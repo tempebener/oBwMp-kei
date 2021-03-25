@@ -1,0 +1,30 @@
+<IfModule mod_rewrite.c>
+
+    RewriteEngine On
+
+	RewriteCond %{REQUEST_FILENAME} !-f
+
+    RewriteCond %{REQUEST_FILENAME} !-d
+
+    RewriteCond $1 !^(index\.php|global|favicon\.ico|javascript)
+
+    RewriteRule ^(.*)$ index.php/$1 [L]
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L]
+# RewriteCond %{HTTP_HOST} ^www\.suarakonsumen\.co
+# RewriteCond %{HTTP_HOST} ^suarakonsumen\.co
+# RewriteRule ^/?$ "https\:\/\/suarakonsumen\.co\/" [R=301,L]
+# RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
+</IfModule>
+
+
+
+<IfModule !mod_rewrite.c>
+
+	ErrorDocument 404 /index.php
+
+</IfModule> 

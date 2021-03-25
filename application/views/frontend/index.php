@@ -22,8 +22,85 @@
                 <li class="navbar-navigation-root-item active"><a class="navbar-navigation-root-link" href="#">Home</a>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Tentang Kami</a>
+                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Kesatriaan Entrepreneur Indonesia</a>
+                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Visi & Misi</a>
+                        </li>
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Struktur Organisasi</a>
+                        </li>
+                        <li><a class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Program & Kegiatan</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Joglo Tumiyono</a>
+                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Profil</a>
+                        </li>
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Pengembangan Seni & Budaya</a>
+                        </li>
+                        <li><a class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Pesantren Entrepreneur</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Unit Bisnis</a>
+                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">LIVESTOCK</a>
+                        </li>
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">MEAT</a>
+                        </li>
+                        <li><a class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">FOOD</a>
+                        </li>
+                        <li><a class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">POULTRY</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="history.html">Kemitraan</a>
+                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Pengembangan Kemitraan</a>
+                    </li>
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Proyeksi Kemitraan</a>
+                    </li>
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Skema Kemitraan</a>
+                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Budidaya Ayam Layer</a>
+                        </li>
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Budidaya Ayam Broiler</a>
+                        </li>
+                        <li><a class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Penggemukan Sapi</a>
+                        </li>
+                        <li><a class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">Budidaya Jagung & Padi</a>
+                        </li>
+                        <li><a class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="#">UMKM Produk Olahan</a>
+                        </li>
+                      </ul>
+                    </li>
+
+                  </ul>
                 </li>
                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Modul Pelatihan</a>
                 </li>

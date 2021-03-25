@@ -1,0 +1,17 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar-absolute
+
+block variables
+	- pageName = 'Home';
+
+block page
+	+rd-navbar
+	include ../components/section/_swiper
+	include ../components/section/_blurb
+	include ../components/section/_price-box
+	include ../components/section/_person-side
+	include ../components/section/_counters
+	include ../components/section/_post-event
+	include ../components/section/_testimonials
+	include ../components/section/_blog-1
+	include ../components/footer/_footer-default

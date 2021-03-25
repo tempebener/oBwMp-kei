@@ -1,0 +1,123 @@
+/**
+ * List
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.list.list-sm {
+	.list-item + .list-item { margin-top: px-to-rem( 9px ) }
+}
+
+// List marked
+.list-marked {
+	> .list-item {
+		padding-left: px-to-rem( 20px );
+
+		&::before {
+			display: inline-block;
+			vertical-align: middle;
+			content: '';
+			width: .38em;
+			height: .38em;
+			margin-left: px-to-rem( -20px );
+			margin-top: -1px; // vertical align fix
+			margin-right: px-to-rem( 14px );
+			border-radius: 50%;
+			background: map-get( $gradients, primary );
+		}
+	}
+
+	.list-item + .list-item {
+		margin-top: px-to-rem( 13px )
+	}
+
+	.list-marked {
+		margin-left: 3em;
+	}
+}
+
+
+// Ordered
+.list-ordered {
+	counter-reset: li;
+
+	> .list-item {
+		padding-left: px-to-rem( 20px );
+
+		&::before {
+			content: counters(li,".")".";
+			counter-increment: li;
+			display: inline-block;
+			min-width: px-to-rem( 20px );
+			margin-left: px-to-rem( -20px );
+			padding-right: px-to-rem( 5px );
+			color: $gray-400;
+		}
+	}
+
+	.list-item + .list-item {
+		margin-top: px-to-rem( 13px )
+	}
+
+	.list-ordered {
+		margin-left: 2.3em;
+	}
+}
+
+
+// List icon
+.list-icons {
+	.list-item {
+		display: flex;
+	}
+
+	.list-icon {
+		margin-right: px-to-rem( 7px );
+		font-size: px-to-rem( 18px );
+		line-height: 1.3;
+		color: $secondary;
+	}
+
+	.list-item + .list-item {
+		margin-top: px-to-rem( 15px * $xs-multiplier );
+	}
+}
+
+
+// Spacing
+* + .list {
+	margin-top: px-to-rem( 16px * $xs-multiplier );
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	* + .list {
+		margin-top: px-to-rem( 16px * $lg-multiplier );
+	}
+
+	.list-icons {
+		.list-item + .list-item {
+			margin-top: px-to-rem( 15px * $lg-multiplier );
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .list {
+		margin-top: px-to-rem( 16px );
+	}
+
+	.list-icons {
+		.list-item + .list-item {
+			margin-top: px-to-rem( 15px );
+		}
+	}
+}

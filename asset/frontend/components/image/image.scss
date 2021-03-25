@@ -1,0 +1,24 @@
+/**
+ * Image
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+
+// Base
+.image {
+
+}
+
+// Image resposive background
+.image-responsive {
+	width: 100%;
+	padding-bottom: 40%;
+	background-size: cover;
+	background-position: center center;
+}

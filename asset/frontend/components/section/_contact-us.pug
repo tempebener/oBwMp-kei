@@ -1,0 +1,47 @@
+// Contact us
+section.section-md.bg-transparent
+	.container
+		.text-block.text-block-1.text-center
+			h5.text-primary Get in touch
+			h2 Contact us
+
+		.row.row-30
+			.col-md-8
+				form.rd-form.rd-mailform( data-form-output='contact-form', data-form-type='contact', method='post', action='components/rd-mailform/rd-mailform.php' )
+					.row.row-20
+						.col-md-6
+							.form-group
+								input.form-control( type='text', name='name', placeholder='Name*', data-constraints='@Required' )
+						.col-md-6
+							.form-group
+								input.form-control( type='email', name='email', placeholder='E-mail*', data-constraints='@Email @Required' )
+						.col-md-6
+							.form-group
+								input.form-control( type='text', name='phone', placeholder='Phone*', data-constraints='@Numeric @Required' )
+						.col-md-6
+							.form-group
+								input.form-control( type='text', name='subject', placeholder='Subject' )
+						.col-12
+							.form-group
+								textarea.form-control( name='textarea', placeholder='Message' )
+					.rd-form-btn.text-left
+						button.btn.btn-primary( type='submit' ) Send message
+				#contact-form.form-output.snackbar.snackbar-primary
+
+			.col-md-4
+				h5.text-primary Before contacting us
+				p Ultrices varius tellus viverra egestas ultrices sed turpis dictum eget. Vulputate ipsum sit et mi, id feugiat. Tincidunt dictum vitae metus leo.
+
+				h5.text-primary Contact information
+				ul.list.list-icons
+					li.list-item
+						.list-icon.custom-font-pin
+						a.link.link-inherit( href='#' ) Brooklyn, NY 10036, 16-2 #[br]United States
+					li.list-item
+						.list-icon.custom-font-email
+						a.link.link-inherit( href='mailto:#' ) info@demolink.org
+					li.list-item
+						.list-icon.custom-font-phone
+						span
+							span= 'Call Us: '
+							a.link.link-inherit( href='tel:#' ) 1-800-123-1234

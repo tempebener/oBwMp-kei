@@ -1,0 +1,24 @@
+/**
+ * Social
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Social
+.social {
+	@include group( px-to-rem( 10px ) );
+}
+
+.social-icon {
+	font-size: px-to-rem( 16px );
+	color: $primary;
+
+	&:hover {
+		color: $dark;
+	}
+}

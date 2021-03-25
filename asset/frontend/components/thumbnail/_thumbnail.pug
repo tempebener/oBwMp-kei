@@ -1,0 +1,44 @@
+//- Thumbnail
+	@param {object} data - data object
+	@param {string} data.img - thumbnail image
+	@param {string} data.title - thumbnail name
+	@param {string} data.meta - thumbnail meta
+	@param {string} data.text - thumbnail text
+mixin thumbnail( data )
+	// Thumbnail
+	.thumbnail&attributes( attributes )
+		.thumbnail-media
+			+img( data.img ).thumbnail-img
+		.thumbnail-title.h5= data.title
+		.thumbnail-text= data.text
+		a.thumbnail-link( href='#' ) Read more
+
+//- Thumbnail 1
+	@param {object} data - data object
+	@param {string} data.img - thumbnail image
+	@param {string} data.title - thumbnail name
+	@param {string} data.meta - thumbnail meta
+	@param {string} data.text - thumbnail text
+mixin thumbnail-1( data )
+	// Thumbnail 1
+	.thumbnail.thumbnail-1&attributes( attributes )
+		.thumbnail-media
+			+img( data.img ).thumbnail-img
+		.thumbnail-body
+			.thumbnail-title.h5: a( href='#' )= data.title
+			.thumbnail-text= data.text
+			a.thumbnail-link.btn.btn-primary( href='#' ) Read more
+
+//- Thumbnail gallery
+	@param {object} data - data object
+	@param {string} data.img - thumbnail image
+	@param {string} data.title - thumbnail name
+	@param {string} data.meta - thumbnail meta
+	@param {string} data.text - thumbnail text
+mixin thumbnail-gallery( data )
+	// Thumbnail gallery
+	.thumbnail.thumbnail-gallery&attributes( attributes )
+		a.thumbnail-media.lightgallery-item( href= 'images/' + data.imgOriginal + '.jpg' )
+			+img( data.img ).thumbnail-img
+			.thumbnail-media-caption
+				.thumbnail-media-icon.custom-font-maximize

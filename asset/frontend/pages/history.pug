@@ -1,0 +1,15 @@
+extends ../components/base/_skeleton
+include ../components/rd-navbar/_rd-navbar
+include ../components/breadcrumb/_breadcrumb
+
+block variables
+	- pageName = 'History';
+
+block page
+	+rd-navbar
+	+breadcrumb-section
+	include ../components/section/_blurb-accent
+	include ../components/section/_about-us-side
+	include ../components/section/_person-4-col
+	include ../components/section/_gallery-1
+	include ../components/footer/_footer-default

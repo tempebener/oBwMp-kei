@@ -1,0 +1,81 @@
+/**
+ * Icon
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.icon {
+	display: inline-flex;
+	line-height: 1;
+}
+
+
+// Sizes
+.icon-md {
+	font-size: $font-size-lg;
+}
+
+.icon-sm {
+	font-size: px-to-rem( 17px );
+}
+
+// Round link
+.icon-round {
+	justify-content: center;
+	align-items: center;
+	width: 2.56em;
+	height: 2.56em;
+	background-color: $gray-100;
+	border-radius: 50%;
+
+	&.icon-sm {
+		width: px-to-rem( 30px );
+		height: px-to-rem( 30px );
+	}
+}
+
+// Icon link
+.icon-link {
+	transition: $transition-base;
+
+	&.icon-round {
+		color: $white;
+		background-color: $primary;
+
+		&:hover {
+			background-color: $gray-900;
+		}
+
+		// Social icons
+		&[class*='facebook'] {
+			background-color: $facebook;
+
+			&:hover {
+				background-color: darken( $facebook, 10% );
+			}
+		}
+
+		&[class*='twitter'] {
+			background-color: $twitter;
+
+			&:hover {
+				background-color: darken( $twitter, 10% );
+			}
+		}
+
+		&[class*='google'] {
+			background-color: $google;
+
+			&:hover {
+				background-color: darken( $google, 10% );
+			}
+		}
+	}
+}

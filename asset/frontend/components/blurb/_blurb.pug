@@ -1,0 +1,28 @@
+//- Blurb
+	@param {object} data - data object
+	@param {string} data.iconClass - class for icon
+	@param {string} data.title - blurb title
+	@param {string} [data.text] - blurb text
+mixin blurb( data )
+	// Blurb
+	article.blurb&attributes( attributes )
+		.icon.blurb-icon( class= data.iconClass )
+		.blurb-title.h4= data.title
+		.blurb-text.big= data.text
+
+//- Blurb side
+	@param {object} data - data object
+	@param {string} data.iconClass - class for icon
+	@param {string} data.title - blurb title
+	@param {string} [data.text] - blurb text
+mixin blurb-3( data )
+	// Blurb side
+	article.blurb.blurb-side&attributes( attributes )
+		.blurb-item
+			.icon.blurb-icon( class= data.iconClass )
+		.blurb-body
+			.blurb-counter-value.h2
+				span( data-counter='' )= data.value
+				if ( data.valuePostfix )
+					span.counter-postfix= data.valuePostfix
+			.blurb-title.h4= data.title

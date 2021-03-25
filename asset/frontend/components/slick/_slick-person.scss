@@ -1,0 +1,40 @@
+// Slick-product
+.slick-person-container {
+	.slick-prev,
+	.slick-next {
+		top: -43%;
+		transform: none;
+	}
+}
+
+.slick-person-img {
+	max-width: 460px;
+	margin-left: auto;
+	margin-right: auto;
+
+	img {
+		border-radius: 50%;
+		transition: $transition-base;
+		cursor: pointer;
+	}
+
+	.slick-slide:not(.slick-center) {
+		img {
+			transform: scale( .6 );
+		}
+	}
+}
+
+* + .slick-person-container { margin-top: px-to-rem( 50px * $xs-multiplier ) }
+* + .slick-person-content { margin-top: px-to-rem( 41px * $xs-multiplier ) }
+
+// Media
+@include media-breakpoint-up( lg ) {
+	* + .slick-person-container { margin-top: px-to-rem( 50px * $lg-multiplier ) }
+	* + .slick-person-content { margin-top: px-to-rem( 41px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .slick-person-container { margin-top: px-to-rem( 50px ) }
+	* + .slick-person-content { margin-top: px-to-rem( 41px ) }
+}

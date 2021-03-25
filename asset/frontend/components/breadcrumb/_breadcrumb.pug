@@ -1,0 +1,29 @@
+//- Breadcrumb
+	@param {Array} path - navigation path
+	@example +breadcrumb([ { title:'About Us', link:'about-us.html' }, { title:'Team member' } ])
+mixin breadcrumb ( path )
+	// Breadcrumb
+	.breadcrumb&attributes( attributes )
+		.breadcrumb-inner
+			if ( path.length && path[ path.length - 1 ].title.toLowerCase() !== homePage.title.toLowerCase() )
+				.breadcrumb-item: a.breadcrumb-link( href= homePage.link )= homePage.title
+				- for ( var i = 0; i < path.length; i++ )
+					- item = path[i]
+					if ( i === path.length - 1 )
+						.breadcrumb-item: span.breadcrumb-text.breadcrumb-active= item.title
+					else if ( item.link )
+						.breadcrumb-item: a.breadcrumb-link( href= item.link )= item.title
+					else
+						.breadcrumb-item: span.breadcrumb-text= item.title
+			else
+				.breadcrumb-item: span.breadcrumb-text.breadcrumb-active= homePage.title
+
+//- Breadcrumb section
+	@param {object} data - breadcrumb section data
+	@param {string} data.background - breadcrumb background image
+	@param {string} [data.title] - breadcrumb section title
+mixin breadcrumb-section ( data )
+	- data = data || {}
+	section.section.breadcrumb-section&attributes( attributes )
+		.container
+			+breadcrumb( breadcrumbs )

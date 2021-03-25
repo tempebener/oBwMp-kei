@@ -1,0 +1,78 @@
+/**
+ * Price box
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Base
+.price-box {
+	max-width: 270px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: $border-radius;
+	overflow: hidden;
+	font-weight: 600;
+	color: $white;
+	background-color: $primary;
+}
+
+.price-box-media {
+	position: relative;
+}
+
+.price-box-img {
+	width: 100%;
+}
+
+.price-box-tag {
+	padding: px-to-rem( 0px, 7px );
+	position: absolute;
+	left: px-to-rem( 10px );
+	top: px-to-rem( 10px );
+	line-height: 1.45;
+	color: $white;
+	background-color: $secondary;
+	border-radius: $border-radius-sm;
+}
+
+.price-box-body {
+	padding: px-to-rem( 25px, 15px );
+}
+
+.price-box-title {
+	color: inherit;
+
+	a:hover {
+		color: $dark;
+	}
+}
+
+
+// Spacing
+* + .price-box-title { margin-top: px-to-rem( 16px * $xs-multiplier ) }
+* + .price-box-text { margin-top: px-to-rem( 10px * $xs-multiplier ) }
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.price-box-body {
+		padding: px-to-rem( 30px * $lg-multiplier, 15px * $lg-multiplier, 28px * $lg-multiplier );
+	}
+
+	* + .price-box-title { margin-top: px-to-rem( 16px * $lg-multiplier ) }
+	* + .price-box-text { margin-top: px-to-rem( 10px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.price-box-body {
+		padding: px-to-rem( 30px, 15px, 28px );
+	}
+
+	* + .price-box-title { margin-top: px-to-rem( 16px ) }
+	* + .price-box-text { margin-top: px-to-rem( 10px ) }
+}

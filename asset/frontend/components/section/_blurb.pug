@@ -1,0 +1,29 @@
+include ../blurb/_blurb
+
+// Blurb default
+section.section-md.bg-transparent.text-center
+	.container
+		.text-block.text-block-1( data-animate!={ class: 'fadeIn' } )
+			h5.text-primary Guaranteed Success
+			h2 What We Offer
+			p.big Teachzy offers students the best of education and entertainment opportunities available in the area. We are glad to take care of every student and university entrant.
+
+		.row.row-30.justify-content-center
+			.col-sm-6.col-md-4
+				+blurb({
+					iconClass: 'custom-font-online-course',
+					title:     'Online Education',
+					text:      'Teachzy provides online education services with all learning materials and lectures available to you.'
+				}).blurb-2( data-animate!={ class: 'fadeInUp' } )
+			.col-sm-6.col-md-4
+				+blurb({
+					iconClass: 'custom-font-degree',
+					title:     'Programs & Courses',
+					text:      'We offer a wide range of courses and  programs that encompass lots of knowledge spheres.'
+				}).blurb-2( data-animate!={ class: 'fadeInUp', delay: '.15s' } )
+			.col-sm-6.col-md-4
+				+blurb({
+					iconClass: 'custom-font-school',
+					title:     'Campus Events',
+					text:      'Our campus is the hub to a talented and diverse student community that turns opportunities into success.'
+				}).blurb-2( data-animate!={ class: 'fadeInUp', delay: '.3s' } )

@@ -1,0 +1,35 @@
+include ../post/_post
+
+// Blog
+section.section-md.bg-transparent
+	.container
+		.row.row-30.justify-content-center
+			.col-md-6.col-lg-8
+				h5.text-primary Our blog
+				h2 Latest news
+				+post({
+					img: 'image-23-769x380',
+					date: 'April 23, 2020',
+					comments: '3 comment(s)',
+					title: 'Studying in the United States',
+					text: 'Ultrices varius tellus viverra egestas ultrices sed turpis dictum eget. Vulputate ipsum sit et mi, id feugiat. Tincidunt dictum vitae metus leo, orci luctus lorem. Volutpat ornare quis risus semper.'
+				}).post-offset
+				+post({
+					img: 'image-09-769x380',
+					date: 'April 23, 2020',
+					comments: '3 comment(s)',
+					title: 'Liberal Arts Colleges Rankings',
+					text: 'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non.'
+				}).post-offset
+				+post({
+					img: 'image-24-769x380',
+					date: 'April 23, 2020',
+					comments: '3 comment(s)',
+					title: '5 Ways to Pay for Community College',
+					text: 'similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est.'
+				}).post-offset
+
+			.col-md-6.col-lg-4
+				include ../widget/_widget-search
+				include ../widget/_widget-category
+				include ../widget/_widget-book-form

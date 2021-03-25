@@ -1,0 +1,52 @@
+//- Person
+	@param {object} data - data object
+	@param {string} data.img - person image
+	@param {string} data.title - person name
+	@param {string} data.meta - person meta
+	@param {string} data.text - person text
+mixin person-1( data )
+	// Person
+	.person&attributes( attributes )
+		.person-media
+			+img( data.img ).person-img
+		.person-title.h5: a( href='team-member.html' )= data.title
+		.person-meta= data.meta
+		.person-text= data.text
+		a.person-link( href='team-member.html' ) Learn more
+
+//- Person side
+	@param {object} data - data object
+	@param {string} data.img - person image
+	@param {string} data.title - person name
+	@param {string} data.meta - person meta
+	@param {string} data.text - person text
+mixin person-side( data )
+	// Person side
+	.person.person-side&attributes( attributes )
+		.person-media
+			+img( data.img ).person-img
+		.person-body
+			.person-title.h6: a( href='team-member.html' )= data.title
+			.person-meta= data.meta
+			.person-text= data.text
+			.person-social.social
+				each icon in data.social
+					a.icon.social-icon( href='#', class= icon )
+
+//- Person boxed
+	@param {object} data - data object
+	@param {string} data.img - person-boxed image
+	@param {string} data.title - person-boxed name
+	@param {string} data.meta - person-boxed meta
+	@param {string} data.text - person-boxed text
+mixin person-boxed( data )
+	// Person boxed
+	.person.person-boxed&attributes( attributes )
+		.person-media
+			+img( data.img ).person-img
+		.person-body
+			.person-title.h6: a( href='team-member.html' )= data.title
+			.person-text= data.text
+			.person-social.social
+				each icon in data.social
+					a.icon.social-icon( href='#', class= icon )

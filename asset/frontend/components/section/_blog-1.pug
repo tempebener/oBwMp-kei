@@ -1,0 +1,40 @@
+include ../post/_post
+
+// Blog
+section.section-md.bg-transparent
+	.container
+		.text-block.text-block-1.text-center( data-animate!={ class: 'fadeIn' } )
+			h5.text-primary Latest news
+			h2 From our blog
+			p.big We regularly share news and updates in our university’s blog. The articles we publish vary from announcing new events and courses to providing useful information to our students.
+
+		.row.row-30.justify-content-center
+			.col-xs-10.col-sm-6
+				+post({
+					img: 'image-09-570x380',
+					date: 'April 23, 2020',
+					comments: '3 comment(s)',
+					title: 'Liberal Arts Colleges Rankings',
+					text: 'The National Liberal Arts Colleges, including schools like Wellesley College and Bowdoin College, emphasize undergraduate education and award at least half of their degrees in the liberal arts fields of study.'
+				})( data-animate!={ class: 'fadeIn' } )
+
+			.col-xs-10.col-sm-6
+				h5.text-primary Popular
+				+post({
+					date: 'April 23, 2020',
+					comments: '3 comment(s)',
+					title: 'Studying in the United States',
+					text: 'International students increasingly want to come to the United States for college or graduate school. Use our tips, rankings, and more to help you find the best school for you.'
+				})( data-animate!={ class: 'fadeInUp' } )
+				+post({
+					date: 'April 23, 2020',
+					comments: '3 comment(s)',
+					title: '5 Ways to Pay for Community College',
+					text: 'Most community college students qualify for need-based aid, experts say. Many community colleges offer promise programs, which offer tuition-free awards to eligible students - mainly to students with Pell grant eligibility.'
+				})( data-animate!={ class: 'fadeInUp' } )
+				+post({
+					date: 'April 23, 2020',
+					comments: '3 comment(s)',
+					title: 'Consider MBA Programs That Offer Summer Prep',
+					text: 'New MBA students can brush up on finance and accounting before classes begin. Summer preparatory programs offered through schools allow students to get a head start on making connections and building skills.'
+				})( data-animate!={ class: 'fadeInUp' } )

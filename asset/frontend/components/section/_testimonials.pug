@@ -1,0 +1,39 @@
+include ../quote/_quote
+
+// Testimonials
+section.section-md.bg-300.text-center
+	.container
+		.text-block.text-block-1( data-animate!={ class: 'fadeIn' } )
+			h2 Testimonials
+			p.big Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.
+		.slick-person-container
+			.slick-slider.slick-person-img.slider-nav( data-slick!={ slidesToShow: 3, arrows: false, asNavFor: '.slider-for', focusOnSelect: true, centerMode: true, centerPadding: '0px' } )
+				.slick-content: +img( 'person-11-135x135' )
+				.slick-content: +img( 'person-07-135x135' )
+				.slick-content: +img( 'person-10-135x135' )
+				.slick-content: +img( 'person-08-135x135' )
+			.slick-slider.slick-person-content.slider-for( data-slick!={ arrows: true, asNavFor: '.slider-nav', autoplay: true, autoplaySpeed: 5000, fade: true } )
+				.slick-content
+					+quote-simple({
+						quote: 'My overall experience in Teachzy was amazing. The best part is to get to know people from a lot of different places, learn about different cultures and make friends for life!',
+						cite: 'Peter Fletcher',
+						meta: 'Student'
+					})
+				.slick-content
+					+quote-simple({
+						quote: 'This university was an exceptional and international experience for me. It did not only advance my studies and knowledge but even gave me the chance to make friends across the globe.',
+						cite: 'Jenny Wilson',
+						meta: 'Student'
+					})
+				.slick-content
+					+quote-simple({
+						quote: 'I made friends from countries all over the world. That’s really amazing! And Teachzy is just like a quiet oasis in the crowded city, it’s really pleasant to study and live here.',
+						cite: 'John Adams',
+						meta: 'Student'
+					})
+				.slick-content
+					+quote-simple({
+						quote: 'I\'ve been working at Teachzy for over 20 years. As a tutor I love interacting with students and share my knowledge. Here you can definitely make connections for life!',
+						cite: 'Esther Howard',
+						meta: 'Professor'
+					})

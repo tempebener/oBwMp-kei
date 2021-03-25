@@ -1,0 +1,13 @@
+// Search results
+section.section.section-md.bg-transparent
+	.container
+		.row.justify-content-center
+			.col-md-10.col-lg-9.col-xl-8
+				form.rd-form.rd-form-inline( action='search-results.html', method='GET', data-rd-search!={
+					output: '.rd-search-results',
+					mode: 'submit'
+				} )
+					.form-group
+						input.form-control( type='text', placeholder='Enter a keyword', autocomplete='off', name='s' )
+					button.btn.btn-sm( type='submit' ) Search
+				.rd-search-results

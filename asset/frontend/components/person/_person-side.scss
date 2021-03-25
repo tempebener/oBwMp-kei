@@ -1,0 +1,63 @@
+// Base
+.person-side {
+	font-size: px-to-rem( 14px );
+
+	.person-img {
+		border-radius: 50%;
+	}
+
+	.person-body {
+		padding-top: px-to-rem( 20px );
+	}
+
+	.person-meta {
+		font-weight: 600;
+	}
+
+	* + .person-meta { margin-top: px-to-rem( 10px * $xs-multiplier ) }
+	* + .person-text { margin-top: px-to-rem( 5px * $xs-multiplier ) }
+	* + .person-social { margin-top: px-to-rem( 13px * $xs-multiplier ) }
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.person-side {
+		display: flex;
+		text-align: left;
+
+		.person-media {
+			flex-shrink: 0;
+			max-width: 38%;
+		}
+
+		.person-body {
+			padding-top: 0;
+			padding-left: px-to-rem( 15px );
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.person-side {
+		.person-body {
+			padding-left: px-to-rem( 35px * $lg-multiplier );
+		}
+
+		* + .person-meta { margin-top: px-to-rem( 10px * $lg-multiplier ) }
+		* + .person-text { margin-top: px-to-rem( 5px * $lg-multiplier ) }
+		* + .person-social { margin-top: px-to-rem( 13px * $lg-multiplier ) }
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.person-side {
+		.person-body {
+			padding-left: px-to-rem( 35px );
+		}
+
+		* + .person-meta { margin-top: px-to-rem( 10px ) }
+		* + .person-text { margin-top: px-to-rem( 5px ) }
+		* + .person-social { margin-top: px-to-rem( 13px ) }
+	}
+}

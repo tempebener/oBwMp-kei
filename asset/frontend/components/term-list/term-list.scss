@@ -1,0 +1,40 @@
+/**
+ * Term list
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+// Variables
+$dt-font-weight: $font-weight-base;
+
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+dt {
+	color: $gray-900;
+}
+
+// Spacing
+* + dd { margin-top: px-to-rem( 19px * $xs-multiplier ); }
+dl + dl { margin-top: px-to-rem( 51px * $xs-multiplier ); }
+h4 + dl { margin-top: px-to-rem( 48px * $xs-multiplier ); }
+* + .term-list { margin-top: px-to-rem( 58px * $xs-multiplier ); }
+
+@include media-breakpoint-up( xxl ) {
+	* + dd { margin-top: px-to-rem( 19px * $lg-multiplier); }
+	dl + dl { margin-top: px-to-rem( 51px * $lg-multiplier); }
+	h4 + dl { margin-top: px-to-rem( 48px * $lg-multiplier); }
+	* + .term-list { margin-top: px-to-rem( 58px * $lg-multiplier); }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + dd { margin-top: px-to-rem( 19px ); }
+	dl + dl { margin-top: px-to-rem( 51px ); }
+	h4 + dl { margin-top: px-to-rem( 48px ); }
+	* + .term-list { margin-top: px-to-rem( 58px ); }
+}

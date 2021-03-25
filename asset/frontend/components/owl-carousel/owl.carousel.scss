@@ -1,0 +1,169 @@
+/**
+ * Owl carousel
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+@import "default";
+
+// TODO просмотреть стандартную стилизацию
+// Variables
+$owl-primary: $primary;
+$owl-dot-color: $gray-300;
+
+
+// Dots
+.owl-carousel {
+	.owl-dots {
+		margin-top: px-to-rem( 60px * $xs-multiplier );
+		font-size: 0;
+		line-height: 0;
+		text-align: center;
+		@include group( px-to-rem( 20px ) );
+	}
+
+	.owl-dot {
+		position: relative;
+		width: 15px;
+		height: 15px;
+		display: inline-block;
+		border-radius: 50%;
+		background-color: transparent;
+		box-shadow: inset 0 0 0 2px $primary;
+		transition: all .3s ease;
+
+		&:hover,
+		&.active {
+			box-shadow: inset 0 0 0 10px $primary;
+		}
+	}
+
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		transform: translateY( -50% );
+		pointer-events: none;
+	}
+
+	.owl-prev,
+	.owl-next {
+		position: relative;
+		z-index: 0;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		width: px-to-rem( 30px );
+		height: px-to-rem( 30px );
+		font-size: px-to-rem( 24px );
+		line-height: 1;
+		color: $gray-900;
+		background-color: $gray-200;
+		border-radius: 50%;
+		cursor: pointer;
+		pointer-events: auto;
+		transition: $transition-base;
+
+		&::before {
+			display: block;
+			font-family: 'Material Design Icons';
+		}
+
+		&::after {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			z-index: -1;
+			content: '';
+			background: map-get( $gradients, primary );
+			border-radius: inherit;
+			opacity: 0;
+			transition: $transition-base;
+		}
+
+		&:hover {
+			color: $white;
+
+			&::after {
+				opacity: 1;
+			}
+		}
+
+		&.disabled {
+			color: $owl-primary;
+			opacity: .3;
+			cursor: default;
+			pointer-events: none;
+		}
+	}
+
+	.owl-prev {
+		&::before {
+			content: '\f237';
+		}
+	}
+
+	.owl-next {
+		&::before {
+			content: '\f238';
+		}
+	}
+}
+
+
+// Spacing
+* + .owl-content-1 { margin-top: px-to-rem( 51px * $xs-multiplier ) }
+
+
+// Modifying
+.owl-vertical-center {
+	.owl-stage {
+		display: flex;
+		align-items: center;
+	}
+}
+
+// Owl carousel context
+.owl-carousel-shadow {
+	.owl-stage-outer {
+		margin: -25px -28px -30px;
+		padding: 25px 28px 30px;
+	}
+
+	.owl-item:not(.active) {
+		> * {
+			box-shadow: none;
+		}
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.owl-carousel {
+		.owl-dots {
+			margin-top: px-to-rem( 60px * $lg-multiplier );
+		}
+	}
+
+	* + .owl-content-1 { margin-top: px-to-rem( 51px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.owl-carousel {
+		.owl-dots {
+			margin-top: px-to-rem( 60px );
+		}
+	}
+
+	* + .owl-content-1 { margin-top: px-to-rem( 51px ) }
+}

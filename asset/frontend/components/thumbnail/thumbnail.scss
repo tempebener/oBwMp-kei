@@ -1,0 +1,27 @@
+/**
+ * Thumbnail
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Thumbnail
+.thumbnail-img {
+	width: 100%;
+}
+
+.thumbnail-link {
+	display: inline-block;
+}
+
+* + .thumbnail-title { margin-top: px-to-rem( 16px ) }
+* + .thumbnail-text { margin-top: px-to-rem( 8px ) }
+* + .thumbnail-link { margin-top: px-to-rem( 12px ) }
+
+
+// Layouts
+@import "thumbnail-gallery";

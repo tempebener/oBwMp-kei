@@ -1,0 +1,44 @@
+// Modifying
+.swiper-1 {
+	min-height: calc( 100vh - 60px );
+
+	.swiper-slide {
+		padding: 40px 0 100px;
+	}
+}
+
+
+// Media
+@include media-breakpoint-up( md ) {
+	.swiper-1 {
+		.swiper-wrapper {
+			min-height: 450px;
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.swiper-1 {
+		.swiper-wrapper {
+			min-height: 500px;
+		}
+	}
+}
+
+@include media-breakpoint-up( xl ) {
+	.swiper-1 {
+		.swiper-wrapper {
+			min-height: 100vh;
+		}
+
+		.swiper-slide {
+			padding: 120px 0 100px;
+		}
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.swiper-1 {
+
+	}
+}

@@ -1,0 +1,6 @@
+//- Logo
+mixin logo
+	// Logo
+	.logo&attributes( attributes )
+		a.logo-link( href= homePage.link )
+			+img( logo.inverse, { retina: true } ).logo-image-inverse( alt= logo.name )

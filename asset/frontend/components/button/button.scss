@@ -1,0 +1,168 @@
+/**
+ * Button
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../bootstrap/scss/button-group";
+@import "../base/mixins";
+
+
+// Base
+.btn {
+	position: relative;
+	z-index: 0;
+	display: inline-block;
+	text-align: center;
+	border: $btn-border-width solid transparent;
+	font-family: $btn-font-family;
+	font-weight: $btn-font-weight;
+	text-transform: capitalize;
+	color: $white;
+	background: $primary;
+	transition: $transition-base;
+
+	@include button-size(
+		$btn-padding-y,
+		$btn-padding-x,
+		$btn-font-size,
+		$btn-line-height,
+		$btn-border-radius
+	);
+
+	&:hover,
+	&.hover,
+	&:active,
+	&.active {
+		text-decoration: none;
+		color: $white;
+		background: darken( $primary, 10% );
+	}
+
+	&:focus,
+	&.focus {
+		outline: 0;
+	}
+
+	&.disabled,
+	&:disabled {
+		opacity: $btn-disabled-opacity;
+		pointer-events: none;
+	}
+}
+
+
+// Spacing
+* + .btn {
+	margin-top: px-to-rem( 22px );
+}
+
+
+// Theming
+.btn-outline {
+	color: $dark;
+	background: transparent;
+	border-color: $dark;
+
+	&:hover {
+		color: $white;
+		background-color: $dark;
+	}
+}
+
+.btn-shadow {
+	box-shadow: $box-shadow;
+
+	&:hover {
+		box-shadow: none;
+	}
+}
+
+.btn-block {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+
+// Button icon
+.btn-icon {
+	font-size: 1.3em;
+	margin: 0 px-to-rem( 10px );
+
+	&:first-child {
+		margin-left: 0;
+	}
+
+	&:last-child {
+		margin-right: 0;
+	}
+}
+
+
+// Sizing
+.btn-lg {
+	@include button-size( $btn-padding-y-lg, $btn-padding-x-lg, $btn-font-size-lg, $btn-line-height-lg, $btn-border-radius-lg );
+}
+
+.btn-sm {
+	@include button-size( $btn-padding-y-sm, $btn-padding-x-sm, $btn-font-size-sm, $btn-line-height-sm, $btn-border-radius-sm );
+}
+
+
+// Buttons groups
+.btn-group-1 {
+	@include group( px-to-rem( 30px ), px-to-rem( 15px ) )
+}
+
+* + .btn-group-1 { margin-top: px-to-rem( 25px ) }
+
+
+// Context dark
+.context-dark {
+	.btn-outline {
+		color: $white;
+		background: transparent;
+		border-color: $white;
+
+		&:hover {
+			color: $primary;
+			background-color: $white;
+		}
+	}
+}
+
+.bg-primary {
+	.btn-primary {
+		color: $dark;
+		background-color: $white;
+		border-color: $white;
+
+		&:hover,
+		&.hover,
+		&:active,
+		&.active {
+			color: $white;
+			background-color: $dark;
+			border-color: $dark;
+		}
+	}
+}
+
+.big + .btn { margin-top: px-to-rem( 32px * $xs-multiplier ) }
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.big + .btn { margin-top: px-to-rem( 32px * $lg-multiplier ) }
+}
+
+@include media-breakpoint-up( xxl ) {
+	.btn {
+		min-width: 170px;
+	}
+
+	.big + .btn { margin-top: px-to-rem( 32px ) }
+}

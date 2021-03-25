@@ -1,0 +1,34 @@
+/**
+ * Post meta
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Post
+.post-meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: px-to-rem( 12px );
+	@include group( px-to-rem( 28px ), px-to-rem( 0px ) );
+}
+
+.post-meta-item {
+	display: inline-flex;
+}
+
+.post-meta-icon {
+	margin-right: px-to-rem( 7px );
+	font-size: 1.3em;
+	line-height: 1.2;
+	color: $secondary;
+}
+
+.post-meta-vertical {
+	display: block;
+}

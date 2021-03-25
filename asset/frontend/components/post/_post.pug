@@ -1,0 +1,63 @@
+//- Post
+	@param {object} data - data object
+	@param {string} data.img - post image
+	@param {string} data.title - post title
+	@param {array} data.meta - post meta
+	@param {string} data.text - post text
+mixin post( data )
+	// Post
+	.post&attributes( attributes )
+		if ( data.img )
+			a.post-media( href='single-post.html' )
+				+img( data.img ).post-img
+		.post-meta
+			.post-meta-item
+				.post-meta-icon.custom-font-calendar
+				.post-date= data.date
+			.post-meta-item
+				.post-meta-icon.custom-font-message-circle
+				.post-comment= data.comments
+		.post-title.h6: a( href='single-post.html' )= data.title
+		if ( data.text )
+			.post-text= data.text
+
+//- Post event
+	@param {object} data - data object
+	@param {string} data.img - post image
+	@param {string} data.title - post title
+	@param {string} data.text - post text
+mixin post-event( data )
+	// Post event
+	.post.post-event&attributes( attributes )
+		a.post-media( href='single-post.html' )
+			+img( data.img ).post-img
+			.post-date
+				.post-day= data.day
+				.post-month= data.month
+		.post-heading.h4
+			.post-title: a( href='single-post.html' )= data.title
+			.post-price= data.price
+		.post-meta.post-meta-vertical.big
+			.post-meta-item
+				.post-meta-icon.custom-font-clock
+				.post-time= data.time
+			.post-meta-item
+				.post-meta-icon.custom-font-pin
+				.post-location= data.location
+
+//- Post 2
+	@param {object} data - data object
+	@param {string} data.img - post image
+	@param {string} data.title - post title
+	@param {string} data.text - post text
+mixin post-2( data )
+	// Post 2
+	.post.post-2&attributes( attributes )
+		a.post-media( href='single-post.html' )
+			+img( data.img ).post-img
+		.post-body
+			.post-title.h6: a( href='single-post.html' )= data.title
+			.post-meta
+				.post-meta-item
+					.post-meta-icon.mdi-calendar
+					.post-date= data.date

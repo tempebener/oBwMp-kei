@@ -7,132 +7,9 @@
   <body>
     <div class="page">
       <!--RD Navbar-->
-      <header class="section rd-navbar-absolute-wrap" data-preset='{"title":"Navbar Default","category":"header","reload":true,"id":"navbar-default"}'>
-        <nav class="rd-navbar" data-rd-navbar='{"responsive":{"1200":{"stickUpOffset":"50px"}}}'>
-          <div class="navbar-container">
-            <div class="navbar-cell">
-              <div class="navbar-panel">
-                <button class="navbar-switch novi-icon custom-font-menu" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","isolate":"[data-multi-switch]"}'></button>
-                <div class="navbar-logo"><a class="navbar-logo-link" href=""><img class="navbar-logo-inverse" src="<?php echo base_url();?>asset/frontend/images/logo-inverse-396x100.png" alt="Teachzy" width="150" height="50"/></a></div>
-              </div>
-            </div>
-            <div class="navbar-spacer"></div>
-            <div class="navbar-cell navbar-sidebar">
-              <ul class="navbar-navigation rd-navbar-nav">
-                <li class="navbar-navigation-root-item active"><a class="navbar-navigation-root-link" href="#">Home</a>
-                </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Tentang Kami</a>
-                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
-
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Kesatriaan Entrepreneur Indonesia</a>
-                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Visi & Misi</a>
-                        </li>
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Struktur Organisasi</a>
-                        </li>
-                        <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Program & Kegiatan</a>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Joglo Tumiyono</a>
-                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Profil</a>
-                        </li>
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Pengembangan Seni & Budaya</a>
-                        </li>
-                        <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Pesantren Entrepreneur</a>
-                        </li>
-                      </ul>
-                    </li>
-
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Unit Bisnis</a>
-                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">LIVESTOCK</a>
-                        </li>
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">MEAT</a>
-                        </li>
-                        <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">FOOD</a>
-                        </li>
-                        <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">POULTRY</a>
-                        </li>
-                      </ul>
-                    </li>
-
-                  </ul>
-                </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="history.html">Kemitraan</a>
-                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
-
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Pengembangan Kemitraan</a>
-                    </li>
-
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Proyeksi Kemitraan</a>
-                    </li>
-
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Skema Kemitraan</a>
-                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Budidaya Ayam Layer</a>
-                        </li>
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Budidaya Ayam Broiler</a>
-                        </li>
-                        <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Penggemukan Sapi</a>
-                        </li>
-                        <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Budidaya Jagung & Padi</a>
-                        </li>
-                        <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">UMKM Produk Olahan</a>
-                        </li>
-                      </ul>
-                    </li>
-
-                  </ul>
-                </li>
-               <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Modul Pelatihan</a>
-                </li>
-               <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Inkubator Bisnis</a>
-                </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Akses Permodalan</a>
-                </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="contact-us.html">Contact us</a>
-                </li>
-              </ul>
-            </div>
-            <div class="navbar-spacer"></div>
-            <div class="navbar-cell">
-              <div class="navbar-subpanel">
-                <div class="navbar-subpanel-item">
-                  <div class="navbar-search">
-                    <div class="navbar-search-container">
-                      <form class="navbar-search-form" action="search-results.html" method="GET" data-rd-search='{"output":".navbar-search-results","mode":"live","liveResults":3,"template":"<h5 class=\"search-title\"><a target=\"_top\" href=\"#{href}\" class=\"search-link\">#{title}</a></h5><p>...#{token}...</p>"}'>
-                        <input class="navbar-search-input" type="text" placeholder="Enter search terms..." autocomplete="off" name="s"/>
-                        <button class="navbar-search-btn custom-font-search novi-icon"></button>
-                        <button class="navbar-search-close search-switch custom-font-close novi-icon" type="button" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","class":"navbar-search-active","isolate":"[data-multi-switch]:not(.search-switch)"}'></button>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="navbar-search-results">No results</div>
-                  <button class="navbar-button search-switch custom-font-search" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","class":"navbar-search-active","isolate":"[data-multi-switch]:not(.search-switch)"}'></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </nav>
-      </header>
+     <!-- head -->
+<?php $this->load->view('frontend/header')?>
+<!-- head end -->
       <!-- Swiper default-->
       <!-- slider -->
 <?php $this->load->view('frontend/slider')?>
@@ -178,8 +55,8 @@
       <section class="section-md bg-300 text-center">
         <div class="container">
           <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
-            <h2>Our Featured Courses</h2>
-            <p class="big">Our featured courses are selected through a rigorous process and uniquely created for each semester. They cover a lot of topics and are available both online and offline.</p>
+            <h2>Events dan Pelatihan</h2>
+            <p class="big">Webinar Entrepreneur-Kesatriaan Sekolah Tani/Ternak-Pengembangan Ekonomi-Seni&Budaya.</p>
           </div>
           <div class="owl-carousel owl-content-1" data-owl="{&quot;dots&quot;:true}" data-loop="false" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4">
                   <!-- Price box-->
@@ -348,9 +225,9 @@
                               <div class="icon blurb-icon custom-font-graduated"></div>
                             </div>
                             <div class="blurb-body">
-                              <div class="blurb-counter-value h2"><span data-counter="">97</span><span class="counter-postfix">%</span>
+                              <div class="blurb-counter-value h2"><span data-counter="">100</span><span class="counter-postfix">%</span>
                               </div>
-                              <div class="blurb-title h4">Graduates</div>
+                              <div class="blurb-title h4">Jaminan Akses Pemodalan</div>
                             </div>
                           </article>
                   </div>
@@ -361,9 +238,9 @@
                               <div class="icon blurb-icon custom-font-male-teacher"></div>
                             </div>
                             <div class="blurb-body">
-                              <div class="blurb-counter-value h2"><span data-counter="">50</span><span class="counter-postfix">+</span>
+                              <div class="blurb-counter-value h2"><span data-counter="">100%</span><span class="counter-postfix">%</span>
                               </div>
-                              <div class="blurb-title h4">Certified tutors</div>
+                              <div class="blurb-title h4">Pendampingan Bisnis</div>
                             </div>
                           </article>
                   </div>
@@ -374,9 +251,9 @@
                               <div class="icon blurb-icon custom-font-student-at-desk"></div>
                             </div>
                             <div class="blurb-body">
-                              <div class="blurb-counter-value h2"><span data-counter="">6500</span>
+                               <div class="blurb-counter-value h2"><span data-counter="">100%</span><span class="counter-postfix">%</span>
                               </div>
-                              <div class="blurb-title h4">Students</div>
+                              <div class="blurb-title h4">Pembimbing Profesional & Berpengalaman</div>
                             </div>
                           </article>
                   </div>
@@ -387,9 +264,9 @@
                               <div class="icon blurb-icon custom-font-university"></div>
                             </div>
                             <div class="blurb-body">
-                              <div class="blurb-counter-value h2"><span data-counter="">10</span>
+                              <div class="blurb-counter-value h2"><span data-counter="">100%</span><span class="counter-postfix">%</span>
                               </div>
-                              <div class="blurb-title h4">Campuses</div>
+                              <div class="blurb-title h4">Pembelajaran Komprehensif</div>
                             </div>
                           </article>
                   </div>
@@ -540,7 +417,7 @@
         <div class="container">
           <div class="text-block text-block-1 text-center" data-animate='{"class":"fadeIn"}'>
             <h5 class="text-primary">Latest news</h5>
-            <h2>From our blog</h2>
+            <h2>Agropreneur Update</h2>
             <p class="big">We regularly share news and updates in our university’s blog. The articles we publish vary from announcing new events and courses to providing useful information to our students.</p>
           </div>
           <div class="row row-30 justify-content-center">

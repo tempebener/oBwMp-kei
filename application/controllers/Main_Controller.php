@@ -21,7 +21,7 @@ class Main_Controller extends CI_Controller {
 	public function index()
 	{
 		$page1 = '1';
-			$data['post_slider'] = $this->Model_main->get_all_slider($page1);
+			$data['post_slider'] 						= $this->Model_main->get_all_slider($page1);
 			$data['about'] = $this->Model_main->get_all_about()->result();
 		$this->load->view('frontend/index',$data);
 	}

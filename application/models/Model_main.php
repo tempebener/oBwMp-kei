@@ -12,6 +12,8 @@ function get_all_slider($page1)
     $this->db->join('slider_s', 'slider_s.id_slider_s = slider.id_slider_s','inner');
     return $this->db->get('slider')->result();
   }
+
+  
   function get_all_sliders($page1)
     {
       $this->db->limit(1);

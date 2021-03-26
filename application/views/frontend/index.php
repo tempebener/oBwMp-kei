@@ -51,7 +51,6 @@
           </div>
         </div>
       </section>
-
       <!--modul pelatihan start-->
       <?php $this->load->view('frontend/modul_pelatihan')?>
       <!--modul pelatihan end-->
@@ -118,7 +117,6 @@
           </div>
         </div>
       </section>
->>>>>>> 1e1df5a3369f3097aa4f1594643ba49de3e32265
       <!-- Person side-->
       <section class="section-md bg-transparent text-center">
         <div class="container">

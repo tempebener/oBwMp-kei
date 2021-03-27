@@ -16,41 +16,7 @@
 <!-- slider end -->
 
       <!-- Blurb default-->
-      <section class="section-md bg-transparent text-center">
-        <div class="container">
-          <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
-            <h5 class="text-primary">Guaranteed Success</h5>
-            <h2>What We Offer</h2>
-            <p class="big">Teachzy offers students the best of education and entertainment opportunities available in the area. We are glad to take care of every student and university entrant.</p>
-          </div>
-          <div class="row row-30 justify-content-center">
-            <div class="col-sm-6 col-md-4">
-                    <!-- Blurb-->
-                    <article class="blurb blurb-2" data-animate='{"class":"fadeInUp"}'>
-                      <div class="icon blurb-icon custom-font-online-course"></div>
-                      <div class="blurb-title h4">Online Education</div>
-                      <div class="blurb-text big">Teachzy provides online education services with all learning materials and lectures available to you.</div>
-                    </article>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                    <!-- Blurb-->
-                    <article class="blurb blurb-2" data-animate='{"class":"fadeInUp","delay":".15s"}'>
-                      <div class="icon blurb-icon custom-font-degree"></div>
-                      <div class="blurb-title h4">Programs &amp; Courses</div>
-                      <div class="blurb-text big">We offer a wide range of courses and  programs that encompass lots of knowledge spheres.</div>
-                    </article>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                    <!-- Blurb-->
-                    <article class="blurb blurb-2" data-animate='{"class":"fadeInUp","delay":".3s"}'>
-                      <div class="icon blurb-icon custom-font-school"></div>
-                      <div class="blurb-title h4">Campus Events</div>
-                      <div class="blurb-text big">Our campus is the hub to a talented and diverse student community that turns opportunities into success.</div>
-                    </article>
-            </div>
-          </div>
-        </div>
-      </section>
+     <?php $this->load->view('frontend/whatweover')?>
       <!--modul pelatihan start-->
       <?php $this->load->view('frontend/modul_pelatihan')?>
       <!--modul pelatihan end-->
@@ -131,86 +97,7 @@
       </section>
 
       <!-- Post event-->
-      <section class="section-md bg-transparent text-center">
-        <div class="container">
-          <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
-            <h5 class="text-primary">Don’t miss anything</h5>
-            <h2>Upcoming Events</h2>
-            <p class="big">Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.</p>
-          </div>
-          <div class="row row-30 justify-content-center">
-            <div class="col-xs-8 col-sm-6 col-md-4">
-                    <!-- Post event-->
-                    <div class="post post-event" data-animate='{"class":"fadeInUp"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>theme/frontend/images/image-06-370x240.jpg" alt="" width="370" height="240"/>
-                        <div class="post-date">
-                          <div class="post-day">19</div>
-                          <div class="post-month">Sep</div>
-                        </div></a>
-                      <div class="post-heading h4">
-                        <div class="post-title"><a href="single-post.html">Creative Day</a></div>
-                        <div class="post-price">$20</div>
-                      </div>
-                      <div class="post-meta post-meta-vertical big">
-                        <div class="post-meta-item">
-                          <div class="post-meta-icon custom-font-clock"></div>
-                          <div class="post-time">12:00 am - 2:00 pm</div>
-                        </div>
-                        <div class="post-meta-item">
-                          <div class="post-meta-icon custom-font-pin"></div>
-                          <div class="post-location">Cambridge, MA 02138, USA</div>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-            <div class="col-xs-8 col-sm-6 col-md-4">
-                    <!-- Post event-->
-                    <div class="post post-event" data-animate='{"class":"fadeInUp","delay":".15s"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>theme/frontend/images/image-07-370x240.jpg" alt="" width="370" height="240"/>
-                        <div class="post-date">
-                          <div class="post-day">21</div>
-                          <div class="post-month">Sep</div>
-                        </div></a>
-                      <div class="post-heading h4">
-                        <div class="post-title"><a href="single-post.html">Poetry Event</a></div>
-                        <div class="post-price">$15</div>
-                      </div>
-                      <div class="post-meta post-meta-vertical big">
-                        <div class="post-meta-item">
-                          <div class="post-meta-icon custom-font-clock"></div>
-                          <div class="post-time">11:00 am - 1:00 pm</div>
-                        </div>
-                        <div class="post-meta-item">
-                          <div class="post-meta-icon custom-font-pin"></div>
-                          <div class="post-location">233 Main St. New York United States</div>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-            <div class="col-xs-8 col-sm-6 col-md-4">
-                    <!-- Post event-->
-                    <div class="post post-event" data-animate='{"class":"fadeInUp","delay":".3s"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>theme/frontend/images/image-08-370x240.jpg" alt="" width="370" height="240"/>
-                        <div class="post-date">
-                          <div class="post-day">26</div>
-                          <div class="post-month">Sep</div>
-                        </div></a>
-                      <div class="post-heading h4">
-                        <div class="post-title"><a href="single-post.html">Undergraduate Day</a></div>
-                        <div class="post-price">Free</div>
-                      </div>
-                      <div class="post-meta post-meta-vertical big">
-                        <div class="post-meta-item">
-                          <div class="post-meta-icon custom-font-clock"></div>
-                          <div class="post-time">1:00 pm - 11:59 pm</div>
-                        </div>
-                        <div class="post-meta-item">
-                          <div class="post-meta-icon custom-font-pin"></div>
-                          <div class="post-location">Cambridge, MA 02138, USA</div>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
 
       <!-- ekonomi outlook start-->
       <?php $this->load->view('frontend/ekonomi_outlook')?>

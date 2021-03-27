@@ -1,0 +1,40 @@
+include ../price-box/_price-box
+
+// Price box
+section.section-md.bg-300.text-center
+	.container
+		.text-block.text-block-1( data-animate!={ class: 'fadeIn' } )
+			h2 Our Featured Courses
+			p.big Our featured courses are selected through a rigorous process and uniquely created for each semester. They cover a lot of topics and are available both online and offline.
+
+		.owl-carousel.owl-content-1( data-owl= { dots: true }, data-loop='false', data-items='1', data-sm-items='2', data-md-items='3', data-lg-items='4' )
+			+price-box({
+				price: '$20',
+				img: 'image-01-270x220',
+				title: 'Academic English',
+				text: 'Steven Carter'
+			})
+			+price-box({
+				price: '$40',
+				img: 'image-02-270x220',
+				title: 'Online Marketing',
+				text: 'Ronald Richards'
+			})
+			+price-box({
+				price: '$30',
+				img: 'image-03-270x220',
+				title: 'HR Management',
+				text: 'Ralph Edwards'
+			})
+			+price-box({
+				price: '$30',
+				img: 'image-04-270x220',
+				title: 'Financial Analytics',
+				text: 'Emma Smith'
+			})
+			+price-box({
+				price: '$30',
+				img: 'image-18-270x220',
+				title: 'Web Technology',
+				text: 'Kathryn Murphy'
+			})

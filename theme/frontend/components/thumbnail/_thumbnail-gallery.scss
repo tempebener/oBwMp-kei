@@ -1,0 +1,44 @@
+// Base
+.thumbnail-gallery {
+	.thumbnail-media {
+		position: relative;
+		display: block;
+	}
+
+	.thumbnail-media-caption {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: rgba( $primary, .6 );
+	}
+
+	.thumbnail-media-icon {
+		font-size: px-to-rem( 36px );
+		color: $white;
+	}
+}
+
+// Desktop context
+.desktop {
+	.thumbnail-gallery {
+		overflow: hidden;
+
+		.thumbnail-media-caption {
+			opacity: 0;
+			transform: scale( 3.6 );
+			transition: .3s;
+		}
+
+		&:hover {
+			.thumbnail-media-caption {
+				opacity: 1;
+				transform: scale( 1 );
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+/**
+ * Person
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Base
+.person-link {
+	display: inline-block;
+}
+
+* + .person-title { margin-top: px-to-rem( 16px ) }
+* + .person-text { margin-top: px-to-rem( 8px ) }
+* + .person-link { margin-top: px-to-rem( 12px ) }
+
+
+// Layouts
+@import "person-side";
+@import "person-boxed";

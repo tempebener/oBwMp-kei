@@ -1,0 +1,106 @@
+/**
+ * Swiper
+ */
+
+@import "../bootstrap/scss/_functions";
+@import "../base/_functions";
+@import "../base/_variables";
+@import "../bootstrap/scss/_variables";
+@import "../bootstrap/scss/_mixins";
+@import "../base/_mixins";
+@import "default";
+
+
+// Reset styles
+.swiper-container {
+  display: flex;
+  width: 100%;
+}
+
+.swiper-wrapper {
+  display: flex;
+  height: auto;
+}
+
+.swiper-slide {
+  display: flex;
+  align-items: center;
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+}
+
+// Swiper pagination
+.swiper-pagination {
+
+}
+
+.swiper-pagination-bullet {
+  position: relative;
+  z-index: 0;
+  width: 15px;
+  height: 15px;
+  border: 2px solid $white;
+  background-color: transparent;
+  opacity: 1;
+  transition: $transition-base;
+  will-change: transform;
+
+  &::before {
+    position: absolute;
+    left: -3px;
+    top: -3px;
+    right: -3px;
+    bottom: -3px;
+    z-index: -1;
+    background: $white;
+    content: '';
+    transform: scale( 0 );
+    transition: inherit;
+    border-radius: inherit;
+  }
+
+  &:hover,
+  &-active {
+    &::before {
+      transform: scale( 1 );
+    }
+  }
+}
+
+.swiper-container-horizontal {
+  > .swiper-pagination-bullets {
+    bottom: px-to-rem( 50px );
+
+    .swiper-pagination-bullet {
+      margin: 0 px-to-rem( 10px );
+    }
+  }
+}
+
+
+// Reset default nav content
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev {
+	&::after {
+    content: '';
+  }
+}
+
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+  &::after {
+    content: '';
+  }
+}
+
+@include media-breakpoint-up( xxl ) {
+  .swiper-container-horizontal {
+    > .swiper-pagination-bullets {
+      bottom: px-to-rem( 60px );
+    }
+  }
+}
+
+// Layouts
+@import "swiper-1";

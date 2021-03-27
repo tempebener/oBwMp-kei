@@ -1,0 +1,41 @@
+include ../post/_post
+
+// Post event
+section.section-md.bg-transparent.text-center
+	.container
+		.text-block.text-block-1( data-animate!={ class: 'fadeIn' } )
+			h5.text-primary Don’t miss anything
+			h2 Upcoming Events
+			p.big Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.
+
+		.row.row-30.justify-content-center
+			.col-xs-8.col-sm-6.col-md-4
+				+post-event({
+					day: '19',
+					month: 'Sep',
+					img: 'image-06-370x240',
+					title: 'Creative Day',
+					price: '$20',
+					time: '12:00 am - 2:00 pm',
+					location: 'Cambridge, MA 02138, USA'
+				})( data-animate!={ class: 'fadeInUp' } )
+			.col-xs-8.col-sm-6.col-md-4
+				+post-event({
+					day: '21',
+					month: 'Sep',
+					img: 'image-07-370x240',
+					title: 'Poetry Event',
+					price: '$15',
+					time: '11:00 am - 1:00 pm',
+					location: '233 Main St. New York United States'
+				})( data-animate!={ class: 'fadeInUp', delay: '.15s' } )
+			.col-xs-8.col-sm-6.col-md-4
+				+post-event({
+					day: '26',
+					month: 'Sep',
+					img: 'image-08-370x240',
+					title: 'Undergraduate Day',
+					price: 'Free',
+					time: '1:00 pm - 11:59 pm',
+					location: 'Cambridge, MA 02138, USA'
+				})( data-animate!={ class: 'fadeInUp', delay: '.3s' } )

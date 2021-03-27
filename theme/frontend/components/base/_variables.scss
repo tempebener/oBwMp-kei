@@ -1,0 +1,199 @@
+// Variables
+
+// Colors
+$white:    #fff;
+$gray-100: #fafafa;
+$gray-200: #f7f7f7;
+$gray-300: #e9eff4;
+$gray-400: #555555;
+$gray-600: #595959;
+$gray-700: #42495b;
+$gray-800: #23232f;
+$gray-900: #171724;
+$black:    #000;
+
+$primary:   #04d2c8;
+$secondary: #ff9900;
+$success:   #77ba21;
+$info:      #138ce4;
+$warning:   #f19711;
+$danger:    #e72660;
+$light:     $gray-200;
+$dark:      $gray-700;
+
+$context-dark-color: $white;
+
+// Social
+$facebook: #3e6db9;
+$twitter: #00b5eb;
+$google: #e43711;
+
+// Gradients
+$gradients: (
+	primary: linear-gradient( 180deg, $primary, rgba( $primary, 0 ) ),
+	primary-3-color: linear-gradient( 90deg, $primary 0%, lighten( $primary, 10% ) 51%, $primary 100% )
+);
+
+
+// Body
+$body-color: $gray-600;
+
+
+// Resize multiplier
+$xs-multiplier: .55;
+$lg-multiplier: .7;
+
+
+// Grid breakpoints
+$grid-breakpoints: (
+	xxs: 0,
+	xs: 480px,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1600px
+);
+
+
+// Grid containers
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 960px,
+	xl: 1200px
+);
+
+
+// Grid columns
+$grid-gutter-width: px-to-rem( 30px );
+
+
+// Components
+$border-width:     2px;
+$border-color:     rgba( $gray-600, .2 );
+
+
+$border-radius-sm: px-to-rem( 5px );
+$border-radius:    px-to-rem( 10px );
+$border-radius-lg: px-to-rem( 30px );
+
+$box-shadow:       5px 6px 18px rgba($gray-900, 0.12);
+
+
+// Fonts
+$font-family-base: 'Montserrat', sans-serif;
+$font-family-mono: 'IBM Plex Mono', monospace;
+$font-size-base: px-to-rem( 14px );
+$font-size-lg: px-to-rem( 16px );
+$font-size-sm: px-to-rem( 12px );
+$font-weight-base: 400;
+$line-height-base: 1.6;
+$line-height-lg: 1.65;
+$line-height-sm: 1.65;
+
+$h1-font-size: px-to-rem( 56px );
+$h2-font-size: px-to-rem( 48px );
+$h3-font-size: px-to-rem( 40px );
+$h4-font-size: px-to-rem( 24px );
+$h5-font-size: px-to-rem( 20px );
+$h6-font-size: px-to-rem( 18px );
+
+$h1-line-height: 1.1;
+$h2-line-height: 1.1;
+$h3-line-height: 1.1;
+$h4-line-height: 1.1;
+$h5-line-height: 1.1;
+$h6-line-height: 1.1;
+
+$headings-color: $gray-700;
+$headings-font-weight: 700;
+
+$lead-font-size: $font-size-base * 1.15; // ~24px
+$small-font-size: 81%;  // ~17px
+
+$mark-padding: .2em .2em;
+$mark-bg: $primary;
+
+$hr-border-color:             $border-color;
+$hr-border-width:             $border-width;
+$hr-margin-y: 0;
+
+
+// Buttons
+$btn-padding-y:        px-to-rem( 13px );
+$btn-padding-x:        px-to-rem( 30px );
+$btn-font-size:        $font-size-base;
+$btn-line-height:      1.47;
+
+$btn-padding-y-sm:     px-to-rem( 6px );
+$btn-padding-x-sm:     px-to-rem( 16px );
+$btn-font-size-sm:     $font-size-sm;
+$btn-line-height-sm:   1.47;
+
+$btn-padding-y-lg:     px-to-rem(16px);
+$btn-padding-x-lg:     px-to-rem( 40px );
+$btn-font-size-lg:     $font-size-sm;
+$btn-line-height-lg:   1.47;
+
+$btn-border-width:     $border-width;
+
+$btn-font-weight:      700;
+$btn-box-shadow:       $box-shadow;
+$btn-focus-box-shadow: none;
+
+$btn-border-radius:    $border-radius-lg;
+$btn-border-radius-sm: $border-radius-lg;
+$btn-border-radius-lg: $border-radius-lg;
+
+
+// Forms
+$label-margin-bottom: .5rem;
+$label-font-size: $font-size-sm;
+
+$input-padding-y: px-to-rem( 12px );
+$input-padding-x: px-to-rem( 20px );
+$input-font-size: $font-size-base;
+$input-line-height: $line-height-base;
+$input-font-weight: 500;
+$input-border-width: $border-width;
+
+$input-padding-y-lg: $input-padding-y * 1.1;
+$input-padding-x-lg: $input-padding-x * 1.1;
+$input-font-size-lg: $input-font-size * 1.1;
+$input-line-height-lg: $input-line-height;
+
+$input-padding-y-sm: $input-padding-y * 0.9;
+$input-padding-x-sm: $input-padding-x * 0.9;
+$input-font-size-sm: $input-font-size * 0.9;
+$input-line-height-sm: $input-line-height * 0.9;
+
+$input-color: $body-color;
+$input-placeholder-color: #c4c4c4;
+$input-bg: transparent;
+$input-disabled-bg: rgba( $gray-100, .8 );
+$input-border-color: $border-color;
+
+$input-border-radius: $border-radius-lg;
+
+$input-focus-bg: $white;
+$input-focus-color: $gray-900;
+$input-focus-border-color: $input-border-color;
+$input-focus-box-shadow: 0 0 0 1px $input-focus-border-color;
+
+$input-height-border: $input-border-width * 2;
+$input-height: #{$input-font-size * $input-line-height + $input-padding-y * 2 + px-to-rem($input-height-border)};
+$input-height-lg: #{$input-font-size-lg * $input-line-height-lg + $input-padding-y-lg * 2 + px-to-rem($input-height-border)};
+$input-height-sm: #{$input-font-size-sm * $input-line-height-sm + $input-padding-y-sm * 2 + px-to-rem($input-height-border)};
+
+$form-grid-gutter-width: 30px;
+
+
+// Z-index master list
+$zindex-dropdown:       10;
+$zindex-sticky:         11;
+$zindex-popover:        12;
+$zindex-tooltip:        13;
+$zindex-fixed:          14;
+$zindex-modal-backdrop: 15;
+$zindex-modal:          16;

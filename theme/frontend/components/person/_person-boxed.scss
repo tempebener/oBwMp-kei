@@ -1,0 +1,70 @@
+// Base
+.person-boxed {
+	max-width: 270px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: $border-radius;
+	overflow: hidden;
+	font-weight: 600;
+	color: $white;
+	background-color: $primary;
+
+	.person-img {
+		width: 100%;
+	}
+
+	.person-body {
+		padding: px-to-rem( 25px, 15px );
+	}
+
+	.person-title {
+		color: inherit;
+
+		a:hover {
+			color: $dark;
+		}
+	}
+
+	.social-icon {
+		color: inherit;
+
+		&:hover {
+			color: $dark;
+		}
+	}
+}
+
+
+
+// Spacing
+.person-boxed {
+	* + .person-title { margin-top: px-to-rem( 16px * $xs-multiplier ) }
+	* + .person-text { margin-top: px-to-rem( 6px * $xs-multiplier ) }
+	* + .person-social { margin-top: px-to-rem( 8px * $xs-multiplier ) }
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.person-boxed {
+		.person-body {
+			padding: px-to-rem( 21px * $lg-multiplier, 15px * $lg-multiplier, 18px * $lg-multiplier );
+		}
+
+		* + .person-title { margin-top: px-to-rem( 16px * $lg-multiplier ) }
+		* + .person-text { margin-top: px-to-rem( 6px * $lg-multiplier ) }
+		* + .person-social { margin-top: px-to-rem( 8px * $lg-multiplier ) }
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.person-boxed {
+		.person-body {
+			padding: px-to-rem( 21px, 15px, 18px );
+		}
+
+		* + .person-title { margin-top: px-to-rem( 16px ) }
+		* + .person-text { margin-top: px-to-rem( 6px ) }
+		* + .person-social { margin-top: px-to-rem( 8px ) }
+	}
+}

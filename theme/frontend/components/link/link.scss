@@ -1,0 +1,23 @@
+/**
+ * Link
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+
+
+// Base
+.link {
+	position: relative;
+	display: inline-block;
+}
+
+.link-inherit {
+	color: inherit;
+
+	&:hover {
+		color: $primary;
+	}
+}

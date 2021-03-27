@@ -1,0 +1,23 @@
+//- Box
+	@param {object} data - data object
+	@param {string} data.iconClass - class for icon
+	@param {string} data.title - box title
+	@param {string} [data.text] - box text
+mixin box-1( data )
+	// Box
+	article.box.box-1&attributes( attributes )
+		h5.box-title= data.title
+		p.box-text= data.text
+		a.box-btn.btn( href='#' ) Learn more
+
+//- Box 2
+	@param {object} data - data object
+	@param {string} data.iconClass - class for icon
+	@param {string} data.title - box title
+	@param {string} [data.text] - box text
+mixin box-2( data )
+	// Box
+	article.box.box-2&attributes( attributes )
+		.box-inner
+			h5.box-title= data.title
+			p.box-text= data.text

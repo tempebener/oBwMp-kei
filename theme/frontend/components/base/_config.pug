@@ -1,0 +1,73 @@
+-
+	var
+		logo = {
+			inverse: 'logo-inverse-396x100.png',
+			name: 'Teachzy'
+		},
+
+		buyLink = '#',
+
+		menu = {
+			type: 'root',
+			child: [
+				{
+					title: 'Home',
+					link: 'index.html',
+					home: true
+				},
+
+				{
+					title: 'Academics'
+				},
+
+				{
+					title: 'History'
+				},
+
+				{
+					title: 'Tutors',
+					child: {
+						type: 'dropdown',
+						child: [
+							{ title: 'Team member' }
+						]
+					}
+				},
+
+				{
+					title: 'Blog',
+					child: {
+						type: 'dropdown',
+						child: [
+							{ title: 'Single post' }
+						]
+					}
+				},
+
+				{
+					title: 'Pages',
+					link: '#',
+					child: {
+						type: 'dropdown',
+						child: [
+							{ title: 'Gallery' },
+							{ title: '404' },
+							{ title: 'Coming soon' },
+							{ title: 'Privacy policy' },
+							{ title: 'Search results' }
+						]
+					}
+				},
+
+				{
+					title: 'Contact us'
+				}
+			]
+		},
+
+		homePage,
+		pageName,
+		pageId,
+		pageClass,
+		htmlClass,
+		breadcrumbs = [];

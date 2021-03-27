@@ -1,0 +1,15 @@
+//- Price box
+	@param {object} data - data object
+	@param {string} data.img - price-box image
+	@param {string} data.title - price-box name
+	@param {string} data.meta - price-box meta
+	@param {string} data.text - price-box text
+mixin price-box( data )
+	// Price box
+	.price-box&attributes( attributes )
+		.price-box-media
+			+img( data.img ).price-box-img
+			.price-box-tag= data.price
+		.price-box-body
+			.price-box-title.h6: a( href='#' )= data.title
+			.price-box-text= data.text

@@ -1,0 +1,39 @@
+include ../counter/_counter
+include ../blurb/_blurb
+
+// Counters
+section.section-lg.bg-primary.bg-image-wrap.context-dark.text-center.text-md-left
+	.bg-image-wrap-item.bg-image( style='background-image:url(images/image-05-875x705.jpg);' )
+	.container
+		.row
+			.col-lg-7
+				.pr-xxl-5
+					h2 Why Choose Us
+					p.big Teachzy offers quality education helping you build your future career. Here just some of the facts that show why students choose us.
+					.row.row-30.row-lg-55
+						.col-6.col-sm-3.col-md-6
+							+blurb-3({
+								iconClass: 'custom-font-graduated',
+								value: '97',
+								valuePostfix: '%',
+								title: 'Graduates'
+							})
+						.col-6.col-sm-3.col-md-6
+							+blurb-3({
+								iconClass: 'custom-font-male-teacher',
+								value: '50',
+								valuePostfix: '+',
+								title: 'Certified tutors'
+							})
+						.col-6.col-sm-3.col-md-6
+							+blurb-3({
+								iconClass: 'custom-font-student-at-desk',
+								value: '6500',
+								title: 'Students'
+							})
+						.col-6.col-sm-3.col-md-6
+							+blurb-3({
+								iconClass: 'custom-font-university',
+								value: '10',
+								title: 'Campuses'
+							})

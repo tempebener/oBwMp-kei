@@ -1,0 +1,57 @@
+// Base
+.widget-form {
+	padding: px-to-rem( 44px * $xs-multiplier, 35px * $xs-multiplier, 60px * $xs-multiplier );
+	text-align: center;
+	border-radius: $border-radius;
+
+	.form-control {
+		height: auto;
+		padding: 0 0 px-to-rem( 7px );
+		font-size: $font-size-sm;
+		line-height: $line-height-sm;
+		border: 0;
+		border-bottom: $input-border-width solid;
+		border-radius: 0;
+
+		&:focus {
+			background-color: transparent;
+			outline: none;
+			box-shadow: none;
+		}
+	}
+
+	.form-validation {
+		top: 100%;
+		right: 0;
+		color: $white;
+	}
+
+	* + .widget-form-subtitle { margin-top: px-to-rem( 12px * $lg-multiplier ) }
+	* + .form-group { margin-top: px-to-rem( 21px * $lg-multiplier ) }
+	.form-group + .form-group { margin-top: px-to-rem( 40px * $lg-multiplier ) }
+	* + .btn { margin-top: px-to-rem( 33px * $lg-multiplier ) }
+}
+
+
+// Media
+@include media-breakpoint-up( lg ) {
+	.widget-form {
+		padding: px-to-rem( 44px * $lg-multiplier, 35px * $lg-multiplier, 60px * $lg-multiplier );
+
+		* + .widget-form-subtitle { margin-top: px-to-rem( 12px * $lg-multiplier ) }
+		* + .form-group { margin-top: px-to-rem( 21px * $lg-multiplier ) }
+		.form-group + .form-group { margin-top: px-to-rem( 40px * $lg-multiplier ) }
+		* + .btn { margin-top: px-to-rem( 33px * $lg-multiplier ) }
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.widget-form {
+		padding: px-to-rem( 44px, 35px, 60px );
+
+		* + .widget-form-subtitle { margin-top: px-to-rem( 12px ) }
+		* + .form-group { margin-top: px-to-rem( 21px ) }
+		.form-group + .form-group { margin-top: px-to-rem( 40px ) }
+		* + .btn { margin-top: px-to-rem( 33px ) }
+	}
+}

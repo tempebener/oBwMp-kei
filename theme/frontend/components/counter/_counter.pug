@@ -1,0 +1,27 @@
+//- Counter simple
+	@param {object} data - counter data object
+	@param {number} data.value - counter value
+	@param {string} [data.postfix] - counter value unit
+	@param {string} data.title - counter title
+mixin counter-simple( data )
+	// Counter
+	.counter.counter-simple&attributes( attributes )
+		.counter-value.h2
+			span( data-counter='' )= data.value
+			if ( data.postfix )
+				span.counter-postfix= data.postfix
+		.counter-title!= data.title
+
+//- Counter boxed
+	@param {object} data - counter data object
+	@param {number} data.value - counter value
+	@param {string} [data.postfix] - counter value unit
+	@param {string} data.title - counter title
+mixin counter-boxed( data )
+	// Counter
+	.counter.counter-boxed&attributes( attributes )
+		.counter-value.h2
+			span( data-counter='' )= data.value
+			if ( data.postfix )
+				span.counter-postfix= data.postfix
+		.counter-title!= data.title

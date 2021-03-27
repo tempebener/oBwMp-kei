@@ -1,0 +1,49 @@
+/**
+ * Footer
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../base/mixins";
+@import "../bootstrap/scss/mixins";
+
+
+// Base
+.footer-top {
+	padding: px-to-rem( 112px * $xs-multiplier, 0 );
+}
+
+.footer-bottom {
+	padding: px-to-rem( 25px, 0 );
+	font-weight: 500;
+}
+
+.footer-title {
+	color: $primary;
+}
+
+.footer-title + * { margin-top: px-to-rem( 30px ) }
+
+
+// Media
+@include media-breakpoint-up(lg) {
+	.footer-top {
+		padding: px-to-rem( 112px * $lg-multiplier, 0 );
+	}
+}
+
+@include media-breakpoint-up(xl) {
+	.footer-top {
+		padding: px-to-rem( 112px, 0 );
+	}
+
+	.footer-bottom {
+		padding: px-to-rem( 30px, 0 );
+	}
+
+	.footer {
+		.footer-title + * { margin-top: px-to-rem( 16px ) }
+	}
+}

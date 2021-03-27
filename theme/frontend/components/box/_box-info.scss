@@ -1,0 +1,58 @@
+// Base
+.box-info {
+	padding: px-to-rem( 30px, 15px );
+	font-size: $font-size-lg;
+	line-height: $line-height-lg;
+	border-radius: $border-radius;
+	background-color: $gray-300;
+
+	.box-title {
+		color: $primary;
+	}
+
+	.box-list-term {
+		font-weight: 700;
+		color: $dark;
+	}
+
+	* + .box-list { margin-top: px-to-rem( 27px * $xs-multiplier ) }
+	* + .box-list-item { margin-top: px-to-rem( 23px * $xs-multiplier ) }
+}
+
+
+// Media
+@include media-breakpoint-up( sm ) {
+	.box-info {
+		.box-list-item {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		.box-list-term {
+			min-width: 120px;
+			margin-right: 15px;
+		}
+
+		.box-list-desc {
+			text-align: right;
+		}
+	}
+}
+
+@include media-breakpoint-up( lg ) {
+	.box-info {
+		padding: px-to-rem( 40px * $lg-multiplier, 30px * $lg-multiplier, 64px * $lg-multiplier );
+
+		* + .box-list { margin-top: px-to-rem( 27px * $lg-multiplier ) }
+		* + .box-list-item { margin-top: px-to-rem( 23px * $lg-multiplier ) }
+	}
+}
+
+@include media-breakpoint-up( xxl ) {
+	.box-info {
+		padding: px-to-rem( 40px, 30px, 64px );
+
+		* + .box-list { margin-top: px-to-rem( 27px ) }
+		* + .box-list-item { margin-top: px-to-rem( 23px ) }
+	}
+}

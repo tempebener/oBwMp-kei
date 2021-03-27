@@ -1,0 +1,38 @@
+nav.rd-navbar( data-rd-navbar!={
+	responsive: {
+		1200: {
+			stickUpOffset: '50px'
+		}
+	}
+} )&attributes( attributes )
+	.navbar-container
+		.navbar-cell
+			.navbar-panel
+				button.navbar-switch.novi-icon.custom-font-menu( data-multi-switch!= {
+					targets: '.rd-navbar',
+					scope:   '.rd-navbar',
+					isolate: '[data-multi-switch]'
+				})
+
+				.navbar-logo
+					a.navbar-logo-link( href= homePage.link )
+						+img( logo.inverse, { retina: true } ).navbar-logo-inverse( alt= logo.name )
+
+		.navbar-spacer
+
+		.navbar-cell.navbar-sidebar
+			+navigation( menu )
+
+		.navbar-spacer
+
+		.navbar-cell
+			.navbar-subpanel
+				.navbar-subpanel-item
+					include _search
+
+					button.navbar-button.search-switch.custom-font-search( data-multi-switch!= {
+						targets: '.rd-navbar',
+						scope:   '.rd-navbar',
+						class:   'navbar-search-active',
+						isolate: '[data-multi-switch]:not(.search-switch)'
+					})

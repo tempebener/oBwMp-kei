@@ -1,0 +1,29 @@
+include ../blurb/_blurb
+
+// Blurb accent
+section.section-md.bg-transparent.text-center
+	.container
+		.text-block.text-block-1
+			h5.text-primary About us
+			h2 Welcome to Teachzy
+			p.big Massa, et porttitor cras sed ultrices ullamcorper mauris semper iaculis. Ornare suscipit purus nulla pharetra velit, leo in. Amet nulla nunc vitae viverra pellentesque in eget. Mi ut sit ultrices sed.
+
+		.row.row-30.justify-content-center
+			.col-sm-6.col-md-4
+				+blurb({
+					iconClass: 'blurb-icon-primary custom-font-wisdom',
+					title:     'Online Education',
+					text:      'Teachzy provides online education services with all learning materials and lectures available to you.'
+				}).blurb-2
+			.col-sm-6.col-md-4
+				+blurb({
+					iconClass: 'blurb-icon-primary custom-font-share-ideas',
+					title:     'Programs & Courses',
+					text:      'We offer a wide range of courses and  programs that encompass lots of knowledge spheres.'
+				}).blurb-2
+			.col-sm-6.col-md-4
+				+blurb({
+					iconClass: 'blurb-icon-primary custom-font-geography-book',
+					title:     'Campus Events',
+					text:      'Our campus is the hub to a talented and diverse student community that turns opportunities into success.'
+				}).blurb-2

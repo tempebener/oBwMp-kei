@@ -1,0 +1,12 @@
+.widget
+	.widget-body
+		form.widget-form.bg-primary.context-dark
+			.widget-form-title.h3 Free courses
+			.widget-form-subtitle.h5 It’s time to learn
+			.form-group
+				input.form-control( type='text', placeholder='Your name', data-constraints='@Required' )
+			.form-group
+				input.form-control( type='email', placeholder='Your a-mail address', data-constraints='@Email @Required' )
+			.form-group
+				input.form-control( type='text', placeholder='Your phone number', data-constraints='@Numeric @Required' )
+			button.btn.btn-primary.btn-block Get Your Course Now

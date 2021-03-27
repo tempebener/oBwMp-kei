@@ -1,0 +1,40 @@
+/**
+ * Widget
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Spacing
+.widget-title {
+	color: $primary;
+}
+
+.widget-list {
+	font-weight: 500;
+}
+
+* + .widget-body { margin-top: px-to-rem( 20px * $xs-multiplier ); }
+* + .widget-list-item { margin-top: px-to-rem( 9px * $xs-multiplier ); }
+.widget + .widget { margin-top: px-to-rem( 40px * $xs-multiplier ); }
+
+// Media
+@include media-breakpoint-up( lg ) {
+	* + .widget-body { margin-top: px-to-rem( 20px * $lg-multiplier ); }
+	* + .widget-list-item { margin-top: px-to-rem( 9px * $lg-multiplier ); }
+	.widget + .widget { margin-top: px-to-rem( 40px * $lg-multiplier ); }
+}
+
+@include media-breakpoint-up( xxl ) {
+	* + .widget-body { margin-top: px-to-rem( 20px ); }
+	* + .widget-list-item { margin-top: px-to-rem( 9px ); }
+	.widget + .widget { margin-top: px-to-rem( 40px ); }
+}
+
+
+// Layouts
+@import "widget-form";

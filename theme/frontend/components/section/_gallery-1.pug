@@ -1,0 +1,39 @@
+include ../thumbnail/_thumbnail
+
+// Gallery
+section.section-md.context-dark.bg-layer.text-center
+	.bg-layer-item.bg-primary( style='bottom: 62%' )
+	.container
+		h2 Our gallery
+
+		.row.no-gutters.justify-content-center( data-lightgallery )
+			.col-6.col-xs-5.col-md-4
+				+thumbnail-gallery({
+					img: 'image-03-390x390',
+					imgOriginal: 'image-03-1200x800'
+				})
+			.col-6.col-xs-5.col-md-4
+				+thumbnail-gallery({
+					img: 'image-18-390x390',
+					imgOriginal: 'image-18-1200x800'
+				})
+			.col-6.col-xs-5.col-md-4
+				+thumbnail-gallery({
+					img: 'image-09-390x390',
+					imgOriginal: 'image-09-1200x800'
+				})
+			.col-6.col-xs-5.col-md-4
+				+thumbnail-gallery({
+					img: 'image-19-390x390',
+					imgOriginal: 'image-19-1200x800'
+				})
+			.col-6.col-xs-5.col-md-4
+				+thumbnail-gallery({
+					img: 'image-20-390x390',
+					imgOriginal: 'image-20-1200x800'
+				})
+			.col-6.col-xs-5.col-md-4
+				+thumbnail-gallery({
+					img: 'image-09-390x390',
+					imgOriginal: 'image-09-1200x800'
+				})

@@ -1,0 +1,23 @@
+/**
+ * Text block
+ */
+
+@import "../bootstrap/scss/functions";
+@import "../base/functions";
+@import "../base/variables";
+@import "../bootstrap/scss/variables";
+@import "../bootstrap/scss/mixins";
+@import "../base/mixins";
+
+// Mixins
+@mixin text-block-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+// Modifying
+.text-block-1 {
+	max-width: 830px;
+	@include text-block-center;
+}

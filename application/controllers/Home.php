@@ -8,6 +8,7 @@ class Home extends CI_Controller{
 		$this->load->model('m_agenda');
 		$this->load->model('m_files');
 		$this->load->model('m_pengunjung');
+		$this->load->model('M_main');
 		$this->m_pengunjung->count_visitor();
 	}
 	function index(){
@@ -18,7 +19,9 @@ class Home extends CI_Controller{
 			// $x['tot_siswa']=$this->db->get('tbl_siswa')->num_rows();
 			// $x['tot_files']=$this->db->get('tbl_files')->num_rows();
 			// $x['tot_agenda']=$this->db->get('tbl_agenda')->num_rows();
-			$this->load->view('frontend/index');
+		$page1 = '1';
+			$data['post_slider'] 						= $this->M_main->get_all_slider($page1);
+			$this->load->view('frontend/index',$data);
 	}
 
 }

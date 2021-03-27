@@ -33,7 +33,7 @@
 
       <!-- Counters-->
       <section class="section-lg bg-primary bg-image-wrap context-dark text-center text-md-left">
-        <div class="bg-image-wrap-item bg-image" style="background-image:url(images/image-05-875x705.jpg);"></div>
+        <div class="bg-image-wrap-item bg-image" style="background-image:url(<?php echo base_url();?>theme/frontend/images/image-05-875x705.jpg);"></div>
         <div class="container">
           <div class="row">
             <div class="col-lg-7">

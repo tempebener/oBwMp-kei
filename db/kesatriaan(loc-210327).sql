@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2021 at 12:13 PM
+-- Generation Time: Mar 27, 2021 at 01:40 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -390,11 +390,11 @@ CREATE TABLE `tbl_pelatihan` (
 
 INSERT INTO `tbl_pelatihan` (`id_pelatihan`, `judul_pelatihan`, `deskripsi_singkat`, `deskirpsi_full`, `foto`) VALUES
 (1, 'UMKM PRODUK PERTANIAN', 'Jacob coord', 'Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.', 'beras.jpg'),
-(2, 'UMKM PRODUK OLAHAN DAGING', 'Jacob coord', 'Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.', 'produk-olahan.jpg'),
+(2, 'UMKM PRODUK OLAHAN DAGING', 'Jacob coord', 'Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.', 'produk_olahan.jpg'),
 (3, 'BUDIDAYA PADI & JAGUNG', 'Jacob coord', 'Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.', 'jagung.png'),
 (4, 'PENGGEMUKAN SAPI', 'Jacob coord', 'Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.', 'sapi.jpg'),
-(5, 'BUDIDAYA AYAM BROILER', 'Jacob coord', 'Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.', 'ayam-broiler.jpg'),
-(6, 'BUDIDAYA AYAM LAYER', 'Jacob coord', 'Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.', 'ayam-layer.jpg');
+(5, 'BUDIDAYA AYAM BROILER', 'Jacob coord', 'Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.', 'ayam_broiler.jpg'),
+(6, 'BUDIDAYA AYAM LAYER', 'Jacob coord', 'Every week, we organize a variety of events for our students and undergraduates. From webinars to creative events, there are activities that are always worth your attention.', 'ayam_layer.jpg');
 
 -- --------------------------------------------------------
 
@@ -427,7 +427,7 @@ CREATE TABLE `tbl_pengguna` (
 --
 
 INSERT INTO `tbl_pengguna` (`pengguna_id`, `pengguna_nama`, `pengguna_moto`, `pengguna_jenkel`, `pengguna_username`, `pengguna_password`, `pengguna_tentang`, `pengguna_email`, `pengguna_nohp`, `pengguna_facebook`, `pengguna_twitter`, `pengguna_linkdin`, `pengguna_google_plus`, `pengguna_status`, `pengguna_level`, `pengguna_register`, `pengguna_photo`) VALUES
-(1, 'M Fikri Setiadi', 'Just do it', 'L', 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'I am a mountainner. to me mountainerring is a life', 'fikrifiver97@gmail.com', '081277159401', 'facebook.com/m_fikri_setiadi', 'twitter.com/fiver_fiver', '', '', 1, '1', '2016-09-03 06:07:55', 'db5dec647062751f2fb236b9bc3f1c54.png');
+(1, 'admin', 'Just do it', 'L', 'admin', 'e10adc3949ba59abbe56e057f20f883e', 'I am a mountainner. to me mountainerring is a life', 'fikrifiver97@gmail.com', '081277159401', 'facebook.com/m_fikri_setiadi', 'twitter.com/fiver_fiver', '', '', 1, '1', '2016-09-03 06:07:55', 'db5dec647062751f2fb236b9bc3f1c54.png');
 
 -- --------------------------------------------------------
 
@@ -474,7 +474,8 @@ INSERT INTO `tbl_pengunjung` (`pengunjung_id`, `pengunjung_tanggal`, `pengunjung
 (930, '2018-08-09 08:04:59', '::1', 'Chrome'),
 (931, '2021-03-25 04:10:02', '127.0.0.1', 'Firefox'),
 (932, '2021-03-26 03:45:05', '127.0.0.1', 'Firefox'),
-(933, '2021-03-27 03:44:10', '127.0.0.1', 'Firefox');
+(933, '2021-03-27 03:44:10', '127.0.0.1', 'Firefox'),
+(934, '2021-03-27 12:04:33', '::1', 'Opera');
 
 -- --------------------------------------------------------
 
@@ -610,7 +611,7 @@ INSERT INTO `tbl_tulisan` (`tulisan_id`, `tulisan_judul`, `tulisan_isi`, `tulisa
 CREATE TABLE `tbl_tutor` (
   `id_tutor` int(11) NOT NULL,
   `nama` text NOT NULL,
-  `jabatan` varchar(50) NOT NULL,
+  `jabatan` varchar(100) NOT NULL,
   `quotes` text NOT NULL,
   `foto` varchar(200) NOT NULL,
   `link` varchar(50) NOT NULL,
@@ -622,12 +623,18 @@ CREATE TABLE `tbl_tutor` (
 --
 
 INSERT INTO `tbl_tutor` (`id_tutor`, `nama`, `jabatan`, `quotes`, `foto`, `link`, `id_tutor_s`) VALUES
-(1, 'Leslie Alexander', 'Tutor', 'Tetap Semangat, Jangan Menyerah!', '1.jpg', '#', 1),
-(2, 'Cameron Williamson', 'Course assistant', 'Tetap Semangat, Jangan Menyerah!', '2.jpg', '#', 1),
-(3, 'Theresa Webb', 'Lead tutor', 'Tetap Semangat, Jangan Menyerah!', '3.jpg', '#', 1),
-(4, 'Jacob Jones', 'Program coordinator', 'Tetap Semangat, Jangan Menyerah!', '4.jpg', '#', 1),
-(5, 'Brooklyn Simmons', 'Professor', 'Tetap Semangat, Jangan Menyerah!', '5.jpg', '#', 1),
-(6, 'Wade Warren', 'Tutor', 'Tetap Semangat, Jangan Menyerah!', '6.jpg', '#', 1);
+(1, 'Tumiyana', 'Founder dan Komisaris Utama PT. Widodo Makmur Perkasa', 'Tetap Semangat, Jangan Menyerah!', 'tumiyana.jpg', '#', 1),
+(2, 'Giyono', 'Direktur Business Development PT. Widodo Makmur Perkasa', 'Tetap Semangat, Jangan Menyerah!', '6.jpg', '#', 1),
+(3, 'Nur Iswan', 'CEO PT. Widodofood Makmur Sejahtera', 'Tetap Semangat, Jangan Menyerah!', 'nur.jpg', '#', 1),
+(4, 'Jaka Widada', 'Ketua Program Studi Mikrobiologi Pertanian UGM', 'Tetap Semangat, Jangan Menyerah!', '4.jpg', '#', 1),
+(5, 'Mochammad Puji Tri', 'Depot Tani Sehat Wonosobo', 'Tetap Semangat, Jangan Menyerah!', '5.jpg', '#', 1),
+(6, 'Adhika Mahardika', 'Agrajaya', 'Tetap Semangat, Jangan Menyerah!', '1.jpg', '#', 1),
+(7, 'Anam Masrur', 'Permaculture Specialist Lumbung Nuswantoro', 'Tetap Semangat, Jangan Menyerah!', '2.jpg', '#', 1),
+(8, 'Arief Budiman', 'Agriculture Entrepreneur Clinics', 'Tetap Semangat, Jangan Menyerah!', '3.jpg', '#', 1),
+(9, 'Sapto Tjiptanto', 'Rumah Organic Jogja', 'Tetap Semangat, Jangan Menyerah!', '9.jpg', '#', 1),
+(10, 'Shofyan Adi Cahyono', 'Sayur Organik Merbabu', 'Tetap Semangat, Jangan Menyerah!', '10.jpg', '#', 1),
+(11, 'Wardiono', 'Sanggar Anak Tani Trucuk Klaten', 'Tetap Semangat, Jangan Menyerah!', '11.jpg', '#', 1),
+(12, 'Wednes Ari Yudha', 'Owner Coklat Dhalem', 'Tetap Semangat, Jangan Menyerah!', '12.jpg', '#', 1);
 
 --
 -- Indexes for dumped tables
@@ -870,7 +877,7 @@ ALTER TABLE `tbl_pengumuman`
 -- AUTO_INCREMENT for table `tbl_pengunjung`
 --
 ALTER TABLE `tbl_pengunjung`
-  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=934;
+  MODIFY `pengunjung_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=935;
 
 --
 -- AUTO_INCREMENT for table `tbl_siswa`
@@ -906,7 +913,7 @@ ALTER TABLE `tbl_tulisan`
 -- AUTO_INCREMENT for table `tbl_tutor`
 --
 ALTER TABLE `tbl_tutor`
-  MODIFY `id_tutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_tutor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

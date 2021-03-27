@@ -24,7 +24,7 @@ class M_main extends CI_Model
 
 	function get_all_bod($status)
 	{
-	    $this->db->limit(6);
+	    // $this->db->limit(6);
 	    $this->db->where('tbl_bod.id_status',$status);
 	    $this->db->order_by('id_bod','asc' );
 	    $this->db->join('tbl_slider_s', 'tbl_slider_s.id_slider_s = tbl_bod.id_status','inner');

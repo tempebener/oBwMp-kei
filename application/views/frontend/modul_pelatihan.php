@@ -18,7 +18,7 @@
                       <!-- <div class="price-box-tag"></div> -->
                     </div>
                     <div class="price-box-body">
-                      <div class="price-box-title h6"><a href="#"><?php echo $post_new->judul_pelatihan ?></a></div>
+                      <div class="price-box-title h6"><a href="#" class="margin-auto"><?php echo $post_new->judul_pelatihan ?></a></div>
                      <!--  <div class="price-box-text"></div>
  -->                    </div>
                   </div>

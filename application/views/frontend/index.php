@@ -207,6 +207,11 @@
                         </div>
                       </div>
                     </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     <!-- ekonomi outlook start-->
     <?php $this->load->view('frontend/ekonomi_outlook')?>
     <!-- ekonomi outlook end-->
@@ -262,7 +267,7 @@
                         <div class="quote-meta">Professor</div>
                       </blockquote>
               </div>
-              
+
             </div>
           </div>
         </div>

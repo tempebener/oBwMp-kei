@@ -46,9 +46,9 @@ CREATE TABLE `tbl_slider` (
 --
 
 INSERT INTO `tbl_slider` (`id_slider`, `jdl_1`, `jdl_2`, `slider_tanggal`, `foto`, `link`, `id_slider_s`, `slider_pengguna_id`, `slider_author`, `status`) VALUES
-(10, 'Joglo', 'Deskripsi', '2021-03-27 07:16:30', 'f9fafeed19a1574b495335d4c8429295.jpg', '#', 1, 1, 'M Fikri Setiadi', 0),
+(10, 'Joglo', 'Deskripsi', '2021-03-27 07:16:30', 'f9fafeed19a1574b495335d4c8429295.jpg', '#', 1, 1, 'KEI', 0),
 (12, 'Joglo', 'Deskirpsi', '2021-03-27 07:16:30', 'joglos.jpg', '#', 1, NULL, NULL, 0),
-(13, 'dfs', '', '2021-03-27 08:53:28', '602872c59a4b8b33123031f0e16f61a9.jpg', '', 0, 1, 'M Fikri Setiadi', 1);
+(13, 'dfs', '', '2021-03-27 08:53:28', '602872c59a4b8b33123031f0e16f61a9.jpg', '', 0, 1, 'KEI', 1);
 
 --
 -- Indexes for dumped tables

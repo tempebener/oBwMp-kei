@@ -19,11 +19,12 @@ class Home extends CI_Controller{
 		// $x['tot_siswa']=$this->db->get('tbl_siswa')->num_rows();
 		// $x['tot_files']=$this->db->get('tbl_files')->num_rows();
 		// $x['tot_agenda']=$this->db->get('tbl_agenda')->num_rows();
-		$page1 = '1';
-		$data['post_slider'] = $this->M_main->get_all_slider($page1);
-		$data['post_tutors'] = $this->M_main->get_all_tutors($page1);
+		$status = '1';
+		$data['post_slider'] = $this->M_main->get_all_slider($status);
+		$data['post_tutors'] = $this->M_main->get_all_tutors($status);
 		$data['pelatihan'] = $this->db->query("select * from tbl_pelatihan  ORDER BY  id_pelatihan desc 
 			")->result();
+		$data['post_bod'] = $this->M_main->get_all_bod($status);
 		$data['ekonomi_outlook'] = $this->db->query("select * from tbl_ekonomi_outlook  ORDER BY  id_eo desc 
 			")->result();
 		$this->load->view('frontend/index',$data);

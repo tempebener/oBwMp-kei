@@ -37,8 +37,8 @@ class Slider extends CI_Controller{
 	                        $config['create_thumb']= FALSE;
 	                        $config['maintain_ratio']= FALSE;
 	                        $config['quality']= '60%';
-	                        $config['width']= 500;
-	                        $config['height']= 400;
+	                        $config['width']= 5000;
+	                        $config['height']= 4000;
 	                        $config['new_image']= '.theme/images/foto_slider/'.$gbr['file_name'];
 	                        $this->load->library('image_lib', $config);
 	                        $this->image_lib->resize();

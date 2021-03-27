@@ -18,7 +18,7 @@
                       <div class="person-body">
                         <div class="person-title h6"><a href="<?php echo base_url();?>/<?= $t->link ?>"><?= $t->nama ?></a></div>
                         <div class="person-meta"><?= $t->jabatan ?></div>
-                        <div class="person-text"><?= $t->quotes ?></div>
+                        <!-- <div class="person-text"><?= $t->quotes ?></div> -->
                         <!-- <div class="person-social social"><a class="icon social-icon custom-font-facebook" href="#"></a><a class="icon social-icon custom-font-twitter" href="#"></a><a class="icon social-icon custom-font-linkedin" href="#"></a>
                         </div> -->
                       </div>

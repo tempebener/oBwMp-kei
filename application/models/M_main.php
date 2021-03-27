@@ -15,7 +15,7 @@ class M_main extends CI_Model
 
 	function get_all_tutors($status)
 	{
-	    $this->db->limit(6);
+	    $this->db->limit(12);
 	    $this->db->where('tbl_tutor.id_tutor_s',$status);
 	    $this->db->order_by('id_tutor','asc' );
 	    $this->db->join('tbl_slider_s', 'tbl_slider_s.id_slider_s = tbl_tutor.id_tutor_s','inner');

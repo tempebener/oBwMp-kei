@@ -24,9 +24,9 @@ class M_slider extends CI_Model{
 		$hsl=$this->db->query("update tbl_slider set jdl_1='$judul',slider_pengguna_id='$user_id',slider_author='$user_nama' where id_slider='$id_slider'");
 		return $hsl;
 	}
-	function hapus_slider($kode,$album){
+	function hapus_slider($kode){
 		$this->db->trans_start();
-            $this->db->query("update tbl_slider set status='0' where id_slider='$kode'");
+            $this->db->query("update tbl_slider set id_slider_s='0' where id_slider='$kode'");
             // $this->db->query("update tbl_album set album_count=album_count-1 where album_id='$album'");
         $this->db->trans_complete();
         if($this->db->trans_status()==true)

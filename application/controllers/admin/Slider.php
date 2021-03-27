@@ -131,7 +131,7 @@ class Slider extends CI_Controller{
 		$gambar=$this->input->post('gambar');
 		$path='./theme/images/foto_slider/'.$gambar;
 		unlink($path);
-		$this->m_slider->hapus_slider($kode,$album);
+		$this->m_slider->hapus_slider($kode);
 		echo $this->session->set_flashdata('msg','success-hapus');
 		redirect('admin/slider');
 	}

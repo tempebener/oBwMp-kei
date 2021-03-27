@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 27, 2021 at 11:58 AM
+-- Generation Time: Mar 27, 2021 at 12:13 PM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.2.34
 
@@ -129,8 +129,13 @@ CREATE TABLE `tbl_ekonomi_outlook` (
 --
 
 INSERT INTO `tbl_ekonomi_outlook` (`id_eo`, `judul_eo`, `deskripsi_eo`, `foto_eo`, `date_time`) VALUES
-(1, 'Poetry Event', 'Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.', 'image-07-370x240.jpg', '2021-03-27 00:00:00'),
-(2, 'Undergraduate Day', 'Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.', 'image-06-370x240.jpg', '2021-03-27 00:00:00');
+(1, 'Publikasi Tanaman Pangan Jagung', 'Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.', 'image-07-370x240.jpg', '2021-03-27 00:00:00'),
+(2, 'Ringkasan Eksekutif Komoditas Beras di Indonesia', 'Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.', 'image-06-370x240.jpg', '2021-03-27 00:00:00'),
+(3, 'Data Produksi Kulit Ternak Besar di Indonesia', 'Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.', 'image-07-370x240.jpg', '2021-03-27 00:00:00'),
+(4, 'Outlook Komoditas Telur Ayam Ras di Indonesia', 'Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.', 'image-06-370x240.jpg', '2021-03-27 00:00:00'),
+(5, 'Statistik Perdagangan Komoditas Daging Sapi dan Daging Kerbau', 'Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.', 'image-06-370x240.jpg', '2021-03-27 00:00:00'),
+(6, 'Keragaan Komoditas Ayam 2020', 'Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.', 'image-07-370x240.jpg', '2021-03-27 00:00:00'),
+(7, 'Statistik Peternakan Sapi di Indonesia', 'Want to know more about our university? The feedback submitted by our students is an effective way to show how beneficial the studying at Teachzy university can be.', 'image-06-370x240.jpg', '2021-03-27 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -516,7 +521,7 @@ CREATE TABLE `tbl_slider` (
   `slider_tanggal` timestamp NULL DEFAULT current_timestamp(),
   `foto` varchar(200) NOT NULL,
   `link` varchar(50) NOT NULL,
-  `id_slider_s` mediumint(20) NOT NULL,
+  `id_slider_s` mediumint(20) NOT NULL DEFAULT 1,
   `slider_pengguna_id` int(11) DEFAULT NULL,
   `slider_author` varchar(60) DEFAULT NULL,
   `status` int(11) NOT NULL DEFAULT 0
@@ -793,7 +798,7 @@ ALTER TABLE `tbl_bod`
 -- AUTO_INCREMENT for table `tbl_ekonomi_outlook`
 --
 ALTER TABLE `tbl_ekonomi_outlook`
-  MODIFY `id_eo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_eo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_files`

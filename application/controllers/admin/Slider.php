@@ -37,8 +37,8 @@ class Slider extends CI_Controller{
 	                        $config['create_thumb']= FALSE;
 	                        $config['maintain_ratio']= FALSE;
 	                        $config['quality']= '60%';
-	                        $config['width']= 5000;
-	                        $config['height']= 4000;
+	                        $config['width']= 1200;
+	                        $config['height']= 584;
 	                        $config['new_image']= '.theme/images/foto_slider/'.$gbr['file_name'];
 	                        $this->load->library('image_lib', $config);
 	                        $this->image_lib->resize();
@@ -82,8 +82,8 @@ class Slider extends CI_Controller{
 	                        $config['create_thumb']= FALSE;
 	                        $config['maintain_ratio']= FALSE;
 	                        $config['quality']= '60%';
-	                        $config['width']= 5000;
-	                        $config['height']= 4000;
+	                        $config['width']= 1200;
+	                        $config['height']= 584;
 	                        $config['new_image']= './theme/images/foto_slider/'.$gbr['file_name'];
 	                        $this->load->library('image_lib', $config);
 	                        $this->image_lib->resize();
@@ -131,7 +131,7 @@ class Slider extends CI_Controller{
 		$gambar=$this->input->post('gambar');
 		$path='./theme/images/foto_slider/'.$gambar;
 		unlink($path);
-		$this->m_slider->hapus_slider($kode,$album);
+		$this->m_slider->hapus_slider($kode);
 		echo $this->session->set_flashdata('msg','success-hapus');
 		redirect('admin/slider');
 	}

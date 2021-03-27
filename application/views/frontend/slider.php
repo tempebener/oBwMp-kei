@@ -8,8 +8,8 @@
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-md-9 col-lg-7">
-                  <h1>Inspiration, Innovation and Discovery</h1>
-                  <p class="big">Any successful career starts with good education. Together with us you will have deeper knowledge of the subjects that will be especially useful for you when climbing the career ladder.</p><a class="btn btn-primary" href="academics.html">Learn more</a>
+                  <h1><?php echo $u->jdl_1 ?></h1>
+                  <p class="big"><?php echo $u->jdl_2 ?></p><a class="btn btn-primary" href="<?php echo $u->jdl_1 ?>">selengkapnya</a>
                 </div>
               </div>
             </div>

@@ -56,103 +56,11 @@
       <!--modul pelatihan end-->
       
 
-     
-      <!-- Person side-->
-      <section class="section-md bg-transparent text-center">
-        <div class="container">
-          <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
-            <h5 class="text-primary">People Behind Our Success</h5>
-            <h2>Our Tutors</h2>
-            <p class="big">We employ highly experienced and qualified teachers who set the ground for all our programs and courses. They are aimed to help you achieve more on your path to success.</p>
-          </div>
-          <div class="row row-30 row-lg-60">
-            <div class="col-xs-6 col-lg-4">
-                    <!-- Person side-->
-                    <div class="person person-side" data-animate='{"class":"fadeInUp"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-01-135x135.jpg" alt="" width="135" height="135"/>
-                      </div>
-                      <div class="person-body">
-                        <div class="person-title h6"><a href="team-member.html">Leslie Alexander</a></div>
-                        <div class="person-meta">Tutor</div>
-                        <div class="person-text">Leslie joined our team in 2010 as a marketing tutor.</div>
-                        <div class="person-social social"><a class="icon social-icon custom-font-facebook" href="#"></a><a class="icon social-icon custom-font-twitter" href="#"></a><a class="icon social-icon custom-font-linkedin" href="#"></a>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-            <div class="col-xs-6 col-lg-4">
-                    <!-- Person side-->
-                    <div class="person person-side" data-animate='{"class":"fadeInUp","delay":".15s"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-02-135x135.jpg" alt="" width="135" height="135"/>
-                      </div>
-                      <div class="person-body">
-                        <div class="person-title h6"><a href="team-member.html">Cameron Williamson</a></div>
-                        <div class="person-meta">Course assistant</div>
-                        <div class="person-text">Cameron helps Teachzy team with online programs.</div>
-                        <div class="person-social social"><a class="icon social-icon custom-font-facebook" href="#"></a><a class="icon social-icon custom-font-twitter" href="#"></a><a class="icon social-icon custom-font-linkedin" href="#"></a>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-            <div class="col-xs-6 col-lg-4">
-                    <!-- Person side-->
-                    <div class="person person-side" data-animate='{"class":"fadeInUp","delay":".3s"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-03-135x135.jpg" alt="" width="135" height="135"/>
-                      </div>
-                      <div class="person-body">
-                        <div class="person-title h6"><a href="team-member.html">Theresa Webb</a></div>
-                        <div class="person-meta">Lead tutor</div>
-                        <div class="person-text">Theresa is one of our best foreign language tutors.</div>
-                        <div class="person-social social"><a class="icon social-icon custom-font-facebook" href="#"></a><a class="icon social-icon custom-font-twitter" href="#"></a><a class="icon social-icon custom-font-linkedin" href="#"></a>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-            <div class="col-xs-6 col-lg-4">
-                    <!-- Person side-->
-                    <div class="person person-side" data-animate='{"class":"fadeInUp"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-04-135x135.jpg" alt="" width="135" height="135"/>
-                      </div>
-                      <div class="person-body">
-                        <div class="person-title h6"><a href="team-member.html">Jacob Jones</a></div>
-                        <div class="person-meta">Program coordinator</div>
-                        <div class="person-text">Jacob coordinates most of our programs &amp; courses.</div>
-                        <div class="person-social social"><a class="icon social-icon custom-font-facebook" href="#"></a><a class="icon social-icon custom-font-twitter" href="#"></a><a class="icon social-icon custom-font-linkedin" href="#"></a>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-            <div class="col-xs-6 col-lg-4">
-                    <!-- Person side-->
-                    <div class="person person-side" data-animate='{"class":"fadeInUp","delay":".15s"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-05-135x135.jpg" alt="" width="135" height="135"/>
-                      </div>
-                      <div class="person-body">
-                        <div class="person-title h6"><a href="team-member.html">Brooklyn Simmons</a></div>
-                        <div class="person-meta">Professor</div>
-                        <div class="person-text">Brooklyn is our leading management tutor.</div>
-                        <div class="person-social social"><a class="icon social-icon custom-font-facebook" href="#"></a><a class="icon social-icon custom-font-twitter" href="#"></a><a class="icon social-icon custom-font-linkedin" href="#"></a>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-            <div class="col-xs-6 col-lg-4">
-                    <!-- Person side-->
-                    <div class="person person-side" data-animate='{"class":"fadeInUp","delay":".3s"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-06-135x135.jpg" alt="" width="135" height="135"/>
-                      </div>
-                      <div class="person-body">
-                        <div class="person-title h6"><a href="team-member.html">Wade Warren</a></div>
-                        <div class="person-meta">Tutor</div>
-                        <div class="person-text">Wade is an author of Web Tehcnology programs.</div>
-                        <div class="person-social social"><a class="icon social-icon custom-font-facebook" href="#"></a><a class="icon social-icon custom-font-twitter" href="#"></a><a class="icon social-icon custom-font-linkedin" href="#"></a>
-                        </div>
-                      </div>
-                    </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <!-- Our Tutors -->
+      <?php $this->load->view('frontend/our_tutors')?>
+      <!-- Our Tutors end -->
+    
+
       <!-- Counters-->
       <section class="section-lg bg-primary bg-image-wrap context-dark text-center text-md-left">
         <div class="bg-image-wrap-item bg-image" style="background-image:url(images/image-05-875x705.jpg);"></div>

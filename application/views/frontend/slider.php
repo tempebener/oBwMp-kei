@@ -3,7 +3,7 @@
         <!-- Additional required wrapper-->
         <div class="swiper-wrapper">
           <!-- Slides-->
-          <div class="swiper-slide section-md" style="background-image: url( images/image-21-1920x998.jpg )">
+          <div class="swiper-slide section-md" style="background-image: url( theme/frontend/images/image-21-1920x998.jpg )">
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-md-9 col-lg-7">
@@ -13,7 +13,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide section-md" style="background-image: url( images/image-07-1920x988.jpg )">
+          <div class="swiper-slide section-md" style="background-image: url( theme/frontend/images/image-07-1920x988.jpg )">
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-md-9 col-lg-7">
@@ -23,7 +23,7 @@
               </div>
             </div>
           </div>
-          <div class="swiper-slide section-md" style="background-image: url( images/image-17-1920x998.jpg )">
+          <div class="swiper-slide section-md" style="background-image: url( theme/frontend/images/image-17-1920x998.jpg )">
             <div class="container">
               <div class="row justify-content-center">
                 <div class="col-md-9 col-lg-7">

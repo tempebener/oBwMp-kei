@@ -4,7 +4,7 @@
             <div class="navbar-cell">
               <div class="navbar-panel">
                 <button class="navbar-switch novi-icon custom-font-menu" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","isolate":"[data-multi-switch]"}'></button>
-                <div class="navbar-logo"><a class="navbar-logo-link" href=""><img class="navbar-logo-inverse" src="<?php echo base_url();?>asset/images/logojoglo.png" alt="Teachzy" width="70" height="80"/></a></div>
+                <div class="navbar-logo"><a class="navbar-logo-link" href=""><img class="navbar-logo-inverse" src="<?php echo base_url();?>theme/frontend/images/logojoglo.png" alt="Teachzy" width="70" height="80"/></a></div>
               </div>
             </div>
             <div class="navbar-spacer"></div>

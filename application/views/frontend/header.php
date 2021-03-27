@@ -99,7 +99,7 @@
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Akses Permodalan</a>
                 </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="contact-us.html">Contact us</a>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="contact-us.html">Kontak</a>
                 </li>
               </ul>
             </div>

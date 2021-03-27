@@ -39,7 +39,7 @@
             <div class="col-lg-7">
               <div class="pr-xxl-5">
                 <h2>Complete Facilities to be Entrepreneur</h2>
-                <p class="big">Teachzy offers quality education helping you build your future career. Here just some of the facts that show why students choose us.</p>
+                <!-- <p class="big">Teachzy offers quality education helping you build your future career. Here just some of the facts that show why students choose us.</p> -->
                 <div class="row row-30 row-lg-55">
                   <div class="col-6 col-sm-3 col-md-6">
                           <!-- Blurb side-->
@@ -48,7 +48,7 @@
                               <div class="icon blurb-icon custom-font-graduated"></div>
                             </div>
                             <div class="blurb-body">
-                              <div class="blurb-counter-value h2"><span data-counter="">100</span><span class="counter-postfix">%</span>
+                              <div class="blurb-counter-value h2"><!-- <span data-counter="">100</span><span class="counter-postfix">%</span> -->
                               </div>
                               <div class="blurb-title h4">Jaminan Akses Pemodalan</div>
                             </div>
@@ -61,7 +61,7 @@
                               <div class="icon blurb-icon custom-font-male-teacher"></div>
                             </div>
                             <div class="blurb-body">
-                              <div class="blurb-counter-value h2"><span data-counter="">100%</span><span class="counter-postfix">%</span>
+                              <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
                               </div>
                               <div class="blurb-title h4">Pendampingan Bisnis</div>
                             </div>
@@ -74,7 +74,7 @@
                               <div class="icon blurb-icon custom-font-student-at-desk"></div>
                             </div>
                             <div class="blurb-body">
-                               <div class="blurb-counter-value h2"><span data-counter="">100%</span><span class="counter-postfix">%</span>
+                               <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
                               </div>
                               <div class="blurb-title h4">Pembimbing Profesional & Berpengalaman</div>
                             </div>
@@ -87,7 +87,7 @@
                               <div class="icon blurb-icon custom-font-university"></div>
                             </div>
                             <div class="blurb-body">
-                              <div class="blurb-counter-value h2"><span data-counter="">100%</span><span class="counter-postfix">%</span>
+                              <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
                               </div>
                               <div class="blurb-title h4">Pembelajaran Komprehensif</div>
                             </div>

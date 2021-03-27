@@ -66,7 +66,7 @@
           <div class="owl-carousel owl-content-1" data-owl="{&quot;dots&quot;:true}" data-loop="false" data-items="1" data-sm-items="2" data-md-items="3" data-lg-items="4">
                   <!-- Price box-->
                   <div class="price-box">
-                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>asset/frontend/images/image-01-270x220.jpg" alt="" width="270" height="220"/>
+                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>theme/frontend/images/image-01-270x220.jpg" alt="" width="270" height="220"/>
                       <div class="price-box-tag">$20</div>
                     </div>
                     <div class="price-box-body">
@@ -76,7 +76,7 @@
                   </div>
                   <!-- Price box-->
                   <div class="price-box">
-                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>asset/frontend/images/image-02-270x220.jpg" alt="" width="270" height="220"/>
+                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>theme/frontend/images/image-02-270x220.jpg" alt="" width="270" height="220"/>
                       <div class="price-box-tag">$40</div>
                     </div>
                     <div class="price-box-body">
@@ -86,7 +86,7 @@
                   </div>
                   <!-- Price box-->
                   <div class="price-box">
-                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>asset/frontend/images/image-03-270x220.jpg" alt="" width="270" height="220"/>
+                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>theme/frontend/images/image-03-270x220.jpg" alt="" width="270" height="220"/>
                       <div class="price-box-tag">$30</div>
                     </div>
                     <div class="price-box-body">
@@ -96,7 +96,7 @@
                   </div>
                   <!-- Price box-->
                   <div class="price-box">
-                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>asset/frontend/images/image-04-270x220.jpg" alt="" width="270" height="220"/>
+                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>theme/frontend/images/image-04-270x220.jpg" alt="" width="270" height="220"/>
                       <div class="price-box-tag">$30</div>
                     </div>
                     <div class="price-box-body">
@@ -106,7 +106,7 @@
                   </div>
                   <!-- Price box-->
                   <div class="price-box">
-                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>asset/frontend/images/image-18-270x220.jpg" alt="" width="270" height="220"/>
+                    <div class="price-box-media"><img class="price-box-img" src="<?php echo base_url();?>theme/frontend/images/image-18-270x220.jpg" alt="" width="270" height="220"/>
                       <div class="price-box-tag">$30</div>
                     </div>
                     <div class="price-box-body">
@@ -129,7 +129,7 @@
             <div class="col-xs-6 col-lg-4">
                     <!-- Person side-->
                     <div class="person person-side" data-animate='{"class":"fadeInUp"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>asset/frontend/images/person-01-135x135.jpg" alt="" width="135" height="135"/>
+                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-01-135x135.jpg" alt="" width="135" height="135"/>
                       </div>
                       <div class="person-body">
                         <div class="person-title h6"><a href="team-member.html">Leslie Alexander</a></div>
@@ -143,7 +143,7 @@
             <div class="col-xs-6 col-lg-4">
                     <!-- Person side-->
                     <div class="person person-side" data-animate='{"class":"fadeInUp","delay":".15s"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>asset/frontend/images/person-02-135x135.jpg" alt="" width="135" height="135"/>
+                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-02-135x135.jpg" alt="" width="135" height="135"/>
                       </div>
                       <div class="person-body">
                         <div class="person-title h6"><a href="team-member.html">Cameron Williamson</a></div>
@@ -157,7 +157,7 @@
             <div class="col-xs-6 col-lg-4">
                     <!-- Person side-->
                     <div class="person person-side" data-animate='{"class":"fadeInUp","delay":".3s"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>asset/frontend/images/person-03-135x135.jpg" alt="" width="135" height="135"/>
+                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-03-135x135.jpg" alt="" width="135" height="135"/>
                       </div>
                       <div class="person-body">
                         <div class="person-title h6"><a href="team-member.html">Theresa Webb</a></div>
@@ -171,7 +171,7 @@
             <div class="col-xs-6 col-lg-4">
                     <!-- Person side-->
                     <div class="person person-side" data-animate='{"class":"fadeInUp"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>asset/frontend/images/person-04-135x135.jpg" alt="" width="135" height="135"/>
+                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-04-135x135.jpg" alt="" width="135" height="135"/>
                       </div>
                       <div class="person-body">
                         <div class="person-title h6"><a href="team-member.html">Jacob Jones</a></div>
@@ -185,7 +185,7 @@
             <div class="col-xs-6 col-lg-4">
                     <!-- Person side-->
                     <div class="person person-side" data-animate='{"class":"fadeInUp","delay":".15s"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>asset/frontend/images/person-05-135x135.jpg" alt="" width="135" height="135"/>
+                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-05-135x135.jpg" alt="" width="135" height="135"/>
                       </div>
                       <div class="person-body">
                         <div class="person-title h6"><a href="team-member.html">Brooklyn Simmons</a></div>
@@ -199,7 +199,7 @@
             <div class="col-xs-6 col-lg-4">
                     <!-- Person side-->
                     <div class="person person-side" data-animate='{"class":"fadeInUp","delay":".3s"}'>
-                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>asset/frontend/images/person-06-135x135.jpg" alt="" width="135" height="135"/>
+                      <div class="person-media"><img class="person-img" src="<?php echo base_url();?>theme/frontend/images/person-06-135x135.jpg" alt="" width="135" height="135"/>
                       </div>
                       <div class="person-body">
                         <div class="person-title h6"><a href="team-member.html">Wade Warren</a></div>
@@ -292,7 +292,7 @@
           <div class="row row-30 justify-content-center">
             <div class="col-xs-8 col-sm-6 col-md-4">
                     <!-- Post event-->
-                    <div class="post post-event" data-animate='{"class":"fadeInUp"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>asset/frontend/images/image-06-370x240.jpg" alt="" width="370" height="240"/>
+                    <div class="post post-event" data-animate='{"class":"fadeInUp"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>theme/frontend/images/image-06-370x240.jpg" alt="" width="370" height="240"/>
                         <div class="post-date">
                           <div class="post-day">19</div>
                           <div class="post-month">Sep</div>
@@ -315,7 +315,7 @@
             </div>
             <div class="col-xs-8 col-sm-6 col-md-4">
                     <!-- Post event-->
-                    <div class="post post-event" data-animate='{"class":"fadeInUp","delay":".15s"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>asset/frontend/images/image-07-370x240.jpg" alt="" width="370" height="240"/>
+                    <div class="post post-event" data-animate='{"class":"fadeInUp","delay":".15s"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>theme/frontend/images/image-07-370x240.jpg" alt="" width="370" height="240"/>
                         <div class="post-date">
                           <div class="post-day">21</div>
                           <div class="post-month">Sep</div>
@@ -338,7 +338,7 @@
             </div>
             <div class="col-xs-8 col-sm-6 col-md-4">
                     <!-- Post event-->
-                    <div class="post post-event" data-animate='{"class":"fadeInUp","delay":".3s"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>asset/frontend/images/image-08-370x240.jpg" alt="" width="370" height="240"/>
+                    <div class="post post-event" data-animate='{"class":"fadeInUp","delay":".3s"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>theme/frontend/images/image-08-370x240.jpg" alt="" width="370" height="240"/>
                         <div class="post-date">
                           <div class="post-day">26</div>
                           <div class="post-month">Sep</div>
@@ -371,13 +371,13 @@
           </div>
           <div class="slick-person-container">
             <div class="slick-slider slick-person-img slider-nav" data-slick='{"slidesToShow":3,"arrows":false,"asNavFor":".slider-for","focusOnSelect":true,"centerMode":true,"centerPadding":"0px"}'>
-              <div class="slick-content"><img src="<?php echo base_url();?>asset/frontend/images/person-11-135x135.jpg" alt="" width="135" height="135"/>
+              <div class="slick-content"><img src="<?php echo base_url();?>theme/frontend/images/person-11-135x135.jpg" alt="" width="135" height="135"/>
               </div>
-              <div class="slick-content"><img src="<?php echo base_url();?>asset/frontend/images/person-07-135x135.jpg" alt="" width="135" height="135"/>
+              <div class="slick-content"><img src="<?php echo base_url();?>theme/frontend/images/person-07-135x135.jpg" alt="" width="135" height="135"/>
               </div>
-              <div class="slick-content"><img src="<?php echo base_url();?>asset/frontend/images/person-10-135x135.jpg" alt="" width="135" height="135"/>
+              <div class="slick-content"><img src="<?php echo base_url();?>theme/frontend/images/person-10-135x135.jpg" alt="" width="135" height="135"/>
               </div>
-              <div class="slick-content"><img src="<?php echo base_url();?>asset/frontend/images/person-08-135x135.jpg" alt="" width="135" height="135"/>
+              <div class="slick-content"><img src="<?php echo base_url();?>theme/frontend/images/person-08-135x135.jpg" alt="" width="135" height="135"/>
               </div>
             </div>
             <div class="slick-slider slick-person-content slider-for" data-slick='{"arrows":true,"asNavFor":".slider-nav","autoplay":true,"autoplaySpeed":5000,"fade":true}'>
@@ -428,7 +428,7 @@
           <div class="row row-30 justify-content-center">
             <div class="col-xs-10 col-sm-6">
                     <!-- Post-->
-                    <div class="post" data-animate='{"class":"fadeIn"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>asset/frontend/images/image-09-570x380.jpg" alt="" width="570" height="380"/></a>
+                    <div class="post" data-animate='{"class":"fadeIn"}'><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>theme/frontend/images/image-09-570x380.jpg" alt="" width="570" height="380"/></a>
                       <div class="post-meta">
                         <div class="post-meta-item">
                           <div class="post-meta-icon custom-font-calendar"></div>

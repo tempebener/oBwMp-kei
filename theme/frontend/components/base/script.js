@@ -5,7 +5,7 @@ let components = {};
 
 components.customFont = {
 	selector: '[class*="custom-font-"]',
-	styles: './asset/frontend/components/custom-font/custom-font.css'
+	styles: './theme/frontend/components/custom-font/custom-font.css'
 };
 
 components.fontMontserrat = {
@@ -29,144 +29,144 @@ components.pageReveal = {
 
 components.currentDevice = {
 	selector: 'html',
-	script: './asset/frontend/components/current-device/current-device.min.js'
+	script: './theme/frontend/components/current-device/current-device.min.js'
 };
 
 components.blurb = {
 	selector: '.blurb',
-	styles: './asset/frontend/components/blurb/blurb.css'
+	styles: './theme/frontend/components/blurb/blurb.css'
 };
 
 components.box = {
 	selector: '.box',
-	styles: './asset/frontend/components/box/box.css'
+	styles: './theme/frontend/components/box/box.css'
 };
 
 components.breadcrumb = {
 	selector: '.breadcrumb',
-	styles: './asset/frontend/components/breadcrumb/breadcrumb.css'
+	styles: './theme/frontend/components/breadcrumb/breadcrumb.css'
 };
 
 components.button = {
 	selector: '.btn',
-	styles: './asset/frontend/components/button/button.css'
+	styles: './theme/frontend/components/button/button.css'
 };
 
 components.footer = {
 	selector: 'footer',
-	styles: './asset/frontend/components/footer/footer.css'
+	styles: './theme/frontend/components/footer/footer.css'
 };
 
 components.grid = {
 	selector: '.container, .container-fluid, .row, [class*="col-"]',
-	styles: './asset/frontend/components/grid/grid.css'
+	styles: './theme/frontend/components/grid/grid.css'
 };
 
 components.icon = {
 	selector: '.icon',
-	styles: './asset/frontend/components/icon/icon.css'
+	styles: './theme/frontend/components/icon/icon.css'
 };
 
 components.image = {
 	selector: '.image',
-	styles: './asset/frontend/components/image/image.css'
+	styles: './theme/frontend/components/image/image.css'
 };
 
 components.input = {
 	selector: '.form-group, .input-group, .form-check, .custom-control, .form-control',
-	styles: './asset/frontend/components/input/input.css'
+	styles: './theme/frontend/components/input/input.css'
 };
 
 components.link = {
 	selector: '.link',
-	styles: './asset/frontend/components/link/link.css'
+	styles: './theme/frontend/components/link/link.css'
 };
 
 components.list = {
 	selector: '.list',
-	styles: './asset/frontend/components/list/list.css'
+	styles: './theme/frontend/components/list/list.css'
 };
 
 components.logo = {
 	selector: '.logo',
-	styles: './asset/frontend/components/logo/logo.css'
+	styles: './theme/frontend/components/logo/logo.css'
 };
 
 components.person = {
 	selector: '.person',
-	styles: './asset/frontend/components/person/person.css'
+	styles: './theme/frontend/components/person/person.css'
 };
 
 components.post = {
 	selector: '.post',
-	styles: './asset/frontend/components/post/post.css'
+	styles: './theme/frontend/components/post/post.css'
 };
 
 components.postMeta = {
 	selector: '.post-meta',
-	styles: './asset/frontend/components/post-meta/post-meta.css'
+	styles: './theme/frontend/components/post-meta/post-meta.css'
 };
 
 components.preloader = {
 	selector: '.preloader',
-	styles: './asset/frontend/components/preloader/preloader.css'
+	styles: './theme/frontend/components/preloader/preloader.css'
 };
 
 components.priceBox = {
 	selector: '.price-box',
-	styles: './asset/frontend/components/price-box/price-box.css'
+	styles: './theme/frontend/components/price-box/price-box.css'
 };
 
 components.quote = {
 	selector: '.quote',
-	styles: './asset/frontend/components/quote/quote.css'
+	styles: './theme/frontend/components/quote/quote.css'
 };
 
 components.rdForm = {
 	selector: '.rd-form',
-	styles: './asset/frontend/components/rd-form/rd-form.css'
+	styles: './theme/frontend/components/rd-form/rd-form.css'
 };
 
 components.section = {
 	selector: 'section',
-	styles: './asset/frontend/components/section/section.css'
+	styles: './theme/frontend/components/section/section.css'
 };
 
 components.social = {
 	selector: '.social',
-	styles: './asset/frontend/components/social/social.css'
+	styles: './theme/frontend/components/social/social.css'
 };
 
 components.snackbar = {
 	selector: '.snackbar',
-	styles: './asset/frontend/components/snackbar/snackbar.css'
+	styles: './theme/frontend/components/snackbar/snackbar.css'
 };
 
 components.termList = {
 	selector: '.term-list',
-	styles: './asset/frontend/components/term-list/term-list.css'
+	styles: './theme/frontend/components/term-list/term-list.css'
 };
 
 components.textBlock = {
 	selector: '.text-block',
-	styles: './asset/frontend/components/text-block/text-block.css'
+	styles: './theme/frontend/components/text-block/text-block.css'
 };
 
 components.thumbnail = {
 	selector: '.thumbnail',
-	styles: './asset/frontend/components/thumbnail/thumbnail.css'
+	styles: './theme/frontend/components/thumbnail/thumbnail.css'
 };
 
 components.widget = {
 	selector: '.widget',
-	styles: './asset/frontend/components/widget/widget.css'
+	styles: './theme/frontend/components/widget/widget.css'
 };
 
 // Script components
 components.animate = {
 	selector: '[data-animate]',
-	styles: './asset/frontend/components/animate/animate.css',
-	script: './asset/frontend/components/current-device/current-device.min.js',
+	styles: './theme/frontend/components/animate/animate.css',
+	script: './theme/frontend/components/current-device/current-device.min.js',
 	init: function ( nodes ) {
 		if ( window.xMode || device.macos() ) {
 			nodes.forEach( function ( node ) {
@@ -203,10 +203,10 @@ components.animate = {
 
 components.counter = {
 	selector: '[data-counter]',
-	styles: './asset/frontend/components/counter/counter.css',
+	styles: './theme/frontend/components/counter/counter.css',
 	script: [
-		'./asset/frontend/components/util/util.min.js',
-		'./asset/frontend/components/counter/counter.min.js',
+		'./theme/frontend/components/util/util.min.js',
+		'./theme/frontend/components/counter/counter.min.js',
 	],
 	init: function ( nodes ) {
 		let observer = new IntersectionObserver( function ( entries ) {
@@ -242,11 +242,11 @@ components.counter = {
 
 components.countdown = {
 	selector: '[ data-countdown ]',
-	styles: './asset/frontend/components/countdown/countdown.css',
+	styles: './theme/frontend/components/countdown/countdown.css',
 	script: [
-		'./asset/frontend/components/util/util.min.js',
-		'./asset/frontend/components/progress-circle/progress-circle.min.js',
-		'./asset/frontend/components/countdown/countdown.min.js'
+		'./theme/frontend/components/util/util.min.js',
+		'./theme/frontend/components/progress-circle/progress-circle.min.js',
+		'./theme/frontend/components/countdown/countdown.min.js'
 	],
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
@@ -260,11 +260,11 @@ components.countdown = {
 
 components.lightgallery = {
 	selector: '[data-lightgallery]',
-	styles: './asset/frontend/components/lightgallery/lightgallery.css',
+	styles: './theme/frontend/components/lightgallery/lightgallery.css',
 	script: [
-		'./asset/frontend/components/jquery/jquery.min.js',
-		'./asset/frontend/components/lightgallery/lightgallery.min.js',
-		'./asset/frontend/components/util/util.min.js'
+		'./theme/frontend/components/jquery/jquery.min.js',
+		'./theme/frontend/components/lightgallery/lightgallery.min.js',
+		'./theme/frontend/components/util/util.min.js'
 	],
 	init: function ( nodes ) {
 		if ( !window.xMode ) {
@@ -296,10 +296,10 @@ components.lightgallery = {
 
 components.multiswitch = {
 	selector: '[data-multi-switch]',
-	styles: './asset/frontend/components/multiswitch/multiswitch.css',
+	styles: './theme/frontend/components/multiswitch/multiswitch.css',
 	script: [
-		'./asset/frontend/components/current-device/current-device.min.js',
-		'./asset/frontend/components/multiswitch/multiswitch.min.js'
+		'./theme/frontend/components/current-device/current-device.min.js',
+		'./theme/frontend/components/multiswitch/multiswitch.min.js'
 	],
 	dependencies: 'rdNavbar',
 	init: function ( nodes ) {
@@ -323,13 +323,13 @@ components.multiswitch = {
 components.owlCarousel = {
 	selector: '.owl-carousel',
 	styles: [
-		'./asset/frontend/components/owl-carousel/owl.carousel.css',
-		'./asset/frontend/components/custom-font/custom-font.css'
+		'./theme/frontend/components/owl-carousel/owl.carousel.css',
+		'./theme/frontend/components/custom-font/custom-font.css'
 	],
 	script: [
-		'./asset/frontend/components/jquery/jquery.min.js',
-		'./asset/frontend/components/owl-carousel/owl.carousel.min.js',
-		'./asset/frontend/components/util/util.min.js'
+		'./theme/frontend/components/jquery/jquery.min.js',
+		'./theme/frontend/components/owl-carousel/owl.carousel.min.js',
+		'./theme/frontend/components/util/util.min.js'
 	],
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
@@ -386,10 +386,10 @@ components.owlCarousel = {
 
 components.regula = {
 	selector: '[data-constraints]',
-	styles: './asset/frontend/components/regula/regula.css',
+	styles: './theme/frontend/components/regula/regula.css',
 	script: [
-		'./asset/frontend/components/jquery/jquery.min.js',
-		'./asset/frontend/components/regula/regula.min.js'
+		'./theme/frontend/components/jquery/jquery.min.js',
+		'./theme/frontend/components/regula/regula.min.js'
 	],
 	init: function ( nodes ) {
 		let elements = $( nodes );
@@ -460,12 +460,12 @@ components.regula = {
 components.rdMailform = {
 	selector: '.rd-mailform',
 	styles: [
-		'./asset/frontend/components/rd-mailform/rd-mailform.css',
-		'./asset/frontend/components/font-awesome/font-awesome.css'
+		'./theme/frontend/components/rd-mailform/rd-mailform.css',
+		'./theme/frontend/components/font-awesome/font-awesome.css'
 	],
 	script: [
-		'./asset/frontend/components/jquery/jquery.min.js',
-		'./asset/frontend/components/rd-mailform/rd-mailform.min.js',
+		'./theme/frontend/components/jquery/jquery.min.js',
+		'./theme/frontend/components/rd-mailform/rd-mailform.min.js',
 	],
 	init: function ( nodes ) {
 		let i, j, k,
@@ -751,13 +751,13 @@ components.rdMailform = {
 components.rdNavbar = {
 	selector: '.rd-navbar',
 	styles: [
-		'./asset/frontend/components/rd-navbar/rd-navbar.css'
+		'./theme/frontend/components/rd-navbar/rd-navbar.css'
 	],
 	script: [
-		'./asset/frontend/components/jquery/jquery.min.js',
-		'./asset/frontend/components/util/util.min.js',
-		'./asset/frontend/components/current-device/current-device.min.js',
-		'./asset/frontend/components/rd-navbar/rd-navbar.min.js'
+		'./theme/frontend/components/jquery/jquery.min.js',
+		'./theme/frontend/components/util/util.min.js',
+		'./theme/frontend/components/current-device/current-device.min.js',
+		'./theme/frontend/components/rd-navbar/rd-navbar.min.js'
 	],
 	dependencies: 'currentDevice',
 	init: function ( nodes ) {
@@ -850,8 +850,8 @@ components.rdNavbar = {
 
 components.rdSearch = {
 	selector: '[data-rd-search]',
-	styles: './asset/frontend/components/rd-search/rd-search.css',
-	script: './asset/frontend/components/rd-search/rd-search.min.js',
+	styles: './theme/frontend/components/rd-search/rd-search.css',
+	script: './theme/frontend/components/rd-search/rd-search.min.js',
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
 			console.log( URLSearchParams );
@@ -867,10 +867,10 @@ components.rdSearch = {
 
 components.slick = {
 	selector: '.slick-slider',
-	styles: './asset/frontend/components/slick/slick.css',
+	styles: './theme/frontend/components/slick/slick.css',
 	script: [
-		'./asset/frontend/components/jquery/jquery.min.js',
-		'./asset/frontend/components/slick/slick.min.js'
+		'./theme/frontend/components/jquery/jquery.min.js',
+		'./theme/frontend/components/slick/slick.min.js'
 	],
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
@@ -895,11 +895,11 @@ components.slick = {
 
 components.swiper = {
 	selector: '[data-swiper]',
-	styles: './asset/frontend/components/swiper/swiper.css',
+	styles: './theme/frontend/components/swiper/swiper.css',
 	script: [
-		'./asset/frontend/components/jquery/jquery.min.js',
-		'./asset/frontend/components/swiper/swiper.min.js',
-		'./asset/frontend/components/util/util.min.js'
+		'./theme/frontend/components/jquery/jquery.min.js',
+		'./theme/frontend/components/swiper/swiper.min.js',
+		'./theme/frontend/components/util/util.min.js'
 	],
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
@@ -940,10 +940,10 @@ components.swiper = {
 components.toTop = {
 	selector: 'html',
 	styles: [
-		'./asset/frontend/components/to-top/to-top.css',
-		'./asset/frontend/components/font-awesome/font-awesome.css',
+		'./theme/frontend/components/to-top/to-top.css',
+		'./theme/frontend/components/font-awesome/font-awesome.css',
 	],
-	script: './asset/frontend/components/jquery/jquery.min.js',
+	script: './theme/frontend/components/jquery/jquery.min.js',
 	init: function () {
 		if ( !window.xMode ) {
 			let node = document.createElement( 'div' );

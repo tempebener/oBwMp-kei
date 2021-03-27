@@ -14,12 +14,12 @@ function get_all_slider($page1)
   }
 
 function get_all_tutors($page1)
-  {
+{
     $this->db->limit(6);
     $this->db->where('tbl_tutor.id_tutor_s',$page1);
     $this->db->order_by('id_tutor','asc' );
     $this->db->join('tbl_slider_s', 'tbl_slider_s.id_slider_s = tbl_tutor.id_tutor_s','inner');
     return $this->db->get('tbl_tutor')->result();
-  }
+}
  
 }

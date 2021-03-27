@@ -17,7 +17,7 @@
             <div class="col-sm-6 col-md-4">
                     <!-- Blurb-->
                     <article class="blurb blurb-2" data-animate='{"class":"fadeInUp","delay":".15s"}'>
-                      <div class="icon blurb-icon custom-font-degree"></div>
+                      <div class="icon blurb-icon custom-font-clock"></div>
                       <div class="blurb-title h4">Timeline Pelatihan</div>
                       <div class="blurb-text big">We offer a wide range of courses and  programs that encompass lots of knowledge spheres.</div>
                     </article>
@@ -25,7 +25,7 @@
             <div class="col-sm-6 col-md-4">
                     <!-- Blurb-->
                     <article class="blurb blurb-2" data-animate='{"class":"fadeInUp","delay":".3s"}'>
-                      <div class="icon blurb-icon custom-font-school"></div>
+                      <div class="icon blurb-icon custom-font-university"></div>
                       <div class="blurb-title h4">Program Pelatihan</div>
                       <div class="blurb-text big">Our campus is the hub to a talented and diverse student community that turns opportunities into success.</div>
                     </article>

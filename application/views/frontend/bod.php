@@ -1,4 +1,4 @@
-      <!-- Testimonials-->
+      <!-- BOD-->
       <section class="section-md bg-300 text-center">
         <div class="container">
           <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
@@ -8,8 +8,8 @@
           <div class="slick-person-container">
             <div class="slick-slider slick-person-img slider-nav" data-slick='{"slidesToShow":3,"arrows":false,"asNavFor":".slider-for","focusOnSelect":true,"centerMode":true,"centerPadding":"0px"}'>
 
-            <?php foreach ($post_testimonials as $testi) {?>
-              <div class="slick-content"><img src="<?php echo base_url();?>theme/images/our_tutors/<?= $testi->foto ?>" alt="" width="135" height="135"/>
+            <?php foreach ($post_bod as $bod) {?>
+              <div class="slick-content"><img src="<?php echo base_url();?>theme/images/our_tutors/<?= $bod->foto ?>" alt="" width="135" height="135"/>
               </div>
             <?php } ?>
 
@@ -21,9 +21,9 @@
               <div class="slick-content">
                       <!-- Quote-->
                       <blockquote class="quote quote-simple">
-                        <q class="quote-text"><?= $testi->quotes ?></q>
-                        <cite class="quote-cite h6"><?= $testi->nama ?></cite>
-                        <div class="quote-meta"><?= $testi->jabatan ?></div>
+                        <q class="quote-text"><?= $bod->quotes ?></q>
+                        <cite class="quote-cite h6"><?= $bod->nama ?></cite>
+                        <div class="quote-meta"><?= $bod->jabatan ?></div>
                       </blockquote>
               </div>
             <?php } ?>

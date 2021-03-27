@@ -103,9 +103,9 @@
       <?php $this->load->view('frontend/ekonomi_outlook')?>
       <!-- ekonomi outlook end-->
 
-      <!-- Testimonials start -->
-      <?php $this->load->view('frontend/testimonials')?>
-      <!-- Our Tutors end -->
+      <!-- BOD start -->
+      <?php $this->load->view('frontend/bod')?>
+      <!-- Our BOD end -->
 
       <!-- Blog-->
       <section class="section-md bg-transparent">

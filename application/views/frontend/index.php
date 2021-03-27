@@ -38,7 +38,7 @@
           <div class="row">
             <div class="col-lg-7">
               <div class="pr-xxl-5">
-                <h2>Why Choose Us</h2>
+                <h2>Complete Facilities to be Entrepreneur</h2>
                 <p class="big">Teachzy offers quality education helping you build your future career. Here just some of the facts that show why students choose us.</p>
                 <div class="row row-30 row-lg-55">
                   <div class="col-6 col-sm-3 col-md-6">
@@ -117,7 +117,7 @@
           <div class="text-block text-block-1 text-center" data-animate='{"class":"fadeIn"}'>
             <h5 class="text-primary">Latest news</h5>
             <h2>Agropreneur Update</h2>
-            <p class="big">We regularly share news and updates in our university’s blog. The articles we publish vary from announcing new events and courses to providing useful information to our students.</p>
+            <p class="big">Berita terbaru seputar Pertanian dan Peternakan, dilengkapi dengan informasi terkini nasional.</p>
           </div>
           <div class="row row-30 justify-content-center">
             <div class="col-xs-10 col-sm-6">

@@ -3,9 +3,9 @@
       <section class="section-md bg-transparent text-center">
         <div class="container">
           <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
-            <h5 class="text-primary">People Behind Our Success</h5>
-            <h2>Our Tutors</h2>
-            <p class="big">We employ highly experienced and qualified teachers who set the ground for all our programs and courses. They are aimed to help you achieve more on your path to success.</p>
+<!--             <h5 class="text-primary"></h5>
+ -->            <h2>Business Coach</h2>
+            <p class="big">Belajar Bersama Para Ahli di Bidangnya.</p>
           </div>
           <div class="row row-30 row-lg-60">
 

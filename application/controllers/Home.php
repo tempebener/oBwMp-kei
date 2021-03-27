@@ -21,6 +21,8 @@ class Home extends CI_Controller{
 			// $x['tot_agenda']=$this->db->get('tbl_agenda')->num_rows();
 		$page1 = '1';
 			$data['post_slider'] 						= $this->M_main->get_all_slider($page1);
+			$data['pelatihan'] = $this->db->query("select * from tbl_pelatihan  ORDER BY  id_pelatihan desc 
+			")->result();
 			$this->load->view('frontend/index',$data);
 	}
 

@@ -9,7 +9,7 @@
             <div class="slick-slider slick-person-img slider-nav" data-slick='{"slidesToShow":3,"arrows":false,"asNavFor":".slider-for","focusOnSelect":true,"centerMode":true,"centerPadding":"0px"}'>
 
             <?php foreach ($post_bod as $bod) {?>
-              <div class="slick-content"><img src="<?php echo base_url();?>theme/images/our_tutors/<?= $bod->foto ?>" alt="" width="135" height="135"/>
+              <div class="slick-content"><img src="<?php echo base_url();?>theme/images/foto_bod/<?= $bod->foto ?>" alt="" width="135" height="135"/>
               </div>
             <?php } ?>
 

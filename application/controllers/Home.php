@@ -23,6 +23,8 @@ class Home extends CI_Controller{
 			$data['post_slider'] 						= $this->M_main->get_all_slider($page1);
 			$data['pelatihan'] = $this->db->query("select * from tbl_pelatihan  ORDER BY  id_pelatihan desc 
 			")->result();
+			$data['ekonomi_outlook'] = $this->db->query("select * from tbl_ekonomi_outlook  ORDER BY  id_eo desc 
+			")->result();
 			$this->load->view('frontend/index',$data);
 	}
 

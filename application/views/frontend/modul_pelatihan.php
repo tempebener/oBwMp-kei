@@ -2,7 +2,7 @@
         <div class="container">
           <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
             <h2>Events dan Pelatihan</h2>
-            <p class="big">Webinar Entrepreneur-Kesatriaan Sekolah Tani/Ternak-Pengembangan Ekonomi-Seni&Budaya.</p>
+            <p class="big">Kumpulan pelatihan Kesatriaan Entrepreneur Indonesia.</p>
           </div>
 
          

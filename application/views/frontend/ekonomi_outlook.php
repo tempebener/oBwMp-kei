@@ -19,7 +19,7 @@
                           <div class="post-month"></div>
                         </div> --></a>
                       <div class="post-heading h4">
-                        <div class="post-title"><a href="single-post.html"><?php echo $post_new->judul_eo ?></a></div>
+                        <div class="post-title"><a href="#"><?php echo $post_new->judul_eo ?></a></div>
 <!--                         <div class="post-price"></div>
  -->                      </div>
                       <div class="post-meta post-meta-vertical big">

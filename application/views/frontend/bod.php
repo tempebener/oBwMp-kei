@@ -2,7 +2,7 @@
       <section class="section-md bg-300 text-center">
         <div class="container">
           <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
-            <h2>Board of Director</h2>
+            <h2>Kesatriaan Quotes</h2>
             <p class="big">Profil & Quotes dari para BOD Widodo Makmur Perkasa Group</p>
           </div>
           <div class="slick-person-container">

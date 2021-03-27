@@ -23,18 +23,11 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-<<<<<<< HEAD
-
-=======
->>>>>>> 69a743c465a1906e0d92cdf55ab668a602334b32
 $config['base_url'] = ((isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] == "on") ? "https" : "http");
 $config['base_url'] .= "://".$_SERVER['HTTP_HOST'];
 $config['base_url'] .= preg_replace('@/+$@','',dirname($_SERVER['SCRIPT_NAME'])).'/'; // <<< change this url to your desired url.
 //NOTE:  >>> Put url like http://hr.yourdomain.com/ or http://yourdomain.com/hr/
-<<<<<<< HEAD
-=======
 $config['base_url']  =  "https://".$_SERVER['HTTP_HOST'];
->>>>>>> 69a743c465a1906e0d92cdf55ab668a602334b32
 
 
 /*

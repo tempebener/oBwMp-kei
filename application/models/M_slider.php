@@ -26,7 +26,7 @@ class M_slider extends CI_Model{
 	}
 	function hapus_slider($kode,$album){
 		$this->db->trans_start();
-            $this->db->query("update tbl_slider set status=1 where id_slider='$kode'");
+            $this->db->query("update tbl_slider set status='0' where id_slider='$kode'");
             // $this->db->query("update tbl_album set album_count=album_count-1 where album_id='$album'");
         $this->db->trans_complete();
         if($this->db->trans_status()==true)

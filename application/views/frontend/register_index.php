@@ -110,7 +110,7 @@
                     </div>
                   </div>
                 </div>
-
+                <br/>
                 <div class="text-left">
                   <button class="btn btn-primary" name="submit" type="submit">Apply</button>
                 </div>

@@ -7,7 +7,7 @@
     <meta property="og:description" content="">
     <meta property="og:image" content="">
     <meta property="og:url" content="">
-    <link rel="icon" href="<?php echo base_url();?>theme/frontend/images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?php echo base_url();?>theme/frontend/components/base/base.css">
     <script src="<?php echo base_url();?>theme/frontend/components/base/core.min.js"></script>
     <script src="<?php echo base_url();?>theme/frontend/components/base/script.js"></script>

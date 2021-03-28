@@ -13,7 +13,7 @@
               ?>
             <div class="col-xs-8 col-sm-6 col-md-4">
                     <!-- Post event-->
-                    <div class="post post-event" data-animate='{"class":"fadeInUp"}'><a class="post-media" href="#"><img class="post-img" src="<?php echo base_url()?>theme/images/foto_ekonomi/<?php echo $post_new->foto_eo ?>" alt="" width="370" height="240"/>
+                    <div class="post post-event" data-animate='{"class":"fadeInUp"}'><a class="post-media" href="#"><img class="post-img post-img-custom" src="<?php echo base_url()?>theme/images/foto_ekonomi/<?php echo $post_new->foto_eo ?>" alt=""/>
                        <!--  <div class="post-date">
                           <div class="post-day">19</div>
                           <div class="post-month"></div>

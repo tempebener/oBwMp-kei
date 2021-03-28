@@ -2,14 +2,15 @@
         <div class="footer-top bg-300">
           <div class="container">
             <div class="row row-30">
-              <div class="col-xs-6 col-md-3">
-                <h5 class="footer-title">Contacts</h5>
+              <div class="col-xs-6 col-md-5">
+                <h5 class="footer-title">Kontak</h5>
                 <ul class="list list-icons">
                   <li class="list-item">
-                    <div class="list-icon custom-font-pin"></div><a class="link link-inherit" href="#">Brooklyn, NY 10036, 16-2 United States</a>
+                    <div class="list-icon custom-font-pin"></div><a class="link link-inherit" href="#">Joglo Tumiyono Desa Ngerangan, Kecamatan Bayat Kabupaten Klaten, Jawa Tengah 
+                    </a>
                   </li>
                   <li class="list-item">
-                    <div class="list-icon custom-font-email"></div><a class="link link-inherit" href="mailto:#">info@demolink.org</a>
+                    <div class="list-icon custom-font-email"></div><a class="link link-inherit" href="mailto:#">kesatriaan.entrepreneur@gmail.com</a>
                   </li>
                   <li class="list-item">
                     <div class="list-icon custom-font-phone"></div><span><span>Call Us: </span><a class="link link-inherit" href="tel:#">1-800-123-1234</a></span>
@@ -17,29 +18,28 @@
                 </ul>
               </div>
               <div class="col-6 col-md-3">
-                <h5 class="footer-title">Socials</h5>
+                <h5 class="footer-title">Sosial Media</h5>
                 <ul class="list list-sm">
-                  <li class="list-item"><a class="link link-inherit" href="#">Facebook</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">Pinterest</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">LinkedIn</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">Instagram</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">Twitter</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">YouTube</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://www.facebook.com/kesatriaan.entrepreneur.indonesia">Facebook</a></li>
+                  <!-- <li class="list-item"><a class="link link-inherit" href="#">Pinterest</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="#">LinkedIn</a></li> -->
+                  <li class="list-item"><a class="link link-inherit" href="https://www.instagram.com/kesatriaan.entrepreneur">Instagram</a></li>
+                  <!-- <li class="list-item"><a class="link link-inherit" href="#">Twitter</a></li> -->
+                  <li class="list-item"><a class="link link-inherit" href="https://www.youtube.com/channel/UCaXcQCE0lbJWRz9GQhtuXSw">YouTube</a></li>
                 </ul>
               </div>
               <div class="col-6 col-md-3">
-                <h5 class="footer-title">About Us</h5>
+                <h5 class="footer-title">Lini Bisnis</h5>
                 <ul class="list list-sm">
-                  <li class="list-item"><a class="link link-inherit" href="#">Our Mission</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">Graduate Admission</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">Our Vision</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">Our Values</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">About Us</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="academics.html">Academics</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#">Degree Programs</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/livestock/">Livestock</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/meat/">Meat</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/food/">Food</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/poultry/">Poultry</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/property/">Property</a></li>
+                 
                 </ul>
               </div>
-              <div class="col-6 col-md-3">
+             <!--  <div class="col-6 col-md-3">
                 <h5 class="footer-title">Teachers</h5>
                 <ul class="list list-sm">
                   <li class="list-item"><a class="link link-inherit" href="team-member.html">Olivia Thomas</a></li>
@@ -50,7 +50,7 @@
                   <li class="list-item"><a class="link link-inherit" href="team-member.html">Martha Stevens</a></li>
                   <li class="list-item"><a class="link link-inherit" href="team-member.html">Connor Walker</a></li>
                 </ul>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>

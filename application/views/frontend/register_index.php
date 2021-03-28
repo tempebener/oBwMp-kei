@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <!-- head -->
-<?php $this->load->view('frontend/register/head')?>
+<?php $this->load->view('frontend/head')?>
 <!-- head end -->
   <body>
     <div class="page">

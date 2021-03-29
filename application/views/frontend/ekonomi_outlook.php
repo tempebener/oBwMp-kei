@@ -1,17 +1,19 @@
   <section class="section-md bg-transparent text-center">
         <div class="container">
           <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
-<!--             <h5 class="text-primary"></h5>
- -->            <h2>Ekonomi Outlook</h2>
+            <!-- <h5 class="text-primary"></h5> -->
+            <h2>Ekonomi Outlook</h2>
             <p class="big">Outlook pertumbuhan ekonomi secara kolektif bidang peternakan dan pertanian.</p>
           </div>
           <div class="row row-30 justify-content-center">
+         
+          <div class="owl-carousel owl-content-1" data-owl="{&quot;dots&quot;:true}" data-loop="false" data-items="1" data-sm-items="2" data-md-items="2" data-lg-items="3">
               <?php
               foreach ($ekonomi_outlook as $post_new)
               {
               
               ?>
-            <div class="col-xs-8 col-sm-6 col-md-4">
+            <div>
                     <!-- Post event-->
                     <div class="post post-event" data-animate='{"class":"fadeInUp"}'><a class="post-media" href="#"><img class="post-img post-img-custom" src="<?php echo base_url()?>theme/images/foto_ekonomi/<?php echo $post_new->foto_eo ?>" alt=""/>
                        <!--  <div class="post-date">
@@ -36,6 +38,7 @@
             </div>
           <?php } ?>
 
+          </div>
           </div>
         </div>
       </section>

@@ -7,25 +7,26 @@
   <body>
     <div class="page">
       <!--RD Navbar-->
-     <!-- head -->
-<?php $this->load->view('frontend/header')?>
-<!-- head end -->
-      <!-- Swiper default-->
-      <!-- slider -->
-<?php $this->load->view('frontend/slider')?>
-<!-- slider end -->
+      <!-- head -->
+      <?php $this->load->view('frontend/header')?>
+      <!-- head end -->
 
+      <!-- Swiper default-->
+      <!-- slider start -->
+      <?php $this->load->view('frontend/slider')?>
+      <!-- slider end -->
 
       <!-- Blurb default-->
-     <?php $this->load->view('frontend/whatweover')?>
-      <!--modul pelatihan start-->
+      <?php $this->load->view('frontend/whatweover')?>
+
       <!--pendaftaran start-->
       <?php $this->load->view('frontend/pendaftaran')?>
       <!--pendaftaran end-->
+
+      <!--modul pelatihan start-->
       <?php $this->load->view('frontend/modul_pelatihan')?>
       <!--modul pelatihan end-->
       
-
       <!-- Our Tutors start -->
       <?php $this->load->view('frontend/our_tutors')?>
       <!-- Our Tutors end -->
@@ -102,7 +103,6 @@
 
       <!-- Post event-->
     
-
       <!-- ekonomi outlook start-->
       <?php $this->load->view('frontend/ekonomi_outlook')?>
       <!-- ekonomi outlook end-->

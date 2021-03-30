@@ -33,10 +33,10 @@
       <?php $this->load->view('frontend/our_tutors')?>
       <!-- Our Tutors end -->
     
-
+      <div class="owl-carousel owl-content-1" data-owl="{&quot;dots&quot;:true}" data-loop="false" data-items="1" data-sm-items="1" data-md-items="1" data-lg-items="1">
       <!-- Counters-->
       <section class="section-lg bg-primary bg-image-wrap context-dark text-center text-md-left">
-        <div class="bg-image-wrap-item bg-image" style="background-image:url(<?php echo base_url();?>theme/frontend/images/image-05-875x705.jpg);"></div>
+        <div class="bg-image-wrap-item bg-image" style="background-image:url(<?php echo base_url();?>theme/images/complete_facilities/1.jpg);"></div>
         <div class="container">
           <div class="row">
             <div class="col-lg-7">
@@ -102,6 +102,75 @@
           </div>
         </div>
       </section>
+
+      <section class="section-lg bg-primary bg-image-wrap context-dark text-center text-md-left">
+        <div class="bg-image-wrap-item bg-image" style="background-image:url(<?php echo base_url();?>theme/images/complete_facilities/2.jpg);"></div>
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-7">
+              <div class="pr-xxl-5">
+                <h2>Complete Facilities to be Entrepreneur</h2>
+                <!-- <p class="big">Teachzy offers quality education helping you build your future career. Here just some of the facts that show why students choose us.</p> -->
+                <div class="row row-30 row-lg-55">
+                  <div class="col-6 col-sm-3 col-md-6">
+                          <!-- Blurb side-->
+                          <article class="blurb blurb-side">
+                            <div class="blurb-item">
+                              <div class="icon blurb-icon custom-font-graduated"></div>
+                            </div>
+                            <div class="blurb-body">
+                              <div class="blurb-counter-value h2"><!-- <span data-counter="">100</span><span class="counter-postfix">%</span> -->
+                              </div>
+                              <div class="blurb-title h4">Jaminan Akses Pemodalan</div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-6 col-sm-3 col-md-6">
+                          <!-- Blurb side-->
+                          <article class="blurb blurb-side">
+                            <div class="blurb-item">
+                              <div class="icon blurb-icon custom-font-male-teacher"></div>
+                            </div>
+                            <div class="blurb-body">
+                              <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
+                              </div>
+                              <div class="blurb-title h4">Pendampingan Bisnis</div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-6 col-sm-3 col-md-6">
+                          <!-- Blurb side-->
+                          <article class="blurb blurb-side">
+                            <div class="blurb-item">
+                              <div class="icon blurb-icon custom-font-student-at-desk"></div>
+                            </div>
+                            <div class="blurb-body">
+                               <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
+                              </div>
+                              <div class="blurb-title h4">Pembimbing Profesional & Berpengalaman</div>
+                            </div>
+                          </article>
+                  </div>
+                  <div class="col-6 col-sm-3 col-md-6">
+                          <!-- Blurb side-->
+                          <article class="blurb blurb-side">
+                            <div class="blurb-item">
+                              <div class="icon blurb-icon custom-font-university"></div>
+                            </div>
+                            <div class="blurb-body">
+                              <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
+                              </div>
+                              <div class="blurb-title h4">Pembelajaran Komprehensif</div>
+                            </div>
+                          </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      </div>
 
       <!-- Post event-->
     

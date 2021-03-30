@@ -31,7 +31,7 @@
         <div class="container">
           <div class="text-block text-block-1">
             <h2>PROFIL JOGLO TUMIYONO</h2>
-            <p class="big" style="text-align: left !important;">
+            <p class="big" style="text-align: justify !important;">
               Lokasi Joglo 
 <br/>
               <a href="https://maps.app.goo.gl/PvJNhJXnneQc1VbG9">https://maps.app.goo.gl/PvJNhJXnneQc1VbG9</a>

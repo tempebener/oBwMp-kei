@@ -32,7 +32,7 @@
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Joglo Tumiyono</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Profil</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>profil">Profil</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="#">Pengembangan Seni & Budaya</a>

@@ -8,7 +8,9 @@
     <div class="page">
       <!--RD Navbar-->
       <!-- head -->
-      <?php $this->load->view('frontend/header')?>
+      <header class="section rd-navbar-absolute-wrap" data-preset='{"title":"Navbar Default","category":"header","reload":true,"id":"navbar-default"}'>
+        <?php $this->load->view('frontend/header')?>
+      </header>
       <!-- head end -->
 
       <!-- Swiper default-->

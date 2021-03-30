@@ -1,4 +1,3 @@
-      <header class="section rd-navbar-absolute-wrap" data-preset='{"title":"Navbar Default","category":"header","reload":true,"id":"navbar-default"}'>
         <nav class="rd-navbar" data-rd-navbar='{"responsive":{"1200":{"stickUpOffset":"50px"}}}'>
           <div class="navbar-container">
             <div class="navbar-cell">
@@ -32,7 +31,7 @@
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Joglo Tumiyono</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Profil</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>profil">Profil</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="#">Pengembangan Seni & Budaya</a>
@@ -123,4 +122,3 @@
             </div>
           </div>
         </nav>
-      </header>

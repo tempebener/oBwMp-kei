@@ -48,7 +48,7 @@
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>livestock">LIVESTOCK</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">MEAT</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>meat">MEAT</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="#">FOOD</a>

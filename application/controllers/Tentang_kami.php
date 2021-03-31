@@ -7,12 +7,17 @@ class Tentang_kami extends CI_Controller{
 
 	function profil(){
 
-		$this->load->view('frontend/profil_index');
+		$this->load->view('frontend/tk_profil');
 	}
 
 	function livestock(){
 
 		$this->load->view('frontend/tk_livestock');
+	}
+
+	function meat(){
+
+		$this->load->view('frontend/tk_meat');
 	}
 
 }

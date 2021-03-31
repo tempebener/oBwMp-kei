@@ -10,4 +10,9 @@ class Tentang_kami extends CI_Controller{
 		$this->load->view('frontend/profil_index');
 	}
 
+	function livestock(){
+
+		$this->load->view('frontend/tk_livestock');
+	}
+
 }

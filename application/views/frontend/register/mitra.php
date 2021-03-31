@@ -39,6 +39,16 @@
                 <div class="row row-20">
                   <div class="col-md-6">
                     <div class="form-group">
+                      <input class="form-control" type="email" name="email" placeholder="E-mail*" data-constraints="@Email @Required">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input class="form-control" type="password" name="password" placeholder="Password*" data-constraints="@Required">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
                       <input class="form-control" type="text" name="nama" placeholder="Nama*" data-constraints="@Required">
                     </div>
                   </div>
@@ -50,11 +60,6 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <input class="form-control" type="text" name="no_hp" placeholder="Nomor Handphone*" data-constraints="@Numeric @Required">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input class="form-control" type="email" name="email" placeholder="E-mail*" data-constraints="@Email @Required">
                     </div>
                   </div>
                   <div class="col-md-6">

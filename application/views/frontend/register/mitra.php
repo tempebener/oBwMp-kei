@@ -30,7 +30,7 @@
       <section class="section-sm bg-transparent">
         <div class="container">
           <div class="text-block text-block-1 text-center">
-            <h2>Pendaftaran</h2>
+            <h2>Pendaftaran Mitra</h2>
           </div>
 
           <div class="row row-30">
@@ -47,6 +47,7 @@
                       <input class="form-control" type="password" name="password" placeholder="Password*" data-constraints="@Required">
                     </div>
                   </div>
+                  <hr style="width:100%;text-align:left;margin-left:12px;margin-right:12px;">
                   <div class="col-md-6">
                     <div class="form-group">
                       <input class="form-control" type="text" name="nama" placeholder="Nama*" data-constraints="@Required">

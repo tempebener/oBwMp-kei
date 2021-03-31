@@ -62,15 +62,39 @@
 &emsp;&emsp;Inovasi adalah kunci untuk menjaga eksistensi dan reputasi. Merespon dinamika zaman, PT Pasir Tengah secara konsisten menempatkan anak-anak muda yang energik, kreatif dan inovatif dalam jajaran manajemen sebagai penggerak utama perusahaan.  Visi kerja berbasis Research and Development telah menjadi salah satu kultur kami. Seiring perkembangan dunia bisnis dan peningkatan kesadaran masyarakat akan higienitas. PT Pasir Tengah mengintegrasikan peternakan sapi yang dimiliki dengan Rumah Potong Hewan (RPH) terbesar di Indonesia, berstandar internasional dengan kapasitas potong 300 ekor sapi per hari.  Bersertifikasi halal MUI dan dilengkapi sertifikasi NKV. Kami berkomitmen dalam melaksanakan proses penanganan sapi sesuai SOP (Standard Operating Procedure) yang menjadi syarat dalam  sertifikasi halal karena kepercayaan konsumen adalah yang utama.
 </p>
           </div>
-          <div class="row no-gutters">
-            <div class="col-6"><img src="<?php echo base_url();?>theme/images/profil/1.jpg" alt="" width="390" height="390"/>
+          
+      </section>
+      <section class="section-md bg-transparent text-center text-md-left">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 bg-primary context-dark spacing-box">
+              <h2>KLATEN FARM</h2>
+              <p class="big">•  Luas 5 hektar</p>
+              <p class="big">• Populasi mencapai 10.000 ekor sapi.</p>
+              <p class="big">•  Berada di bawah manajemen PT Pandanaran Artha Perkasa juga menjadi Pusat Penelitian dan Pengembangan Strain Sapi Unggulan dan sebagai "Centre Of Excellence" bekerjasama dengan Fakultas Peternakan Universitas Gadjah Mada di bawah supervisi para ahli peternakan terkemuka tingkat nasional.</p>
+              <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-6"><img src="<?php echo base_url();?>theme/images/profil/2.jpg" alt="" width="390" height="390"/>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/farm1-850x450.png);"></div>
+
+
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/pasirtengah.png);"></div>
+            <div class="col-md-6 bg-secondary context-dark spacing-box">
+              <h2>PASIR TENGAH 2 FARM</h2>
+               <p class="big">•  Luas 5 hektar</p>
+              <p class="big">•  Populasi mencapai 5000 ekor sapi.</p>
+              <p class="big">•  Peternakan ini disiapkan untuk memenuhi stok pasar Jakarta, Bogor, Depok, Tangerang dan sekitarnya.</p>
+             <!--  <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-6"><img src="<?php echo base_url();?>theme/images/profil/3.jpg" alt="" width="390" height="390"/>
+             <div class="col-md-6 bg-primary context-dark spacing-box">
+              <h2>CARIU FARM</h2>
+              <p class="big">•  Luas 25 hektar</p>
+              <p class="big">•  Populasi direncanakan mencapai 25.000 ekor ke depannya.</p>
+              <p class="big">•  Saat ini dalam tahap penyelesaian pembangunan dan beberapa kandang sudah mulai dioperasikan.</p>
+              <p class="big">•  Peternakan ini berpotensi dikembangkan lebih besar dan kompleks di masa mendatang.</p>
+              <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-6"><img src="<?php echo base_url();?>theme/images/profil/4.jpg" alt="" width="390" height="390"/>
-            </div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/Cariu-Farm.jpg);"></div>
+
           </div>
         </div>
       </section>

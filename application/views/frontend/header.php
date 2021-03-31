@@ -45,7 +45,7 @@
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Unit Bisnis</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">LIVESTOCK</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>livestock">LIVESTOCK</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="#">MEAT</a>

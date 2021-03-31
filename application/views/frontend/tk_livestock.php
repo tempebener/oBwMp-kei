@@ -113,6 +113,51 @@
 
         </div>
       </section>
+
+       <section class="section-md bg-transparent text-center">
+        <div class="container">
+          
+          <div class="row row-30">
+            <div class="col-md-6 col-xl-10 d-flex">
+              <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div>
+            </div>
+          
+            </div>
+            <div class="col-md-6 col-xl-10">
+             <br/>
+&emsp;&emsp;Dengan mempertahankan kualitasnya, PT Widodo Makmur Perkasa berhasil menjadi salah satu dari tiga pemain besar di bidang pasokan sapi bakalan di Indonesia. Perusahaan ini juga membuat inovasi dan penelitian untuk mengembangkan sapi silangan unggul bernama GAMA BLUE sebagai hasil kolaborasi kami dengan Fakultas Peternakan Universitas Gadjah Mada (UGM) dan Fakultas Kedokteran Hewan University of Liege, Belgia. Kami juga melaksanakan program cross breeding untuk menghasilkan sapi unggulan lainnya, bekerja sama dengan lembaga peternakan dari dalam dan luar negeri.
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <section class="section-md bg-transparent text-center text-md-left">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 bg-primary context-dark spacing-box">
+              <h2>Pakan Ternak</h2>
+              <p class="big">•  131.000 Ton / Tahun
+Kami juga menghasilkan pakan ternak sapi dengan bahan baku pilihan yang aman untuk dikonsumsi oleh sapi dan tidak memberikan dampak buruk bagi kesehatan. Kapasitas produksi pakan sapi mencapai 131 juta kg/tahun yang digunakan untuk konsumsi internal sebanyak 85% dan didistribusikan 15% untuk pasar eksternal, serta petani plasma binaan.
+</p>
+              <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
+            </div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/feedmill-1.png);"></div>
+
+
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/organicfertilizer.png);"></div>
+            <div class="col-md-6 bg-secondary context-dark spacing-box">
+             <h2>Pupuk Organik</h2>
+              <p class="big">•  4.530 Ton / Bulan Kami memanfaatkan limbah sapi dalam bentuk cair dan padat sebagai pupuk organik yang dipasarkan ke perkebunan skala besar seperti perkebunan kelapa sawit, karet atau tebu dan penggunaan limbah sebagai pupuk dapat mengurangi biaya produksi. Ini merupakan solusi cerdas, selain itu kami berkomitmen dalam melaksankan konsep zero waste untuk mengurangi produksi limbah yang dihasilkan industri agar mampu mereduksi efek rumah kaca (green house effect). Keberlangsungan lingkungan merupakan tanggung jawab semua pihak. Kapasitas produksi pupuk mencapai 4.530 ton/bulan. Langkah selanjutnya adalah memanfaatkan limbah sapi sebagai bahan bakar dalam bentuk briket yang dipasarkan pada industri skala kecil dan menengah di daerah Cianjur dan sekitarnya. Karena bahan bakar briket limbah sapi dapat menciptakan efisiensi serta  tidak menciptakan polusi udara yang berbahaya.
+             <!--  <a class="btn btn-outline" href="#">Learn more</a> -->
+            </div>
+             
+           
+
+
+
+
+        </div>
+      </section>
       <!-- Footer start-->
       <?php $this->load->view('frontend/footer')?>
       <!-- Footer end-->

@@ -30,5 +30,14 @@ class M_main extends CI_Model
 	    $this->db->join('tbl_slider_s', 'tbl_slider_s.id_slider_s = tbl_bod.id_status','inner');
 	    return $this->db->get('tbl_bod')->result();
 	}
+
+	function get_all_member(){
+		$hsl=$this->db->query("SELECT tbl_member.*,DATE_FORMAT(created_at,'%d %M %Y') AS tanggal FROM tbl_member ORDER BY id_member DESC");
+		return $hsl;
+	}
+
+    public function insert($table,$data){
+        return $this->db->insert($table, $data);
+    }
  
 }

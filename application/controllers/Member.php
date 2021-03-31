@@ -4,7 +4,7 @@ class Member extends CI_Controller {
 	 function __construct()
   {
     parent::__construct();
-	$this->load->model('m_member');
+	$this->load->model('m_main');
   }
   
 	public function index(){	
@@ -55,7 +55,7 @@ class Member extends CI_Controller {
                                     'foto_sku'=>$hasil['file_name'],
                                     'partnership_agreement'=>$hasil['file_name']);
             }
-            $this->m_member->insert('tbl_member',$data);
+            $this->m_main->insert('tbl_member',$data);
             redirect('member');
         }else{
 			$this->load->view('frontend/register_index');

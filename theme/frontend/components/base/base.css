@@ -5622,14 +5622,44 @@ button.bg-red:focus {
 	padding-top: 0;
 }
 
-.bg-red .btn-red:hover, .bg-red .btn-red.hover, .bg-red .btn-red:active, .bg-red .btn-red.active {
+.bg-red .btn-white:hover, .bg-red .btn-white.hover, .bg-red .btn-white:active, .bg-red .btn-white.active {
     color: #fff;
     background-color: #42495b;
     border-color: #42495b;
 }
 
-.bg-red .btn-red {
+.bg-red .btn-white {
     color: #42495b;
     background-color: #fff;
     border-color: #fff;
+}
+
+.btn-danger {
+    background-color:#FF0040 !important;
+    color: #FFFFFF;
+}
+
+.btn-danger:hover {
+    background-color:#EB003B !important;
+    color: #FFFFFF;
+}
+
+.btn-warning {
+    background-color:#FFA500 !important;
+    color: #FFFFFF;
+}
+
+.btn-warning:hover {
+    background-color:#EB9800 !important;
+    color: #FFFFFF;
+}
+
+.btn-info {
+    background-color:#00D4FF !important;
+    color: #FFFFFF;
+}
+
+.btn-info:hover {
+    background-color:#00C4EB !important;
+    color: #FFFFFF;
 }

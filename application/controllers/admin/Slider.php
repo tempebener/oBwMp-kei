@@ -12,7 +12,6 @@ class Slider extends CI_Controller{
 		$this->load->library('upload');
 	}
 
-
 	function index(){
 		
 		$x['data']=$this->m_slider->get_all_slider();

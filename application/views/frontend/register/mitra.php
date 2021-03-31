@@ -20,7 +20,7 @@
           <div class="breadcrumb">
             <div class="breadcrumb-inner">
               <div class="breadcrumb-item"><a class="breadcrumb-link" href="<?php echo base_url();?>">Home</a></div>
-              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">Pendaftaran</span></div>
+              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">Pendaftaran Mitra</span></div>
             </div>
           </div>
         </div>

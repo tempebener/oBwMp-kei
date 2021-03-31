@@ -30,13 +30,24 @@
       <section class="section-sm bg-transparent">
         <div class="container">
           <div class="text-block text-block-1 text-center">
-            <h2>Pendaftaran</h2>
+            <h2>Pendaftaran Member</h2>
           </div>
 
           <div class="row row-30">
             <div class="col-md-12">
-              <form class="rd-form rd-mailform" data-form-output="contact-form" data-form-type="contact" method="post" action="<?php echo base_url();?>member/add_member" enctype="multipart/form-data">
+              <form class="rd-form rd-mailform" data-form-output="contact-form" data-form-type="contact" method="post" action="<?php echo base_url();?>register/add_member" enctype="multipart/form-data">
                 <div class="row row-20">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input class="form-control" type="email" name="email" placeholder="E-mail*" data-constraints="@Email @Required">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input class="form-control" type="password" name="password" placeholder="Password*" data-constraints="@Required">
+                    </div>
+                  </div>
+                  <hr style="width:100%;text-align:left;margin-left:12px;margin-right:12px;">
                   <div class="col-md-6">
                     <div class="form-group">
                       <input class="form-control" type="text" name="nama" placeholder="Nama*" data-constraints="@Required">
@@ -50,11 +61,6 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <input class="form-control" type="text" name="no_hp" placeholder="Nomor Handphone*" data-constraints="@Numeric @Required">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <input class="form-control" type="email" name="email" placeholder="E-mail*" data-constraints="@Email @Required">
                     </div>
                   </div>
                   <div class="col-md-6">
@@ -93,26 +99,8 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label class="post-title h6">Upload NPWP</label>
-                      <input class="form-control" type="file" name="foto_npwp" placeholder="Upload NPWP*">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
                       <label class="post-title h6">Upload Foto Diri</label>
                       <input class="form-control" type="file" name="foto_pas" placeholder="Upload Foto Diri*">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="post-title h6">Upload SKU (Surat Keterangan Usaha)</label>
-                      <input class="form-control" type="file" name="foto_sku" placeholder="Upload SKU Diri*">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="post-title h6">Partnership Agreement</label>
-                      <input class="form-control" type="file" name="partnership_agreement" placeholder="Partnership Agreement*">
                     </div>
                   </div>
                 </div>

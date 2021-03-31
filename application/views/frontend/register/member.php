@@ -35,7 +35,7 @@
 
           <div class="row row-30">
             <div class="col-md-12">
-              <form class="rd-form rd-mailform" data-form-output="contact-form" data-form-type="contact" method="post" action="<?php echo base_url();?>member/add_member" enctype="multipart/form-data">
+              <form class="rd-form rd-mailform" data-form-output="contact-form" data-form-type="contact" method="post" action="<?php echo base_url();?>register/add_member" enctype="multipart/form-data">
                 <div class="row row-20">
                   <div class="col-md-6">
                     <div class="form-group">
@@ -99,26 +99,8 @@
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label class="post-title h6">Upload NPWP</label>
-                      <input class="form-control" type="file" name="foto_npwp" placeholder="Upload NPWP*">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
                       <label class="post-title h6">Upload Foto Diri</label>
                       <input class="form-control" type="file" name="foto_pas" placeholder="Upload Foto Diri*">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="post-title h6">Upload SKU (Surat Keterangan Usaha)</label>
-                      <input class="form-control" type="file" name="foto_sku" placeholder="Upload SKU Diri*">
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label class="post-title h6">Partnership Agreement</label>
-                      <input class="form-control" type="file" name="partnership_agreement" placeholder="Partnership Agreement*">
                     </div>
                   </div>
                 </div>

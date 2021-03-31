@@ -35,7 +35,7 @@
 
           <div class="row row-30">
             <div class="col-md-12">
-              <form class="rd-form rd-mailform" data-form-output="contact-form" data-form-type="contact" method="post" action="<?php echo base_url();?>member/add_member" enctype="multipart/form-data">
+              <form class="rd-form rd-mailform" data-form-output="contact-form" data-form-type="contact" method="post" action="<?php echo base_url();?>register/add_mitra" enctype="multipart/form-data">
                 <div class="row row-20">
                   <div class="col-md-6">
                     <div class="form-group">

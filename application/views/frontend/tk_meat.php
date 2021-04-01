@@ -2,7 +2,20 @@
 <html lang="en">
 
 <!-- head -->
-<?php $this->load->view('frontend/head')?>
+<head>
+    <title>Meat</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="KEI">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:url" content="">
+    <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="<?php echo base_url();?>theme/frontend/components/base/base.css">
+    <script src="<?php echo base_url();?>theme/frontend/components/base/core.min.js"></script>
+    <script src="<?php echo base_url();?>theme/frontend/components/base/script.js"></script>
+  </head>
 <!-- head end -->
 
   <body>
@@ -36,7 +49,7 @@
             <h2>Meat</h2>
             <p class="big" style="text-align: justify !important;">
 
-              <img src="<?php echo base_url();?>theme/images/meat/cam.png" alt="PT. Cianjur Arta Makmur" width="250px" height="auto" style="float:left;"><strong style="font-size: 1.4rem;">Rumah Potong Hewan Modern Dan Terintegrasi</strong><br/>
+              <img src="<?php echo base_url();?>theme/images/unit/meat/cam.png" alt="PT. Cianjur Arta Makmur" width="250px" height="auto" style="float:left;"><strong style="font-size: 1.4rem;">Rumah Potong Hewan Modern Dan Terintegrasi</strong><br/>
               &emsp;&emsp;PT Cianjur Arta Makmur  merupakan representasi lini bisnis MEAT yang bergerak di bidang perdagangan produk daging sapi. CAM sebagai bagian dari rantai integrasi bisnis peternakan sapi terbesar di Indonesia yaitu PT Pasir Tengah yang mengirimkan sapi bakalan terbaiknya ke RPH untuk dipotong menggunakan peralatan modern yang berstandar internasional dengan kapasitas produksi 300 ekor sapi perhari serta kemampuan blasting 52 ton dan kemampuan menyimpan stock di seluruh warehouse berkapasitas total 500 ton.
               <br/><br/>
               &emsp;&emsp;PT Cianjur Arta Makmur menyediakan produk daging sapi segar berkualitas prima (premium and high quality chilled beef), beku (frozen beef) dan produk-produk sampingan. Standar Operasional Prosedur (SOP) produksi dilaksanakan secara ketat dari tahap pemilihan sapi yang harus sehat  pemotongan, penimbangan, pemilahan, pengemasan, penyimpanan dan proses pendistribusian agar daging tetap terjaga higienitas dan kualitasnya.

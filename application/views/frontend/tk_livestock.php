@@ -51,6 +51,7 @@
 
               
 <br/>
+ <img src="<?php echo base_url();?>theme/images/unit/livestock/paste.png" alt="PT. Cianjur Arta Makmur" width="250px" height="auto" style="float:left;">
 &emsp;&emsp;Sebagai sebuah perusahaan peternakan sapi terintegrasi terbesar di Indonesia, PT Pasir Tengah kini tercatat memenuhi kurang lebih 15% dari total kebutuhan pasar sapi potong nasional. Secara kontinu pemenuhan tersebut disuplai dari 4 fasilitas farm yang tersebar di beberapa lokasi strategis di daerah Cianjur, Cariu, Cileungsi (ketiganya berada di wilayah Jawa Barat) dan Bayat (Klaten, Jawa Tengah) dengan total kapasitas hingga 135 ribu ekor per tahun.
 <br/><br/>
 &emsp;&emsp;Kualitas produk adalah label utama PT Pasir Tengah dalam memasuki pasar, dimana hal tersebut telah dimulai sejak proses seleksi bakalan di Australia yang telah dikenal sebagai salah satu produsen daging sapi terbaik di dunia karena keberhasilan mereka dalam mengembangkan program breeding yang menghasilkan sapi bakalan dengan pertumbuhan progresif, tahan penyakit, tahan cuaca ekstrem dan terjamin bebas dari Penyakit Mulut & Kuku (PMK) serta Anthrax. Titik kedua untuk menjaga kualitas produk adalah di pelabuhan bongkar muat dan kandang karantina. Kontrol yang ketat diberlakukan sepanjang proses perjalanan sapi di kapal, proses bongkar di pelabuhan, maupun ketika sapi-sapi tersebut masuk lokasi kandang di masing-masing farm. Selanjutnya selama 14 hari sapi akan berada di kandang karantina untuk tindakan observasi oleh tim veteriner farm bersama petugas karantina dari Balai Karantina Pertanian.
@@ -76,10 +77,10 @@
               <p class="big">•  Kegiatan utama : fattening, breeding, feedmill production, organic fertilizer production, mini ranch, cross breeding program dibawah departemen research and development, serta kemitraan</p>
               <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/cianjur.jpg);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/unit/livestock/cianjur.jpg);"></div>
 
 
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/farm1-850x450.png);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/unit/livestock/farm1-850x450.png);"></div>
             <div class="col-md-6 bg-secondary context-dark spacing-box">
              <h2>KLATEN FARM</h2>
               <p class="big">•  Luas 5 hektar</p>
@@ -94,10 +95,10 @@
               <p class="big">•  Peternakan ini disiapkan untuk memenuhi stok pasar Jakarta, Bogor, Depok, Tangerang dan sekitarnya.</p>
               <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/pasirtengah.png);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/unit/livestock/pasirtengah.png);"></div>
 
 
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/Cariu-Farm.jpg);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/unit/livestock/Cariu-Farm.jpg);"></div>
             <div class="col-md-6 bg-secondary context-dark spacing-box">
               <h2>CARIU FARM</h2>
               <p class="big">•  Luas 25 hektar</p>
@@ -120,7 +121,7 @@
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
               <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/profil/sapi.png" alt="PT. Cianjur Arta Makmur" width="100%" height="auto">
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/unit/livestock/sapi.png" alt="PT. Cianjur Arta Makmur" width="100%" height="auto">
             </div>
           
             </div>
@@ -142,10 +143,10 @@ Kami juga menghasilkan pakan ternak sapi dengan bahan baku pilihan yang aman unt
 </p>
               <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/feedmill-1.png);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/unit/livestock/feedmill-1.png);"></div>
 
 
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/organicfertilizer.png);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/unit/livestock/organicfertilizer.png);"></div>
             <div class="col-md-6 bg-secondary context-dark spacing-box">
              <h2>Pupuk Organik</h2>
               <p class="big">•  4.530 Ton / Bulan Kami memanfaatkan limbah sapi dalam bentuk cair dan padat sebagai pupuk organik yang dipasarkan ke perkebunan skala besar seperti perkebunan kelapa sawit, karet atau tebu dan penggunaan limbah sebagai pupuk dapat mengurangi biaya produksi. Ini merupakan solusi cerdas, selain itu kami berkomitmen dalam melaksankan konsep zero waste untuk mengurangi produksi limbah yang dihasilkan industri agar mampu mereduksi efek rumah kaca (green house effect). Keberlangsungan lingkungan merupakan tanggung jawab semua pihak. Kapasitas produksi pupuk mencapai 4.530 ton/bulan. Langkah selanjutnya adalah memanfaatkan limbah sapi sebagai bahan bakar dalam bentuk briket yang dipasarkan pada industri skala kecil dan menengah di daerah Cianjur dan sekitarnya. Karena bahan bakar briket limbah sapi dapat menciptakan efisiensi serta  tidak menciptakan polusi udara yang berbahaya.

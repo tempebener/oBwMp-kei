@@ -15,6 +15,11 @@ class Tentang_kami extends CI_Controller{
 		$this->load->view('frontend/tk_profil');
 	}
 
+	function pesantren_entrepreneur(){
+
+		$this->load->view('frontend/tk_pesantren_entrepreneur');
+	}
+
 	function livestock(){
 
 		$this->load->view('frontend/tk_livestock');

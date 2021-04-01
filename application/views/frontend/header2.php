@@ -38,7 +38,7 @@
                           <a class="navbar-navigation-dropdown-link" href="#">Pengembangan Seni & Budaya</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Pesantren Entrepreneur</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pesantren_entrepreneur">Pesantren Entrepreneur</a>
                         </li>
                       </ul>
                     </li>

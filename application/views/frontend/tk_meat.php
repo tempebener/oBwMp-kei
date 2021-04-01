@@ -70,7 +70,7 @@
         <div class="col-sm-3 col-md-3" style="border-style: solid;">
                 <!-- Blurb-->
                 <div class="blurb blurb-2" data-animate='{"class":"fadeInUp"}' style="margin: 10% 0;">
-                  <p class="blurb-text big center" style="display: flex;justify-content: center;align-items: center;line-height: 2.0;">
+                  <p class="blurb-text big center" style="justify-content: center;align-items: center;line-height: 2.0;">
                     300 ekor/hari <br/>
                     Kapasitas <em>Warehouse</em> 3.000 ton <br/>
                     52 Ton Penyimpanan <em>Blast Freezer</em> <br/>
@@ -81,7 +81,7 @@
                 <!-- Blurb-->
                 <article class="blurb blurb-2" data-animate='{"class":"fadeInUp","delay":".15s"}'>
                   <div class="blurb-text big">
-                    <img src="<?php echo base_url();?>theme/images/meat/halal.png" alt="PT. Cianjur Arta Makmur" width="200px" height="auto"><br/>
+                    <img src="<?php echo base_url();?>theme/images/unit/meat/halal.png" alt="PT. Cianjur Arta Makmur" width="200px" height="auto"><br/>
                     <strong style="font-size: 1.4rem;">Sertivikasi Halal MUI</strong>
                   </div>
                 </article>
@@ -102,10 +102,10 @@
               <p class="big text-justify">Sirloin adalah jenis daging steak dan perbedaannya teletak pada bagian belakang sapi yang bekerja lebih berat daripada bagian lain yang umum dipakai untuk steak. Oleh sebab itu daging steak sirloin lebih alot setelah dimasak dengan serat yang lebih kasar jika dibandingkan jenis daging steak dari bagian lain. Untuk urusan harga, harga sirloin umumnya lebih murah dibandingkan daging steak lainnya. Namun demikian, sirloin memiliki kelebihan dalam ukuran, yaitu bisa dipotong lebih besar daripada bagian sapi lain yang lebih lembut.  Cita rasa daging steak jenis sirloin pun lebih juicy dibandingkan tenderloin karena adanya sedikit bagian lemak di pinggiran daging. Lemak ini membuat rasa steak sirloin menjadi lebih gurih meskipun tekstur daging sedikit kenyal daripada tenderloin.</p>
               <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/meat/sirloin.jpg);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/unit/meat/sirloin.jpg);"></div>
 
 
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/meat/striploin.jpg);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/unit/meat/striploin.jpg);"></div>
             <div class="col-md-6 bg-secondary context-dark spacing-box">
               <h2>Striploin</h2>
               <p class="big text-justify">Top loin / striploin disebut juga New York Cuts, Kansas City Strip, Shell Steak dan Delmonico. Striploin adalah daging sapi yang membungkus bagian tenderloin. Jenis ini adalah salah satu daging primadona karena dagingnya yang lembut dan rasa juicy dari lemak yang cukup terasa. Bermula di Tahun 1873, sebuah restoran bernama Delmonico di Manhattan menjual jenis daging steak ini dan diberi nama Delmonico Steak. Delmonico Steak kemudian merambah New York hingga akhirnya terkenal menjadi New York Cuts.</p>
@@ -116,7 +116,7 @@
               <p class="big text-justify">Tenderloin dikenal sebagai Eye Fillet atau Fillet Mignon. Jenis daging steak dan perbedaannya yang khas sering kita sebutnya daging has atau lulur. Daging tidakn tidak memiliki serat atau otot. Tenderloin adalah daging sapi bagian pinggang (loin) yang paling lembut (tender). Potongan dagingnya paling kecil dibanding lainnya sehingga harganya cenderung lebih mahal. Teksturnya lembut, tetapi tidak terlalu kaya rasa karena kandungan lemak yang sangat rendah. Menu steak tenderloin cocok untuk steak lovers yang sedang diet namun ingin menikmati daging steak. Bagian ini sering menjadi pilihan untuk digunakan sebagai bahan baku steak, sate, rendang atau semur. Teknik memasak yang paling cocok adalah dry heat seperti barbeque.</p>
               <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/meat/tenderloin.jpg);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/unit/meat/tenderloin.jpg);"></div>
            
         </div>
       </section>

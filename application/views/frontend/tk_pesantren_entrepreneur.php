@@ -36,7 +36,7 @@
         <div class="container">
           <div class="text-block text-block-2 text-center">
             <h3>SANTRI ENTREPRENEUR PENGGERAK EKONOMI UMAT</h3>
-            <hr style="border: 5px solid yellow;margin-left:20px;margin-right:20px;border-radius: 5px;">
+            <hr style="border: 5px solid yellow;border-radius: 5px;">
           </div>
           <div class="row">
             <div class="col-md-6 spacing-box">

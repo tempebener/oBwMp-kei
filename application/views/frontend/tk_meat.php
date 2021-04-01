@@ -47,74 +47,64 @@
 
       </section>
 
-          <div class="row row-30 justify-content-center">
-            <div class="col-sm-6 col-md-6">
-                    <!-- Blurb-->
-                    <article class="blurb blurb-2" data-animate='{"class":"fadeInUp"}'>
-                      <div class="blurb-text big">
-                        300 ekor/hari <br/>
-                        Kapasitas Warehouse 3.000 ton <br/>
-                        52 Ton Penyimpanan  Blast Freezer <br/>
-                        Penyembelihan sesuai syariat Islam</div>
-                    </article>
-            </div>
-            <div class="col-sm-6 col-md-6">
-                    <!-- Blurb-->
-                    <article class="blurb blurb-2" data-animate='{"class":"fadeInUp","delay":".15s"}'>
-                      <div class="blurb-text big">
-                        <img src="<?php echo base_url();?>theme/images/meat/halal.png" alt="PT. Cianjur Arta Makmur" width="200px" height="auto"><br/>
-                        <strong style="font-size: 1.4rem;">Sertivikasi Halal MUI</strong>
-                      </div>
-                    </article>
-            </div>
-          </div>
+      <div class="row row-30 justify-content-center">
+        <div class="col-sm-3 col-md-3">
+                <!-- Blurb-->
+                <article class="blurb blurb-2" data-animate='{"class":"fadeInUp"}'>
+                  <div class="blurb-text big">
+                </article>
+        </div>
+        <div class="col-sm-3 col-md-3" style="border-style: solid;">
+                <!-- Blurb-->
+                <div class="blurb blurb-2" data-animate='{"class":"fadeInUp"}' style="margin: 10% 0;">
+                  <p class="blurb-text big center" style="display: flex;justify-content: center;align-items: center;line-height: 2.0;">
+                    300 ekor/hari <br/>
+                    Kapasitas <em>Warehouse</em> 3.000 ton <br/>
+                    52 Ton Penyimpanan <em>Blast Freezer</em> <br/>
+                    Penyembelihan sesuai syariat Islam</p>
+                </div>
+        </div>
+        <div class="col-sm-3 col-md-3 text-center" style="border-style: solid;">
+                <!-- Blurb-->
+                <article class="blurb blurb-2" data-animate='{"class":"fadeInUp","delay":".15s"}'>
+                  <div class="blurb-text big">
+                    <img src="<?php echo base_url();?>theme/images/meat/halal.png" alt="PT. Cianjur Arta Makmur" width="200px" height="auto"><br/>
+                    <strong style="font-size: 1.4rem;">Sertivikasi Halal MUI</strong>
+                  </div>
+                </article>
+        </div>
+        <div class="col-sm-3 col-md-3">
+                <!-- Blurb-->
+                <article class="blurb blurb-2" data-animate='{"class":"fadeInUp"}'>
+                  <div class="blurb-text big">
+                </article>
+        </div>
+      </div>
 
       <section class="section-md bg-transparent text-center text-md-left">
         <div class="container">
           <div class="row">
             <div class="col-md-6 bg-primary context-dark spacing-box">
-              <h2>CIANJUR FARM</h2>
-              <p class="big">•  Luas 140 Hektar</p>
-              <p class="big">•  Populasi sapi mencapai 28.000 ekor</p>
-              <p class="big">•  Kapasitas mencapai 112.000 ekor sapi/tahun</p>
-              <p class="big">•  Kegiatan utama : fattening, breeding, feedmill production, organic fertilizer production, mini ranch, cross breeding program dibawah departemen research and development, serta kemitraan</p>
+              <h2>Sirloin</h2>
+              <p class="big text-justify">Sirloin adalah jenis daging steak dan perbedaannya teletak pada bagian belakang sapi yang bekerja lebih berat daripada bagian lain yang umum dipakai untuk steak. Oleh sebab itu daging steak sirloin lebih alot setelah dimasak dengan serat yang lebih kasar jika dibandingkan jenis daging steak dari bagian lain. Untuk urusan harga, harga sirloin umumnya lebih murah dibandingkan daging steak lainnya. Namun demikian, sirloin memiliki kelebihan dalam ukuran, yaitu bisa dipotong lebih besar daripada bagian sapi lain yang lebih lembut.  Cita rasa daging steak jenis sirloin pun lebih juicy dibandingkan tenderloin karena adanya sedikit bagian lemak di pinggiran daging. Lemak ini membuat rasa steak sirloin menjadi lebih gurih meskipun tekstur daging sedikit kenyal daripada tenderloin.</p>
               <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/cianjur.jpg);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/meat/sirloin.jpg);"></div>
 
 
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/farm1-850x450.png);"></div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/meat/striploin.jpg);"></div>
             <div class="col-md-6 bg-secondary context-dark spacing-box">
-             <h2>KLATEN FARM</h2>
-              <p class="big">•  Luas 5 hektar</p>
-              <p class="big">• Populasi mencapai 10.000 ekor sapi.</p>
-              <p class="big">•  Berada di bawah manajemen PT Pandanaran Artha Perkasa juga menjadi Pusat Penelitian dan Pengembangan Strain Sapi Unggulan dan sebagai "Centre Of Excellence" bekerjasama dengan Fakultas Peternakan Universitas Gadjah Mada di bawah supervisi para ahli peternakan terkemuka tingkat nasional.</p>
+              <h2>Striploin</h2>
+              <p class="big text-justify">Top loin / striploin disebut juga New York Cuts, Kansas City Strip, Shell Steak dan Delmonico. Striploin adalah daging sapi yang membungkus bagian tenderloin. Jenis ini adalah salah satu daging primadona karena dagingnya yang lembut dan rasa juicy dari lemak yang cukup terasa. Bermula di Tahun 1873, sebuah restoran bernama Delmonico di Manhattan menjual jenis daging steak ini dan diberi nama Delmonico Steak. Delmonico Steak kemudian merambah New York hingga akhirnya terkenal menjadi New York Cuts.</p>
              <!--  <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
              <div class="col-md-6 bg-primary context-dark spacing-box">
-              <h2>PASIR TENGAH 2 FARM</h2>
-               <p class="big">•  Luas 5 hektar</p>
-              <p class="big">•  Populasi mencapai 5000 ekor sapi.</p>
-              <p class="big">•  Peternakan ini disiapkan untuk memenuhi stok pasar Jakarta, Bogor, Depok, Tangerang dan sekitarnya.</p>
+              <h2>Tenderloin</h2>
+              <p class="big text-justify">Tenderloin dikenal sebagai Eye Fillet atau Fillet Mignon. Jenis daging steak dan perbedaannya yang khas sering kita sebutnya daging has atau lulur. Daging tidakn tidak memiliki serat atau otot. Tenderloin adalah daging sapi bagian pinggang (loin) yang paling lembut (tender). Potongan dagingnya paling kecil dibanding lainnya sehingga harganya cenderung lebih mahal. Teksturnya lembut, tetapi tidak terlalu kaya rasa karena kandungan lemak yang sangat rendah. Menu steak tenderloin cocok untuk steak lovers yang sedang diet namun ingin menikmati daging steak. Bagian ini sering menjadi pilihan untuk digunakan sebagai bahan baku steak, sate, rendang atau semur. Teknik memasak yang paling cocok adalah dry heat seperti barbeque.</p>
               <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
             </div>
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/pasirtengah.png);"></div>
-
-
-            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/profil/Cariu-Farm.jpg);"></div>
-            <div class="col-md-6 bg-secondary context-dark spacing-box">
-              <h2>CARIU FARM</h2>
-              <p class="big">•  Luas 25 hektar</p>
-              <p class="big">•  Populasi direncanakan mencapai 25.000 ekor ke depannya.</p>
-              <p class="big">•  Saat ini dalam tahap penyelesaian pembangunan dan beberapa kandang sudah mulai dioperasikan.</p>
-              <p class="big">•  Peternakan ini berpotensi dikembangkan lebih besar dan kompleks di masa mendatang.</p>
-             <!--  <a class="btn btn-outline" href="#">Learn more</a> -->
-            </div>
+            <div class="col-md-6 bg-image" style="background-image:url(<?php echo base_url();?>theme/images/meat/tenderloin.jpg);"></div>
            
-
-
-
-
         </div>
       </section>
       <!-- Footer start-->

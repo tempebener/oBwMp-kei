@@ -5,6 +5,11 @@ class Tentang_kami extends CI_Controller{
 		$this->load->model('m_tentang_kami');
 	}
 
+	function visi_misi(){
+
+		$this->load->view('frontend/tk_visi_misi');
+	}
+
 	function profil(){
 
 		$this->load->view('frontend/tk_profil');

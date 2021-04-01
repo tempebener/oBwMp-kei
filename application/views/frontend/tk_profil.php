@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- head -->
-<?php $this->load->view('frontend/head')?>
+ <head>
+    <title>Profil</title>
+    <?php $this->load->view('frontend/head2')?>
+  </head>
 <!-- head end -->
 
   <body>

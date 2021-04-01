@@ -2,6 +2,13 @@
         <div class="footer-top bg-300">
           <div class="container">
             <div class="row row-30">
+              <div class="col-3 col-md-2">
+                <ul class="list list-sm">
+                  <li class="list-item"><a class="link link-inherit" href="<?php echo base_url();?>">
+                    <img src="<?php echo base_url();?>theme/images/logo-kesatriaan.png" alt="Kesatriaan Entrepreneur Indonesia" width="200px" height="auto"></a>
+                  </li>
+                </ul>
+              </div>
               <div class="col-xs-6 col-md-5">
                 <h5 class="footer-title">Kontak</h5>
                 <ul class="list list-icons">
@@ -17,7 +24,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-6 col-md-3">
+              <div class="col-6 col-md-2">
                 <h5 class="footer-title">Sosial Media</h5>
                 <ul class="list list-sm">
                   <li class="list-item"><a class="link link-inherit" href="https://www.facebook.com/kesatriaan.entrepreneur.indonesia">Facebook</a></li>
@@ -28,7 +35,7 @@
                   <li class="list-item"><a class="link link-inherit" href="https://www.youtube.com/channel/UCaXcQCE0lbJWRz9GQhtuXSw">YouTube</a></li>
                 </ul>
               </div>
-              <div class="col-6 col-md-3">
+              <div class="col-6 col-md-2">
                 <h5 class="footer-title">Lini Bisnis</h5>
                 <ul class="list list-sm">
                   <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/livestock/">Livestock</a></li>

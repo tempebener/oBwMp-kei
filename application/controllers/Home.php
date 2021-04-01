@@ -27,6 +27,10 @@ class Home extends CI_Controller{
 		$data['post_bod'] = $this->M_main->get_all_bod($status);
 		$data['ekonomi_outlook'] = $this->db->query("select * from tbl_ekonomi_outlook  ORDER BY  id_eo desc 
 			")->result();
+		$data['berita'] = $this->db->query("select * from tbl_berita where status = 'Y'  ORDER BY  id_berita desc limit 1
+			")->result();
+		$data['berita2'] = $this->db->query("select * from tbl_berita where status = 'Y'  ORDER BY  id_berita desc limit 3 offset 1
+			")->result();
 		$this->load->view('frontend/index',$data);
 	}
 

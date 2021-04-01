@@ -118,12 +118,13 @@
         <div class="container">
           
           <div class="row row-30">
-            <div class="col-md-6 col-xl-10 d-flex">
-              <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div>
+            <div class="col-md-6 col-xl-12 d-flex">
+              <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/profil/sapi.png" alt="PT. Cianjur Arta Makmur" width="100%" height="auto">
             </div>
           
             </div>
-            <div class="col-md-6 col-xl-10">
+            <div class="col-md-6 col-xl-12 text-justify">
              <br/>
 &emsp;&emsp;Dengan mempertahankan kualitasnya, PT Widodo Makmur Perkasa berhasil menjadi salah satu dari tiga pemain besar di bidang pasokan sapi bakalan di Indonesia. Perusahaan ini juga membuat inovasi dan penelitian untuk mengembangkan sapi silangan unggul bernama GAMA BLUE sebagai hasil kolaborasi kami dengan Fakultas Peternakan Universitas Gadjah Mada (UGM) dan Fakultas Kedokteran Hewan University of Liege, Belgia. Kami juga melaksanakan program cross breeding untuk menghasilkan sapi unggulan lainnya, bekerja sama dengan lembaga peternakan dari dalam dan luar negeri.
             </div>

@@ -15,9 +15,20 @@ class Tentang_kami extends CI_Controller{
 		$this->load->view('frontend/tk_livestock');
 	}
 
+<<<<<<< Updated upstream
 	function meat(){
 
 		$this->load->view('frontend/tk_meat');
+=======
+	function food(){
+
+		$this->load->view('frontend/tk_food');
+	}
+
+	function poultry(){
+
+		$this->load->view('frontend/tk_poultry');
+>>>>>>> Stashed changes
 	}
 
 }

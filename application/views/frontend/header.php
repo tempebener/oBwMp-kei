@@ -51,10 +51,10 @@
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>meat">MEAT</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">FOOD</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>food">FOOD</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">POULTRY</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>poultry">POULTRY</a>
                         </li>
                       </ul>
                     </li>

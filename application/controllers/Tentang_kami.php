@@ -18,6 +18,8 @@ class Tentang_kami extends CI_Controller{
 	function meat(){
 
 		$this->load->view('frontend/tk_meat');
+	}
+	
 	function food(){
 
 		$this->load->view('frontend/tk_food');
@@ -27,5 +29,4 @@ class Tentang_kami extends CI_Controller{
 
 		$this->load->view('frontend/tk_poultry');
 	}
-}
 }

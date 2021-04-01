@@ -53,12 +53,9 @@ $route['default_controller'] = 'home';
 $route['administrator']='admin/login';
 $route['profil']='tentang_kami/profil';
 $route['livestock']='tentang_kami/livestock';
-<<<<<<< Updated upstream
 $route['meat']='tentang_kami/meat';
-=======
 $route['food']='tentang_kami/food';
 $route['poultry']='tentang_kami/poultry';
->>>>>>> Stashed changes
 $route['register_member']='register/add_member';
 $route['register_mitra']='register/add_mitra';
 $route['artikel']='blog';

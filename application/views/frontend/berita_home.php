@@ -12,7 +12,7 @@ $isi = character_limiter($post_new->isi_berita,200);
 ?>
             <div class="col-xs-10 col-sm-6">
                     <!-- Post-->
-                    <div class="post" data-animate='{"class":"fadeIn"}'><a class="post-media" href="#"><img class="post-img" src="<?php echo base_url();?>theme/images/berita/<?php echo $post_new->gambar ?>" alt="" width="570" height="380"/></a>
+                    <div class="post" data-animate='{"class":"fadeIn"}'><a class="post-media" href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><img class="post-img" src="<?php echo base_url();?>theme/images/berita/<?php echo $post_new->gambar ?>" alt="" width="570" height="380"/></a>
                       <div class="post-meta">
                         <div class="post-meta-item">
                           <div class="post-meta-icon custom-font-calendar"></div>
@@ -23,7 +23,7 @@ $isi = character_limiter($post_new->isi_berita,200);
                           <div class="post-comment">3 comment(s)</div>
                         </div> -->
                       </div>
-                      <div class="post-title h6"><a href="#"><?php echo $post_new->judul ?></a></div>
+                      <div class="post-title h6"><a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a></div>
                       <div class="post-text"><?php echo $isi ?></div>
                     </div>
                     <?php } ?>
@@ -43,7 +43,7 @@ $isi = character_limiter($post_new->isi_berita,200);
                         </div>
                        
                       </div>
-                      <div class="post-title h6"><a href="#"><?php echo $post_new->judul ?></a></div>
+                      <div class="post-title h6"><a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a></div>
                       <div class="post-text"><?php echo $isi ?></div>
                     </div>
                     <!-- Post-->

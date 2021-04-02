@@ -59,6 +59,7 @@ $route['livestock']='tentang_kami/livestock';
 $route['meat']='tentang_kami/meat';
 $route['food']='tentang_kami/food';
 $route['poultry']='tentang_kami/poultry';
+$route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
 // Register
 $route['register_member']='register/add_member';
 $route['register_mitra']='register/add_mitra';

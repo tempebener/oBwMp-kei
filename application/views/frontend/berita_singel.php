@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
     <title>Food</title>
-    <?php $this->load->view('frontend/head2')?>
+    <?php $this->load->view('frontend/head')?>
   </head>
   <body>
     <div class="page">
@@ -28,22 +28,18 @@
       <section class="section-md bg-transparent">
         <div class="container">
           <div class="post">
-            <div class="post-media"><img class="post-img" src="images/image-23-1170x500.jpg" alt="" width="1170" height="500"/>
+            <div class="post-media"><img class="post-img" src="<?php echo base_url()?>theme/images/berita/<?php echo "$rows[gambar]"; ?>" alt="" width="1170" height="500"/>
             </div>
             <div class="post-meta">
               <div class="post-meta-item">
                 <div class="post-meta-icon custom-font-calendar"></div>
-                <div class="post-date">April 23, 2020</div>
+                <div class="post-date"><?php echo  tgl_indo($rows['tanggal']); ?></div>
               </div>
-              <div class="post-meta-item">
-                <div class="post-meta-icon custom-font-message-circle"></div>
-                <div class="post-comment">3 Comments</div>
-              </div>
+             
             </div>
-            <div class="post-title h6">Studying in the United States</div>
+            <div class="post-title h6"><?php echo "$rows[judul]"; ?></div>
             <div class="post-text">
-              <p>Ultrices varius tellus viverra egestas ultrices sed turpis dictum eget. Vulputate ipsum sit et mi, id feugiat. Tincidunt dictum vitae metus leo, orci luctus lorem. Volutpat ornare quis risus semper. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices ipsum non mattis pharetra. Integer laoreet non felis sit amet pharetra. Integer mollis eget felis non finibus. Nullam nibh mauris, fermentum vitae felis vehicula, aliquam bibendum sapien. In euismod velit vitae neque rhoncus congue. Aliquam luctus, sapien in consectetur cursus, quam urna euismod magna, sed pellentesque massa libero eu lorem. Aenean rhoncus gravida nisl vel pretium. Nam ac nisl non ipsum vestibulum vehicula vulputate sagittis magna. Aenean est nisl, convallis volutpat tempor ac, tempus ac ante. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce rhoncus sodales tempor. Nunc pretium tortor felis, eget cursus magna accumsan a.</p>
-              <p>Etiam eu molestie eros, commodo hendrerit sapien. Maecenas tempus leo ac nisi iaculis porta. Sed sapien tortor, aliquet a velit ut, lacinia molestie velit. Maecenas ornare consequat massa ullamcorper dapibus. Aliquam auctor, sapien sit amet accumsan facilisis, enim enim aliquet arcu, tincidunt pellentesque justo turpis id neque. Duis eleifend nunc sit amet mi dapibus ornare. Suspendisse vel libero sem.</p>
+              <p><?php echo "$rows[isi_berita]"; ?></p>
             </div>
           </div>
         </div>

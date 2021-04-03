@@ -76,16 +76,16 @@
                           <a class="navbar-navigation-dropdown-link" href="#">Budidaya Ayam Layer</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Budidaya Ayam Broiler</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>budidaya_ayam_broiler">Budidaya Ayam Broiler</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="#">Penggemukan Sapi</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Budidaya Jagung & Padi</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>budidaya_jagung_padi">Budidaya Jagung & Padi</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">UMKM Produk Olahan</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>umkm_produk_olahan">UMKM Produk Olahan</a>
                         </li>
                       </ul>
                     </li>

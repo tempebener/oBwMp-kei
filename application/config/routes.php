@@ -59,6 +59,11 @@ $route['livestock']='tentang_kami/livestock';
 $route['meat']='tentang_kami/meat';
 $route['food']='tentang_kami/food';
 $route['poultry']='tentang_kami/poultry';
+// Kemitraan
+$route['budidaya_ayam_broiler']='kemitraan/budidaya_ayam_broiler';
+$route['budidaya_jagung_padi']='kemitraan/budidaya_jagung_padi';
+$route['umkm_produk_olahan']='kemitraan/umkm_produk_olahan';
+
 $route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
 // Register
 $route['register_member']='register/add_member';

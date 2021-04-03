@@ -2,7 +2,7 @@
 class Tentang_kami extends CI_Controller{
 	function __construct(){
 		parent::__construct();
-		$this->load->model('m_tentang_kami');
+		$this->load->model('m_main');
 	}
 
 	function visi_misi(){

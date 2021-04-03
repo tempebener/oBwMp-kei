@@ -40,7 +40,7 @@
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
               <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_ayam_broiler/skema_budidaya_broiler.png" alt="PT. Cianjur Arta Makmur" width="100%" height="auto">
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_ayam_broiler/skema_budidaya_broiler.png" alt="SKEMA KEMITRAAN BROILER" width="100%" height="auto">
             </div>
           
           </div>

@@ -25,7 +25,7 @@
               <div class="breadcrumb-item"><a class="breadcrumb-link" href="<?php echo base_url();?>">Home</a></div>
               <div class="breadcrumb-item"><span class="breadcrumb-text">Kemitraan</span></div>
               <div class="breadcrumb-item"><span class="breadcrumb-text">Skema Kemitraan</span></div>
-              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">Budidaya Ayam Broiler</span></div>
+              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">Budidaya Jagung & Padi</span></div>
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
               <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_jagung_padi/skema_budidaya_beras.png" alt="PT. Cianjur Arta Makmur" width="100%" height="auto">
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_jagung_padi/skema_budidaya_beras.png" alt="SKEMA KEMITRAAN DENGAN PETANI UNTUK PRODUKSI BAHAN BAKU BERAS" width="100%" height="auto">
             </div>
           
           </div>
@@ -55,7 +55,7 @@
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
               <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_jagung_padi/skema_budidaya_jagung.png" alt="PT. Cianjur Arta Makmur" width="100%" height="auto">
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_jagung_padi/skema_budidaya_jagung.png" alt="SKEMA KEMITRAAN DENGAN PETANI UNTUK BUDIDAYA JAGUNG" width="100%" height="auto">
             </div>
           
           </div>

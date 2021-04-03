@@ -3,6 +3,15 @@
 // Global components list
 let components = {};
 
+// Add by Bayu - Start
+var base_url = window.location.origin;
+// "http://stackoverflow.com"
+
+var host = window.location.host;
+// stackoverflow.com
+
+// Add by Bayu - End
+
 components.customFont = {
 	selector: '[class*="custom-font-"]',
 	styles: './theme/frontend/components/custom-font/custom-font.css'

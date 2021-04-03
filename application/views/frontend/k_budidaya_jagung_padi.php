@@ -2,7 +2,7 @@
 <html lang="en">
 <!-- head -->
  <head>
-    <title>Kemitraan Budidaya Ayam Broiler</title>
+    <title>Kemitraan Budidaya Jagung & Padi</title>
     <?php $this->load->view('frontend/head2')?>
   </head>
 <!-- head end -->
@@ -31,16 +31,31 @@
         </div>
       </section>
 
-      <!-- Deskripsi Profil -->
+      <!-- Deskripsi Budidaya Jagung & Padi -->
        <section class="section-md bg-transparent text-center">
         <div class="container">
-            <h2>SKEMA KEMITRAAN BROILER</h2>
-            <hr style="border: 5px solid yellow;margin-left:200px;margin-right:200px;border-radius: 5px;">
+            <h2>SKEMA KEMITRAAN DENGAN PETANI UNTUK PRODUKSI BAHAN BAKU BERAS</h2>
+            <hr style="border: 5px solid yellow;border-radius: 5px;">
           
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
               <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_ayam_broiler/skema_budidaya_broiler.png" alt="PT. Cianjur Arta Makmur" width="100%" height="auto">
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_jagung_padi/skema_budidaya_beras.png" alt="PT. Cianjur Arta Makmur" width="100%" height="auto">
+            </div>
+          
+          </div>
+        </div>
+      </section>
+      <br/>
+      <section class="section-md bg-transparent text-center">
+        <div class="container">
+            <h2>SKEMA KEMITRAAN DENGAN PETANI UNTUK BUDIDAYA JAGUNG</h2>
+            <hr style="border: 5px solid yellow;margin-left:20px;margin-right:20px;border-radius: 5px;">
+          
+          <div class="row row-30">
+            <div class="col-md-6 col-xl-12 d-flex">
+              <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_jagung_padi/skema_budidaya_jagung.png" alt="PT. Cianjur Arta Makmur" width="100%" height="auto">
             </div>
           
           </div>

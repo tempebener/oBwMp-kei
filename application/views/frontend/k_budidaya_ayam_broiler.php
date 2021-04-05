@@ -34,13 +34,13 @@
       <!-- Deskripsi Profil -->
        <section class="section-md bg-transparent text-center">
         <div class="container">
-            <h2>SKEMA KEMITRAAN BROILER</h2>
-            <hr style="border: 5px solid yellow;margin-left:200px;margin-right:200px;border-radius: 5px;">
+            <h2>SKEMA KEMITRAAN Budidaya Ayam Broiler</h2>
+            <hr style="border: 5px solid yellow;margin-left:20px;margin-right:20px;border-radius: 5px;">
           
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
               <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/budidaya_ayam_broiler/skema_budidaya_broiler.png" alt="SKEMA KEMITRAAN BROILER" width="100%" height="auto">
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/skema_kemitraan_budidaya_ayam_broiler.png" alt="SKEMA KEMITRAAN Budidaya Ayam Broiler" width="100%" height="auto">
             </div>
           
           </div>

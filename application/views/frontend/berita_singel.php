@@ -2,7 +2,7 @@
 <html lang="en">
    <head>
     <title>Food</title>
-    <?php $this->load->view('frontend/head2')?>
+    <?php $this->load->view('frontend/head')?>
   </head>
   <body>
     <div class="page">

@@ -40,14 +40,15 @@
           <div class="row">
             <div class="col-lg-7">
               <div class="pr-xxl-5">
-                <h2>Complete Facilities to be Entrepreneur</h2>
+                <h2>Fasilitas Pendampingan dan Pembelajaran</h2>
                 <!-- <p class="big">Teachzy offers quality education helping you build your future career. Here just some of the facts that show why students choose us.</p> -->
                 <div class="row row-30 row-lg-55">
                   <div class="col-6 col-sm-3 col-md-6">
                           <!-- Blurb side-->
                           <article class="blurb blurb-side">
                             <div class="blurb-item">
-                              <div class="icon blurb-icon custom-font-graduated"></div>
+                              <!-- <div class="icon blurb-icon custom-font-graduated"></div> -->
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/jaminan_akses_pemodalan.jpg" alt="Jaminan Akses Pemodalan" width="100px" height="auto">
                             </div>
                             <div class="blurb-body">
                               <div class="blurb-counter-value h2"><!-- <span data-counter="">100</span><span class="counter-postfix">%</span> -->
@@ -60,7 +61,8 @@
                           <!-- Blurb side-->
                           <article class="blurb blurb-side">
                             <div class="blurb-item">
-                              <div class="icon blurb-icon custom-font-male-teacher"></div>
+                              <!-- <div class="icon blurb-icon custom-font-male-teacher"></div> -->
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/pendampingan_bisnis.jpg" alt="Pendampingan Bisnis" width="100px" height="auto">
                             </div>
                             <div class="blurb-body">
                               <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
@@ -73,7 +75,8 @@
                           <!-- Blurb side-->
                           <article class="blurb blurb-side">
                             <div class="blurb-item">
-                              <div class="icon blurb-icon custom-font-student-at-desk"></div>
+                              <!-- <div class="icon blurb-icon custom-font-student-at-desk"></div> -->
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/pembimbing_profesional_berpengalaman.jpg" alt="Pembimbing Profesional & Berpengalaman" width="150px" height="auto">
                             </div>
                             <div class="blurb-body">
                                <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
@@ -86,7 +89,8 @@
                           <!-- Blurb side-->
                           <article class="blurb blurb-side">
                             <div class="blurb-item">
-                              <div class="icon blurb-icon custom-font-university"></div>
+                              <!-- <div class="icon blurb-icon custom-font-university"></div> -->
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/pembelajaran_komprehensif.jpg" alt="Pembelajaran Komprehensif" width="100px" height="auto">
                             </div>
                             <div class="blurb-body">
                               <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->

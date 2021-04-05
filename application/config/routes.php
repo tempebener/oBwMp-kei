@@ -54,6 +54,7 @@ $route['administrator']='admin/login';
 // Tentang Kami
 $route['visi_misi']='tentang_kami/visi_misi';
 $route['profil']='tentang_kami/profil';
+$route['program_kegiatan']='tentang_kami/program_kegiatan';
 $route['pesantren_entrepreneur']='tentang_kami/pesantren_entrepreneur';
 $route['livestock']='tentang_kami/livestock';
 $route['meat']='tentang_kami/meat';
@@ -69,6 +70,7 @@ $route['budidaya_jagung_padi']='kemitraan/budidaya_jagung_padi';
 $route['umkm_produk_olahan']='kemitraan/umkm_produk_olahan';
 
 $route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
+$route['pelatihan/(:num)/(:any)'] = "pelatihan/detail_pelatihan/$1/$2";
 // Register
 $route['register_member']='register/add_member';
 $route['register_mitra']='register/add_mitra';

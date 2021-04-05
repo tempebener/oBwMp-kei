@@ -64,22 +64,22 @@
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="history.html">Kemitraan</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
 
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Pengembangan Kemitraan</a>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pengembangan_kemitraan">Pengembangan Kemitraan</a>
                     </li>
 
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Proyeksi Kemitraan</a>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>proyeksi_kemitraan">Proyeksi Kemitraan</a>
                     </li>
 
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Skema Kemitraan</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Budidaya Ayam Layer</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>budidaya_ayam_layer">Budidaya Ayam Layer</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>budidaya_ayam_broiler">Budidaya Ayam Broiler</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Penggemukan Sapi</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>penggemukan_sapi">Penggemukan Sapi</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>budidaya_jagung_padi">Budidaya Jagung & Padi</a>

@@ -39,7 +39,26 @@
             </div>
             <div class="post-title h6"><?php echo "$rows[judul_pelatihan]"; ?></div>
             <div class="post-text">
-              <p></p>
+              <div class="row row-30 row-lg-55">
+                
+                <!-- foreachnya nti taro sini - Start -->
+                <div class="col-6 col-sm-3 col-md-6">
+                  <!-- Blurb side-->
+                  <article class="blurb blurb-side">
+                    <div class="blurb-item">
+                      <!-- <div class="icon blurb-icon custom-font-graduated"></div> -->
+                      <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/jaminan_akses_pemodalan.jpg" alt="Jaminan Akses Pemodalan" width="100px" height="auto">
+                    </div>
+                    <div class="blurb-body" style="vertical-align: middle;display: inline-grid;">
+                      <div class="blurb-counter-value h2"><!-- <span data-counter="">100</span><span class="counter-postfix">%</span> -->
+                      </div>
+                      <div class="blurb-title h4"><a href="#">Jaminan Akses Pemodalan</a></div>
+                    </div>
+                  </article>
+                </div>
+                <!-- foreachnya nti taro sini - End -->
+
+              </div>
             </div>
           </div>
         </div>

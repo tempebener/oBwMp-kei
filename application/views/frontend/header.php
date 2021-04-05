@@ -14,7 +14,7 @@
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Tentang Kami</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
 
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Kesatriaan Entrepreneur Indonesia</a>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">KEI</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                         <li class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>visi_misi">Visi & Misi</a>

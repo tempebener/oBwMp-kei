@@ -60,7 +60,11 @@ $route['meat']='tentang_kami/meat';
 $route['food']='tentang_kami/food';
 $route['poultry']='tentang_kami/poultry';
 // Kemitraan
+$route['pengembangan_kemitraan']='kemitraan/pengembangan_kemitraan';
+$route['proyeksi_kemitraan']='kemitraan/proyeksi_kemitraan';
+$route['budidaya_ayam_layer']='kemitraan/budidaya_ayam_layer';
 $route['budidaya_ayam_broiler']='kemitraan/budidaya_ayam_broiler';
+$route['penggemukan_sapi']='kemitraan/penggemukan_sapi';
 $route['budidaya_jagung_padi']='kemitraan/budidaya_jagung_padi';
 $route['umkm_produk_olahan']='kemitraan/umkm_produk_olahan';
 
@@ -72,3 +76,11 @@ $route['register_mitra']='register/add_mitra';
 
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+$route['admin'] = 'auth';
+
+$route['admin/slider'] = 'admin/slider/all_slider_list';
+$route['admin/slider/add'] = 'admin/slider/index';
+
+$route['admin/berita'] = 'admin/berita/index';

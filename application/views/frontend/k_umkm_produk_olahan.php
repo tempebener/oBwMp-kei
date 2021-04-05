@@ -2,7 +2,7 @@
 <html lang="en">
 <!-- head -->
  <head>
-    <title>Kemitraan UMKM Produk Olahan</title>
+    <title>SKEMA KEMITRAAN UMKM Produk Olahan</title>
     <?php $this->load->view('frontend/head2')?>
   </head>
 <!-- head end -->
@@ -34,28 +34,13 @@
       <!-- Deskripsi UMKM Produk Olahan -->
        <section class="section-md bg-transparent text-center">
         <div class="container">
-            <h2>SKEMA KEMITRAAN DENGAN UKM MINI RICE MILL UNTUK PASOKAN BAHAN BAKU BERAS</h2>
-            <hr style="border: 5px solid yellow;border-radius: 5px;">
+            <h2>SKEMA KEMITRAAN UMKM Produk Olahan</h2>
+            <hr style="border: 5px solid yellow;margin-left:30px;margin-right:30px;border-radius: 5px;">
           
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
               <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/umkm_produk_olahan/skema_umkm_beras.png" alt="SKEMA KEMITRAAN DENGAN UKM MINI RICE MILL UNTUK PASOKAN BAHAN BAKU BERAS" width="100%" height="auto">
-            </div>
-          
-          </div>
-        </div>
-      </section>
-      <br/>
-      <section class="section-md bg-transparent text-center">
-        <div class="container">
-            <h2>SKEMA KEMITRAAN DENGAN UMKM PERDAGANGAN KOMODITAS JAGUNG</h2>
-            <hr style="border: 5px solid yellow;margin-left:50px;margin-right:50px;border-radius: 5px;">
-          
-          <div class="row row-30">
-            <div class="col-md-6 col-xl-12 d-flex">
-              <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/umkm_produk_olahan/skema_umkm_jagung.png" alt="SKEMA KEMITRAAN DENGAN UMKM PERDAGANGAN KOMODITAS JAGUNG" width="100%" height="auto">
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/skema_kemitraan_umkm_produk_olahan.png" alt="SKEMA KEMITRAAN UMKM Produk Olahan" width="100%" height="auto">
             </div>
           
           </div>

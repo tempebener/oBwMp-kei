@@ -40,7 +40,7 @@
           <div class="row">
             <div class="col-lg-7">
               <div class="pr-xxl-5">
-                <h2>Complete Facilities to be Entrepreneur</h2>
+                <h2>Fasilitas Pendampingan dan Pembelajaran</h2>
                 <!-- <p class="big">Teachzy offers quality education helping you build your future career. Here just some of the facts that show why students choose us.</p> -->
                 <div class="row row-30 row-lg-55">
                   <div class="col-6 col-sm-3 col-md-6">

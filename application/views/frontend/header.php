@@ -23,7 +23,7 @@
                           <a class="navbar-navigation-dropdown-link" href="#">Struktur Organisasi</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Program & Kegiatan</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>program_kegiatan">Program & Kegiatan</a>
                         </li>
                       </ul>
                     </li>

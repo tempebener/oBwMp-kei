@@ -403,6 +403,25 @@
                         </li>
 
                         <li>
+                            <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url('admin/member/all_member_list') ?>" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">Member</span></a>
+                            <ul aria-expanded="false" class="collapse">
+
+                                <?php if ($this->session->userdata('role') == 'admin'): ?>
+                                    <li><a href="<?php echo base_url('admin/member') ?>"><i class="fa fa-angle-right"></i> Add Member </a></li>
+                                   
+                                <?php else: ?>
+                                    <?php if(check_power(1)):?>
+                                        <li><a href="<?php echo base_url('admin/member') ?>"><i class="fa fa-angle-right"></i> Add Member </a></li>
+                                    <?php endif; ?>
+                                <?php endif ?>
+
+                                <li><a href="<?php echo base_url('admin/member/all_member_list') ?>"><i class="fa fa-angle-right"></i> All Member</a></li>
+                            </ul>
+                        </li>
+
+                   
+
+                        <li>
                             <a class="has-arrow waves-effect waves-dark" href="<?php echo base_url('admin/user/all_user_list') ?>" aria-expanded="false"><i class="fa fa-user"></i><span class="hide-menu">User</span></a>
                             <ul aria-expanded="false" class="collapse">
 

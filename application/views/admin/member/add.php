@@ -8,10 +8,10 @@
     
     <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-            <h3 class="text-themecolor m-b-0 m-t-0">Slider</h3>
+            <h3 class="text-themecolor m-b-0 m-t-0">User</h3>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                <li class="breadcrumb-item active">Add New Slider</li>
+                <li class="breadcrumb-item active">Add New User</li>
             </ol>
         </div>
         
@@ -35,20 +35,19 @@
             
             <div class="card card-outline-info">
                 <div class="card-header">
-                    <h4 class="m-b-0 text-white"> Add New Slider <a href="<?php echo base_url('admin/slider/all_slider_list') ?>" class="btn btn-info pull-right"><i class="fa fa-list"></i> All Slider </a></h4>
+                    <h4 class="m-b-0 text-white"> Add New User <a href="<?php echo base_url('admin/user/all_user_list') ?>" class="btn btn-info pull-right"><i class="fa fa-list"></i> All Users </a></h4>
 
                 </div>
                 <div class="card-body">
-                    <form method="post" action="<?php echo base_url('admin/slider/add') ?>" class="form-horizontal" novalidate>
+                    <form method="post" action="<?php echo base_url('admin/user/add') ?>" class="form-horizontal" novalidate>
                         <div class="form-body">
                             <br>
-
                             <div class="row">
                                 <div class="col-md-9">
                                     <div class="form-group row">
-                                        <label class="control-label text-right col-md-3">Gambar <span class="text-danger">*</span></label>
+                                        <label class="control-label text-right col-md-3">First Name <span class="text-danger">*</span></label>
                                         <div class="col-md-9 controls">
-                                        <input type="file" name="foto" class="form-control" required> </div>
+                                            <input type="text" name="first_name" class="form-control" required data-validation-required-message="First Name is required">
                                         </div>
                                     </div>
                                 </div>
@@ -58,9 +57,9 @@
                             <div class="row">
                                 <div class="col-md-9">
                                     <div class="form-group row">
-                                        <label class="control-label text-right col-md-3">Judul <span class="text-danger">*</span></label>
+                                        <label class="control-label text-right col-md-3">Last Name <span class="text-danger">*</span></label>
                                         <div class="col-md-9 controls">
-                                            <input type="text" name="judul" class="form-control" required placeholder="Judul" required data-validation-required-message="Judul is required">
+                                            <input type="text" name="last_name" class="form-control" required data-validation-required-message="Last Name is required">
                                         </div>
                                     </div>
                                 </div>
@@ -70,16 +69,58 @@
                             <div class="row">
                                 <div class="col-md-9">
                                     <div class="form-group row">
-                                    <label class="control-label text-right col-md-3">Deskripsi <span class="text-danger">*</span></label>
+                                        <label class="control-label text-right col-md-3">Email <span class="text-danger">*</span></label>
                                         <div class="col-md-9 controls">
-                                            <textarea name="deskripsi" id="deskripsi" class="form-control" required placeholder="Desksripsi" required data-validation-required-message="Deskripsi is required"></textarea>
+                                            <input type="email" name="email" class="form-control" required data-validation-required-message="Email is required">
                                         </div>
                                     </div>
                                 </div>
                                 <!--/span-->
                             </div>
 
-                          
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="form-group row">
+                                        <label class="control-label text-right col-md-3">Password <span class="text-danger">*</span></label>
+                                        <div class="col-md-9 controls">
+                                            <input type="password" name="password" class="form-control" required data-validation-required-message="Password is required">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="form-group row">
+                                        <label class="control-label text-right col-md-3">Mobile </label>
+                                        <div class="col-md-9 controls">
+                                            <input type="text" name="mobile" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
+
+
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="form-group row">
+                                        <label class="control-label text-right col-md-3">Country </label>
+                                        <div class="col-md-9 controls">
+                                            <div class="form-group has-success">
+                                                <select class="form-control custom-select" name="country" aria-invalid="false">
+                                                    <option value="0">Select</option>
+                                                    <?php foreach ($country as $cn): ?>
+                                                        <option value="<?php echo $cn['id']; ?>"><?php echo $cn['name']; ?></option>
+                                                    <?php endforeach ?>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--/span-->
+                            </div>
 
 
                             <div class="row">

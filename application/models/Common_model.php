@@ -180,6 +180,48 @@ class Common_model extends CI_Model {
     }
 
 
+     //-- get all member with type 2
+     function get_all_member(){
+        $this->db->select('*');
+        $this->db->from('tbl_member');
+        $this->db->order_by('id_member','DESC');
+        $query = $this->db->get();
+        $query = $query->result_array();  
+        return $query;
+    }
+
+
+    //-- count active, inactive and total user
+    function get_member_total(){
+        $this->db->select('*');
+        $this->db->select('count(*) as total');
+        $this->db->select('(SELECT count(tbl_member.id_member)
+                            FROM tbl_member 
+                            WHERE (tbl_member.id_status = 1)
+                            )
+                            AS active_member',TRUE);
+
+        $this->db->select('(SELECT count(tbl_member.id_member)
+                            FROM tbl_member 
+                            WHERE (tbl_member.id_status = 0)
+                            )
+                            AS inactive_member',TRUE);
+
+        $this->db->select('(SELECT count(tbl_member.id_member)
+                            FROM tbl_member 
+                            WHERE (tbl_member.status_keanggotaan = "member")
+                            )
+                            AS member',TRUE);
+
+        $this->db->from('tbl_member');
+        $query = $this->db->get();
+        $query = $query->row();  
+        return $query;
+    }
+
+
+
+
     //-- image upload function with resize option
     function upload_image($max_size){
             

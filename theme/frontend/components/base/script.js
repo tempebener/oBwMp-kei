@@ -14,7 +14,7 @@ var host = window.location.host;
 
 components.customFont = {
 	selector: '[class*="custom-font-"]',
-	styles: './theme/frontend/components/custom-font/custom-font.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/custom-font/custom-font.css'
 };
 
 components.fontMontserrat = {
@@ -38,144 +38,144 @@ components.pageReveal = {
 
 components.currentDevice = {
 	selector: 'html',
-	script: './theme/frontend/components/current-device/current-device.min.js'
+	script: 'http://localhost/kesatriaan/theme/frontend/components/current-device/current-device.min.js'
 };
 
 components.blurb = {
 	selector: '.blurb',
-	styles: './theme/frontend/components/blurb/blurb.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/blurb/blurb.css'
 };
 
 components.box = {
 	selector: '.box',
-	styles: './theme/frontend/components/box/box.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/box/box.css'
 };
 
 components.breadcrumb = {
 	selector: '.breadcrumb',
-	styles: './theme/frontend/components/breadcrumb/breadcrumb.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/breadcrumb/breadcrumb.css'
 };
 
 components.button = {
 	selector: '.btn',
-	styles: './theme/frontend/components/button/button.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/button/button.css'
 };
 
 components.footer = {
 	selector: 'footer',
-	styles: './theme/frontend/components/footer/footer.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/footer/footer.css'
 };
 
 components.grid = {
 	selector: '.container, .container-fluid, .row, [class*="col-"]',
-	styles: './theme/frontend/components/grid/grid.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/grid/grid.css'
 };
 
 components.icon = {
 	selector: '.icon',
-	styles: './theme/frontend/components/icon/icon.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/icon/icon.css'
 };
 
 components.image = {
 	selector: '.image',
-	styles: './theme/frontend/components/image/image.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/image/image.css'
 };
 
 components.input = {
 	selector: '.form-group, .input-group, .form-check, .custom-control, .form-control',
-	styles: './theme/frontend/components/input/input.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/input/input.css'
 };
 
 components.link = {
 	selector: '.link',
-	styles: './theme/frontend/components/link/link.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/link/link.css'
 };
 
 components.list = {
 	selector: '.list',
-	styles: './theme/frontend/components/list/list.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/list/list.css'
 };
 
 components.logo = {
 	selector: '.logo',
-	styles: './theme/frontend/components/logo/logo.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/logo/logo.css'
 };
 
 components.person = {
 	selector: '.person',
-	styles: './theme/frontend/components/person/person.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/person/person.css'
 };
 
 components.post = {
 	selector: '.post',
-	styles: './theme/frontend/components/post/post.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/post/post.css'
 };
 
 components.postMeta = {
 	selector: '.post-meta',
-	styles: './theme/frontend/components/post-meta/post-meta.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/post-meta/post-meta.css'
 };
 
 components.preloader = {
 	selector: '.preloader',
-	styles: './theme/frontend/components/preloader/preloader.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/preloader/preloader.css'
 };
 
 components.priceBox = {
 	selector: '.price-box',
-	styles: './theme/frontend/components/price-box/price-box.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/price-box/price-box.css'
 };
 
 components.quote = {
 	selector: '.quote',
-	styles: './theme/frontend/components/quote/quote.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/quote/quote.css'
 };
 
 components.rdForm = {
 	selector: '.rd-form',
-	styles: './theme/frontend/components/rd-form/rd-form.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/rd-form/rd-form.css'
 };
 
 components.section = {
 	selector: 'section',
-	styles: './theme/frontend/components/section/section.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/section/section.css'
 };
 
 components.social = {
 	selector: '.social',
-	styles: './theme/frontend/components/social/social.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/social/social.css'
 };
 
 components.snackbar = {
 	selector: '.snackbar',
-	styles: './theme/frontend/components/snackbar/snackbar.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/snackbar/snackbar.css'
 };
 
 components.termList = {
 	selector: '.term-list',
-	styles: './theme/frontend/components/term-list/term-list.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/term-list/term-list.css'
 };
 
 components.textBlock = {
 	selector: '.text-block',
-	styles: './theme/frontend/components/text-block/text-block.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/text-block/text-block.css'
 };
 
 components.thumbnail = {
 	selector: '.thumbnail',
-	styles: './theme/frontend/components/thumbnail/thumbnail.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/thumbnail/thumbnail.css'
 };
 
 components.widget = {
 	selector: '.widget',
-	styles: './theme/frontend/components/widget/widget.css'
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/widget/widget.css'
 };
 
 // Script components
 components.animate = {
 	selector: '[data-animate]',
-	styles: './theme/frontend/components/animate/animate.css',
-	script: './theme/frontend/components/current-device/current-device.min.js',
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/animate/animate.css',
+	script: 'http://localhost/kesatriaan/theme/frontend/components/current-device/current-device.min.js',
 	init: function ( nodes ) {
 		if ( window.xMode || device.macos() ) {
 			nodes.forEach( function ( node ) {
@@ -212,10 +212,10 @@ components.animate = {
 
 components.counter = {
 	selector: '[data-counter]',
-	styles: './theme/frontend/components/counter/counter.css',
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/counter/counter.css',
 	script: [
-		'./theme/frontend/components/util/util.min.js',
-		'./theme/frontend/components/counter/counter.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/util/util.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/counter/counter.min.js',
 	],
 	init: function ( nodes ) {
 		let observer = new IntersectionObserver( function ( entries ) {
@@ -251,11 +251,11 @@ components.counter = {
 
 components.countdown = {
 	selector: '[ data-countdown ]',
-	styles: './theme/frontend/components/countdown/countdown.css',
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/countdown/countdown.css',
 	script: [
-		'./theme/frontend/components/util/util.min.js',
-		'./theme/frontend/components/progress-circle/progress-circle.min.js',
-		'./theme/frontend/components/countdown/countdown.min.js'
+		'http://localhost/kesatriaan/theme/frontend/components/util/util.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/progress-circle/progress-circle.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/countdown/countdown.min.js'
 	],
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
@@ -269,11 +269,11 @@ components.countdown = {
 
 components.lightgallery = {
 	selector: '[data-lightgallery]',
-	styles: './theme/frontend/components/lightgallery/lightgallery.css',
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/lightgallery/lightgallery.css',
 	script: [
-		'./theme/frontend/components/jquery/jquery.min.js',
-		'./theme/frontend/components/lightgallery/lightgallery.min.js',
-		'./theme/frontend/components/util/util.min.js'
+		'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/lightgallery/lightgallery.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/util/util.min.js'
 	],
 	init: function ( nodes ) {
 		if ( !window.xMode ) {
@@ -305,10 +305,10 @@ components.lightgallery = {
 
 components.multiswitch = {
 	selector: '[data-multi-switch]',
-	styles: './theme/frontend/components/multiswitch/multiswitch.css',
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/multiswitch/multiswitch.css',
 	script: [
-		'./theme/frontend/components/current-device/current-device.min.js',
-		'./theme/frontend/components/multiswitch/multiswitch.min.js'
+		'http://localhost/kesatriaan/theme/frontend/components/current-device/current-device.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/multiswitch/multiswitch.min.js'
 	],
 	dependencies: 'rdNavbar',
 	init: function ( nodes ) {
@@ -332,13 +332,13 @@ components.multiswitch = {
 components.owlCarousel = {
 	selector: '.owl-carousel',
 	styles: [
-		'./theme/frontend/components/owl-carousel/owl.carousel.css',
-		'./theme/frontend/components/custom-font/custom-font.css'
+		'http://localhost/kesatriaan/theme/frontend/components/owl-carousel/owl.carousel.css',
+		'http://localhost/kesatriaan/theme/frontend/components/custom-font/custom-font.css'
 	],
 	script: [
-		'./theme/frontend/components/jquery/jquery.min.js',
-		'./theme/frontend/components/owl-carousel/owl.carousel.min.js',
-		'./theme/frontend/components/util/util.min.js'
+		'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/owl-carousel/owl.carousel.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/util/util.min.js'
 	],
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
@@ -395,10 +395,10 @@ components.owlCarousel = {
 
 components.regula = {
 	selector: '[data-constraints]',
-	styles: './theme/frontend/components/regula/regula.css',
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/regula/regula.css',
 	script: [
-		'./theme/frontend/components/jquery/jquery.min.js',
-		'./theme/frontend/components/regula/regula.min.js'
+		'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/regula/regula.min.js'
 	],
 	init: function ( nodes ) {
 		let elements = $( nodes );
@@ -469,12 +469,12 @@ components.regula = {
 components.rdMailform = {
 	selector: '.rd-mailform',
 	styles: [
-		'./theme/frontend/components/rd-mailform/rd-mailform.css',
-		'./theme/frontend/components/font-awesome/font-awesome.css'
+		'http://localhost/kesatriaan/theme/frontend/components/rd-mailform/rd-mailform.css',
+		'http://localhost/kesatriaan/theme/frontend/components/font-awesome/font-awesome.css'
 	],
 	script: [
-		'./theme/frontend/components/jquery/jquery.min.js',
-		'./theme/frontend/components/rd-mailform/rd-mailform.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/rd-mailform/rd-mailform.min.js',
 	],
 	init: function ( nodes ) {
 		let i, j, k,
@@ -760,13 +760,13 @@ components.rdMailform = {
 components.rdNavbar = {
 	selector: '.rd-navbar',
 	styles: [
-		'./theme/frontend/components/rd-navbar/rd-navbar.css'
+		'http://localhost/kesatriaan/theme/frontend/components/rd-navbar/rd-navbar.css'
 	],
 	script: [
-		'./theme/frontend/components/jquery/jquery.min.js',
-		'./theme/frontend/components/util/util.min.js',
-		'./theme/frontend/components/current-device/current-device.min.js',
-		'./theme/frontend/components/rd-navbar/rd-navbar.min.js'
+		'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/util/util.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/current-device/current-device.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/rd-navbar/rd-navbar.min.js'
 	],
 	dependencies: 'currentDevice',
 	init: function ( nodes ) {
@@ -859,8 +859,8 @@ components.rdNavbar = {
 
 components.rdSearch = {
 	selector: '[data-rd-search]',
-	styles: './theme/frontend/components/rd-search/rd-search.css',
-	script: './theme/frontend/components/rd-search/rd-search.min.js',
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/rd-search/rd-search.css',
+	script: 'http://localhost/kesatriaan/theme/frontend/components/rd-search/rd-search.min.js',
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
 			console.log( URLSearchParams );
@@ -876,10 +876,10 @@ components.rdSearch = {
 
 components.slick = {
 	selector: '.slick-slider',
-	styles: './theme/frontend/components/slick/slick.css',
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/slick/slick.css',
 	script: [
-		'./theme/frontend/components/jquery/jquery.min.js',
-		'./theme/frontend/components/slick/slick.min.js'
+		'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/slick/slick.min.js'
 	],
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
@@ -904,11 +904,11 @@ components.slick = {
 
 components.swiper = {
 	selector: '[data-swiper]',
-	styles: './theme/frontend/components/swiper/swiper.css',
+	styles: 'http://localhost/kesatriaan/theme/frontend/components/swiper/swiper.css',
 	script: [
-		'./theme/frontend/components/jquery/jquery.min.js',
-		'./theme/frontend/components/swiper/swiper.min.js',
-		'./theme/frontend/components/util/util.min.js'
+		'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/swiper/swiper.min.js',
+		'http://localhost/kesatriaan/theme/frontend/components/util/util.min.js'
 	],
 	init: function ( nodes ) {
 		nodes.forEach( function ( node ) {
@@ -949,10 +949,10 @@ components.swiper = {
 components.toTop = {
 	selector: 'html',
 	styles: [
-		'./theme/frontend/components/to-top/to-top.css',
-		'./theme/frontend/components/font-awesome/font-awesome.css',
+		'http://localhost/kesatriaan/theme/frontend/components/to-top/to-top.css',
+		'http://localhost/kesatriaan/theme/frontend/components/font-awesome/font-awesome.css',
 	],
-	script: './theme/frontend/components/jquery/jquery.min.js',
+	script: 'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
 	init: function () {
 		if ( !window.xMode ) {
 			let node = document.createElement( 'div' );

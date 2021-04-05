@@ -127,6 +127,27 @@ class Common_model extends CI_Model {
         return $query;
     }
 
+
+     //-- get single user info
+     function get_single_member_info($id){
+        $this->db->select('*');
+        $this->db->from('tbl_member');
+        $this->db->where('tbl_member.id_member',$id);
+        $query = $this->db->get();
+        $query = $query->row();  
+        return $query;
+    }
+
+     //-- get single user info
+     function get_member_role($id){
+        $this->db->select('ur.*');
+        $this->db->from('user_role ur');
+        $this->db->where('ur.user_id',$id);
+        $query = $this->db->get();
+        $query = $query->result_array();  
+        return $query;
+    }
+
     //-- get single user info
     function get_user_role($id){
         $this->db->select('ur.*');

@@ -133,6 +133,9 @@
                                     <td class="text-nowrap">
 
                                         <?php if ($this->session->userdata('role') == 'admin'): ?>
+                                            
+                                            <a href="<?php echo base_url('admin/Member/profile/'.$Member['id_member']) ?>" data-toggle="tooltip" data-original-title="Detail"> <i class="fa fa-search text-success m-r-10"></i> </a>
+
                                             <a href="<?php echo base_url('admin/Member/update/'.$Member['id_member']) ?>" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-success m-r-10"></i> </a>
 
                                             <a id="delete" data-toggle="modal" data-target="#confirm_delete_<?php echo $Member['id_member'];?>" href="#"  data-toggle="tooltip" data-original-title="Delete"> <i class="fa fa-trash text-danger m-r-10"></i> </a>
@@ -143,6 +146,8 @@
                                             <!-- check logged Member role permissions -->
 
                                             <?php if(check_power(2)):?>
+                                                <a href="<?php echo base_url('admin/Member/profile/'.$Member['id_member']) ?>" data-toggle="tooltip" data-original-title="Detail"> <i class="fa fa-search text-success m-r-10"></i> </a>
+
                                                 <a href="<?php echo base_url('admin/member/update/'.$Member['id_member']) ?>" data-toggle="tooltip" data-original-title="Edit"> <i class="fa fa-pencil text-success m-r-10"></i> </a>
                                             <?php endif; ?>
                                             <?php if(check_power(3)):?>

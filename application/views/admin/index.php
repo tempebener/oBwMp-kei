@@ -482,7 +482,7 @@
                             </li>                    
                      
 
-                        <li>
+                        <!-- <li>
                             <a class="waves-effect waves-dark" href="<?php echo base_url('admin/dashboard/backup') ?>" ><i class="fa fa-cloud-download"></i><span class="hide-menu">Backup Database</span></a>
                         </li>
 
@@ -565,7 +565,7 @@
                                 <li><a href="<?php echo base_url('admin/ui/calender') ?>"><i class="fa fa-angle-right"></i> Calendar</a></li>
                                 <li><a href="<?php echo base_url('admin/ui/contact') ?>"><i class="fa fa-angle-right"></i> Contact / Employee</a></li>
                             </ul>
-                        </li>
+                        </li> -->
 
                       
                     </ul>

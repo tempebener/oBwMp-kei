@@ -17,9 +17,9 @@
           <!-- Breadcrumb-->
           <div class="breadcrumb">
             <div class="breadcrumb-inner">
-              <div class="breadcrumb-item"><a class="breadcrumb-link" href="index.html">Home</a></div>
-              <div class="breadcrumb-item"><a class="breadcrumb-link" href="blog.html">Blog</a></div>
-              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">Single post</span></div>
+              <div class="breadcrumb-item"><a class="breadcrumb-link" href="<?php echo base_url();?>">Home</a></div>
+              <!-- <div class="breadcrumb-item"><a class="breadcrumb-link" href="blog.html">Blog</a></div> -->
+              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active"><?php echo "$rows[judul]"; ?></span></div>
             </div>
           </div>
         </div>

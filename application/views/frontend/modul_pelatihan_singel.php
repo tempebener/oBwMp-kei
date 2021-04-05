@@ -54,9 +54,9 @@
                   
                     <div class="blurb-item">
                       <!-- <div class="icon blurb-icon custom-font-graduated"></div> -->
-                      <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/jaminan_akses_pemodalan.jpg" alt="Jaminan Akses Pemodalan" width="100px" height="auto">
+                      <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/foto_pelatihan/pelatihan_detail/<?php echo $post_new->gambar ?>" alt="Jaminan Akses Pemodalan" width="80px" height="auto">
                     </div>
-                    <div class="blurb-body" style="vertical-align: middle;display: inline-grid;">
+                    <div class="blurb-body">
                       <div class="blurb-counter-value h2"><!-- <span data-counter="">100</span><span class="counter-postfix">%</span> -->
                       </div>
                       

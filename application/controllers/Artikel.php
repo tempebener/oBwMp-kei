@@ -32,8 +32,7 @@ public function detail(){
 				$row = $query->row_array();
 				$data['title'] = cetak($row['judul']);
 				$data['description'] = cetak_meta($row['isi_berita'],0,400);
-				$data['rows'] = $row;
-				 
+				$data['rows'] = $row;		 
 				  
 
 				$this->load->view('frontend/berita_singel', $data);

@@ -15,6 +15,30 @@ class M_slider extends CI_Model{
         else
         return false;
 	}
+
+	 //-- count active, inactive and total slider
+	 function get_slider_total(){
+        $this->db->select('*');
+        $this->db->select('count(*) as total');
+        $this->db->select('(SELECT count(tbl_slider.id_slider)
+                            FROM tbl_slider 
+                            WHERE (tbl_slider.id_slider_s = 1)
+                            )
+                            AS active_slider',TRUE);
+
+        $this->db->select('(SELECT count(tbl_slider.id_slider)
+                            FROM tbl_slider 
+                            WHERE (tbl_slider.id_slider_s = 0)
+                            )
+                            AS inactive_slider',TRUE);
+
+        
+
+        $this->db->from('tbl_slider');
+        $query = $this->db->get();
+        $query = $query->row();  
+        return $query;
+    }
 	
 	function update_slider($id_slider,$judul,$user_id,$user_nama,$gambar){
 		$hsl=$this->db->query("update tbl_slider set jdl_1='$judul',slider_pengguna_id='$user_id',slider_author='$user_nama',foto='$gambar' where id_slider='$id_slider'");

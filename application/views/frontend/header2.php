@@ -1,4 +1,3 @@
-      <header class="section rd-navbar-wrap" data-preset='{"title":"Navbar Default","category":"header","reload":true,"id":"navbar-default"}'>
         <nav class="rd-navbar" data-rd-navbar='{"responsive":{"1200":{"stickUpOffset":"50px"}}}'>
           <div class="navbar-container">
             <div class="navbar-cell">
@@ -10,7 +9,7 @@
             <div class="navbar-spacer"></div>
             <div class="navbar-cell navbar-sidebar">
               <ul class="navbar-navigation rd-navbar-nav">
-                <li class="navbar-navigation-root-item active"><a class="navbar-navigation-root-link" href="#">Home</a>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>">Home</a>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Tentang Kami</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
@@ -123,4 +122,3 @@
             </div>
           </div>
         </nav>
-      </header>

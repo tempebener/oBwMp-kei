@@ -70,7 +70,7 @@ $route['budidaya_jagung_padi']='kemitraan/budidaya_jagung_padi';
 $route['umkm_produk_olahan']='kemitraan/umkm_produk_olahan';
 
 $route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
-$route['detail_pelatihan/(:num)/(:any)'] = "pelatihan/detail_pelatihan/$1/$2";
+$route['pelatihan/(:num)/(:any)'] = "pelatihan/detail_pelatihan/$1/$2";
 // Register
 $route['register_member']='register/add_member';
 $route['register_mitra']='register/add_mitra';

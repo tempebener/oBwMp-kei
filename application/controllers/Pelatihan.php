@@ -16,7 +16,7 @@ class Pelatihan extends CI_Controller {
 
 public function detail_pelatihan(){
 
-			$page1 = 'Y';
+			
 			$query = $this->Model_utama->view_where('tbl_pelatihan',array('judul_pelatihan_seo' => $this->uri->segment(3)),'id_pelatihan','DESC',0,1);
 			if ($query->num_rows()<=0){
 				redirect('main');

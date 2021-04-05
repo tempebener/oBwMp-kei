@@ -19,7 +19,7 @@
             <div class="breadcrumb-inner">
               <div class="breadcrumb-item"><a class="breadcrumb-link" href="<?php echo base_url();?>">Beranda</a></div>
               <!-- <div class="breadcrumb-item"><a class="breadcrumb-link" href="blog.html">Blog</a></div> -->
-              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">judul</span></div>
+              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active"><?php echo "$rows[judul_pelatihan]"; ?></span></div>
             </div>
           </div>
         </div>
@@ -28,16 +28,16 @@
       <section class="section-md bg-transparent">
         <div class="container">
           <div class="post">
-            <div class="post-media"><img class="post-img" src="" alt="" width="1170" height="500"/>
+            <div class="post-media"><img class="post-img" src="<?php echo base_url()?>theme/images/foto_pelatihan/<?php echo "$rows[foto]"; ?>" alt="" width="1170" height="500"/>
             </div>
-            <div class="post-meta">
+           <!--  <div class="post-meta">
               <div class="post-meta-item">
                 <div class="post-meta-icon custom-font-calendar"></div>
                 <div class="post-date"></div>
-              </div>
+              </div> -->
              
             </div>
-            <div class="post-title h6"></div>
+            <div class="post-title h6"><?php echo "$rows[judul_pelatihan]"; ?></div>
             <div class="post-text">
               <p></p>
             </div>

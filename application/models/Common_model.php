@@ -78,7 +78,7 @@ class Common_model extends CI_Model {
         }
     }
 
-    public function check_judul($judull){
+    public function check_judul($judul){
         $this->db->select('*');
         $this->db->from('tbl_slider');
         $this->db->where('jdl_1', $judul); 

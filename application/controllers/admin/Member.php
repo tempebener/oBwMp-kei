@@ -22,39 +22,30 @@ class Member extends CI_Controller {
     }
 
     //-- add new member by admin
-    public function add3()
+    public function add()
     {   
         if ($_POST) {
 
-            $config['upload_path'] = './theme/images/foto_ktp/'; //path folder
-            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-            $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+            $config['upload_path'] = 'theme/images/foto_ktp/';
+            $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG|PNG|pdf|docx';
+            $config['max_size'] = '100000'; // kb
+            $this->load->library('upload', $config);
+           
 
-            $this->upload->initialize($config);
-
-            if(!empty($_FILES['foto_ktp']['name']))
-	            {
-	                if ($this->upload->do_upload('foto_ktp'))
-	                {
-	                        $gbr = $this->upload->data();
-	                        //Compress Image
-	                        $config['image_library']='gd2';
-	                        $config['source_image']='./theme/images/foto_ktp/'.$gbr['file_name'];
-	                        $config['create_thumb']= FALSE;
-	                        $config['maintain_ratio']= FALSE;
-	                        $config['quality']= '60%';
-	                        $config['width']= 710;
-	                        $config['height']= 460;
-	                        $config['new_image']= './theme/images/foto_ktp/'.$gbr['file_name'];
-	                        $this->load->library('image_lib', $config);
-	                        $this->image_lib->resize();
-
-	                        $ktp=$gbr['file_name'];
-
-
-                            
-                    }
-                }            
+           
+            $this->upload->do_upload('foto_ktp');
+            $hasil1 = $this->upload->data();
+            
+            $this->upload->do_upload('foto_npwp');
+            $hasil2 = $this->upload->data();
+            
+            $this->upload->do_upload('foto_pas');
+            $hasil3 = $this->upload->data();
+            
+            
+            $ktp = $hasil1['file_name'];
+            $npwp = $hasil2['file_name'];
+            $pas = $hasil3['file_name'];
 
            
 
@@ -68,8 +59,8 @@ class Member extends CI_Controller {
                 'pend_terakhir' => $_POST['pend_terakhir'],
                 'usaha_diminati' => $_POST['usaha_diminati'],
                 'foto_ktp' => $ktp,
-                // 'foto_pas' => $foto_pas,
-                // 'foto_npwp' => $npwp,
+                'foto_pas' => $pas,
+                'foto_npwp' => $npwp,
                 'status_keanggotaan' => $_POST['role'],
                 'created_at' => current_datetime()
             );
@@ -110,35 +101,7 @@ class Member extends CI_Controller {
 
     }
     
-    function add(){
-        $config['upload_path'] = './assets/files/'; //path folder
-        $config['allowed_types'] = 'gif|jpg|JPG|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
-        $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
-
-        $this->upload->initialize($config);
-        if(!empty($_FILES['foto_ktp']['name']))
-        {
-            if ($this->upload->do_upload('foto_ktp'))
-            {
-                    $gbr = $this->upload->data();
-                    $file=$gbr['file_name'];
-                    $nama=$this->input->post('nama');
-                    $alamat=$this->input->post('alamat');
-                   
-
-                    $this->m_member->simpan_file($nama,$alamat,$file);
-                    echo $this->session->set_flashdata('msg','success');
-                    redirect('admin/member/all_member_list');
-            }else{
-                echo $this->session->set_flashdata('msg','warning');
-                redirect(base_url('admin/member/all_member_list'));
-            }
-             
-        }else{
-            redirect(base_url('admin/member'));
-        }
-        
-}
+ 
 
 
 

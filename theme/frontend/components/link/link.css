@@ -1,4 +1,1 @@
-/**
- * Link
- */.link {	position: relative;	display: inline-block;}.link-inherit {	color: inherit;}.link-inherit:hover {	color: #04d2c8;}
-/*# sourceMappingURL=link.css.map */
+/** * Link */.link {	position: relative;	display: inline-block;}.link-inherit {	color: inherit;}.link-inherit:hover {	color: #04d2c8;}/*# sourceMappingURL=link.css.map *//*Add/Modif by Bayu*/.link-inherit:hover {    color: #0339a0;}

@@ -135,6 +135,30 @@
                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Inkubator Bisnis</a>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Akses Permodalan</a>
+                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                    <li class="navbar-navigation-dropdown-item">
+                      <a class="navbar-navigation-dropdown-link" href="#">Perbankan</a>
+                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>kur">KUR</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="navbar-navigation-dropdown-item">
+                      <a class="navbar-navigation-dropdown-link" href="#">Non Perbankan</a>
+                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>lpdb_kumkm">LPDB KUMKM</a>
+                        </li>
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pkbl_bumn">PKBL BUMN</a>
+                        </li>
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pnm">PNM</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Kontak</a>
                 </li>

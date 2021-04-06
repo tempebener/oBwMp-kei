@@ -8,6 +8,7 @@ class Member extends CI_Controller {
        $this->load->model('common_model');
        $this->load->model('login_model');
        $this->load->library('upload');
+       $this->load->helper(array('form', 'url'));
     }
 
 
@@ -26,7 +27,7 @@ class Member extends CI_Controller {
     {   
         if ($_POST) {
 
-            $config['upload_path'] = 'theme/images/foto_ktp/';
+            $config['upload_path'] = './theme/images/foto_ktp/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG|PNG|pdf|docx';
             $config['max_size'] = '100000'; // kb
             $this->load->library('upload', $config);
@@ -65,7 +66,7 @@ class Member extends CI_Controller {
                 'created_at' => current_datetime()
             );
 
-            $data = $this->security->xss_clean($data);
+            // $data = $this->security->xss_clean($data);
             
             //-- check duplicate email
             $email = $this->common_model->check_email($_POST['email']);

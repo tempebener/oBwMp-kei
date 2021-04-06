@@ -39,7 +39,8 @@
 
                 </div>
                 <div class="card-body">
-                    <form method="post" action="<?php echo base_url('admin/member/add') ?>" class="form-horizontal" novalidate>
+                    <form method="post" action="<?php echo base_url('admin/member/add') ?>" enctype="multipart/form-data" class="form-horizontal" novalidate>
+                    
                         <div class="form-body">
                             <br>
                             <div class="row row-30">
@@ -103,7 +104,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                         <label class="post-title h6">Upload KTP</label>
-                                        <input class="form-control" type="file" name="foto_ktp" placeholder="Upload KTP*" data-constraints="@Required">
+                                        <input type="file" name="foto_ktp" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">

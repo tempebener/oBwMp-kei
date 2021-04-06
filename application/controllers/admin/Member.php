@@ -23,50 +23,72 @@ class Member extends CI_Controller {
     //-- add new member by admin
     public function add()
     {   
-        if ($_POST) {
-
-            $data = array(
-                'first_name' => $_POST['first_name'],
-                'last_name' => $_POST['last_name'],
-                'email' => $_POST['email'],
-                'password' => md5($_POST['password']),
-                'mobile' => $_POST['mobile'],
-                'country' => $_POST['country'],
-                'status' => $_POST['status'],
-                'role' => $_POST['role'],
-                'created_at' => current_datetime()
-            );
-
-            $data = $this->security->xss_clean($data);
-            
-            //-- check duplicate email
-            $email = $this->common_model->check_email($_POST['email']);
-
-            if (empty($email)) {
-                $member_id = $this->common_model->insert($data, 'member');
-            
-                if ($this->input->post('role') == "member") {
-                    $actions = $this->input->post('role_action');
-                    foreach ($actions as $value) {
-                        $role_data = array(
-                            'member_id' => $member_id,
-                            'action' => $value
-                        ); 
-                       $role_data = $this->security->xss_clean($role_data);
-                       $this->common_model->insert($role_data, 'member_role');
-                    }
-                }
-                $this->session->set_flashdata('msg', 'member added Successfully');
-                redirect(base_url('admin/member/all_member_list'));
-            } else {
-                $this->session->set_flashdata('error_msg', 'Email already exist, try another email');
-                redirect(base_url('admin/member'));
+        if ($_FILES['foto_ktp']['size'] > 0) {
+            $this->load->library('upload');
+            $config['upload_path'] = './assets/images/'; //path folder
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+            $config['max_size']      = $this->allowed_file_size;
+            $config['max_width']     = 300;
+            $config['max_height']    = 80;
+            $config['overwrite']     = false;
+            $config['max_filename']  = 25;
+            //$config['encrypt_name'] = TRUE;
+            $this->upload->initialize($config);
+            if (!$this->upload->do_upload('foto_ktp')) {
+                $error = $this->upload->display_errors();
+                $this->session->set_flashdata('error', $error);
+                redirect($_SERVER['HTTP_REFERER']);
             }
-            
-            
-            
-
+            $ktp = $this->upload->file_name;
+            // $this->db->update('settings', ['logo' => $site_logo], ['setting_id' => 1]);
         }
+
+        if ($_FILES['foto_pas']['size'] > 0) {
+            $this->load->library('upload');
+            $config['upload_path'] = './assets/images/'; //path folder
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+            $config['max_size']      = $this->allowed_file_size;
+            $config['max_width']     = 300;
+            $config['max_height']    = 80;
+            $config['overwrite']     = false;
+            $config['max_filename']  = 25;
+            //$config['encrypt_name'] = TRUE;
+            $this->upload->initialize($config);
+            if (!$this->upload->do_upload('foto_pas')) {
+                $error = $this->upload->display_errors();
+                $this->session->set_flashdata('error', $error);
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+            $foto_pas = $this->upload->file_name;
+            // $this->db->update('settings', ['logo2' => $login_logo], ['setting_id' => 1]);
+        }
+
+
+        if ($_FILES['foto_npwp']['size'] > 0) {
+            $this->load->library('upload');
+            $config['upload_path'] = './assets/images/'; //path folder
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+            $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+            $config['max_size']      = $this->allowed_file_size;
+            $config['max_width']     = 300;
+            $config['max_height']    = 80;
+            $config['overwrite']     = false;
+            $config['max_filename']  = 25;
+            //$config['encrypt_name'] = TRUE;
+            $this->upload->initialize($config);
+            if (!$this->upload->do_upload('foto_npwp')) {
+                $error = $this->upload->display_errors();
+                $this->session->set_flashdata('error', $error);
+                redirect($_SERVER['HTTP_REFERER']);
+            }
+            $photo = $this->upload->file_name;
+        }
+
+
+
+
     }
 
     public function all_member_list()

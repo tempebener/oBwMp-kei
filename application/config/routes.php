@@ -86,3 +86,10 @@ $route['admin/slider'] = 'admin/slider/all_slider_list';
 $route['admin/slider/add'] = 'admin/slider/index';
 
 $route['admin/berita'] = 'admin/berita/index';
+
+$route['admin/user'] = 'admin/user/all_user_list';
+$route['admin/user/add'] = 'admin/user/index';
+
+
+
+

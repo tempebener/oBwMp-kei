@@ -158,8 +158,13 @@
                   </ul>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
+                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>register">Pendaftaran</a>
+                        </li>
                 </li>
               </ul>
+            </li>
             </div>
             <div class="navbar-spacer"></div>
             <div class="navbar-cell">

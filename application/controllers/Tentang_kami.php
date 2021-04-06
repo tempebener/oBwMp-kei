@@ -5,26 +5,31 @@ class Tentang_kami extends CI_Controller{
 		$this->load->model('m_main');
 	}
 
+	// KEI
 	function visi_misi(){
 
 		$this->load->view('frontend/tk_visi_misi');
 	}
 
+	// Joglo Tumiyono
 	function profil(){
 
 		$this->load->view('frontend/tk_profil');
 	}
+	function pengembangan_seni_budaya(){
 
+		$this->load->view('frontend/tk_pengembangan_seni_budaya');
+	}
 	function program_kegiatan(){
 
 		$this->load->view('frontend/tk_program_kegiatan');
 	}
-
 	function pesantren_entrepreneur(){
 
 		$this->load->view('frontend/tk_pesantren_entrepreneur');
 	}
 
+	// Unit Bisnis
 	function livestock(){
 
 		$this->load->view('frontend/tk_livestock');

@@ -34,7 +34,7 @@
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>profil">Profil</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Pengembangan Seni & Budaya</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pengembangan_seni_budaya">Pengembangan Seni & Budaya</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pesantren_entrepreneur">Pesantren Entrepreneur</a>

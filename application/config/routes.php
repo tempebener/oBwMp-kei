@@ -54,6 +54,7 @@ $route['administrator']='admin/login';
 // Tentang Kami
 $route['visi_misi']='tentang_kami/visi_misi';
 $route['profil']='tentang_kami/profil';
+$route['pengembangan_seni_budaya']='tentang_kami/pengembangan_seni_budaya';
 $route['program_kegiatan']='tentang_kami/program_kegiatan';
 $route['pesantren_entrepreneur']='tentang_kami/pesantren_entrepreneur';
 $route['livestock']='tentang_kami/livestock';

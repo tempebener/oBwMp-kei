@@ -7,8 +7,7 @@ class Member extends CI_Controller {
         check_login_user();
        $this->load->model('common_model');
        $this->load->model('login_model');
-       $this->load->library('upload');
-       $this->load->helper(array('form', 'url'));
+       
     }
 
 
@@ -29,7 +28,7 @@ class Member extends CI_Controller {
 
             $config['upload_path'] = './theme/images/foto_ktp/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG|PNG|pdf|docx';
-            $config['max_size'] = '100000'; // kb
+            $config['max_size'] = '1000000'; // kb
             $this->load->library('upload', $config);
            
 

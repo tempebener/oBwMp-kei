@@ -5,20 +5,10 @@ class M_slider extends CI_Model{
 		$hsl=$this->db->query("SELECT tbl_slider.*,DATE_FORMAT(slider_tanggal,'%d/%m/%Y') AS tanggal FROM tbl_slider  ORDER BY id_slider DESC");
 		return $hsl;
 	}
-	function simpan_slider($judul,$user_id,$user_nama,$gambar){
+	
+    function simpan_slider($judul,$deskripsi,$file){
 		$this->db->trans_start();
-            $this->db->query("insert into tbl_slider(jdl_1,slider_pengguna_id,slider_author,foto) values ('$judul','$user_id','$user_nama','$gambar')");
-            // $this->db->query("update tbl_album set album_count=album_count+1 where album_id='$album'");
-        $this->db->trans_complete();
-        if($this->db->trans_status()==true)
-        return true;
-        else
-        return false;
-	}
-
-    function simpan($judul,$deskripsi,$gambar){
-		$this->db->trans_start();
-            $this->db->query("insert into tbl_slider(jdl1,jdl2,foto) values ('$judul','$deskripsi','$gambar')");
+            $this->db->query("insert into tbl_slider(jdl_1,jdl_2,foto) values ('$judul','$deskripsi','$file')");
             
         $this->db->trans_complete();
         if($this->db->trans_status()==true)

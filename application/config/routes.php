@@ -89,8 +89,8 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'auth';
 
-$route['admin/slider'] = 'admin/slider/all_slider_list';
-$route['admin/slider/add'] = 'admin/slider/index';
+// $route['admin/slider'] = 'admin/slider/all_slider_list';
+// $route['admin/slider/add'] = 'admin/slider/index';
 
 $route['admin/berita'] = 'admin/berita/index';
 

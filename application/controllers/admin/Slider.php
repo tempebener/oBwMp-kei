@@ -24,7 +24,7 @@ class Slider extends CI_Controller {
     }
 
     //-- add new user by admin
-    public function add()
+    public function add2()
     {   
         $config['upload_path'] = './assets/images/'; //path folder
         $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
@@ -78,10 +78,18 @@ class Slider extends CI_Controller {
     }
 
 
-    function simpan_slider(){
-        $config['upload_path'] = './assets/images/'; //path folder
-        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+    function add(){
+        $config['upload_path'] = './theme/images/foto_slider/'; //path folder
+        $config['allowed_types'] = 'gif|jpg|JPG|JPEG|PNG|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
         $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+        $config['create_thumb']= FALSE;
+        $config['maintain_ratio']= FALSE;
+        $config['quality']= '60%';
+        $config['width']= 500;
+        $config['height']= 400;
+        $config['new_image']= './theme/images/foto_slider/'.$gbr['file_name'];
+        $this->load->library('image_lib', $config);
+        $this->image_lib->resize();
 
         $this->upload->initialize($config);
         if(!empty($_FILES['filefoto']['name']))
@@ -89,39 +97,24 @@ class Slider extends CI_Controller {
             if ($this->upload->do_upload('filefoto'))
             {
                     $gbr = $this->upload->data();
-                    //Compress Image
-                    $config['image_library']='gd2';
-                    $config['source_image']='./assets/images/'.$gbr['file_name'];
-                    $config['create_thumb']= FALSE;
-                    $config['maintain_ratio']= FALSE;
-                    $config['quality']= '60%';
-                    $config['width']= 500;
-                    $config['height']= 400;
-                    $config['new_image']= './assets/images/'.$gbr['file_name'];
-                    $this->load->library('image_lib', $config);
-                    $this->image_lib->resize();
+                    $file=$gbr['file_name'];
+                    $judul=strip_tags($this->input->post('judul'));
+                    $deskripsi=$this->input->post('deskripsi');
+                    
 
-                    $gambar=$gbr['file_name'];
-                    $judul=strip_tags($this->input->post('xjudul'));
-                    $album=strip_tags($this->input->post('xalbum'));
-                    $kode=$this->session->userdata('idadmin');
-                    $user=$this->m_pengguna->get_pengguna_login($kode);
-                    $p=$user->row_array();
-                    $user_id=$p['pengguna_id'];
-                    $user_nama=$p['pengguna_nama'];
-                    $this->m_galeri->simpan_galeri($judul,$album,$user_id,$user_nama,$gambar);
+                    $this->M_slider->simpan_slider($judul,$deskripsi,$file);
                     echo $this->session->set_flashdata('msg','success');
-                    redirect('admin/slider');
+                    redirect('admin/slider/all_slider_list');
             }else{
                 echo $this->session->set_flashdata('msg','warning');
-                redirect('admin/slider');
+                redirect('admin/slider/all_slider_list');
             }
              
         }else{
             redirect('admin/slider');
         }
         
-    }
+}
 
 
     public function all_slider_list()

@@ -26,8 +26,8 @@ class Member extends CI_Controller {
     {   
         if ($_POST) {
 
-            $config['upload_path'] = './theme/images/foto_ktp/';
-            $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG|PNG|pdf|docx';
+            $config['upload_path'] = './theme/images/foto_register/member/';
+            $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG|PNG';
             $config['max_size'] = '1000000'; // kb
             $this->load->library('upload', $config);
            

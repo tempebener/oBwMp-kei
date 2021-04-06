@@ -65,20 +65,19 @@ class Register extends CI_Controller {
   
     public function add_member(){
         if (isset($_POST['submit'])){
-            $config['upload_path'] = 'theme/images/foto_register/member/';
+            $config['upload_path'] = './theme/images/foto_register/member/';
                 $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
                 $config['max_size'] = '1000'; // kb
                 $this->load->library('upload', $config);
-                $this->upload->do_upload('f');
+                $this->upload->do_upload('foto_ktp');
                 $hasil=$this->upload->data();
-                $this->upload->do_upload('g');
+                $this->upload->do_upload('foto_npwp');
                 $hasil2=$this->upload->data();
-                $this->upload->do_upload('h');
+                $this->upload->do_upload('foto_pas');
                 $hasil3=$this->upload->data();
 
-            if ($hasil['file_name']=='')
-             if ($hasil2['file_name']=='')
-              if ($hasil3['file_name']==''){
+                if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']=='' )
+               {
 
                     $data = array('nama'=>$this->input->post('nama'),
                                     'alamat'=>$this->input->post('alamat'),

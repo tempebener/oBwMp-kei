@@ -68,7 +68,13 @@ $route['budidaya_ayam_broiler']='kemitraan/budidaya_ayam_broiler';
 $route['penggemukan_sapi']='kemitraan/penggemukan_sapi';
 $route['budidaya_jagung_padi']='kemitraan/budidaya_jagung_padi';
 $route['umkm_produk_olahan']='kemitraan/umkm_produk_olahan';
+// Akses Permodalan
+$route['kur']='akses_permodalan/kur';
+$route['lpdb_kumkm']='akses_permodalan/lpdb_kumkm';
+$route['pkbl_bumn']='akses_permodalan/pkbl_bumn';
+$route['pnm']='akses_permodalan/pnm';
 
+// Agropreneur Update
 $route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
 $route['pelatihan/(:num)/(:any)'] = "pelatihan/detail_pelatihan/$1/$2";
 // Register
@@ -86,3 +92,10 @@ $route['admin/slider'] = 'admin/slider/all_slider_list';
 $route['admin/slider/add'] = 'admin/slider/index';
 
 $route['admin/berita'] = 'admin/berita/index';
+
+$route['admin/user'] = 'admin/user/all_user_list';
+$route['admin/user/add'] = 'admin/user/index';
+
+
+
+

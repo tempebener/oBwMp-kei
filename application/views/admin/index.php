@@ -109,7 +109,8 @@
                         <!--End Logo icon -->
                         <!-- Logo text -->
                         <span>
-                      
+                     </a> 
+                     
                 </div>
                 
                 <!-- End Logo -->

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Member extends CI_Controller {
+class User extends CI_Controller {
 
 	public function __construct(){
         parent::__construct();
@@ -13,10 +13,10 @@ class Member extends CI_Controller {
     public function index()
     {
         $data = array();
-        $data['page_title'] = 'Member';
+        $data['page_title'] = 'User';
         $data['country'] = $this->common_model->select('country');
         $data['power'] = $this->common_model->get_all_power('user_power');
-        $data['main_content'] = $this->load->view('admin/member/add', $data, TRUE);
+        $data['main_content'] = $this->load->view('admin/user/add', $data, TRUE);
         $this->load->view('admin/index', $data);
     }
 

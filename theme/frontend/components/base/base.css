@@ -5664,7 +5664,19 @@ button.bg-red:focus {
     color: #FFFFFF;
 }
 
-/*Add by Bayu*/
+/*Add/Modif by Bayu*/
+.bg-primary {
+    background-color: #182657;
+}
 .bg-image-2 {
 	background-size: cover;
+}
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .h1 a:hover, .h2 a:hover, .h3 a:hover, .h4 a:hover, .h5 a:hover, .h6 a:hover {
+    color: #0339a0;
+}
+a {
+    color: #182657;
+}
+a:hover {
+    color: #0339a0;
 }

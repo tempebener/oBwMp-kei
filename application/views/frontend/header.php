@@ -61,7 +61,7 @@
 
                   </ul>
                 </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="history.html">Kemitraan</a>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Kemitraan</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
 
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pengembangan_kemitraan">Pengembangan Kemitraan</a>
@@ -167,7 +167,7 @@
                 <div class="navbar-subpanel-item">
                   <div class="navbar-search">
                     <div class="navbar-search-container">
-                      <form class="navbar-search-form" action="search-results.html" method="GET" data-rd-search='{"output":".navbar-search-results","mode":"live","liveResults":3,"template":"<h5 class=\"search-title\"><a target=\"_top\" href=\"#{href}\" class=\"search-link\">#{title}</a></h5><p>...#{token}...</p>"}'>
+                      <form class="navbar-search-form" action="#" method="GET" data-rd-search='{"output":".navbar-search-results","mode":"live","liveResults":3,"template":"<h5 class=\"search-title\"><a target=\"_top\" href=\"#{href}\" class=\"search-link\">#{title}</a></h5><p>...#{token}...</p>"}'>
                         <input class="navbar-search-input" type="text" placeholder="Enter search terms..." autocomplete="off" name="s"/>
                         <button class="navbar-search-btn custom-font-search novi-icon"></button>
                         <button class="navbar-search-close search-switch custom-font-close novi-icon" type="button" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","class":"navbar-search-active","isolate":"[data-multi-switch]:not(.search-switch)"}'></button>

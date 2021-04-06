@@ -75,6 +75,12 @@ $route['kur']='akses_permodalan/kur';
 $route['lpdb_kumkm']='akses_permodalan/lpdb_kumkm';
 $route['pkbl_bumn']='akses_permodalan/pkbl_bumn';
 $route['pnm']='akses_permodalan/pnm';
+// Inkubator Bisnis
+$route['tentang_inkubator_bisnis']='inkubator_bisnis/tentang_inkubator_bisnis';
+$route['peternakan']='inkubator_bisnis/peternakan';
+$route['pertanian']='inkubator_bisnis/pertanian';
+$route['lainnya']='inkubator_bisnis/lainnya';
+$route['inkubator_area']='inkubator_bisnis/inkubator_area';
 
 // Agropreneur Update
 $route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";

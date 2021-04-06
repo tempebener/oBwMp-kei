@@ -130,7 +130,29 @@
                     </li>
                   </ul>
                 </li>
-               <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Inkubator Bisnis</a>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Inkubator Bisnis</a>
+                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>tentang_inkubator_bisnis">Tentang Inkubator Bisnis</a>
+                    </li>
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Konsultasi Online</a>
+                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>peternakan">Peternakan</a>
+                        </li>
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pertanian">Pertanian</a>
+                        </li>
+                        <li><a class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>lainnya">Lainnya</a>
+                        </li>
+                      </ul>
+                    </li>
+                    
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>inkubator_area">Inkubator Area</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Akses Permodalan</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">

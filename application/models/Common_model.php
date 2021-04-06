@@ -78,6 +78,31 @@ class Common_model extends CI_Model {
         }
     }
 
+    public function check_judul($judull){
+        $this->db->select('*');
+        $this->db->from('tbl_slider');
+        $this->db->where('jdl_1', $judul); 
+        $this->db->limit(1);
+        $query = $this->db->get();
+        if($query->num_rows() == 1) {                 
+            return $query->result();
+        }else{
+            return false;
+        }
+    }
+    public function check_email_member($email){
+        $this->db->select('*');
+        $this->db->from('tbl_member');
+        $this->db->where('email', $email); 
+        $this->db->limit(1);
+        $query = $this->db->get();
+        if($query->num_rows() == 1) {                 
+            return $query->result();
+        }else{
+            return false;
+        }
+    }
+
     public function check_exist_power($id){
         $this->db->select('*');
         $this->db->from('user_power');

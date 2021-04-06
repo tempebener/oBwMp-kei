@@ -9,4 +9,10 @@ class M_member extends CI_Model{
     public function insert($table,$data){
         return $this->db->insert($table, $data);
     }
+
+
+	function simpan_file($nama,$alamat,$file){
+		$hsl=$this->db->query("INSERT INTO tbl_member(nama,alamat,foto_ktp) VALUES ('$nama','$alamat','$file')");
+		return $hsl;
+	}
 }

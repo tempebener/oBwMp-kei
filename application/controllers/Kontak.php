@@ -1,5 +1,5 @@
 <?php
-class Contact extends CI_Controller{
+class Kontak extends CI_Controller{
   function __construct(){
 		parent::__construct();
       $this->load->model('m_kontak');
@@ -7,7 +7,7 @@ class Contact extends CI_Controller{
   		$this->m_pengunjung->count_visitor();
 	}
 	function index(){
-		  $this->load->view('depan/v_contact');
+		  $this->load->view('frontend/kontak_kami');
 	}
 
   function kirim_pesan(){
@@ -17,6 +17,6 @@ class Contact extends CI_Controller{
       $pesan=htmlspecialchars($this->input->post('xmessage',TRUE),ENT_QUOTES);
       $this->m_kontak->kirim_pesan($nama,$email,$kontak,$pesan);
       echo $this->session->set_flashdata('msg','<p><strong> NB: </strong> Terima Kasih Telah Menghubungi Kami.</p>');
-      redirect('contact');
+      redirect('Kontak');
   }
 }

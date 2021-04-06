@@ -160,7 +160,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Kontak</a>
+               <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
                 </li>
               </ul>
             </div>

@@ -98,35 +98,32 @@
                       <a class="navbar-navigation-dropdown-link" href="#">Peternakan</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>">Budidaya Ayam Layer</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pelatihan/6/budidaya-ayam-layer">Budidaya Ayam Layer</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>">Budidaya Ayam Broiler</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pelatihan/5/budidaya-ayam-broiler">Budidaya Ayam Broiler</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>">Penggemukan Sapi</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pelatihan/4/penggemukan-sapi">Penggemukan Sapi</a>
                         </li>
                       </ul>
                     </li>
-                    <li class="navbar-navigation-dropdown-item">
+                   <li class="navbar-navigation-dropdown-item">
                       <a class="navbar-navigation-dropdown-link" href="#">Pertanian</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>">Budidaya Padi</a>
-                        </li>
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>">Budidaya Jagung</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pelatihan/3/budidaya-padi-jagung">Budidaya Padi & Jagung</a>
                         </li>
                       </ul>
                     </li>
                     <li><a class="navbar-navigation-dropdown-item">
                       <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>program_kegiatan">Produk Olahan</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>">Produk Olahan Daging</a>
+                      <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pelatihan/2/umkm-produk-olahan-daging">Produk Olahan Daging</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>">Produk Pertanian</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pelatihan/1/umkm-produk-pertanian">Produk Pertanian</a>
                         </li>
                       </ul>
                     </li>
@@ -160,7 +157,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Kontak</a>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
                 </li>
               </ul>
             </div>

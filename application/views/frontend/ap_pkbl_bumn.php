@@ -2,7 +2,7 @@
 <html lang="en">
 <!-- head -->
   <head>
-    <title>KUR</title>
+    <title>PKBL BUMN</title>
     <?php $this->load->view('frontend/head2')?>
   </head>
 <!-- head end -->
@@ -24,8 +24,8 @@
             <div class="breadcrumb-inner">
               <div class="breadcrumb-item"><a class="breadcrumb-link" href="<?php echo base_url();?>">Home</a></div>
               <div class="breadcrumb-item"><span class="breadcrumb-text">Akses Permodalan</span></div>
-              <div class="breadcrumb-item"><span class="breadcrumb-text">Perbankan</span></div>
-              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">KUR</span></div>
+              <div class="breadcrumb-item"><span class="breadcrumb-text">Non Perbankan</span></div>
+              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">PKBL BUMN</span></div>
             </div>
           </div>
         </div>
@@ -35,11 +35,21 @@
       <section class="section-md bg-transparent text-left">
         <div class="container">
           <div class="text-block text-block-1">
-            <img src="<?php echo base_url();?>theme/images/akses_permodalan/kur.png" alt="KUR" width="80px" height="auto" style="float:left;">
-            <h2>KUR</h2>
+            <img src="<?php echo base_url();?>theme/images/akses_permodalan/pkbl_bumn.jpg" alt="PKBL BUMN" width="50px" height="auto" style="float:left;">
+            <h2>PKBL BUMN</h2>
             <br/>
             <p class="big" style="text-align: justify !important;">
-            &emsp;&emsp;<strong>Kredit Usaha Rakyat (KUR)</strong> adalah kredit/pembiayaan modal kerja dan/atau investasi kepada debitur individu/perseorangan, badan usaha dan/atau kelompok usaha yang produktif dan layak namun belum memiliki agunan tambahan atau agunan tambahan belum cukup. Penyaluran KUR dapat dilakukan langsung, maksudnya UMKM dan Koperasi dapat langsung mengakses KUR di Kantor Cabang atau Kantor Cabang Pembantu Bank Pelaksana. Untuk lebih mendekatkan pelayanan kepada usaha mikro, maka penyaluran KUR dapat juga dilakukan secara tidak langsung, maksudnya usaha mikro dapat mengakses KUR melalui Lembaga Keuangan Mikro dan KSP/USP Koperasi, atau melalui kegiatan linkage program lainnya yang bekerjasama dengan Bank Pelaksana.
+            <strong>Program Kemitraan dan Bina Lingkungan BUMN</strong>
+            <br/>&emsp;&emsp;<strong>Program Kemitraan</strong>merupakan Program untuk meningkatkan kemampuan usaha kecil agar menjadi Tangguh dan mandiri. Bentuk Program Kemitraan, yakni:
+            <br/>1. Bentuk Pinjaman
+            <br/>&emsp;&emsp;Dana Program Kemitraan disalurkan dalam bentuk:
+            <br/>• Pinjaman untuk membiayai modal kerja dan/atau pembelian asset tetap dalam rangka meningkatkan produksi dan penjualan.
+            <br/>• Pinjaman tambahan untuk membiayai kebutuhan yang bersifat jangka pendek dalam rangka memenuhi pesanan dari rekanan usaha Mitra Binaan.
+            <br/>2. Batasan Maksimal Pinjaman
+            <br/>&emsp;&emsp;Jumlah pinjaman untuk setiap Mitra Binaan dari Program Kemitraan maksimum sebesar Rp. 200.000.000,00 (dua ratus juta rupiah).
+            <br/>3. Jasa Administrasi
+            <br/>&emsp;&emsp;Besarnya jasa administrasi pinjaman dana Program Kemitraan ditetapkan satu kali pada saat pemberian pinjaman yaitu  sebesar 3% (tiga persen) per tahun dari saldo pinjaman awal tahun.
+            <br/><br/><strong>Bina Lingkungan</strong> merupakan Program pemberdayaan kondisi sosial masyarakat oleh BUMN.
             </p>
           </div>
         </div>

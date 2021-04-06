@@ -24,8 +24,8 @@
             <div class="breadcrumb-inner">
               <div class="breadcrumb-item"><a class="breadcrumb-link" href="<?php echo base_url();?>">Home</a></div>
               <div class="breadcrumb-item"><span class="breadcrumb-text">Akses Permodalan</span></div>
-              <div class="breadcrumb-item"><span class="breadcrumb-text">Perbankan</span></div>
-              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">KUR</span></div>
+              <div class="breadcrumb-item"><span class="breadcrumb-text">Non Perbankan</span></div>
+              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">LPDB KUMKM</span></div>
             </div>
           </div>
         </div>
@@ -35,11 +35,23 @@
       <section class="section-md bg-transparent text-left">
         <div class="container">
           <div class="text-block text-block-1">
-            <img src="<?php echo base_url();?>theme/images/akses_permodalan/kur.png" alt="KUR" width="80px" height="auto" style="float:left;">
+            <img src="<?php echo base_url();?>theme/images/akses_permodalan/lpdb_kumkm.png" alt="LPDB KUMKM" width="80px" height="auto" style="float:left;">
             <h2>LPDB KUMKM</h2>
             <br/>
             <p class="big" style="text-align: justify !important;">
-            &emsp;&emsp;<strong>Kredit Usaha Rakyat (KUR)</strong> adalah kredit/pembiayaan modal kerja dan/atau investasi kepada debitur individu/perseorangan, badan usaha dan/atau kelompok usaha yang produktif dan layak namun belum memiliki agunan tambahan atau agunan tambahan belum cukup. Penyaluran KUR dapat dilakukan langsung, maksudnya UMKM dan Koperasi dapat langsung mengakses KUR di Kantor Cabang atau Kantor Cabang Pembantu Bank Pelaksana. Untuk lebih mendekatkan pelayanan kepada usaha mikro, maka penyaluran KUR dapat juga dilakukan secara tidak langsung, maksudnya usaha mikro dapat mengakses KUR melalui Lembaga Keuangan Mikro dan KSP/USP Koperasi, atau melalui kegiatan linkage program lainnya yang bekerjasama dengan Bank Pelaksana.
+            &emsp;&emsp;<strong>LPDB KUMKM Mitra untuk Bangsa</strong> 
+            Lembaga keuangan bukan bank yang berada di bawah koordinasi Kementerian Koperasi dan UKM ini memiliki nama lengkap Lembaga Pengelola Dana Bergulir Koperasi Usaha Mikro Kecil dan Menengah (LPDB-KUMKM). Lembaga ini diberikan mandat oleh kementerian Koperasi dan UKM untuk mendistribusikan dan mengelola dana APBN yang diperuntukkan khusus pelaku koperasi maupun usaha mikro kecil dan menengah. Pelaku koperasi dengan syarat: 
+            <br/>1. Berbadan Hukum
+            <br/>2. Melaksanakan Rapat Anggota Tahunan
+            <br/>3. Memiliki  status kantor jelas
+            <br/>4. Memiliki hasil usaha positif
+            <br/>5. Kinerja pengembalian atas pinjaman/pembiayaan sebelumnya dalam hal Koperasi pernah menerima pinjaman/pembiayaan dana bergulir dari LPDB-KUMKM
+            <br/><br/>
+            &emsp;&emsp;Pinjaman yang dilakukan oleh LPDB-KUMKM yakni:
+            <br/>1. Program Pemulihan Ekonomi Nasional (PEN)
+            <br/>2. Sektor Riil
+            <br/>3. Sektor Simpan Pinjam
+            <br/>4. UKM Strategis & Prioritas Pemerintah
             </p>
           </div>
         </div>

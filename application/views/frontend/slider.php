@@ -9,7 +9,7 @@
               <div class="row justify-content-center">
                 <div class="col-md-9 col-lg-7">
                   <h1><?php echo $u->jdl_1 ?></h1>
-                  <p class="big"><?php echo $u->jdl_2 ?></p><a class="btn btn-primary" href="<?php echo $u->jdl_1 ?>">selengkapnya</a>
+                  <p class="big"><?php echo $u->jdl_2 ?></p><a class="btn btn-primary" href="#">selengkapnya</a>
                 </div>
               </div>
             </div>

@@ -16,6 +16,17 @@ class M_slider extends CI_Model{
         return false;
 	}
 
+    function simpan($judul,$deskripsi,$gambar){
+		$this->db->trans_start();
+            $this->db->query("insert into tbl_slider(jdl1,jdl2,foto) values ('$judul','$deskripsi','$gambar')");
+            
+        $this->db->trans_complete();
+        if($this->db->trans_status()==true)
+        return true;
+        else
+        return false;
+	}
+
 	 //-- count active, inactive and total slider
 	 function get_slider_total(){
         $this->db->select('*');

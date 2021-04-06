@@ -94,19 +94,19 @@
                   <div class="col-md-6">
                     <div class="form-group">
                       <label class="post-title h6">Upload KTP</label>
-                      <input class="form-control" type="file" name="foto_ktp" placeholder="Upload KTP*" data-constraints="@Required">
+                      <input class="form-control" type="file" name="f" placeholder="Upload KTP*" data-constraints="@Required">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label class="post-title h6">Upload Foto Diri</label>
-                      <input class="form-control" type="file" name="foto_pas" placeholder="Upload Foto Diri*">
+                      <input class="form-control" type="file" name="g" placeholder="Upload Foto Diri*">
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
                       <label class="post-title h6">Upload NPWP</label>
-                      <input class="form-control" type="file" name="foto_npwp" placeholder="Upload NPWP*">
+                      <input class="form-control" type="file" name="h" placeholder="Upload NPWP*">
                     </div>
                   </div>
                 </div>

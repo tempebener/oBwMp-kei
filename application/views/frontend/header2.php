@@ -20,7 +20,7 @@
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>visi_misi">Visi & Misi</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Struktur Organisasi</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>struktur_organisasi">Struktur Organisasi</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>program_kegiatan">Program & Kegiatan</a>
@@ -34,7 +34,7 @@
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>profil">Profil</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Pengembangan Seni & Budaya</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pengembangan_seni_budaya">Pengembangan Seni & Budaya</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pesantren_entrepreneur">Pesantren Entrepreneur</a>
@@ -61,7 +61,7 @@
 
                   </ul>
                 </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="history.html">Kemitraan</a>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Kemitraan</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
 
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pengembangan_kemitraan">Pengembangan Kemitraan</a>
@@ -130,7 +130,29 @@
                     </li>
                   </ul>
                 </li>
-               <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Inkubator Bisnis</a>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Inkubator Bisnis</a>
+                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>tentang_inkubator_bisnis">Tentang Inkubator Bisnis</a>
+                    </li>
+
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Konsultasi Online</a>
+                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>peternakan">Peternakan</a>
+                        </li>
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pertanian">Pertanian</a>
+                        </li>
+                        <li><a class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>lainnya">Lainnya</a>
+                        </li>
+                      </ul>
+                    </li>
+                    
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>inkubator_area">Inkubator Area</a>
+                    </li>
+                  </ul>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Akses Permodalan</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
@@ -159,6 +181,12 @@
                   </ul>
                 </li>
                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
+                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                        <li class="navbar-navigation-dropdown-item">
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>register">Pendaftaran</a>
+                        </li>
+                </li>
+              </ul>
                 </li>
               </ul>
             </div>
@@ -168,7 +196,7 @@
                 <div class="navbar-subpanel-item">
                   <div class="navbar-search">
                     <div class="navbar-search-container">
-                      <form class="navbar-search-form" action="search-results.html" method="GET" data-rd-search='{"output":".navbar-search-results","mode":"live","liveResults":3,"template":"<h5 class=\"search-title\"><a target=\"_top\" href=\"#{href}\" class=\"search-link\">#{title}</a></h5><p>...#{token}...</p>"}'>
+                      <form class="navbar-search-form" action="#" method="GET" data-rd-search='{"output":".navbar-search-results","mode":"live","liveResults":3,"template":"<h5 class=\"search-title\"><a target=\"_top\" href=\"#{href}\" class=\"search-link\">#{title}</a></h5><p>...#{token}...</p>"}'>
                         <input class="navbar-search-input" type="text" placeholder="Enter search terms..." autocomplete="off" name="s"/>
                         <button class="navbar-search-btn custom-font-search novi-icon"></button>
                         <button class="navbar-search-close search-switch custom-font-close novi-icon" type="button" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","class":"navbar-search-active","isolate":"[data-multi-switch]:not(.search-switch)"}'></button>

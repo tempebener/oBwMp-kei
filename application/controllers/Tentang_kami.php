@@ -10,6 +10,14 @@ class Tentang_kami extends CI_Controller{
 
 		$this->load->view('frontend/tk_visi_misi');
 	}
+	function struktur_organisasi(){
+
+		$this->load->view('frontend/tk_struktur_organisasi');
+	}
+	function program_kegiatan(){
+
+		$this->load->view('frontend/tk_program_kegiatan');
+	}
 
 	// Joglo Tumiyono
 	function profil(){
@@ -19,10 +27,6 @@ class Tentang_kami extends CI_Controller{
 	function pengembangan_seni_budaya(){
 
 		$this->load->view('frontend/tk_pengembangan_seni_budaya');
-	}
-	function program_kegiatan(){
-
-		$this->load->view('frontend/tk_program_kegiatan');
 	}
 	function pesantren_entrepreneur(){
 

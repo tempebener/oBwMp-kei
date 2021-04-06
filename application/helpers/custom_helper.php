@@ -25,7 +25,7 @@
 	//-- current date time function
 	if(!function_exists('current_datetime')){
 	    function current_datetime(){        
-	        $dt = new DateTime('now', new DateTimezone('Asia/Dhaka'));
+	        $dt = new DateTime('now', new DateTimezone('Asia/Jakarta'));
 	        $date_time = $dt->format('Y-m-d H:i:s');      
 	        return $date_time;
 	    }

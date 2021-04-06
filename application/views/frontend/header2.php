@@ -20,7 +20,7 @@
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>visi_misi">Visi & Misi</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="#">Struktur Organisasi</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>struktur_organisasi">Struktur Organisasi</a>
                         </li>
                         <li><a class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>program_kegiatan">Program & Kegiatan</a>

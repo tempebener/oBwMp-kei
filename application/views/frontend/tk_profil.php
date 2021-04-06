@@ -35,11 +35,10 @@
       <section class="section-md bg-transparent text-center">
         <div class="container">
           <div class="text-block text-block-1">
-            <h2>PROFIL JOGLO TUMIYONO</h2>
+            <h2>JOGLO TUMIYONO</h2>
             <p class="big" style="text-align: justify !important;">
-              Lokasi Joglo 
 <br/>
-              <a href="https://maps.app.goo.gl/PvJNhJXnneQc1VbG9">https://maps.app.goo.gl/PvJNhJXnneQc1VbG9</a>
+              <a href="https://maps.app.goo.gl/PvJNhJXnneQc1VbG9">Lokasi Joglo</a>
 <br/><br/>
 &emsp;&emsp;Joglo Tumiyono adalah sebuah mahakarya yang dipersembahkan PT Widodo Makmur Perkasa sebagai bagian dari proses pelestarian  budaya Adiluhung Jawa khususnya terkait dengan seni bangunan dan pahat. Didedikasikan bagi generasi muda agar memiliki wawasan budaya dan menumbuhkan rasa memiliki terhadap budaya bangsa. Kerajaan dan Kesultanan di wilayah Jawa berdasarkan catatan sejarah adalah kerajaan besar yang memiliki wilayah yang luas dan berjaya diantara kerajaan lainnya di sekitar Asia. Tetapi beberapa keraton besar tersebut musnah tidak diketahui keberadaannya, tidak meninggalkan artefak dan catatan sejarah. Keraton Demak, Keraton Majapahit, Keraton Singasari, Kesultanan Demak, Kesultanan Pajang semua hilang tanpa bekas sehingga kita tidak mengetahui kebesaran pada masa lalu.
 <br/><br/>

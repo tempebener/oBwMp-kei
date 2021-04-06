@@ -5672,11 +5672,11 @@ button.bg-red:focus {
 	background-size: cover;
 }
 h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .h1 a:hover, .h2 a:hover, .h3 a:hover, .h4 a:hover, .h5 a:hover, .h6 a:hover {
-    color: #0339a0;
+    color: #0471d2;
 }
 a {
     color: #182657;
 }
 a:hover {
-    color: #0339a0;
+    color: #0471d2;
 }

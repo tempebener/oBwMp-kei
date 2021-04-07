@@ -8,7 +8,7 @@
     
     <div class="row page-titles">
         <div class="col-md-5 col-8 align-self-center">
-            <h3 class="text-themecolor m-b-0 m-t-0">berita</h3>
+            <h3 class="text-themecolor m-b-0 m-t-0">Berita</h3>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
                 <li class="breadcrumb-item active">All berita</li>
@@ -84,8 +84,8 @@
                                 <tr>
                                     <th>Gambar</th>
                                     <th>Judul</th>
-                                    <th>Isi Berita</th>          					
-                                    <th>SEO</th>
+                                    <th>Tanggal</th>          					
+                                    <th>Author</th>
                                     <th>Status</th>
                                     <th style="text-align:right;">Aksi</th>
                                 </tr>
@@ -96,20 +96,20 @@
                                     foreach ($berita->result_array() as $i) :
                                         $no++;
                                         $id_berita=$i['id_berita'];
-                                        $berita_judul=$i['judul'];
-                                        $berita_isi=$i['isi_berita'];
-                                        $berita_seo=$i['judul_seo'];
-                                        $berita_gambar=$i['gambar'];
+                                        $berita_judul=$i['jdl_1'];
+                                        $berita_tanggal=$i['berita_tanggal'];
+                                        $berita_author=$i['berita_author'];
+                                        $berita_gambar=$i['foto'];
                                         $berita_status=$i['status'];
                                         
                                     
 
                                     ?>
                                 <tr>
-                                    <td><img src="<?php echo base_url().'theme/images/berita/'.$berita_gambar;?>" style="width:80px;"></td>
+                                    <td><img src="<?php echo base_url().'theme/images/foto_berita/'.$berita_gambar;?>" style="width:80px;"></td>
                                     <td><?php echo $berita_judul;?></td>
-                                    <td><?php echo $berita_isi;?></td>
-                                    <td><?php echo $berita_seo;?></td>
+                                    <td><?php echo $berita_tanggal;?></td>
+                                    <td><?php echo $berita_author;?></td>
                                     <td><?php echo $berita_status;?></td>
                                     <td style="text-align:right;">
                                         <a class="btn" berita-toggle="modal" berita-target="#ModalEdit<?php echo $id_berita;?>"><span class="fa fa-pencil"></span></a>
@@ -142,12 +142,11 @@
 </div>
 
 <?php foreach ($data->result_array() as $i) :
-             $id_berita=$i['id_berita'];
-             $berita_judul=$i['judul'];
-             $berita_isi=$i['isi_berita'];
-             $berita_seo=$i['judul_seo'];
-             $berita_gambar=$i['gambar'];
-             $berita_status=$i['status'];
+              $id_berita=$i['id_berita'];
+              $berita_judul=$i['jdl_1'];
+              $berita_tanggal=$i['berita_tanggal'];
+              $berita_author=$i['berita_author'];
+              $berita_gambar=$i['foto'];
               
             ?>
         <div class="modal fade" id="confirm_delete_<?php echo $id_berita;?>">

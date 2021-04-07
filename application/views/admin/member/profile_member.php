@@ -50,7 +50,7 @@
             <div class="card">
 
                 <div class="card-body">
-                    <center class="m-t-30"> <img src="<?php echo base_url() ?>assets/images/users/5.jpg" class="img-circle" width="150" />
+                    <center class="m-t-30"> <img src="<?php echo base_url().'theme/images/foto_register/member/'.$member->foto_pas;?>" class="img-circle" width="150" />
                         <h4 class="card-title m-t-10"><?php echo $member->nama; ?></h4>
                         <h6 class="card-subtitle"><?php echo $member->pekerjaan; ?></h6>
                         <div class="row text-center justify-content-md-center">
@@ -110,25 +110,48 @@
                                 </div>
                             </div>
                             <hr>
-                            <p class="m-t-30"><?php echo $member->usaha_diminati; ?></p>
-                            <h4 class="font-medium m-t-30">Skill Set</h4>
+                           
+                            <h4 class="font-medium m-t-30">latar Belakang</h4>
                             <hr>
-                            <h5 class="m-t-30">Wordpress <span class="pull-right">80%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Pendidikan</strong>
+                                    <br>
+                                    <p class="text-muted"><?php echo $member->pend_terakhir; ?></p>
+                                </div>
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Pekerjaan</strong>
+                                    <br>
+                                    <p class="text-muted"><?php echo $member->pekerjaan; ?></p>
+                                </div>
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Usaha yang diminati</strong>
+                                    <br>
+                                    <p class="text-muted"><?php echo $member->usaha_diminati; ?></p>
+                                </div>
+                                
                             </div>
-                            <h5 class="m-t-30">HTML 5 <span class="pull-right">90%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
+
+                            <h4 class="font-medium m-t-30">Dokumen</h4>
+                            <hr>
+                            <div class="row">
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>Foto Pas</strong>
+                                    <br>
+                                    <a href="<?php echo base_url().'theme/images/foto_register/member/'.$member->foto_pas;?>">
+                                    <img src="<?php echo base_url().'theme/images/foto_register/member/'.$member->foto_pas;?>" style="width:80px;"></a>
+                                </div>
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>KTP</strong>
+                                    <br>
+                                    <a href="<?php echo base_url().'theme/images/foto_register/member/'.$member->foto_ktp;?>">
+                                    <img src="<?php echo base_url().'theme/images/foto_register/member/'.$member->foto_ktp;?>" style="width:80px;"></a>
+                                </div>
+                                <div class="col-md-3 col-xs-6 b-r"> <strong>NPWP</strong>
+                                    <br>
+                                    <a href="<?php echo base_url().'theme/images/foto_register/member/'.$member->foto_npwp;?>">
+                                    <img src="<?php echo base_url().'theme/images/foto_register/member/'.$member->foto_npwp;?>" style="width:80px;"></a>
+                                </div>
+                                
                             </div>
-                            <h5 class="m-t-30">jQuery <span class="pull-right">50%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
-                            </div>
-                            <h5 class="m-t-30">Photoshop <span class="pull-right">70%</span></h5>
-                            <div class="progress">
-                                <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%; height:6px;"> <span class="sr-only">50% Complete</span> </div>
-                            </div>
+
+                                                 
+
                         </div>
                     </div>
                     <div class="tab-pane" id="settings" role="tabpanel">

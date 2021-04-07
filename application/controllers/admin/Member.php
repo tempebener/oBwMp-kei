@@ -191,6 +191,7 @@ class Member extends CI_Controller {
          }
  
          $data['member'] = $this->common_model->get_single_member_info($id);
+         $data['member2'] = $this->common_model->get_single_member_info($id);
          $data['member_role'] = $this->common_model->get_member_role($id);
          $data['power'] = $this->common_model->select('user_power');
          $data['country'] = $this->common_model->select('country');

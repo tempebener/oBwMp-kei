@@ -474,8 +474,8 @@
                                                 <?php endif; ?>
                                             <?php endif ?>
 
-                                    <!-- <li><a href="<?php echo base_url('admin/berita') ?>">Berita</a></li>
-                                    <li><a href="#">Ekonomi Outlook</a></li>
+                                    <li><a href="<?php echo base_url('admin/berita') ?>">Berita</a></li>
+                                    <!-- <li><a href="#">Ekonomi Outlook</a></li>
                                     <li><a href="#">Pelatihan</a></li>
                                    
                                     <li><a href="#">item 1.4</a></li> -->

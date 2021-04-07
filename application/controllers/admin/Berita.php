@@ -19,13 +19,18 @@ class Berita extends CI_Controller {
         $data['data'] = $this->M_berita->get_all_berita();
         // $data['country'] = $this->common_model->select('country');
         $data['count'] = $this->M_berita->get_berita_total();
-        $data['main_content'] = $this->load->view('admin/berita/beritas', $data, TRUE);
+        $data['main_content'] = $this->load->view('admin/berita/add', $data, TRUE);
         $this->load->view('admin/index', $data);
     }
 
     //-- add new user by admin
-    public function add()
+    public function add2()
     {   
+        $config['upload_path'] = './assets/images/'; //path folder
+        $config['allowed_types'] = 'gif|jpg|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+        $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+
+
         if ($_POST) {
 
             $data = array(
@@ -71,6 +76,46 @@ class Berita extends CI_Controller {
 
         }
     }
+
+
+    function add(){
+        $config['upload_path'] = './theme/images/foto_berita/'; //path folder
+        $config['allowed_types'] = 'gif|jpg|JPG|JPEG|PNG|png|jpeg|bmp'; //type yang dapat diakses bisa anda sesuaikan
+        $config['encrypt_name'] = TRUE; //nama yang terupload nantinya
+        $config['create_thumb']= FALSE;
+        $config['maintain_ratio']= FALSE;
+        $config['quality']= '60%';
+        $config['width']= 500;
+        $config['height']= 400;
+        $config['new_image']= './theme/images/foto_berita/'.$gbr['file_name'];
+        $this->load->library('image_lib', $config);
+        $this->image_lib->resize();
+
+        $this->upload->initialize($config);
+        if(!empty($_FILES['filefoto']['name']))
+        {
+            if ($this->upload->do_upload('filefoto'))
+            {
+                    $gbr = $this->upload->data();
+                    $file=$gbr['file_name'];
+                    $judul=strip_tags($this->input->post('judul'));
+                    $deskripsi=$this->input->post('deskripsi');
+                    
+
+                    $this->M_berita->simpan_berita($judul,$deskripsi,$file);
+                    echo $this->session->set_flashdata('msg','success');
+                    redirect('admin/berita/all_berita_list');
+            }else{
+                echo $this->session->set_flashdata('msg','warning');
+                redirect('admin/berita/all_berita_list');
+            }
+             
+        }else{
+            redirect('admin/berita');
+        }
+        
+}
+
 
     public function all_berita_list()
     {

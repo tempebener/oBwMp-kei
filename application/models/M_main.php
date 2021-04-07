@@ -39,5 +39,10 @@ class M_main extends CI_Model
     public function insert($table,$data){
         return $this->db->insert($table, $data);
     }
+
+    function insert_member(){
+		$sql=$this->db->query("INSERT tbl_member.*,DATE_FORMAT(created_at,'%d %M %Y') AS tanggal FROM tbl_member ORDER BY id_member DESC");
+		return $sql;
+    }
  
 }

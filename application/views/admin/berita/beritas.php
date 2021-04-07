@@ -64,14 +64,14 @@
                     <div class="card-body">
 
                         <?php if ($this->session->userdata('role') == 'admin'): ?>
-                            <a href="<?php echo base_url('admin/berita/add') ?>" class="btn btn-info pull-right"><i class="fa fa-plus"></i> Add New berita</a> &nbsp;
+                            <a href="<?php echo base_url('admin/berita/index') ?>" class="btn btn-info pull-right"><i class="fa fa-plus"></i> Add New berita</a> &nbsp;
 
                         
                         <?php else: ?>
                             <!-- check logged user role permissions -->
 
                             <?php if(check_power(1)):?>
-                                <a href="<?php echo base_url('admin/berita/add') ?>" class="btn btn-info pull-right"><i class="fa fa-plus"></i> Add New berita</a>
+                                <a href="<?php echo base_url('admin/berita') ?>" class="btn btn-info pull-right"><i class="fa fa-plus"></i> Add New berita</a>
                             <?php endif; ?>
                         <?php endif ?>
                     
@@ -96,10 +96,10 @@
                                     foreach ($berita->result_array() as $i) :
                                         $no++;
                                         $id_berita=$i['id_berita'];
-                                        $berita_judul=$i['jdl_1'];
-                                        $berita_tanggal=$i['berita_tanggal'];
-                                        $berita_author=$i['berita_author'];
-                                        $berita_gambar=$i['foto'];
+                                        $berita_judul=$i['judul'];
+                                        $berita_tanggal=$i['tanggal'];
+                                        $berita_seo=$i['judul_seo'];
+                                        $berita_gambar=$i['gambar'];
                                         $berita_status=$i['status'];
                                         
                                     
@@ -109,7 +109,7 @@
                                     <td><img src="<?php echo base_url().'theme/images/foto_berita/'.$berita_gambar;?>" style="width:80px;"></td>
                                     <td><?php echo $berita_judul;?></td>
                                     <td><?php echo $berita_tanggal;?></td>
-                                    <td><?php echo $berita_author;?></td>
+                                    <td><?php echo $berita_seo;?></td>
                                     <td><?php echo $berita_status;?></td>
                                     <td style="text-align:right;">
                                         <a class="btn" berita-toggle="modal" berita-target="#ModalEdit<?php echo $id_berita;?>"><span class="fa fa-pencil"></span></a>
@@ -143,10 +143,10 @@
 
 <?php foreach ($data->result_array() as $i) :
               $id_berita=$i['id_berita'];
-              $berita_judul=$i['jdl_1'];
-              $berita_tanggal=$i['berita_tanggal'];
-              $berita_author=$i['berita_author'];
-              $berita_gambar=$i['foto'];
+              $berita_judul=$i['judul'];
+              $berita_tanggal=$i['tanggal'];
+              $berita_seo=$i['judul_seo'];
+              $berita_gambar=$i['gambar'];
               
             ?>
         <div class="modal fade" id="confirm_delete_<?php echo $id_berita;?>">

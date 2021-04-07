@@ -5635,12 +5635,12 @@ button.bg-red:focus {
 }
 
 .btn-danger {
-    background-color:#FF0040 !important;
+    background-color:#ff0908 !important;
     color: #FFFFFF;
 }
 
 .btn-danger:hover {
-    background-color:#EB003B !important;
+    background-color:#bb0100 !important;
     color: #FFFFFF;
 }
 
@@ -5655,7 +5655,7 @@ button.bg-red:focus {
 }
 
 .btn-info {
-    background-color:#00D4FF !important;
+    background-color:#182657 !important;
     color: #FFFFFF;
 }
 

@@ -41,7 +41,7 @@
 
               
 <br/>
- <img src="<?php echo base_url();?>theme/images/unit/livestock/paste.png" alt="PT. Cianjur Arta Makmur" width="250px" height="auto" style="float:left;">
+ <img src="<?php echo base_url();?>theme/images/unit/livestock/paste.png" alt="PT. Cianjur Arta Makmur" width="250px" height="auto" style="float:left;margin-right: 20px;">
 &emsp;&emsp;Sebagai sebuah perusahaan peternakan sapi terintegrasi terbesar di Indonesia, PT Pasir Tengah kini tercatat memenuhi kurang lebih 15% dari total kebutuhan pasar sapi potong nasional. Secara kontinu pemenuhan tersebut disuplai dari 4 fasilitas farm yang tersebar di beberapa lokasi strategis di daerah Cianjur, Cariu, Cileungsi (ketiganya berada di wilayah Jawa Barat) dan Bayat (Klaten, Jawa Tengah) dengan total kapasitas hingga 135 ribu ekor per tahun.
 <br/><br/>
 &emsp;&emsp;Kualitas produk adalah label utama PT Pasir Tengah dalam memasuki pasar, dimana hal tersebut telah dimulai sejak proses seleksi bakalan di Australia yang telah dikenal sebagai salah satu produsen daging sapi terbaik di dunia karena keberhasilan mereka dalam mengembangkan program breeding yang menghasilkan sapi bakalan dengan pertumbuhan progresif, tahan penyakit, tahan cuaca ekstrem dan terjamin bebas dari Penyakit Mulut & Kuku (PMK) serta Anthrax. Titik kedua untuk menjaga kualitas produk adalah di pelabuhan bongkar muat dan kandang karantina. Kontrol yang ketat diberlakukan sepanjang proses perjalanan sapi di kapal, proses bongkar di pelabuhan, maupun ketika sapi-sapi tersebut masuk lokasi kandang di masing-masing farm. Selanjutnya selama 14 hari sapi akan berada di kandang karantina untuk tindakan observasi oleh tim veteriner farm bersama petugas karantina dari Balai Karantina Pertanian.

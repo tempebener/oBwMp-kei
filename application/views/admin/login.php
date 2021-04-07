@@ -73,8 +73,9 @@
                     <form class="form-horizontal form-material" id="login-form" action="<?php echo base_url('auth/log'); ?>" method="post">
                         
                         <span >
-                        <h2 class="box-title m-b-40 text-center">Login
-                        <br class="box-title m-b-20 text-center">Dashboard KEI</br></h2>
+                        
+                        <h2 class="box-title m-b-40 text-center"><a class="navbar-logo-link" href="<?php echo base_url();?>"><img class="navbar-logo-inverse" src="<?php echo base_url();?>theme/images/logojoglo.png" alt="Teachzy" width="90" height="100"/></a>
+                      </h2>
                         </span>
    
                         <div class="form-group ">

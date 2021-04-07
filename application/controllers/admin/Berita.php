@@ -111,7 +111,7 @@ class Berita extends CI_Controller {
             }
              
         }else{
-            redirect('admin/berita');
+            redirect('admin/berita/add');
         }
         
 }

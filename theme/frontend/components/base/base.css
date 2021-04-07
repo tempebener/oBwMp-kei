@@ -5640,7 +5640,7 @@ button.bg-red:focus {
 }
 
 .btn-danger:hover {
-    background-color:#EB003B !important;
+    background-color:#bb0100 !important;
     color: #FFFFFF;
 }
 

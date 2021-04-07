@@ -30,7 +30,7 @@
                   <li class="list-item"><a class="link link-inherit" href="https://www.facebook.com/kesatriaan.entrepreneur.indonesia">Facebook</a></li>
                   <!-- <li class="list-item"><a class="link link-inherit" href="#">Pinterest</a></li>
                   <li class="list-item"><a class="link link-inherit" href="#">LinkedIn</a></li> -->
-                  <li class="list-item"><a class="link link-inherit" href="https://www.instagram.com/kesatriaan.entrepreneur">Instagram</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://www.instagram.com/kei_widodo_makmur/">Instagram</a></li>
                   <!-- <li class="list-item"><a class="link link-inherit" href="#">Twitter</a></li> -->
                   <li class="list-item"><a class="link link-inherit" href="https://www.youtube.com/channel/UCaXcQCE0lbJWRz9GQhtuXSw">YouTube</a></li>
                 </ul>

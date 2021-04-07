@@ -5655,12 +5655,12 @@ button.bg-red:focus {
 }
 
 .btn-info {
-    background-color:#182657 !important;
+    background-color:#146497 !important;
     color: #FFFFFF;
 }
 
 .btn-info:hover {
-    background-color:#00C4EB !important;
+    background-color:#182657 !important;
     color: #FFFFFF;
 }
 

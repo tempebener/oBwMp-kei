@@ -27,9 +27,18 @@
       <!-- Post single-->
       <section class="section-md bg-transparent">
         <div class="container">
-          <div class="post">
-            <div class="post-media"><img class="post-img" src="<?php echo base_url()?>theme/images/foto_pelatihan/<?php echo "$rows[foto]"; ?>" alt="" width="1170" height="500"/>
+          <div class="text-block text-block-1">
+            <div class="row">
+              <div class="col-md-2"></div>
+              <div class="col-md-8">
+                  <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/foto_pelatihan/<?php echo "$rows[foto]"; ?>" alt="naget ayam" width="100%" height="auto" style="float:left;">
+                <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
+              </div>
+              <div class="col-md-2"></div>
             </div>
+          </div>
+
+          <div class="post">
            <!--  <div class="post-meta">
               <div class="post-meta-item">
                 <div class="post-meta-icon custom-font-calendar"></div>

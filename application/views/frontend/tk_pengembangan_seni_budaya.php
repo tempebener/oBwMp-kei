@@ -43,15 +43,16 @@
               &emsp;&emsp;Dalam pengembangan Seni dan Budaya, Joglo Tumiyono mendukung sepenuhnya setiap usaha pelestarian budaya. Di antaranya memberikan wadah bagi PEPADI (Persatuan Pendalangan Indonesia) berkiprah melaksanakan pentas wayang setiap malam Sabtu Pahing di Joglo Tumiyono. Joglo Tumiyono juga menjadi Pahing, 09 Agustus 2019. Acara tersebut dihadiri Founder WMP, Bupati Klaten Sri Mulyani, Nusron Wahid anggota DPR periode 2019-2024 dan tokoh masyarakat lainnya. Acara tersebut menjadi penanda mutualisme antara Joglo Tumiyono dengan PEPADI dan menjadi komitmen bagi Joglo Tumiyono untuk menyelenggarkan pentas wayang kulit secara rutin setiap malam Sabtu Pahing.
               </p>
 
-          <div class="row">
-            <!-- <div class="col-md-2"></div> -->
-            <div class="col-md-12">
-                <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/pengembangan_seni_budaya/kesenian.jpg" alt="pwm2" width="100%" height="auto" style="float:left;">
-              <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
+            <div class="row">
+              <!-- <div class="col-md-2"></div> -->
+              <div class="col-md-12">
+                  <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/pengembangan_seni_budaya/kesenian.jpg" alt="kesenian" width="100%" height="auto" style="float:left;">
+                <!-- <a class="btn btn-outline" href="#">Learn more</a> -->
+              </div>
+              <!-- <div class="col-md-2"></div> -->
             </div>
-            <!-- <div class="col-md-2"></div> -->
           </div>
-          </div>
+        </div>
       </section>
 
       <!-- Footer start-->

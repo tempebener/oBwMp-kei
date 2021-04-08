@@ -39,92 +39,77 @@
 
                 </div>
                 <div class="card-body">
-                <form action="<?php echo base_url().'admin/member/add'?>" method="post" enctype="multipart/form-data">
+                    <form action="<?php echo base_url().'admin/member/add'?>" method="post" enctype="multipart/form-data">
                     
                         <div class="form-body">
-                            <br>
-                            <div class="row row-30">
-                                <div class="col-md-12">
-                                
-                                    <div class="row row-30">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                            <input class="form-control" name="email" type="email" name="email" placeholder="E-mail*" data-constraints="@Email @Required">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                            <input class="form-control"  type="password" name="password" placeholder="Password*" data-constraints="@Required">
-                                            </div>
-                                        </div>
-                                        <hr style="width:100%;text-align:left;margin-left:12px;margin-right:12px;">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                            <input class="form-control"  type="text" name="nama" placeholder="Nama*" data-constraints="@Required">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                            <input class="form-control" type="text" name="alamat" placeholder="Alamat*" data-constraints="@Required">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                            <input class="form-control" type="text" name="no_hp" placeholder="Nomor Handphone*" data-constraints="@Numeric @Required">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                            <input class="form-control" type="text" name="pend_terakhir" placeholder="Pendidikan Terakhir*" data-constraints="@Required">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                            <input class="form-control" type="text" name="pekerjaan" placeholder="Pekerjaan*" data-constraints="@Required">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                            <input class="form-control" type="text" name="usaha_diminati" placeholder="Bidang Usaha yang Diminati*" data-constraints="@Required">
-                                            </div>
-                                        </div>
-                                    <!-- <div class="col-md-6">
-                                        <div class="form-group">
-                                        <input class="form-control" type="text" name="subject" placeholder="Subject">
-                                        </div>
-                                    </div> -->
-                                    <!-- <div class="col-12">
-                                        <div class="form-group">
-                                        <textarea class="form-control" name="textarea" placeholder="Message"></textarea>
-                                        </div>
-                                    </div> -->
-                                    </div>
 
-                                    <div class="row row-30">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                        <label class="post-title h6">Upload KTP</label>
-                                        <input type="file" name="foto_ktp" >
+                            <h4 class="font-medium m-t-30">Profile</h4>
+                            <hr>
+
+                                        <div class="row row-30">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                <input class="form-control" name="email" type="email" name="email" placeholder="E-mail*" data-constraints="@Email @Required">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                <input class="form-control"  type="password" name="password" placeholder="Password*" data-constraints="@Required">
+                                                </div>
+                                            </div>
+                                            <hr style="width:100%;text-align:left;margin-left:12px;margin-right:12px;">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                <input class="form-control"  type="text" name="nama" placeholder="Nama*" data-constraints="@Required">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                <input class="form-control" type="text" name="alamat" placeholder="Alamat*" data-constraints="@Required">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                <input class="form-control" type="text" name="no_hp" placeholder="Nomor Handphone*" data-constraints="@Numeric @Required">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                <input class="form-control" type="text" name="pend_terakhir" placeholder="Pendidikan Terakhir*" data-constraints="@Required">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                <input class="form-control" type="text" name="pekerjaan" placeholder="Pekerjaan*" data-constraints="@Required">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                <input class="form-control" type="text" name="usaha_diminati" placeholder="Bidang Usaha yang Diminati*" data-constraints="@Required">
+                                                </div>
+                                            </div>
+                                   
                                         </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                        <label class="post-title h6">Upload Foto Diri</label>
-                                        <input class="form-control" type="file" name="foto_pas" placeholder="Upload Foto Diri*">
+
+                                        <h4 class="font-medium m-t-30">Dokumen</h4>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-md-3 col-xs-6 b-r"> <strong>Upload KTP</strong>
+                                                <br>
+                                                <input  class="form-control"  type="file" name="foto_ktp" >
+                                            </div>
+                                            <div class="col-md-3 col-xs-6 b-r"> <strong>Upload Foto Diri</strong>
+                                                <br>
+                                                <input class="form-control" type="file" name="foto_pas" placeholder="Upload Foto Diri*">
+                                            </div>
+                                            <div class="col-md-3 col-xs-6 b-r"> <strong>Upload NPWP/strong>
+                                                <br>
+                                                <input class="form-control" type="file" name="foto_npwp" placeholder="Upload NPWP*">
+                                            </div>
+                                            
                                         </div>
-                                    </div>
-                                
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                        <label class="post-title h6">Upload NPWP</label>
-                                        <input class="form-control" type="file" name="foto_npwp" placeholder="Upload NPWP*">
-                                        </div>
-                                    </div>                                   
 
 
-                                    </div>
-
-                                    
                                         <div class="col-md-4">
                                             <div class="form-group row">
                                                 <label class="control-label text-right col-md-3"></label>
@@ -144,34 +129,23 @@
                                                 </div>
                                             </div>
                                         </div>
-                                   
 
-                            
+                                        <div class="row user_role_area" style="display: none;">
+                                            <div class="col-md-9">
+                                                <div class="form-group row">
+                                                    <label class="control-label text-right col-md-3">User Permissions</label>
+                                                    <div class="controls">
 
-                            <div class="row user_role_area" style="display: none;">
-                                <div class="col-md-9">
-                                    <div class="form-group row">
-                                        <label class="control-label text-right col-md-3">User Permissions</label>
-                                        <div class="controls">
+                                                        <?php foreach ($power as $pw): ?>
+                                                            <label class="custom-control custom-checkbox">
+                                                                <input type="checkbox" value="<?php echo $pw['power_id']; ?>" name="role_action[]" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description"><?php echo $pw['name']; ?></span> 
+                                                            </label>
+                                                        <?php endforeach ?>
 
-                                            <?php foreach ($power as $pw): ?>
-                                                <label class="custom-control custom-checkbox">
-                                                    <input type="checkbox" value="<?php echo $pw['power_id']; ?>" name="role_action[]" class="custom-control-input"> <span class="custom-control-indicator"></span> <span class="custom-control-description"><?php echo $pw['name']; ?></span> 
-                                                </label>
-                                            <?php endforeach ?>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-
-
-                                    <br/>
-                                   
-                                </div>
-                            </div>
-                                                 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>                          
 
                            
 

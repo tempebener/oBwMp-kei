@@ -5666,7 +5666,8 @@ button.bg-red:focus {
 
 /*Add/Modif by Bayu*/
 .bg-primary {
-    background-color: #182657;
+    /*background-color: #182657;*/
+    background-color: #146497;
 }
 .bg-image-2 {
 	background-size: cover;
@@ -5675,7 +5676,8 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover, .h1 a:ho
     color: #0471d2;
 }
 a {
-    color: #182657;
+    /*color: #182657;*/
+    color: #146497;
 }
 a:hover {
     color: #0471d2;

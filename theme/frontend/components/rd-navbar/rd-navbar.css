@@ -960,9 +960,11 @@
 
 /*Add/Modif by Bayu*/
 .rd-navbar-fullwidth-linked .rd-navbar-absolute-wrap .rd-navbar-fullwidth.rd-navbar--is-stuck {
+    /*warna rekomend nugie*/
     background-color: #146497;
 }
 .rd-navbar-fullwidth {
+    /*warna rekomend nugie*/
     background-color: #146497;
 }
 .rd-navbar-fullwidth .navbar-navigation-dropdown-link:hover {

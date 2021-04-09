@@ -14,6 +14,7 @@ class Home extends CI_Controller{
 	function index(){
 		$status = '1';
 		$data['post_slider'] = $this->m_main->get_all_slider($status);
+		$data['post_pengantar'] = $this->m_main->get_pengantar();
 		$data['post_tutors'] = $this->m_main->get_all_tutors($status);
 		$data['pelatihan'] = $this->db->query("select * from tbl_pelatihan  ORDER BY  id_pelatihan desc 
 			")->result();

@@ -13,6 +13,13 @@ class M_main extends CI_Model
 	    return $this->db->get('tbl_slider')->result();
 	  }
 
+	function get_pengantar()
+	{
+	    $this->db->limit(1);
+	    $this->db->order_by('id_pengantar','asc' );
+	    return $this->db->get('tbl_pengantar')->result();
+	}
+
 	function get_all_tutors($status)
 	{
 	    $this->db->limit(12);

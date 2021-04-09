@@ -19,7 +19,9 @@
       <!-- slider end -->
 
       <!-- Blurb default-->
-      <?php $this->load->view('frontend/whatweover')?>
+      <!-- pengantar start -->
+      <?php $this->load->view('frontend/pengantar')?>
+      <!-- pengantar end -->
 
       <!--pendaftaran start-->
       <?php $this->load->view('frontend/pendaftaran')?>

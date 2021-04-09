@@ -14,7 +14,7 @@
                     <article class="blurb blurb-2" data-animate='{"class":"fadeInUp"}'>
                        <div class="blurb-item">
                               <!-- <div class="icon blurb-icon custom-font-male-teacher"></div> -->
-                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/kurikulum_pelatihan.png" alt="Pendampingan Bisnis" width="100px" height="auto">
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/foto_pengantar/kurikulum_pelatihan.png" alt="Pendampingan Bisnis" width="100px" height="auto">
                             </div>
                       <div class="blurb-title h4">Kurikulum Pelatihan</div>
                      <!--  <div class="blurb-text big">Perangkat pembelajaran yang akan didapatkan peserta dalam kegiatan kesatriaan entrepreneur indonesia.</div> -->
@@ -25,7 +25,7 @@
                     <article class="blurb blurb-2" data-animate='{"class":"fadeInUp","delay":".15s"}'>
                       <div class="blurb-item">
                               <!-- <div class="icon blurb-icon custom-font-male-teacher"></div> -->
-                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/timeline_pelatihan.png" alt="Pendampingan Bisnis" width="100px" height="auto">
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/foto_pengantar/timeline_pelatihan.png" alt="Pendampingan Bisnis" width="100px" height="auto">
                             </div>
                       <div class="blurb-title h4">Timeline Pelatihan</div>
                     <!--   <div class="blurb-text big">Serangkaian rencana kegiatan yang akan dilakukan dalam kesatriaan entrepreneur indonesia.</div> -->
@@ -36,7 +36,7 @@
                     <article class="blurb blurb-2" data-animate='{"class":"fadeInUp","delay":".3s"}'>
                       <div class="blurb-item">
                               <!-- <div class="icon blurb-icon custom-font-male-teacher"></div> -->
-                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/program_pelatihan.png" alt="Pendampingan Bisnis" width="100px" height="auto">
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/foto_pengantar/program_pelatihan.png" alt="Pendampingan Bisnis" width="100px" height="auto">
                             </div>
                       <div class="blurb-title h4">Program Pelatihan</div>
                      <!--  <div class="blurb-text big">Seperangkat kegiatan yang diperuntukkan bagi peserta kesatriaan entrepreneur indonesia.</div> -->

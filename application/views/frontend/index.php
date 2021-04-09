@@ -50,7 +50,7 @@
                           <article class="blurb blurb-side">
                             <div class="blurb-item">
                               <!-- <div class="icon blurb-icon custom-font-graduated"></div> -->
-                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/jaminan_akses_pemodalan.jpg" alt="Jaminan Akses Pemodalan" width="100px" height="auto">
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/jaminan_akses_pemodalan.png" alt="Jaminan Akses Pemodalan" width="auto">
                             </div>
                             <div class="blurb-body">
                               <div class="blurb-counter-value h2"><!-- <span data-counter="">100</span><span class="counter-postfix">%</span> -->
@@ -64,7 +64,7 @@
                           <article class="blurb blurb-side">
                             <div class="blurb-item">
                               <!-- <div class="icon blurb-icon custom-font-male-teacher"></div> -->
-                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/pendampingan_bisnis.jpg" alt="Pendampingan Bisnis" width="100px" height="auto">
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/pendampingan_bisnis.png" alt="Pendampingan Bisnis" width="70px">
                             </div>
                             <div class="blurb-body">
                               <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
@@ -78,7 +78,7 @@
                           <article class="blurb blurb-side">
                             <div class="blurb-item">
                               <!-- <div class="icon blurb-icon custom-font-student-at-desk"></div> -->
-                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/pembimbing_profesional_berpengalaman.jpg" alt="Pembimbing Profesional & Berpengalaman" width="150px" height="auto">
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/pembimbing_profesional_berpengalaman.png" alt="Pembimbing Profesional & Berpengalaman" width="auto">
                             </div>
                             <div class="blurb-body">
                                <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->
@@ -92,7 +92,7 @@
                           <article class="blurb blurb-side">
                             <div class="blurb-item">
                               <!-- <div class="icon blurb-icon custom-font-university"></div> -->
-                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/pembelajaran_komprehensif.jpg" alt="Pembelajaran Komprehensif" width="100px" height="auto">
+                              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/fasilitas_pendampingan_pembelajaran/pembelajaran_komprehensif.png" alt="Pembelajaran Komprehensif" width="auto">
                             </div>
                             <div class="blurb-body">
                               <div class="blurb-counter-value h2"><!-- <span data-counter="">100%</span><span class="counter-postfix">%</span> -->

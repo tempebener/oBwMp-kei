@@ -78,7 +78,7 @@
 
                                            <div class="row">
                                            
-                                           <div class="col-sm-4 col-xs-4 b-r"> <strong>Alamat</strong>
+                                            <div class="col-sm-4 col-xs-4 b-r"> <strong>Alamat</strong>
                                                     
                                                     <input class="form-control" type="text" name="alamat" placeholder="Alamat*" data-constraints="@Required">
                                                     

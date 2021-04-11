@@ -134,7 +134,7 @@ class Member extends CI_Controller {
                 $this->common_model->delete_member_role($id, 'member_role');
                 foreach ($powers as $value) {
                    $role_data = array(
-                        'member_id' => $id,
+                        'id_member' => $id,
                         'action' => $value
                     ); 
                    $role_data = $this->security->xss_clean($role_data);
@@ -142,15 +142,16 @@ class Member extends CI_Controller {
                 }
             }
 
-            $this->common_model->edit_option($data, $id, 'member');
+            $this->common_model->edit_option($data, $id, 'tbl_member');
             $this->session->set_flashdata('msg', 'Information Updated Successfully');
             redirect(base_url('admin/member/all_member_list'));
 
         }
 
         $data['member'] = $this->common_model->get_single_member_info($id);
+        $data['member2'] = $this->common_model->get_single_member_info($id);
         $data['member_role'] = $this->common_model->get_member_role($id);
-        $data['power'] = $this->common_model->select('member_power');
+        $data['power'] = $this->common_model->select('user_power');
         $data['country'] = $this->common_model->select('country');
         $data['main_content'] = $this->load->view('admin/member/edit_member', $data, TRUE);
         $this->load->view('admin/index', $data);
@@ -184,7 +185,7 @@ class Member extends CI_Controller {
                  }
              }
  
-             $this->common_model->edit_option($data, $id, 'member');
+             $this->common_model->edit_option($data, $id, 'tbl_member');
              $this->session->set_flashdata('msg', 'Information Updated Successfully');
              redirect(base_url('admin/member/all_member_list'));
  

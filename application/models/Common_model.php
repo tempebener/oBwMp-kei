@@ -155,9 +155,11 @@ class Common_model extends CI_Model {
 
      //-- get single user info
      function get_single_member_info($id){
-        $this->db->select('*');
-        $this->db->from('tbl_member');
-        $this->db->where('tbl_member.id_member',$id);
+        $this->db->select('u.*');
+        $this->db->select('c.password as password,c.group as group');
+        $this->db->from('tbl_member u');
+        $this->db->join('user c','c.id= u.id_member','left');
+        $this->db->where('u.id_member',$id);
         $query = $this->db->get();
         $query = $query->row();  
         return $query;
@@ -183,6 +185,24 @@ class Common_model extends CI_Model {
         return $query;
     }
 
+
+    function get_no_member(){
+        $q = $this->db->query("SELECT MAX(RIGHT(no_member,4)) AS kd_max FROM tbl_member WHERE DATE(create_at)=CURDATE()");
+        $kd = "";
+        if($q->num_rows()>0){
+            foreach($q->result() as $k){
+                $tmp = ((int)$k->kd_max)+1;
+                $kd = sprintf("%04s", $tmp);
+            }
+        }else{
+            $kd = "0001";
+        }
+        date_default_timezone_set('Asia/Jakarta');
+        return date('y').$kd;
+    }
+
+
+ 
 
     //-- get all users with type 2
     function get_all_user(){

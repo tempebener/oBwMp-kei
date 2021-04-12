@@ -8,6 +8,7 @@ class Berita extends CI_Controller {
        $this->load->model('common_model');
        $this->load->model('login_model');
        $this->load->model('M_berita');
+       $this->load->model('Model_app');
        $this->load->library('upload');
        
     }
@@ -256,5 +257,83 @@ class Berita extends CI_Controller {
         redirect(base_url('admin/user/power'));
     }
 
+    function tambah_berita(){
+         
+           
+        if (isset($_POST['submit'])){
+            $config['upload_path'] = 'asset/foto_berita/';
+            $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG|jpeg';
+            $config['max_size'] = '3000'; // kb
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('k');
+            $hasil=$this->upload->data();
+
+            $config['source_image'] = 'theme/images/foto_berita/'.$hasil['file_name'];
+
+            if ($this->input->post('j')!=''){
+                $tag_seo = $this->input->post('j');
+                $tag=implode(',',$tag_seo);
+            }else{
+                $tag = '';
+            }
+
+            $tag = $this->input->post('j');
+            $tags = explode(",", $tag);
+            $tags2 = array();
+            foreach($tags as $t)
+            {
+            $this->load->library('image_lib',$config);
+            $this->image_lib->watermark();
+
+            if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; } 
+            if ($this->session->level == 'kontributor'){ $status2 = 'Y'; }else{ $status2 = 'Y'; }
+
+                $sql = "select * from tag where tag_seo = '" . seo_title($t) . "'";
+                $a = $this->db->query($sql)->result_array();
+                if(count($a) == 0){
+                    $data = array('nama_tag'=>$this->db->escape_str($t),
+                            'id_users'=>$this->session->id_users,
+                            'tag_seo'=>seo_title($t),
+                            'count'=>'0');
+                    $this->mojdel_app->insert('tag',$data);
+                }
+                $tags2[] = seo_title($t);
+            }
+            $tags = implode(",", $tags2);
+            if ($hasil['file_name']==''){
+                    $data = array(
+                                    'id_users'=>$this->session->id_users,
+                                    'judul'=>$this->input->post('b'),
+                                    'judul_seo'=>seo_title($this->input->post('b')).date('sHi'),
+                                    'isi_berita'=>$this->input->post('h'),
+                                    'hari'=>hari_ini(date('w')),
+                                    'tanggal'=>date('Y-m-d'),
+                                    'jam'=>date('H:i:s'),
+                                    'dibaca'=>'0',
+                                    'status'=>$status);
+            }else{
+                    $data = array(
+                                    'id_users'=>$this->session->id_users,
+                                    'judul'=>$this->input->post('b'),
+                                    'judul_seo'=>seo_title($this->input->post('b')).date('sHi'),
+                                    'isi_berita'=>$this->input->post('h'),
+                                    'hari'=>hari_ini(date('w')),
+                                    'tanggal'=>date('Y-m-d'),
+                                    'jam'=>date('H:i:s'),
+                                    'gambar'=>$hasil['file_name'],
+                                    'dibaca'=>'0',
+                                    'status'=>$status);
+            }
+            $this->model_app->insert('tbl_berita',$data);
+            redirect('admin/berita');
+        }else{
+            // $data['get_combo_kategori'] = $this->Kategori_model->get_combo_kategori();
+            // $data['tag'] = $this->model_app->view_ordering('tag','id_tag','DESC');
+            // // $data['record'] = $this->model_app->view_ordering('kategori','id_kategori','DESC');
+            // // $data['record'] = $this->model_app->view_ordering('kategori_dua','id_kategori_dua','DESC');
+            //  $data['record'] = $this->model_app->view_ordering('kategori_shita','id_kategori_blog','DESC');
+            $data['main_content'] = $this->load->view('admin/berita/add2', TRUE);
+        }
+    }
 
 }

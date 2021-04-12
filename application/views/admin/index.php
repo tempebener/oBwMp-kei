@@ -957,8 +957,63 @@
     </script>
     <!-- End form js -->
 
+   
+    <script>
+    function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+        $('#gambar_ktp').attr('src', e.target.result);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+    }
+    $("#foto_ktp").change(function() {
+    readURL(this);
+    });
 
 
+
+    </script>
+
+
+
+    <script>
+        function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+            $('#gambar_pas').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+        }
+        $("#foto_pas").change(function() {
+        readURL(this);
+        });
+
+
+
+    </script>
+
+
+<script>
+        function readURL(input) {
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+            $('#gambar_npwp').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(input.files[0]);
+        }
+        }
+        $("#foto_npwp").change(function() {
+        readURL(this);
+        });
+
+
+
+    </script>
 
 
 

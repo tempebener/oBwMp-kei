@@ -187,7 +187,7 @@ class Common_model extends CI_Model {
 
 
     function get_no_member(){
-        $q = $this->db->query("SELECT MAX(RIGHT(no_member,4)) AS kd_max FROM tbl_member WHERE DATE(create_at)=CURDATE()");
+        $q = $this->db->query("SELECT MAX(RIGHT(no_member,4)) AS kd_max FROM tbl_member WHERE DATE(created_at)=CURDATE()");
         $kd = "";
         if($q->num_rows()>0){
             foreach($q->result() as $k){

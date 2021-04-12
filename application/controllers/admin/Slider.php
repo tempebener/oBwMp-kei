@@ -7,7 +7,7 @@ class Slider extends CI_Controller {
         check_login_user();
        $this->load->model('common_model');
        $this->load->model('login_model');
-       $this->load->model('M_slider');
+       $this->load->model('m_slider');
        $this->load->library('upload');
        
     }
@@ -15,10 +15,10 @@ class Slider extends CI_Controller {
 
     public function index()
     {
-        $data['slider'] = $this->M_slider->get_all_slider();
-        $data['data'] = $this->M_slider->get_all_slider();
+        $data['slider'] = $this->m_slider->get_all_slider();
+        $data['data'] = $this->m_slider->get_all_slider();
         // $data['country'] = $this->common_model->select('country');
-        $data['count'] = $this->M_slider->get_slider_total();
+        $data['count'] = $this->m_slider->get_slider_total();
         $data['main_content'] = $this->load->view('admin/slider/add', $data, TRUE);
         $this->load->view('admin/index', $data);
     }
@@ -102,7 +102,7 @@ class Slider extends CI_Controller {
                     $deskripsi=$this->input->post('deskripsi');
                     
 
-                    $this->M_slider->simpan_slider($judul,$deskripsi,$file);
+                    $this->m_slider->simpan_slider($judul,$deskripsi,$file);
                     echo $this->session->set_flashdata('msg','success');
                     redirect('admin/slider/all_slider_list');
             }else{
@@ -119,10 +119,10 @@ class Slider extends CI_Controller {
 
     public function all_slider_list()
     {
-        $data['slider'] = $this->M_slider->get_all_slider();
-        $data['data'] = $this->M_slider->get_all_slider();
+        $data['slider'] = $this->m_slider->get_all_slider();
+        $data['data'] = $this->m_slider->get_all_slider();
         // $data['country'] = $this->common_model->select('country');
-        $data['count'] = $this->M_slider->get_slider_total();
+        $data['count'] = $this->m_slider->get_slider_total();
         $data['main_content'] = $this->load->view('admin/slider/sliders', $data, TRUE);
         $this->load->view('admin/index', $data);
     }

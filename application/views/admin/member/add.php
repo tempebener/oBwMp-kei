@@ -40,6 +40,7 @@
                 </div>
                 <div class="card-body">
                     <form action="<?php echo base_url().'admin/member/add'?>" method="post" enctype="multipart/form-data">
+                    <form action="<?php echo base_url().'admin/tulisan/simpan_tulisan'?>" method="post" enctype="multipart/form-data">
                     
                         <div class="form-body">
 

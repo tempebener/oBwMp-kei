@@ -96,17 +96,17 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['admin'] = 'auth';
 
-// $route['admin/slider'] = 'admin/slider/all_slider_list';
-// $route['admin/slider/add'] = 'admin/slider/index';
+$route['admin/slider'] = 'admin/slider/all_slider_list';
+$route['admin/slider/add_new'] = 'admin/slider/index';
 
 $route['admin/member'] = 'admin/member/all_member_list';
-$route['admin/member/add'] = 'admin/member/index';
+$route['admin/member/add_new'] = 'admin/member/index';
 
 $route['admin/berita'] = 'admin/berita/all_berita_list';
 $route['admin/berita/add'] = 'admin/berita/index';
 
 $route['admin/user'] = 'admin/user/all_user_list';
-$route['admin/user/add'] = 'admin/user/index';
+$route['admin/user/add_new'] = 'admin/user/index';
 
 $route['admin/slider'] = 'admin/slider/all_slider_list';
 $route['admin/slider/add'] = 'admin/slider/index';

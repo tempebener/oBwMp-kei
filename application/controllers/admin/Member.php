@@ -31,7 +31,7 @@ class Member extends CI_Controller {
             $config['max_size'] = '1000000'; // kb
             $this->load->library('upload', $config);
            
-
+            $no_member=$this->common_model->get_no_member();
            
             $this->upload->do_upload('foto_ktp');
             $hasil1 = $this->upload->data();
@@ -53,7 +53,6 @@ class Member extends CI_Controller {
                 'nama' => $_POST['nama'],
                 'alamat' => $_POST['alamat'],
                 'email' => $_POST['email'],
-                'password' => md5($_POST['password']),
                 'no_hp' => $_POST['no_hp'],
                 'pekerjaan' => $_POST['pekerjaan'],
                 'pend_terakhir' => $_POST['pend_terakhir'],
@@ -64,6 +63,15 @@ class Member extends CI_Controller {
                 'status_keanggotaan' => $_POST['role'],
                 'created_at' => current_datetime()
             );
+
+            // $data_user = array(
+            //     // 'no_induk' => $no_member,
+            //     'email' => $_POST['email'],
+            //     'password' => md5($_POST['password']),
+            //     'mobile' => $_POST['no_hp'],
+            //     'group' => $_POST['role'],
+            //     'created_at' => current_datetime()
+            // );
 
             // $data = $this->security->xss_clean($data);
             
@@ -82,6 +90,7 @@ class Member extends CI_Controller {
                         ); 
                        $role_data = $this->security->xss_clean($role_data);
                        $this->common_model->insert($role_data, 'user_role');
+                    //    $this->common_model->insert($data_user, 'user');
                     }
                 }
                 $this->session->set_flashdata('msg', 'Member added Successfully');

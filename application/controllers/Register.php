@@ -28,6 +28,14 @@ class Register extends CI_Controller {
             $this->upload->do_upload('partnership_agreement');
             $hasil5=$this->upload->data();
 
+            $this->form_validation->set_rules('email','Email','required');
+ 
+            if($this->form_validation->run() == FALSE){
+                $message = validation_errors();
+            }else{
+                echo "Form validation oke";
+            }
+
             // $config['source_image'] = $upload_path.'ktp/'.$hasil['file_name'];
             $no_induk    = $this->m_main->create_no_transaction();
 
@@ -81,8 +89,7 @@ class Register extends CI_Controller {
                                 'foto_sku'=>$hasil4['file_name'],
                                 'partnership_agreement'=>$hasil5['file_name']);
             }
-            $this->m_main->insert('user',$data_user);
-            $this->m_main->insert('tbl_member',$data_member);
+            $this->m_main->multi_insert_member('user',$data_user,'tbl_member',$data_member);
             redirect('register');
         }else{
 			$this->load->view('frontend/register/mitra');
@@ -101,6 +108,14 @@ class Register extends CI_Controller {
             $hasil2=$this->upload->data();
             $this->upload->do_upload('foto_pas');
             $hasil3=$this->upload->data();
+
+            $this->form_validation->set_rules('email','Email','required');
+ 
+            if($this->form_validation->run() == FALSE){
+                $message = validation_errors();
+            }else{
+                echo "Form validation oke";
+            }
 
             $no_induk    = $this->m_main->create_no_transaction();
 
@@ -152,8 +167,7 @@ class Register extends CI_Controller {
                                 'foto_npwp'=>$hasil2['file_name'],
                                 'foto_pas'=>$hasil3['file_name']);
             }
-            $this->m_main->insert('user',$data_user);
-            $this->m_main->insert('tbl_member',$data_member);
+            $this->m_main->multi_insert_member('user',$data_user,'tbl_member',$data_member);
             redirect('register');
         }else{
             $this->load->view('frontend/register/member');

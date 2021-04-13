@@ -70,5 +70,11 @@ class M_main extends CI_Model
 
         return $code;
     }
+
+    public function multi_insert_member($table,$data,$table2,$data2){
+        $sql = $this->db->insert($table, $data);
+        $sql = $this->db->insert($table2, $data2);
+		return $sql;
+    }
  
 }

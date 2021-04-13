@@ -722,7 +722,7 @@ components.rdMailform = {
 						grecaptcha.reset();
 					}
 
-					result = result.length === 5 ? result : 'MF255';
+					result = result.length === 13 ? result : 'MF255';
 					output.text(msg[result]);
 
 					if (result === "MF000") {

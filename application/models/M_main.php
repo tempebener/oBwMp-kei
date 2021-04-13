@@ -51,5 +51,24 @@ class M_main extends CI_Model
 		$sql=$this->db->query("INSERT tbl_member.*,DATE_FORMAT(created_at,'%d %M %Y') AS tanggal FROM tbl_member ORDER BY id_member DESC");
 		return $sql;
     }
+
+    public function create_no_transaction(){
+	    $q = $this->db->query("SELECT no_induk FROM user ORDER BY no_induk DESC LIMIT 1");      
+        
+        $code = "";
+        if ($q->num_rows() > 0) {
+            foreach ($q->result() as $cd) {
+                $tmp = ((int) $cd->no_induk) + 1;
+				// $store_code = $this->session->userdata('store_id');
+                $code = sprintf("%05s", $tmp);
+                // $code = 'PO'.sprintf("%05s", $tmp).'/'. $warehouse_code .'/'.date('m').'/'.date('Y');
+            }
+        } else {
+            $code = '00001';
+            // $code = "PO00001".'/'. $warehouse_code .'/'.date('m').'/'.date('Y');
+        }
+
+        return $code;
+    }
  
 }

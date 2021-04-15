@@ -118,7 +118,7 @@
       <?php $this->load->view('frontend/bod')?>
       <!-- Our BOD end -->
 
-     <!-- berita start -->
+      <!-- berita start -->
       <?php $this->load->view('frontend/berita_home')?>
       <!-- berita end -->
      

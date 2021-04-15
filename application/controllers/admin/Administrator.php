@@ -120,7 +120,7 @@ function home(){
  
   
   function edit_manajemenprofile(){
-        $id = $this->uri->segment(3);
+        $id = $this->uri->segment(4);
         if (isset($_POST['submit'])){
             $config['upload_path'] = 'asset/foto_user/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
@@ -175,7 +175,7 @@ function home(){
 
             redirect('admin/administrator/edit_manajemenprofile/'.$this->input->post('id'));
         }else{
-            if ($this->session->id_users==$this->uri->segment(3) OR $this->session->level=='admin'){
+            if ($this->session->id_users==$this->uri->segment(4) OR $this->session->level=='admin'){
                 $proses = $this->model_app->edit('users', array('id_users' => $id))->row_array();
                 $akses = $this->model_app->view_join_where('users_modul','modul','id_modul', array('id_session' => $proses['id_session']),'id_umod','DESC');
                 $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
@@ -272,7 +272,7 @@ function slider_aktif(){
   }
 
   function edit_slider(){
-    $id = $this->uri->segment(3);
+    $id = $this->uri->segment(4);
     if (isset($_POST['submit'])){
       $config['upload_path'] = 'theme/images/foto_slider/';
             $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
@@ -310,7 +310,7 @@ function slider_aktif(){
 
       redirect('admin/administrator/edit_slider/'.$this->input->post('id'));
     }else{
-            if ($this->session->username==$this->uri->segment(3) OR $this->session->level=='admin'){
+            if ($this->session->username==$this->uri->segment(4) OR $this->session->level=='admin'){
                 $proses = $this->model_app->edit('tbl_slider', array('id_slider' => $id))->row_array();
 
                 $data = array('rows' => $proses);

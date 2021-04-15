@@ -1,6 +1,9 @@
 <?php
 class M_berita extends CI_Model{
 
+ public $table = 'tbl_berita';
+  public $id    = 'id_berita';
+  public $order = 'DESC';
 	function get_all_berita(){
 		$hsl=$this->db->query("SELECT tbl_berita.*,DATE_FORMAT(tanggal,'%d/%m/%Y') AS tanggal FROM tbl_berita  ORDER BY id_berita DESC");
 		return $hsl;
@@ -70,6 +73,19 @@ class M_berita extends CI_Model{
 		$hsl=$this->db->query("SELECT tbl_berita.*,DATE_FORMAT(berita_tanggal,'%d/%m/%Y') AS tanggal,album_nama FROM tbl_berita  ORDER BY id_berita DESC");
 		return $hsl;
 	}
-	
+	function get_by_id($id)
+  {
+    $this->db->where($this->id, $id);
+    $this->db->or_where('judul_seo', $id);
+    $this->db->join('users', 'users.id_users = tbl_berita.id_users','inner');
+    return $this->db->get('tbl_berita')->row();
+  }
+  function get_by_id2($id)
+  {
+    $this->db->where($this->id, $id);
+    $this->db->or_where('judul_seo', $id);
+    $this->db->join('users', 'users.id_users = tbl_berita.id_users','inner');
+    return $this->db->get('tbl_berita')->result_array();
+  }
 
 }

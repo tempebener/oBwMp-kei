@@ -58,7 +58,8 @@ $autoload['packages'] = array();
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('session','database','session','pagination','xmlrpc','user_agent','form_validation');
+
+$autoload['libraries'] = array('database','session','pagination','xmlrpc','user_agent','template','mylibrary','table','form_validation','template',);
 
 /*
 | -------------------------------------------------------------------
@@ -89,7 +90,7 @@ $autoload['drivers'] = array();
 |
 |	$autoload['helper'] = array('url', 'file');
 */
-$autoload['helper'] = array('text','url', 'file','form','tgl_indo','phpmu','custom_helper');
+$autoload['helper'] = array('engine','text','url', 'file','form','tgl_indo','phpmu','custom_helper','html','string');
 
 /*
 | -------------------------------------------------------------------
@@ -132,4 +133,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array();
+$autoload['model'] = array('model_app','model_utama','M_berita');

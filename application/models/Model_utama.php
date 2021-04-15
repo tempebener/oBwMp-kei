@@ -9,23 +9,6 @@ class Model_utama extends CI_model{
         return $this->db->get($table);
     }
 
-    public function view_where2($table,$table1,$field,$data){
-        $this->db->select('*');
-        $this->db->from($table);
-        $this->db->join($table1, $table.'.'.$field.'='.$table1.'.'.$field);
-        $this->db->where($data);
-        return $this->db->get();
-    }
-
-    public function view_join_where3($table1,$table2,$table3,$field,$field1,$data){
-        $this->db->select('*');
-        $this->db->from($table1);
-        $this->db->join($table2, $table1.'.'.$field.'='.$table2.'.'.$field);
-        $this->db->join($table3, $table2.'.'.$field1.'='.$table3.'.'.$field1);
-        $this->db->where($data);
-        return $this->db->get();
-    }
-
     public function view_ordering_limit($table,$order,$ordering,$baris,$dari){
         $this->db->select('*');
         $this->db->order_by($order,$ordering);
@@ -75,36 +58,27 @@ class Model_utama extends CI_model{
         return $this->db->get();
     }
 
-    public function view_join_two($table1,$table2,$table3,$field,$field1,$where,$order,$ordering,$baris,$dari){
+    public function view_join_two($table1,$table2,$table3,$field,$field1,$where,$order,$ordering,$baris,$dari,$id){
       $this->db->select('*');
       $this->db->from($table1);
       $this->db->join($table2, $table1.'.'.$field.'='.$table2.'.'.$field);
       $this->db->join($table3, $table1.'.'.$field1.'='.$table3.'.'.$field1);
-      $this->db->where($where);
+      $this->db->where($where,$id);
       $this->db->order_by($order,$ordering);
       $this->db->limit($dari, $baris);
       return $this->db->get();
     }
-    public function view_join_dua($table1,$table2,$table3,$field,$field1,$where,$order,$ordering,$baris,$dari){
-      $this->db->select('*');
+     public function view_join_two_artikel($table1,$table2,$table3,$field,$field1,$where,$order,$ordering,$baris,$dari,$id){
+       
+      $this->db->select('*',$table2.'.id_users as namax');
       $this->db->from($table1);
       $this->db->join($table2, $table1.'.'.$field.'='.$table2.'.'.$field);
       $this->db->join($table3, $table1.'.'.$field1.'='.$table3.'.'.$field1);
-      $this->db->where($where);
+      $this->db->where($where,$id);
       $this->db->order_by($order,$ordering);
       $this->db->limit($dari, $baris);
       return $this->db->get();
-      }
-    public function view_join_dua2($table1,$table2,$table3,$field,$field1,$where,$order,$ordering,$baris,$dari){
-      $this->db->select('*,berita.id_users as users');
-      $this->db->from($table1);
-      $this->db->join($table2, $table1.'.'.$field.'='.$table2.'.'.$field);
-      $this->db->join($table3, $table1.'.'.$field1.'='.$table3.'.'.$field1);
-      $this->db->where($where);
-      $this->db->order_by($order,$ordering);
-      $this->db->limit($dari, $baris);
-      return $this->db->get();
-      }
+    }
     public function view_join_two2($table1,$table2,$table3,$field,$field1,$where,$order,$ordering,$baris,$dari,$id){
       $this->db->select('*');
       $this->db->from($table1);
@@ -115,7 +89,7 @@ class Model_utama extends CI_model{
       $this->db->limit($dari, $baris);
       return $this->db->get();
     }
-public function view_join_3($table1,$table2,$table3,$table4,$field,$field1,$field2,$where,$order,$ordering,$baris,$dari,$id){
+    public function view_join_3($table1,$table2,$table3,$table4,$field,$field1,$field2,$where,$order,$ordering,$baris,$dari,$id){
       $this->db->select('*');
       $this->db->from($table1);
       $this->db->join($table2, $table1.'.'.$field.'='.$table2.'.'.$field);
@@ -126,6 +100,7 @@ public function view_join_3($table1,$table2,$table3,$table4,$field,$field1,$fiel
       $this->db->limit($dari, $baris);
       return $this->db->get();
     }
+
     function cari_berita($kata){
         $pisah_kata = explode(" ",$kata);
         $jml_katakan = (integer)count($pisah_kata);

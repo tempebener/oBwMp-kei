@@ -120,7 +120,7 @@ function home(){
  
   
   function edit_manajemenprofile(){
-        $id = $this->uri->segment(3);
+        $id = $this->uri->segment(4);
         if (isset($_POST['submit'])){
             $config['upload_path'] = 'asset/foto_user/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
@@ -272,7 +272,7 @@ function slider_aktif(){
   }
 
   function edit_slider(){
-    $id = $this->uri->segment(3);
+    $id = $this->uri->segment(4);
     if (isset($_POST['submit'])){
       $config['upload_path'] = 'theme/images/foto_slider/';
             $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';

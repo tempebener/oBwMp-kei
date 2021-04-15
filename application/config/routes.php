@@ -50,7 +50,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $route['default_controller'] = 'home';
-$route['administrator']='admin/login';
+$route['kei/(:any)'] = "admin/administrator";
 // Tentang Kami
 $route['visi_misi']='tentang_kami/visi_misi';
 $route['profil']='tentang_kami/profil';

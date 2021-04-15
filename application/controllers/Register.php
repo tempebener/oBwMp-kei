@@ -167,7 +167,16 @@ class Register extends CI_Controller {
                                 'foto_npwp'=>$hasil2['file_name'],
                                 'foto_pas'=>$hasil3['file_name']);
             }
-            $this->m_main->multi_insert_member('user',$data_user,'tbl_member',$data_member);
+            
+            $result = $this->m_main->checkEmail($email);
+            if(empty($result)) {
+                $this->m_main->multi_insert_member('user',$data_user,'tbl_member',$data_member);
+                $msg = "Data Insert Successfully";
+            }else {
+                $msg = "Email Already Exists";
+            }
+            $this->session->set_flashdata('msg', $msg);
+
             redirect('register');
         }else{
             $this->load->view('frontend/register/member');

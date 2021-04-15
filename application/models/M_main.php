@@ -76,5 +76,14 @@ class M_main extends CI_Model
         $sql = $this->db->insert($table2, $data2);
 		return $sql;
     }
+
+    public function checkEmail($email)
+    {
+       $this->db->select('*');
+       $this->db->from('user');
+       $this->db->where('email', $email);
+       $query = $this->db->get();
+       return $query->result_array();
+    }
  
 }

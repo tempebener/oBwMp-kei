@@ -55,7 +55,7 @@ function home(){
   }
 
   function edit_manajemenuser(){
-    $id = $this->uri->segment(3);
+    $id = $this->uri->segment(4);
     if (isset($_POST['submit'])){
       $config['upload_path'] = 'asset/foto_user/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
@@ -105,7 +105,7 @@ function home(){
 
       redirect('admin/administrator/edit_manajemenuser/'.$this->input->post('id'));
     }else{
-            if ($this->session->id_users==$this->uri->segment(3) OR $this->session->level=='admin'){
+            if ($this->session->id_users==$this->uri->segment(4) OR $this->session->level=='admin'){
                 $proses = $this->model_app->edit('users', array('id_users' => $id))->row_array();
                 $akses = $this->model_app->view_join_where('users_modul','modul','id_modul', array('id_session' => $proses['id_session']),'id_umod','DESC');
                 $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
@@ -189,14 +189,14 @@ function home(){
 
   function delete_manajemenuser(){
         cek_session_akses('manajemenuser',$this->session->id_session);
-    $id = array('id_users' => $this->uri->segment(3));
+    $id = array('id_users' => $this->uri->segment(4));
         $this->model_app->delete('users',$id);
     redirect('admin/administrator/manajemenuser');
   }
 
     function delete_akses(){
         cek_session_admin();
-        $id = array('id_umod' => $this->uri->segment(3));
+        $id = array('id_umod' => $this->uri->segment(4));
         $this->model_app->delete('users_modul',$id);
         redirect('admin/administrator/edit_manajemenuser/'.$this->uri->segment(4));
     }
@@ -214,18 +214,18 @@ function logout(){
 }
 
 function slider_aktif(){
-         $id = array('id_slider' => $this->uri->segment(3));
+         $id = array('id_slider' => $this->uri->segment(4));
       $this->db->query("update tbl_slider set id_slider_s = '1'
-      where id_slider = '" . $this->uri->segment(3) . "'");
+      where id_slider = '" . $this->uri->segment(4) . "'");
 
 
       redirect($_SERVER['HTTP_REFERER']);
     }
 
       function slider_noaktif(){
-         $id = array('id_slider' => $this->uri->segment(3));
+         $id = array('id_slider' => $this->uri->segment(4));
       $this->db->query("update tbl_slider set id_slider_s = '2'
-      where id_slider = '" . $this->uri->segment(3) . "'")
+      where id_slider = '" . $this->uri->segment(4) . "'")
       ;
 
 
@@ -472,7 +472,7 @@ function publish_listberita(){
     }else{
       $data = array('status'=>'Y');
     }
-        $where = array('id_berita' => $this->uri->segment(3));
+        $where = array('id_berita' => $this->uri->segment(4));
     $this->model_app->update('tbl_berita', $data, $where);
     redirect($_SERVER['HTTP_REFERER']);
   }
@@ -480,9 +480,9 @@ function publish_listberita(){
   function delete_listberita(){
         cek_session_akses('listberita',$this->session->id_session);
         if ($this->session->level=='admin'){
-        $id = array('id_berita' => $this->uri->segment(3));
+        $id = array('id_berita' => $this->uri->segment(4));
         }else{
-            $id = array('id_berita' => $this->uri->segment(3), 'id_users'=>$this->session->id_users);
+            $id = array('id_berita' => $this->uri->segment(4), 'id_users'=>$this->session->id_users);
         }
     $this->model_app->delete('tbl_berita',$id);
     redirect('admin/administrator/listberita');

@@ -6,7 +6,7 @@
                 </div>
               <div class='box-body'>";
               $attributes = array('class'=>'form-horizontal','role'=>'form');
-              echo form_open_multipart('administrator/tambah_manajemenuser',$attributes); 
+              echo form_open_multipart('admin/administrator/tambah_manajemenuser',$attributes); 
           echo "<div class='col-md-12'>
                   <table class='table table-condensed table-bordered'>
                   <tbody>

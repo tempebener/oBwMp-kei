@@ -83,7 +83,7 @@ $a = $a[0];
                     <input type="hidden" name="bulan" value="<?php echo $i;?>"/>
                     <input type="hidden" name="user" value="<?php echo $id;?>"/>
                     
-                    <button type="submit" onclick="return confirm('Anda yakin?')" class="btn btn-xs btn-primary"'>BAYAR</button>
+                    <button type="submit" onclick="return confirm('Anda yakin?')" class="btn btn-xs btn-primary">BAYAR</button>
                 </form>
                 
             <?php }

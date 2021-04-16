@@ -170,7 +170,7 @@ function home(){
                 $data = array('rows' => $proses, 'record' => $modul, 'akses' => $akses);
           $this->template->load('administrator/template','administrator/mod_users/view_users_edit',$data);
             }else{
-                redirect('administrator/edit_manajemenuser/'.$this->session->id_users);
+                redirect('admin/administrator/edit_manajemenuser/'.$this->session->id_users);
             }
     }
   }

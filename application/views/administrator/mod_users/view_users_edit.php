@@ -6,15 +6,15 @@
                 </div>
               <div class='box-body'>";
               $attributes = array('class'=>'form-horizontal','role'=>'form');
-              echo form_open_multipart('administrator/edit_manajemenuser',$attributes); 
+              echo form_open_multipart('admin/administrator/edit_manajemenuser',$attributes); 
               if ($rows['foto']==''){ $foto = 'users.gif'; }else{ $foto = $rows['foto']; }
           echo "<div class='col-md-12'>
                   <table class='table table-condensed table-bordered'>
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id_users]'>
                     <input type='hidden' name='ids' value='$rows[id_session]'>
-                    <tr><th scope='row'>Password</th>                 <td><input type='password'  class='form-control' name='b' onkeyup=\"nospaces(this)\"></td></tr>
                     <tr><th scope='row'>Username</th>             <td><input type='text' class='form-control' name='a' value='$rows[username]'></td></tr>
+                    <tr><th scope='row'>Password</th>                 <td><input type='password'  class='form-control' name='b' onkeyup=\"nospaces(this)\"></td></tr>
                     <tr><th scope='row'>Nama Lengkap</th>             <td><input type='text' class='form-control' name='c' value='$rows[nama_lengkap]'></td></tr>
                     <tr><th scope='row'>Alamat Email</th>                    <td><input type='email' class='form-control' name='d' value='$rows[email]'></td></tr>
                     <tr><th scope='row'>No Telepon</th>                  <td><input type='number' class='form-control' name='e' value='$rows[no_telp]'></td></tr>

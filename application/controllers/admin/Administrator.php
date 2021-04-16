@@ -54,10 +54,68 @@ function home(){
         }
   }
 
+  function manajemenuser(){
+      cek_session_akses('manajemenuser',$this->session->id_session);
+      $data['record'] = $this->model_app->view_ordering('users','id_users','DESC');
+      $this->template->load('administrator/template','administrator/mod_users/view_users',$data);
+  }
+
+  function tambah_manajemenuser(){
+      cek_session_akses('manajemenuser',$this->session->id_session);
+      $id = $this->session->id_users;
+      if (isset($_POST['submit'])){
+          $config['upload_path'] = 'theme/images/foto_register/profil';
+          $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG|jpeg';
+          $config['max_size'] = '1000'; // kb
+          $this->load->library('upload', $config);
+          $this->upload->do_upload('f');
+          $hasil=$this->upload->data();
+          if ($hasil['file_name']==''){
+                  $data = array('id_users'=>$this->db->escape_str($this->input->post('a')),
+                                  'username'=>$this->db->escape_str($this->input->post('h')),
+                                  'password'=>hash("sha512", md5($this->input->post('b'))),
+                                  'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                  'email'=>$this->db->escape_str($this->input->post('d')),
+                                  'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                                  'level'=>$this->db->escape_str($this->input->post('g')),
+                                  'blokir'=>'N',
+                                  'id_session'=>md5($this->input->post('a')).'-'.date('YmdHis'));
+          }else{
+                  $data = array('id_users'=>$this->db->escape_str($this->input->post('a')),
+                                  'username'=>$this->db->escape_str($this->input->post('h')),
+                                  'password'=>hash("sha512", md5($this->input->post('b'))),
+                                  'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                  'email'=>$this->db->escape_str($this->input->post('d')),
+                                  'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                                  'foto'=>$hasil['file_name'],
+                                  'level'=>$this->db->escape_str($this->input->post('g')),
+                                  'blokir'=>'N',
+                                  'id_session'=>md5($this->input->post('a')).'-'.date('YmdHis'));
+          }
+          $this->model_app->insert('users',$data);
+
+            $mod=count($this->input->post('modul'));
+            $modul=$this->input->post('modul');
+            $sess = md5($this->input->post('a')).'-'.date('YmdHis');
+            for($i=0;$i<$mod;$i++){
+              $datam = array('id_session'=>$sess,
+                            'id_modul'=>$modul[$i]);
+              $this->model_app->insert('users_modul',$datam);
+            }
+
+          // redirect('administrator/edit_manajemenuser/'.$this->input->post('a'));
+          redirect('admin/administrator/manajemenuser');
+      }else{
+          $proses = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
+          $data = array('record' => $proses);
+          $this->template->load('administrator/template','administrator/mod_users/view_users_tambah',$data);
+      }
+  }
+
   function edit_manajemenuser(){
     $id = $this->uri->segment(4);
     if (isset($_POST['submit'])){
-      $config['upload_path'] = 'asset/foto_user/';
+      $config['upload_path'] = 'theme/images/foto_register/profil';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
             $config['max_size'] = '1000'; // kb
             $this->load->library('upload', $config);

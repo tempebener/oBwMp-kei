@@ -4,7 +4,7 @@
             <div class="pull-left image">
             <?php $usr = $this->model_app->view_where('users', array('id_users'=> $this->session->id_users))->row_array();
                   if (trim($usr['foto'])==''){ $foto = 'blank.png'; }else{ $foto = $usr['foto']; } ?>
-            <img src="<?php echo base_url(); ?>/asset/foto_user/<?php echo $foto; ?>" class="img-circle" alt="User Image">
+            <img src="<?php echo base_url(); ?>/theme/images/foto_register/profil/<?php echo $foto; ?>" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
               <?php echo "<p>$usr[nama_lengkap]</p>"; ?>
@@ -35,15 +35,20 @@
                 }
              
                 if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url()."admin/administrator/listberita'><i class='fa fa-circle-o'></i>Berita</a></li>";
+                  echo "<li><a href='".base_url()."admin/administrator/listberita'><i class='fa fa-circle-o'></i> Berita</a></li>";
                 }
+
+            $cek=$this->model_app->umenu_akses("manajemenuser",$this->session->id_session);
+            if($cek==1 OR $this->session->level=='admin'){
+              echo "<li><a href='".base_url()."admin/administrator/manajemenuser'><i class='fa fa-circle-o'></i> Manajemen User</a></li>";
+            }
 
               
               ?>
               </ul>
             </li>
 
-          
+            <li class="header"><i class="fa fa-user"> </i> Menu User</li>
             <li><a href="<?php echo base_url(); ?>admin/administrator/edit_manajemenprofile/<?php echo $this->session->id_users; ?>"><i class="fa fa-edit"></i> <span>Edit Profile</span></a></li>
             <li><a href="<?php echo base_url(); ?>admin/administrator/logout"><i class="fa fa-power-off"></i> <span>Logout</span></a></li>
           </ul>

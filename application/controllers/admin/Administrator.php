@@ -487,4 +487,20 @@ function publish_listberita(){
     $this->model_app->delete('tbl_berita',$id);
     redirect('admin/administrator/listberita');
   }
+
+
+  // Controller Modul List Pelatihan
+
+  function listpelatihan(){
+    cek_session_akses('listpelatihan',$this->session->id_session);
+       if ($this->session->level=='admin'){
+           $data['record'] = $this->model_app->view_join_one('tbl_pelatihan','users','id_users','id_pelatihan','DESC');
+        }else{
+            $data['record'] = $this->model_app->view_where_ordering('tbl_pelatihan',array('id_users'=>$this->session->id_users),'id_pelatihan','DESC');
+        }
+        
+       
+        
+    $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan',$data);
+  }
 }

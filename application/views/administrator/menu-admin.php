@@ -38,7 +38,9 @@
                   echo "<li><a href='".base_url()."admin/administrator/listberita'><i class='fa fa-circle-o'></i>Berita</a></li>";
                 }
 
-              
+               if($cek==1 OR $this->session->level=='admin'){
+                  echo "<li><a href='".base_url()."admin/administrator/listpelatihan'><i class='fa fa-circle-o'></i>Pelatihan</a></li>";
+                }
               ?>
               </ul>
             </li>

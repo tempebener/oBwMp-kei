@@ -5498,3 +5498,7 @@ table.text-center th {
  	width: 45px;
  	height: 45px;
 }
+.div-image>img {
+	object-fit: cover;
+	height: 100%;
+}

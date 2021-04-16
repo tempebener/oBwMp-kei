@@ -6,7 +6,7 @@
                 </div>
               <div class='box-body'>";
               $attributes = array('class'=>'form-horizontal','role'=>'form');
-              echo form_open_multipart('administrator/edit_manajemenprofile',$attributes); 
+              echo form_open_multipart('admin/administrator/edit_manajemenprofile',$attributes); 
               if ($rows['foto']==''){ $foto = 'users.gif'; }else{ $foto = $rows['foto']; }
           echo "<div class='col-md-12'>
                   <table class='table table-condensed table-bordered'>
@@ -17,7 +17,7 @@
                     <tr><th scope='row'>Nama Lengkap</th>             <td><input type='text' class='form-control' name='c' value='$rows[nama_lengkap]'></td></tr>
                     <tr><th scope='row'>Alamat Email</th>                    <td><input type='email' class='form-control' name='d' value='$rows[email]'></td></tr>
                     <tr><th scope='row'>No Telepon</th>                  <td><input type='number' class='form-control' name='e' value='$rows[no_telp]'></td></tr>
-                    <tr><th scope='row'>Pesan Singkat</th>             <td><input type='text' class='form-control' name='psn' value='$rows[pesan_singkat]'></td></tr>
+                   
                     <tr><th scope='row'>Ganti Foto</th>                     <td><input type='file' class='form-control' name='f'><hr style='margin:5px'>";
                                                                                  if ($rows['foto'] != ''){ echo "<i style='color:red'>Foto Saat ini : </i><a target='_BLANK' href='".base_url()."asset/foto_user/$rows[foto]'>$rows[foto]</a>"; } echo "</td></tr></td></tr>";
                     if ($this->session->level == 'admin'){

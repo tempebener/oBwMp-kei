@@ -133,7 +133,7 @@ function home(){
                                     'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
                                     'email'=>$this->db->escape_str($this->input->post('d')),
                                     'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                    'pesan_singkat'=>$this->input->post('psn')
+                                   
                                 );
             }elseif ($hasil['file_name']!='' AND empty($this->input->post('bw'))){
                     $data = array(
@@ -141,7 +141,7 @@ function home(){
 
                                     'email'=>$this->db->escape_str($this->input->post('d')),
                                     'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                    'pesan_singkat'=>$this->input->post('psn'),
+                                   
                                     'foto'=>$hasil['file_name']
                                 );
             }elseif ($hasil['file_name']=='' AND !empty($this->input->post('bw'))){

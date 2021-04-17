@@ -10,7 +10,7 @@
     <!--RD Navbar-->
     <!-- head -->
     <header class="section rd-navbar-wrap" data-preset='{"title":"Navbar Default","category":"header","reload":true,"id":"navbar-default"}'>
-      <?php $this->load->view('frontend/header')?>
+      <?php $this->load->view('frontend/header2')?>
     </header>
     <!-- head end -->
 

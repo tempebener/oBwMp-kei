@@ -558,18 +558,15 @@ function publish_listberita(){
   }
 
   function detailspelatihan($id){
-
-
-        $row = $this->M_pelatihan->get_by_id2($id);
+    $row = $this->M_pelatihan->get_by_id2($id);
     /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
-    if ($row)
-    {
+    if ($row){
     /* memanggil function dari masing2 model yang akan digunakan */
     $pelatihan = $this->M_pelatihan->get_by_id2($id);
     $data['pelatihan']            = $pelatihan;
     
     $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_detail',$data);
- 
-}
-}
+    }
+  }
+
 }

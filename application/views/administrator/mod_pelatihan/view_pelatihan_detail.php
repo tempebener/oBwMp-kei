@@ -1,5 +1,3 @@
-
-
 <section class='invoice'>
       <!-- title row -->
       <div class='row'>

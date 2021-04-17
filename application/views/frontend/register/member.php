@@ -92,6 +92,7 @@
                 </div>
 
                 <div class="row row-20">
+                  <hr style="width:100%;text-align:left;margin-left:12px;margin-right:12px;">
                   <div class="col-md-6">
                     <div class="form-group">
                       <label class="post-title h6">Upload KTP</label>
@@ -108,6 +109,18 @@
                     <div class="form-group">
                       <label class="post-title h6">Upload NPWP</label>
                       <input class="form-control" type="file" name="foto_npwp" placeholder="Upload NPWP*">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="post-title h6">Upload SKU (Surat Keterangan Usaha)</label>
+                      <input class="form-control" type="file" name="foto_sku" placeholder="Upload SKU Diri*">
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="post-title h6">Partnership Agreement</label>
+                      <input class="form-control" type="file" name="partnership_agreement" placeholder="Partnership Agreement*">
                     </div>
                   </div>
                 </div>

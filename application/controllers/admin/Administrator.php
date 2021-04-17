@@ -551,14 +551,25 @@ function publish_listberita(){
 
   function listpelatihan(){
     cek_session_akses('listpelatihan',$this->session->id_session);
-       if ($this->session->level=='admin'){
-           $data['record'] = $this->model_app->view_join_one('tbl_pelatihan','users','id_users','id_pelatihan','DESC');
-        }else{
-            $data['record'] = $this->model_app->view_where_ordering('tbl_pelatihan',array('id_users'=>$this->session->id_users),'id_pelatihan','DESC');
-        }
-        
+       $data['record'] = $this->model_app->view_ordering('tbl_pelatihan','id_pelatihan','DESC');
        
         
     $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan',$data);
   }
+
+  function detailspelatihan($id){
+
+
+        $row = $this->M_pelatihan->get_by_id2($id);
+    /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
+    if ($row)
+    {
+    /* memanggil function dari masing2 model yang akan digunakan */
+    $pelatihan = $this->M_pelatihan->get_by_id2($id);
+    $data['pelatihan']            = $pelatihan;
+    
+    $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_detail',$data);
+ 
+}
+}
 }

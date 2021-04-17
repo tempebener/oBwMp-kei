@@ -9,7 +9,7 @@
                   </li>
                 </ul>
               </div>
-              <div class="col-xs-6 col-md-5">
+              <div class="col-xs-6 col-md-4">
                 <h5 class="footer-title">Kontak</h5>
                 <ul class="list list-icons">
                   <li class="list-item">
@@ -35,14 +35,14 @@
                   <li class="list-item"><a class="link link-inherit" href="https://www.youtube.com/channel/UCaXcQCE0lbJWRz9GQhtuXSw">YouTube</a></li>
                 </ul>
               </div>
-              <div class="col-6 col-md-2">
-                <h5 class="footer-title">Lini Bisnis</h5>
+              <div class="col-6 col-md-3">
+                <h5 class="footer-title">Suport BY</h5>
                 <ul class="list list-sm">
-                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/livestock/">Livestock</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/meat/">Meat</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/food/">Food</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/poultry/">Poultry</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id/property/">Property</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurperkasa.co.id" target="_blank">PT WIDODO MAKMUR PERKASA</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://cianjurartamakmur.co.id" target="_blank">PT CIANJUR ARTA MAKMUR</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://widodomakmurunggas.co.id" target="_blank">PT WIDODO MAKMUR UNGGAS</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://garutmakmurperkasa.co.id" target="_blank">PT GARUT MAKMUR PERKASA</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="#" target="_blank">WTV</a></li>
                  
                 </ul>
               </div>

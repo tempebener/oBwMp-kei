@@ -13,7 +13,7 @@
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id_users]'>
                     <input type='hidden' name='ids' value='$rows[id_session]'>
-                    <tr><th scope='row'>Username</th>             <td><input type='text' class='form-control' name='a' value='$rows[username]'></td></tr>
+                    <tr><th scope='row'>Username</th>             <td><input type='text' class='form-control' name='a' value='$rows[username]' disabled></td></tr>
                     <tr><th scope='row'>Password</th>                 <td><input type='password'  class='form-control' name='b' onkeyup=\"nospaces(this)\"></td></tr>
                     <tr><th scope='row'>Nama Lengkap</th>             <td><input type='text' class='form-control' name='c' value='$rows[nama_lengkap]'></td></tr>
                     <tr><th scope='row'>Alamat Email</th>                    <td><input type='email' class='form-control' name='d' value='$rows[email]'></td></tr>

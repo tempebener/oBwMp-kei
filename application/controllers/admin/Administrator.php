@@ -71,8 +71,7 @@ function home(){
           $this->upload->do_upload('f');
           $hasil=$this->upload->data();
           if ($hasil['file_name']==''){
-                  $data = array('id_users'=>$this->db->escape_str($this->input->post('a')),
-                                  'username'=>$this->db->escape_str($this->input->post('h')),
+                  $data = array('username'=>$this->db->escape_str($this->input->post('a')),
                                   'password'=>hash("sha512", md5($this->input->post('b'))),
                                   'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
                                   'email'=>$this->db->escape_str($this->input->post('d')),
@@ -81,8 +80,7 @@ function home(){
                                   'blokir'=>'N',
                                   'id_session'=>md5($this->input->post('a')).'-'.date('YmdHis'));
           }else{
-                  $data = array('id_users'=>$this->db->escape_str($this->input->post('a')),
-                                  'username'=>$this->db->escape_str($this->input->post('h')),
+                  $data = array('username'=>$this->db->escape_str($this->input->post('a')),
                                   'password'=>hash("sha512", md5($this->input->post('b'))),
                                   'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
                                   'email'=>$this->db->escape_str($this->input->post('d')),

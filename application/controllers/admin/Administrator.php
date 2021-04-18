@@ -569,4 +569,74 @@ function publish_listberita(){
     }
   }
 
+  // Modul Pengantar
+  function listpengantar(){
+    cek_session_akses('listpengantar',$this->session->id_session);
+    $data['record'] = $this->model_app->view_ordering('tbl_pengantar','id_pengantar','DESC');
+    $this->template->load('administrator/template','administrator/mod_pengantar/view_pengantar',$data);
+  }
+
+  function detailspengantar($id){
+    $pengantar = $this->M_pengantar->get_by_id($id);
+    $data['pengantar'] = $pengantar;
+    $this->template->load('administrator/template','administrator/mod_pengantar/view_pengantar_detail',$data);
+  }
+
+  function edit_pengantar(){
+      cek_session_akses('listpengantar',$this->session->id_session);
+      $id = $this->uri->segment(4);
+      if (isset($_POST['submit'])){
+          $config['upload_path']    = 'asset/img_pengantar/';
+          $config['allowed_types']  = 'gif|jpg|png|PNG|JPG|JPEG|jpeg|webp';
+          $config['max_size']       = '500'; // kb
+          $config['max_width']      = '100';
+          $config['max_height']     = '100';
+          $this->load->library('upload', $config);
+          $this->upload->do_upload('icon_1');
+          $hasil=$this->upload->data();
+          $this->upload->do_upload('foto_npwp');
+          $hasil2=$this->upload->data();
+          $this->upload->do_upload('foto_pas');
+          $hasil3=$this->upload->data();
+          if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''){
+              $data = array('judul'=>$this->input->post('judul'),
+                          'deskripsi'=>$this->input->post('deskripsi'),
+                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'));
+          }else{
+              $data = array('judul'=>$this->input->post('judul'),
+                          'deskripsi'=>$this->input->post('deskripsi'),
+                          'icon_1'=>$this->input->post('icon_1'),
+                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'icon_2'=>$this->input->post('icon_2'),
+                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
+                          'icon_3'=>$this->input->post('icon_3'),
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'));
+          }
+          $where = array('id_pengantar' => $this->input->post('id'));
+          $this->model_app->update('tbl_pengantar', $data, $where);
+          redirect('admin/administrator/listpengantar');
+      }else{
+          if ($this->session->level=='admin'){
+              $proses = $this->model_app->edit('tbl_pengantar', array('id_pengantar' => $id))->row_array();
+          }else{
+              $proses = $this->model_app->edit('tbl_pengantar', array('id_pengantar' => $id, 'id_users' => $this->session->id_users))->row_array();
+          }
+          $data = array('rows' => $proses);
+          $this->template->load('administrator/template','administrator/mod_pengantar/view_pengantar_edit',$data);
+      }
+  }
+
+  function delete_pengantar(){
+      cek_session_akses('listpengantar',$this->session->id_session);
+      if ($this->session->level=='admin'){
+          $id = array('id_pengantar' => $this->uri->segment(4));
+      }else{
+          $id = array('id_pengantar' => $this->uri->segment(4), 'id_users'=>$this->session->id_users);
+      }
+      $this->model_app->delete('tbl_pengantar',$id);
+      redirect('admin/administrator/pengantar');
+  }
+
 }

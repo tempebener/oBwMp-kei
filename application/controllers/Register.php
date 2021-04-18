@@ -90,7 +90,7 @@ class Register extends CI_Controller {
   
     public function add_member(){
         if (isset($_POST['submit'])){
-            $config['upload_path'] = './theme/images/foto_register/member/';
+            $config['upload_path'] = 'theme/images/foto_register/member/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG|jpeg';
             $config['max_size'] = '1000'; // kb
             $this->load->library('upload', $config);

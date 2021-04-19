@@ -42,14 +42,14 @@
                   echo "<li><a href='".base_url()."admin/administrator/listberita'><i class='fa fa-circle-o'></i>Berita</a></li>";
                 }
 
+                if($cek==1 OR $this->session->level=='admin'){
+                  echo "<li><a href='".base_url()."admin/administrator/listpelatihan'><i class='fa fa-circle-o'></i>Pelatihan</a></li>";
+                }
+
               $cek_user=$this->model_app->umenu_akses("manajemenuser",$this->session->id_session);
               if($cek_user==1 OR $this->session->level=='admin'){
                 echo "<li><a href='".base_url()."admin/administrator/manajemenuser'><i class='fa fa-circle-o'></i>Manajemen User</a></li>";
               }
-
-                if($cek==1 OR $this->session->level=='admin'){
-                  echo "<li><a href='".base_url()."admin/administrator/listpelatihan'><i class='fa fa-circle-o'></i>Pelatihan</a></li>";
-                }
               ?>
               </ul>
             </li>

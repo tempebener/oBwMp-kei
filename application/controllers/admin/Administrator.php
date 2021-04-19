@@ -7,7 +7,7 @@ class Administrator extends CI_Controller {
     parent::__construct();
     /* memanggil model untuk ditampilkan pada masing2 modul */
    
-
+  $this->load->model('M_pelatihan');
     /* memanggil function dari masing2 model yang akan digunakan */
 
   }
@@ -556,16 +556,60 @@ function publish_listberita(){
   }
 
   function detailspelatihan($id){
+
     $row = $this->M_pelatihan->get_by_id2($id);
     /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
     if ($row){
     /* memanggil function dari masing2 model yang akan digunakan */
     $pelatihan = $this->M_pelatihan->get_by_id2($id);
     $data['pelatihan']            = $pelatihan;
-    
+     $data['pelatihanbab']            = $this->M_pelatihan->get_by_id3($id);
     $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_detail',$data);
     }
   }
+
+  function add_bab_pelatihan($id)
+    {
+        $pelatihan = $this->M_pelatihan->get_by_id_add($id);
+        $data['pelatihan']            = $pelatihan;
+
+
+
+
+
+
+        $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah',$data);
+    }
+
+    public function simpan_pelatihan_bab()
+     {
+        
+        $id = $this->input->post('id_pelatihan');
+         $pelatihan = $this->M_pelatihan->get_by_id_add($id);
+         
+             $seo = seo_title($this->input->post('b'));
+             
+             $data = array(
+
+                    'judul_pelatihan_detail' =>$this->input->post('b'),
+                    'id_cerbung' =>$this->input->post('id_cerbung'),
+                     'judul_pelatihan_detail_seo'      =>$seo.'-'.date("dmYHis"),
+                     'deskripsi_pelatihan_singkat'         =>$this->input->post('c'),
+                     'date_time'         => date("Y-m-d"),
+                      'download_pdf' =>$this->input->post('download_pdf'),
+                      'video' =>$this->input->post('video')
+                    
+
+             );
+
+            
+             $this->M_pelatihan->insert_bab($data);
+ 
+            
+             redirect('admin/administrator/detailspelatihan/' . $id);
+
+     }
+
 
   // Modul Pengantar
   function listpengantar(){

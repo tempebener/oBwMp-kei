@@ -39,7 +39,7 @@
                             
                               <td><center>
                               <a class='btn btn-warning btn-xs' title='Detail Data' href='".base_url()."admin/administrator/detailspengantar/$row[id_pengantar]'><span class='glyphicon glyphicon-zoom-in'></span></a>
-                                <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_pengantar/$row[id_pengantar]'><span class='glyphicon glyphicon-edit'></span></a>
+                                <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/edit_pengantar/$row[id_pengantar]'><span class='glyphicon glyphicon-edit'></span></a>
                               </center></td>
                           </tr>";
                       $no++;

@@ -816,31 +816,65 @@ function publish_listberita(){
       cek_session_akses('listmember',$this->session->id_session);
       $id = $this->uri->segment(4);
       if (isset($_POST['submit'])){
-          $config['upload_path']    = 'theme/images/foto_register/member/';
-          $config['allowed_types']  = 'gif|jpg|png|PNG|JPG|JPEG|jpeg|webp|pdf|PDF';
-          $config['max_size']       = '1000'; // kb
+          // Foto KTP
+          $config['upload_path'] = 'theme/images/foto_users/member/ktp/';
+          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
+          $config['max_size'] = '1000'; // kb
           $this->load->library('upload', $config);
-          $this->upload->do_upload('icon_1');
+          $this->upload->do_upload('foto_ktp');
           $hasil=$this->upload->data();
+
+          // Foto NPWP
+          $config['upload_path'] = 'theme/images/foto_users/member/npwp/';
+          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
+          $config['max_size'] = '1000'; // kb
+          $this->load->library('upload', $config);
           $this->upload->do_upload('foto_npwp');
           $hasil2=$this->upload->data();
+
+          // Foto Diri
+          $config['upload_path'] = 'theme/images/foto_users/member/foto_diri/';
+          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
+          $config['max_size'] = '1000'; // kb
+          $this->load->library('upload', $config);
           $this->upload->do_upload('foto_pas');
           $hasil3=$this->upload->data();
-          if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''){
-              $data = array('judul'=>$this->input->post('judul'),
-                          'deskripsi'=>$this->input->post('deskripsi'),
-                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
-                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
-                          'judul_icon_3'=>$this->input->post('judul_icon_3'));
+
+          // Foto SKU
+          $config['upload_path'] = 'theme/images/foto_users/member/sku/';
+          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
+          $config['max_size'] = '1000'; // kb
+          $this->load->library('upload', $config);
+          $this->upload->do_upload('foto_sku');
+          $hasil4=$this->upload->data();
+
+          // Foto Partnership Agreement
+          $config['upload_path'] = 'theme/images/foto_users/member/partnership/';
+          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
+          $config['max_size'] = '1000'; // kb
+          $this->load->library('upload', $config);
+          $this->upload->do_upload('partnership_agreement');
+          $hasil5=$this->upload->data();
+
+          if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''|$hasil4['file_name']==''|$hasil5['file_name']==''){
+              $data = array('nama'=>$this->input->post('nama'),
+                              'alamat'=>$this->input->post('alamat'),
+                              'no_hp'=>$this->input->post('no_hp'),
+                              'pend_terakhir'=>$this->input->post('pend_terakhir'),
+                              'pekerjaan'=>$this->input->post('pekerjaan'),
+                              'usaha_diminati'=>$this->input->post('usaha_diminati'));
           }else{
-              $data = array('judul'=>$this->input->post('judul'),
-                          'deskripsi'=>$this->input->post('deskripsi'),
-                          'icon_1'=>$this->input->post('icon_1'),
-                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
-                          'icon_2'=>$this->input->post('icon_2'),
-                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
-                          'icon_3'=>$this->input->post('icon_3'),
-                          'judul_icon_3'=>$this->input->post('judul_icon_3'));
+              $data = array('nama'=>$this->input->post('nama'),
+                              'alamat'=>$this->input->post('alamat'),
+                              'no_hp'=>$this->input->post('no_hp'),
+                              'pend_terakhir'=>$this->input->post('pend_terakhir'),
+                              'pekerjaan'=>$this->input->post('pekerjaan'),
+                              'usaha_diminati'=>$this->input->post('usaha_diminati'),
+                              'foto_ktp'=>$hasil['file_name'],
+                              'foto_npwp'=>$hasil2['file_name'],
+                              'foto_pas'=>$hasil3['file_name'],
+                              'foto_sku'=>$hasil4['file_name'],
+                              'partnership_agreement'=>$hasil5['file_name']);
           }
           $where = array('id_member' => $this->input->post('id'));
           $this->model_app->update('tbl_member', $data, $where);

@@ -244,9 +244,10 @@ function home(){
     }
 
   function delete_manajemenuser(){
-        cek_session_akses('manajemenuser',$this->session->id_session);
+    cek_session_akses('manajemenuser',$this->session->id_session);
     $id = array('id_users' => $this->uri->segment(4));
-        $this->model_app->delete('users',$id);
+    // $this->model_app->delete('users',$id);
+    $this->model_app->deactive_users($id);
     redirect('admin/administrator/manajemenuser');
   }
 
@@ -684,7 +685,7 @@ function publish_listberita(){
   // Modul Member
   function listmember(){
     cek_session_akses('listmember',$this->session->id_session);
-    $data['record'] = $this->model_app->view_ordering('tbl_member','id_member','DESC');
+    $data['record'] = $this->model_app->view_where_ordering('tbl_member',array('id_status' => '1'),'id_member','DESC');
     $this->template->load('administrator/template','administrator/mod_member/view_member',$data);
   }
 
@@ -891,14 +892,15 @@ function publish_listberita(){
   }
 
   function delete_member(){
-      cek_session_akses('listmember',$this->session->id_session);
-      if ($this->session->level=='admin'){
-          $id = array('id_member' => $this->uri->segment(4));
-      }else{
-          $id = array('id_member' => $this->uri->segment(4), 'id_users'=>$this->session->id_users);
-      }
-      $this->model_app->delete('tbl_member',$id);
-      redirect('admin/administrator/member');
+    cek_session_akses('listmember',$this->session->id_session);
+    if ($this->session->level=='admin'){
+        $id = array('id_member' => $this->uri->segment(4));
+    }else{
+        $id = array('id_member' => $this->uri->segment(4), 'id_users'=>$this->session->id_users);
+    }
+    // $this->model_app->delete('tbl_member',$id);
+    $this->m_member->deactive_member($id);
+    redirect('admin/administrator/member');
   }
 
 }

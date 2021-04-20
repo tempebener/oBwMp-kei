@@ -23,4 +23,9 @@ class M_member extends CI_Model{
 	    $this->db->where($this->id, $id);
 	    return $this->db->get('tbl_member')->result_array();
 	}
+
+	function deactive_member($id){
+		$hsl=$this->db->query("UPDATE tbl_member SET id_status='0' WHERE id='".$id."'");
+		return $hsl;
+	}
 }

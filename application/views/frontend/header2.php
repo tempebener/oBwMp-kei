@@ -180,13 +180,14 @@
                     </li>
                   </ul>
                 </li>
-               <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>register_member">Pendaftaran</a>
-                        </li>
+                    <li class="navbar-navigation-dropdown-item">
+                      <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>register_member">Pendaftaran</a>
+                    </li>
+                  </ul>
                 </li>
-              </ul>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kei/admin">Login</a>
                 </li>
               </ul>
             </div>

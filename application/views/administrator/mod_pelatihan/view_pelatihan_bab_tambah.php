@@ -10,7 +10,7 @@
                     <input type="hidden" name="id" value="">
                     <input type="hidden" name="id_pelatihan" value="<?php echo $pelatihan->id_pelatihan;?>"/>
                     <tr><th width="120px" scope="row">Judul</th>    <td><input type="text" class="form-control" name="judul_pelatihan_detail" required></td></tr>
-                    
+
                     <tr><th scope="row">Deskripsi Singkat</th>             <td><textarea id="editor1" class="form-control" name="deskripsi_pelatihan_singkat" style="height:260px" required></textarea></td></tr>
                    
                     <tr><th scope='row'>Gambar</th>                 <td><input type='file' class='form-control' name='gambar' required></td></tr>

@@ -12,7 +12,6 @@
                     <tr><th width="120px" scope="row">Judul BAB</th>    <td><input type="text" class="form-control" name="b" required></td></tr>
                     
                     <tr><th scope="row">Deskripsi Singkat</th>             <td><textarea id="editor1" class="form-control" name="c" style="height:260px" required></textarea></td></tr>
-                     <tr><th scope='row'>Gambar(720x419)</th>                 <td><input type='file' class='form-control' name='k' required></td></tr>
                    
                     <tr><th scope='row'>File PDF</th>                 <td><input type='file' class='form-control' name='k' ></td></tr>
                    <tr> <th scope='row'><td>NOTED: Nama File PDF Tidak boleh mengunakan Spasi. </td></th></tr>

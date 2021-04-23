@@ -569,18 +569,42 @@ function publish_listberita(){
     }
   }
 
-  function add_bab_pelatihan($id)
-    {
-        $pelatihan = $this->M_pelatihan->get_by_id_add($id);
-        $data['pelatihan']            = $pelatihan;
+  function add_bab_pelatihan($id){
+    $pelatihan = $this->M_pelatihan->get_by_id_add($id);
+    $data['pelatihan']            = $pelatihan;
+    $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah',$data);
+  }
 
+  public function simpan_pelatihan_bab(){
+    if (isset($_POST['submit'])){
+      $id = $this->input->post('id_pelatihan');
+      $pelatihan = $this->M_pelatihan->get_by_id_add($id);
+      $seo = seo_title($this->input->post('judul_pelatihan_detail'));
+      
+      $config['upload_path']    = 'theme/images/foto_pelatihan/pelatihan_detail/';
+      $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
+      $config['max_size']       = '1000'; // kb
+      $this->load->library('upload', $config);
+      $this->upload->do_upload('gambar');
+      $hasil=$this->upload->data();
+      $this->upload->do_upload('download_pdf');
+      $hasil2=$this->upload->data();
+       
+      $data = array('id_pelatihan' =>$id,
+                  'judul_pelatihan_detail' =>$this->input->post('judul_pelatihan_detail'),
+                  'judul_pelatihan_detail_seo' =>$seo.'-'.date("dmYHis"),
+                  'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),
+                  'gambar'=>$hasil['file_name'],
+                  'date_time' => date("Y-m-d"),
+                  'download_pdf' =>$hasil2['file_name'],
+                  'video' =>$this->input->post('video'));
 
-
-
-
-
-        $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah',$data);
+      $this->M_pelatihan->insert_bab($data);
+      redirect('admin/administrator/detailspelatihan/' . $id);
+    }else{
+      $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah');
     }
+
 
     public function simpan_pelatihan_bab()
      {
@@ -631,6 +655,7 @@ function publish_listberita(){
      }
 }
 
+
   // Modul Pengantar
   function listpengantar(){
     cek_session_akses('listpengantar',$this->session->id_session);
@@ -656,9 +681,9 @@ function publish_listberita(){
           $this->load->library('upload', $config);
           $this->upload->do_upload('icon_1');
           $hasil=$this->upload->data();
-          $this->upload->do_upload('foto_npwp');
+          $this->upload->do_upload('icon_2');
           $hasil2=$this->upload->data();
-          $this->upload->do_upload('foto_pas');
+          $this->upload->do_upload('icon_3');
           $hasil3=$this->upload->data();
           if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''){
               $data = array('judul'=>$this->input->post('judul'),
@@ -669,11 +694,11 @@ function publish_listberita(){
           }else{
               $data = array('judul'=>$this->input->post('judul'),
                           'deskripsi'=>$this->input->post('deskripsi'),
-                          'icon_1'=>$this->input->post('icon_1'),
+                          'icon_1'=>$hasil['file_name'],
                           'judul_icon_1'=>$this->input->post('judul_icon_1'),
-                          'icon_2'=>$this->input->post('icon_2'),
+                          'icon_2'=>$hasil2['file_name'],
                           'judul_icon_2'=>$this->input->post('judul_icon_2'),
-                          'icon_3'=>$this->input->post('icon_3'),
+                          'icon_3'=>$hasil3['file_name'],
                           'judul_icon_3'=>$this->input->post('judul_icon_3'));
           }
           $where = array('id_pengantar' => $this->input->post('id'));
@@ -718,43 +743,18 @@ function publish_listberita(){
     cek_session_akses('listmember',$this->session->id_session);
     $id = $this->session->id_users;
     if (isset($_POST['submit'])){
-          // Foto KTP
-          $config['upload_path'] = 'theme/images/foto_users/member/ktp/';
+          $config['upload_path'] = 'theme/images/foto_users/member/';
           $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
           $config['max_size'] = '1000'; // kb
           $this->load->library('upload', $config);
           $this->upload->do_upload('foto_ktp');
           $hasil=$this->upload->data();
-
-          // Foto NPWP
-          $config['upload_path'] = 'theme/images/foto_users/member/npwp/';
-          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-          $config['max_size'] = '1000'; // kb
-          $this->load->library('upload', $config);
           $this->upload->do_upload('foto_npwp');
           $hasil2=$this->upload->data();
-
-          // Foto Diri
-          $config['upload_path'] = 'theme/images/foto_users/member/foto_diri/';
-          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-          $config['max_size'] = '1000'; // kb
-          $this->load->library('upload', $config);
           $this->upload->do_upload('foto_pas');
           $hasil3=$this->upload->data();
-
-          // Foto SKU
-          $config['upload_path'] = 'theme/images/foto_users/member/sku/';
-          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-          $config['max_size'] = '1000'; // kb
-          $this->load->library('upload', $config);
           $this->upload->do_upload('foto_sku');
           $hasil4=$this->upload->data();
-
-          // Foto Partnership Agreement
-          $config['upload_path'] = 'theme/images/foto_users/member/partnership/';
-          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-          $config['max_size'] = '1000'; // kb
-          $this->load->library('upload', $config);
           $this->upload->do_upload('partnership_agreement');
           $hasil5=$this->upload->data();
 
@@ -836,43 +836,18 @@ function publish_listberita(){
       cek_session_akses('listmember',$this->session->id_session);
       $id = $this->uri->segment(4);
       if (isset($_POST['submit'])){
-          // Foto KTP
-          $config['upload_path'] = 'theme/images/foto_users/member/ktp/';
+          $config['upload_path'] = 'theme/images/foto_users/member/';
           $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
           $config['max_size'] = '1000'; // kb
           $this->load->library('upload', $config);
           $this->upload->do_upload('foto_ktp');
           $hasil=$this->upload->data();
-
-          // Foto NPWP
-          $config['upload_path'] = 'theme/images/foto_users/member/npwp/';
-          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-          $config['max_size'] = '1000'; // kb
-          $this->load->library('upload', $config);
           $this->upload->do_upload('foto_npwp');
           $hasil2=$this->upload->data();
-
-          // Foto Diri
-          $config['upload_path'] = 'theme/images/foto_users/member/foto_diri/';
-          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-          $config['max_size'] = '1000'; // kb
-          $this->load->library('upload', $config);
           $this->upload->do_upload('foto_pas');
           $hasil3=$this->upload->data();
-
-          // Foto SKU
-          $config['upload_path'] = 'theme/images/foto_users/member/sku/';
-          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-          $config['max_size'] = '1000'; // kb
-          $this->load->library('upload', $config);
           $this->upload->do_upload('foto_sku');
           $hasil4=$this->upload->data();
-
-          // Foto Partnership Agreement
-          $config['upload_path'] = 'theme/images/foto_users/member/partnership/';
-          $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-          $config['max_size'] = '1000'; // kb
-          $this->load->library('upload', $config);
           $this->upload->do_upload('partnership_agreement');
           $hasil5=$this->upload->data();
 

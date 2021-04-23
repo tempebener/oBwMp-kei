@@ -90,43 +90,18 @@ class Register extends CI_Controller {
   
     public function add_member(){
         if (isset($_POST['submit'])){
-            // Foto KTP
-            $config['upload_path'] = 'theme/images/foto_users/member/ktp/';
+            $config['upload_path'] = 'theme/images/foto_users/member/';
             $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
             $config['max_size'] = '1000'; // kb
             $this->load->library('upload', $config);
             $this->upload->do_upload('foto_ktp');
             $hasil=$this->upload->data();
-
-            // Foto NPWP
-            $config['upload_path'] = 'theme/images/foto_users/member/npwp/';
-            $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-            $config['max_size'] = '1000'; // kb
-            $this->load->library('upload', $config);
             $this->upload->do_upload('foto_npwp');
             $hasil2=$this->upload->data();
-
-            // Foto Diri
-            $config['upload_path'] = 'theme/images/foto_users/member/foto_diri/';
-            $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-            $config['max_size'] = '1000'; // kb
-            $this->load->library('upload', $config);
             $this->upload->do_upload('foto_pas');
             $hasil3=$this->upload->data();
-
-            // Foto SKU
-            $config['upload_path'] = 'theme/images/foto_users/member/sku/';
-            $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-            $config['max_size'] = '1000'; // kb
-            $this->load->library('upload', $config);
             $this->upload->do_upload('foto_sku');
             $hasil4=$this->upload->data();
-
-            // Foto Partnership Agreement
-            $config['upload_path'] = 'theme/images/foto_users/member/partnership/';
-            $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
-            $config['max_size'] = '1000'; // kb
-            $this->load->library('upload', $config);
             $this->upload->do_upload('partnership_agreement');
             $hasil5=$this->upload->data();
 

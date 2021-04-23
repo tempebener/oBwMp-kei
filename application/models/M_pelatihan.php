@@ -16,7 +16,7 @@ class M_pelatihan extends CI_Model{
   {
     $this->db->where($this->id, $id);
     $this->db->or_where('judul_pelatihan_seo', $id);
-    $this->db->join('users', 'users.id_users = tbl_pelatihan.id_users','inner');
+    // $this->db->join('users', 'users.id_users = tbl_pelatihan.id_users','inner');
     return $this->db->get('tbl_pelatihan')->result_array();
   }
   function get_by_id3($id)

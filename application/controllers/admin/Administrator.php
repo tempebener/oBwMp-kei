@@ -605,8 +605,7 @@ function publish_listberita(){
       $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah');
     }
 
-
-    public function simpan_pelatihan_bab()
+     function simpan_pelatihan_bab()
      {
         
         $id = $this->input->post('id_pelatihan');
@@ -897,4 +896,5 @@ function publish_listberita(){
     redirect('admin/administrator/member');
   }
 
+}
 }

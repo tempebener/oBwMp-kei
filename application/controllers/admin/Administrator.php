@@ -575,7 +575,7 @@ function publish_listberita(){
     $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah',$data);
   }
 
-  public function simpan_pelatihan_bab(){
+  function simpan_pelatihan_bab(){
     if (isset($_POST['submit'])){
       $id = $this->input->post('id_pelatihan');
       $pelatihan = $this->M_pelatihan->get_by_id_add($id);
@@ -604,56 +604,7 @@ function publish_listberita(){
     }else{
       $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah');
     }
-
-
-    public function simpan_pelatihan_bab()
-     {
-        
-        $id = $this->input->post('id_pelatihan');
-         $pelatihan = $this->M_pelatihan->get_by_id_add($id);
-         if (isset($_POST['submit'])){
-      $config['upload_path'] = 'assets/frontend/pdf/';
-          $config['allowed_types'] = 'pdf';
-          $config['max_size'] = '3000'; // kb
-          $this->load->library('upload', $config);
-          $this->upload->do_upload('k');
-          $hasil=$this->upload->data();
-
-            $config['source_image'] = 'assets/frontend/pdf/'.$hasil['file_name'];
-
-            $this->load->library('image_lib',$config);
-            $this->image_lib->watermark();
-             $seo = seo_title($this->input->post('b'));
-             if ($hasil['file_name']==''){
-             $data = array(
-
-                    'judul_pelatihan_detail' =>$this->input->post('b'),
-                    'id_pelatihan' =>$this->input->post('id_pelatihan'),
-                     'judul_pelatihan_detail_seo'      =>$seo,
-                     'deskripsi_pelatihan_singkat'         =>$this->input->post('c'),
-                     'date_time'         => date("Y-m-d"),
-                      'video'         =>$this->input->post('aq')
-                    
-
-             );
-
-              }else{
-                    $data = array( 'judul_pelatihan_detail' =>$this->input->post('b'),
-                    'id_pelatihan' =>$this->input->post('id_pelatihan'),
-                     'judul_pelatihan_detail_seo'      =>$seo,
-                     'deskripsi_pelatihan_singkat'         =>$this->input->post('c'),
-                     'date_time'         => date("Y-m-d"),
-                      'download_pdf'=>$hasil['file_name'],
-                      'video'         =>$this->input->post('aq')
-                    );
-            }
-            $this->model_app->insert('tbl_pelatihan_detail',$data);
- 
-            
-             redirect('admin/administrator/detailspelatihan/' . $id);
-
-     }
-}
+  }
 
 
   // Modul Pengantar

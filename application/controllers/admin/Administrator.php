@@ -848,4 +848,4 @@ function publish_listberita(){
     redirect('admin/administrator/member');
   }
 
-}
+

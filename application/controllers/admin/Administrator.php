@@ -6,8 +6,8 @@ class Administrator extends CI_Controller {
   {
     parent::__construct();
     /* memanggil model untuk ditampilkan pada masing2 modul */
-   
-  $this->load->model('M_pelatihan');
+
+    $this->load->model('M_pelatihan');
     /* memanggil function dari masing2 model yang akan digunakan */
 
   }
@@ -38,13 +38,13 @@ class Administrator extends CI_Controller {
 
 
 function home(){
-    
+
       if(!isset($this->session->level))
       {
           redirect(base_url());
           exit;
       }
-     
+
         if ($this->session->level=='admin'){
       $this->template->load('administrator/template','administrator/view_home_admin');
         }else{
@@ -173,8 +173,8 @@ function home(){
     }
   }
 
- 
-  
+
+
   function edit_manajemenprofile(){
         $id = $this->uri->segment(4);
         if (isset($_POST['submit'])){
@@ -189,7 +189,7 @@ function home(){
                                     'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
                                     'email'=>$this->db->escape_str($this->input->post('d')),
                                     'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                   
+
                                 );
             }elseif ($hasil['file_name']!='' AND empty($this->input->post('bw'))){
                     $data = array(
@@ -197,7 +197,7 @@ function home(){
 
                                     'email'=>$this->db->escape_str($this->input->post('d')),
                                     'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                   
+
                                     'foto'=>$hasil['file_name']
                                 );
             }elseif ($hasil['file_name']=='' AND !empty($this->input->post('bw'))){
@@ -277,9 +277,9 @@ function slider_aktif(){
 
 
       redirect($_SERVER['HTTP_REFERER']);
-    }
+}
 
-      function slider_noaktif(){
+function slider_noaktif(){
          $id = array('id_slider' => $this->uri->segment(4));
       $this->db->query("update tbl_slider set id_slider_s = '2'
       where id_slider = '" . $this->uri->segment(4) . "'")
@@ -287,13 +287,13 @@ function slider_aktif(){
 
 
       redirect($_SERVER['HTTP_REFERER']);
-    }
+}
 
-    function tambah_slider(){
+function tambah_slider(){
     if (isset($_POST['submit'])){
       $config['upload_path'] = 'theme/images/foto_slider/';
             $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
-            
+
             $config['max_size'] = '5000'; // kb
             $this->load->library('upload', $config);
             $this->upload->do_upload('f');
@@ -322,13 +322,13 @@ function slider_aktif(){
       redirect('admin/administrator/sliderlist');
     }else{
 
-        
+
              $data['record'] = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
       $this->template->load('administrator/template','administrator/mod_slider/view_slider_tambah',$data);
     }
-  }
+}
 
-  function edit_slider(){
+function edit_slider(){
     $id = $this->uri->segment(4);
     if (isset($_POST['submit'])){
       $config['upload_path'] = 'theme/images/foto_slider/';
@@ -377,7 +377,7 @@ function slider_aktif(){
                 redirect('admin/administrator/edit_slider/');
             }
     }
-  }
+}
 
   // Controller Modul List Berita
 
@@ -389,11 +389,10 @@ function slider_aktif(){
             $data['record'] = $this->model_app->view_where_ordering('tbl_berita',array('id_users'=>$this->session->id_users),'id_berita','DESC');
         }
         $data['rss'] = $this->model_utama->view_join('tbl_berita','users','id_users','id_berita','DESC',0,10);
-       
-        
+
+
     $this->template->load('administrator/template','administrator/mod_berita/view_berita',$data);
   }
-
   function detailsberita($id){
 
 
@@ -404,13 +403,12 @@ function slider_aktif(){
     /* memanggil function dari masing2 model yang akan digunakan */
     $news = $this->M_berita->get_by_id2($id);
     $data['news']            = $news;
-    
-    $this->template->load('administrator/template','administrator/mod_berita/view_berita_detail',$data);
- 
-}
-}
 
- function tambah_listberita(){
+    $this->template->load('administrator/template','administrator/mod_berita/view_berita_detail',$data);
+
+    }
+  }
+  function tambah_listberita(){
     cek_session_akses('listberita',$this->session->id_session);
     if (isset($_POST['submit'])){
       $config['upload_path'] = 'theme/images/berita/';
@@ -425,44 +423,44 @@ function slider_aktif(){
             $this->load->library('image_lib',$config);
             $this->image_lib->watermark();
 
-            if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; } 
+            if ($this->session->level == 'kontributor'){ $status = 'N'; }else{ $status = 'Y'; }
             if ($this->session->level == 'kontributor'){ $status2 = 'Y'; }else{ $status2 = 'Y'; }
 
-          
+
             if ($hasil['file_name']==''){
                     $data = array(
                                     'id_users'=>$this->session->id_users,
                                     'judul'=>$this->input->post('b'),
                                     'judul_seo'=>seo_title($this->input->post('b')).date('sHi'),
-                                    
+
                                     'isi_berita'=>$this->input->post('h'),
-                                    
+
                                     'hari'=>hari_ini(date('w')),
                                     'tanggal'=>date('Y-m-d'),
                                     'jam'=>date('H:i:s'),
-                                   
+
                                     'status'=>$status);
             }else{
                     $data = array(
                                     'id_users'=>$this->session->id_users,
                                     'judul'=>$this->input->post('b'),
                                     'judul_seo'=>seo_title($this->input->post('b')).date('sHi'),
-                                    
+
                                     'isi_berita'=>$this->input->post('h'),
-                                    
+
                                     'hari'=>hari_ini(date('w')),
                                     'tanggal'=>date('Y-m-d'),
                                     'jam'=>date('H:i:s'),
                                     'gambar'=>$hasil['file_name'],
-                                   
+
                                     'status'=>$status);
             }
             $this->model_app->insert('tbl_berita',$data);
       redirect('admin/administrator/listberita');
     }else{
-              
-            
-           
+
+
+
       $this->template->load('administrator/template','administrator/mod_berita/view_berita_tambah');
     }
   }
@@ -484,34 +482,34 @@ function edit_listberita(){
             $this->image_lib->watermark();
 
             if ($this->session->level == 'kontributor'){ $status = 'y'; }else{ $status = 'Y'; }
-             
-          
+
+
             if ($this->session->level == 'kontributor'){ $status2 = 'Y'; }else{ $status2 = 'Y'; }
 
             if ($hasil['file_name']==''){
                     $data = array(
                                     'judul'=>$this->input->post('b'),
-                                    
+
                                     'isi_berita'=>$this->input->post('h'),
                                     'keterangan_gambar'=>$this->input->post('ket'),
-                                  
+
                                    );
             }else{
                     $data = array(
                                     'judul'=>$this->input->post('b'),
-                                   
+
                                     'isi_berita'=>$this->input->post('h'),
                                     'keterangan_gambar'=>$this->input->post('ket'),
                                     'gambar'=>$hasil['file_name'],
                                     'dibaca'=>'0',
-                                   
+
                                     );
             }
             $where = array('id_berita' => $this->input->post('id'));
       $this->model_app->update('tbl_berita', $data, $where);
       redirect('admin/administrator/listberita');
     }else{
-     
+
             if ($this->session->level=='admin'){
                  $proses = $this->model_app->edit('tbl_berita', array('id_berita' => $id))->row_array();
             }else{
@@ -532,9 +530,9 @@ function publish_listberita(){
         $where = array('id_berita' => $this->uri->segment(4));
     $this->model_app->update('tbl_berita', $data, $where);
     redirect($_SERVER['HTTP_REFERER']);
-  }
+}
 
-  function delete_listberita(){
+function delete_listberita(){
         cek_session_akses('listberita',$this->session->id_session);
         if ($this->session->level=='admin'){
         $id = array('id_berita' => $this->uri->segment(4));
@@ -543,20 +541,20 @@ function publish_listberita(){
         }
     $this->model_app->delete('tbl_berita',$id);
     redirect('admin/administrator/listberita');
-  }
+}
 
 
   // Controller Modul List Pelatihan
 
-  function listpelatihan(){
+function listpelatihan(){
     cek_session_akses('listpelatihan',$this->session->id_session);
        $data['record'] = $this->model_app->view_ordering('tbl_pelatihan','id_pelatihan','DESC');
-       
-        
-    $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan',$data);
-  }
 
-  function detailspelatihan($id){
+
+    $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan',$data);
+}
+
+function detailspelatihan($id){
 
     $row = $this->M_pelatihan->get_by_id2($id);
     /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
@@ -567,20 +565,20 @@ function publish_listberita(){
      $data['pelatihanbab']            = $this->M_pelatihan->get_by_id3($id);
     $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_detail',$data);
     }
-  }
+}
 
-  function add_bab_pelatihan($id){
+function add_bab_pelatihan($id){
     $pelatihan = $this->M_pelatihan->get_by_id_add($id);
     $data['pelatihan']            = $pelatihan;
     $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah',$data);
-  }
+}
 
-  function simpan_pelatihan_bab(){
+function simpan_pelatihan_bab(){
     if (isset($_POST['submit'])){
       $id = $this->input->post('id_pelatihan');
       $pelatihan = $this->M_pelatihan->get_by_id_add($id);
       $seo = seo_title($this->input->post('judul_pelatihan_detail'));
-      
+
       $config['upload_path']    = 'theme/images/foto_pelatihan/pelatihan_detail/';
       $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
       $config['max_size']       = '1000'; // kb
@@ -589,7 +587,7 @@ function publish_listberita(){
       $hasil=$this->upload->data();
       $this->upload->do_upload('download_pdf');
       $hasil2=$this->upload->data();
-       
+
       $data = array('id_pelatihan' =>$id,
                   'judul_pelatihan_detail' =>$this->input->post('judul_pelatihan_detail'),
                   'judul_pelatihan_detail_seo' =>$seo.'-'.date("dmYHis"),
@@ -604,7 +602,7 @@ function publish_listberita(){
     }else{
       $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah');
     }
-  }
+}
 
 
   // Modul Pengantar
@@ -765,7 +763,7 @@ function publish_listberita(){
                               'foto_sku'=>$hasil4['file_name'],
                               'partnership_agreement'=>$hasil5['file_name']);
           }
-          
+
           $result = $this->m_main->checkEmail($email);
           if(empty($result)) {
               $this->m_main->multi_insert_member('users',$data_user,'tbl_member',$data_member);
@@ -847,5 +845,4 @@ function publish_listberita(){
     $this->m_member->deactive_member($id);
     redirect('admin/administrator/member');
   }
-
-
+}

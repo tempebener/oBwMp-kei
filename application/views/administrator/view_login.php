@@ -25,17 +25,17 @@
       </div><!-- /.login-logo -->
       <div class="login-box-body">
         <p class="login-box-msg">Silahkan Login Pada Form dibawah ini</p>
-        <?php 
+        <?php
           if ($this->input->post('email')!=''){
             echo "<div class='alert alert-warning'><center>$title</center></div>";
           }elseif($this->input->post('a')!=''){
             echo "<div class='alert alert-danger'><center>$title</center></div>";
           }
 
-            echo form_open('admin/administrator/index'); 
+            echo form_open('admin/administrator/index');
         ?>
           <div class="form-group has-feedback">
-            <input type="text" class="form-control" name='a' placeholder="Username" required>
+            <input type="text" class="form-control" name='a' placeholder="Email" required>
             <span class="glyphicon glyphicon-user form-control-feedback"></span>
           </div>
           <div class="form-group has-feedback">
@@ -85,9 +85,9 @@
         <h5 class="modal-title" id="myModalLabel">Lupa Password Login?</h5>
       </div><center>
       <div class="modal-body">
-                  <?php 
+                  <?php
                       $attributes = array('class'=>'form-horizontal');
-                      echo form_open('admin/administrator/lupapassword',$attributes); 
+                      echo form_open('admin/administrator/lupapassword',$attributes);
                   ?>
                     <div class="form-group">
                         <center style='color:red'>Masukkan Email yang terkait dengan akun!</center><br>
@@ -111,6 +111,6 @@
     </div>
   </div>
 </div>
-        
+
   </body>
 </html>

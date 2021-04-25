@@ -246,8 +246,9 @@ function home(){
   function delete_manajemenuser(){
     cek_session_akses('manajemenuser',$this->session->id_session);
     $id = array('id_users' => $this->uri->segment(4));
+    $data = array('blokir' => 'Y');
     // $this->model_app->delete('users',$id);
-    $this->model_app->deactive_users($id);
+    $this->model_app->deactive_data($id,$data);
     redirect('admin/administrator/manajemenuser');
   }
 
@@ -836,13 +837,10 @@ function simpan_pelatihan_bab(){
 
   function delete_member(){
     cek_session_akses('listmember',$this->session->id_session);
-    if ($this->session->level=='admin'){
-        $id = array('id_member' => $this->uri->segment(4));
-    }else{
-        $id = array('id_member' => $this->uri->segment(4), 'id_users'=>$this->session->id_users);
-    }
+    $id = array('id_member' => $this->uri->segment(4));
+    $data = array('id_status' => '0');
     // $this->model_app->delete('tbl_member',$id);
-    $this->m_member->deactive_member($id);
-    redirect('admin/administrator/member');
+    $this->M_member->deactive_data($id,$data);
+    redirect('admin/administrator/listmember');
   }
 }

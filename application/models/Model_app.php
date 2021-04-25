@@ -82,8 +82,8 @@ class Model_app extends CI_model{
         return $this->db->query("SELECT count(*) as jumlah, tanggal FROM statistik GROUP BY tanggal ORDER BY tanggal DESC LIMIT 10");
     }
 
-    function deactive_users($id){
-        $hsl=$this->db->query("UPDATE users SET blokir='Y' WHERE id='".$id."'");
-        return $hsl;
+    function deactive_data($where,$data){
+        $this->db->where($where);
+        $this->db->update('users',$data);
     }
 }

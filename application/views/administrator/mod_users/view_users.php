@@ -1,4 +1,4 @@
-            <div class="col-xs-12">  
+            <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Manajemen Users</h3>
@@ -19,15 +19,15 @@
                       </tr>
                     </thead>
                     <tbody>
-                  <?php 
+                  <?php
                     $no = 1;
-                    
-                    
-                  
-                    
-                    
+
+
+
+
+
                     foreach ($record as $row){
-                        
+
                     if ($row['foto'] == ''){ $foto ='blank.png'; }else{ $foto = $row['foto']; }
                     echo "<tr><td>$no</td>
                               <td>$row[username]</td>

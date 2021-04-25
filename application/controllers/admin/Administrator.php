@@ -175,7 +175,7 @@ class Administrator extends CI_Controller {
   function edit_manajemenprofile(){
           $id = $this->uri->segment(4);
           if (isset($_POST['submit'])){
-              $config['upload_path'] = 'asset/foto_user/';
+              $config['upload_path'] = 'theme/images/foto_register/profil/';
               $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
               $config['max_size'] = '1000'; // kb
               $this->load->library('upload', $config);

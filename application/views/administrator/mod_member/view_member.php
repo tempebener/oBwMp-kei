@@ -1,8 +1,8 @@
-            <div class="col-xs-12">  
+            <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">List Member</h3>
-                  <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>admin/administrator/tambah_manajemenuser'>Tambahkan Data</a>
+                  <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>admin/administrator/tambah_member'>Tambah Member</a>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
@@ -20,10 +20,10 @@
                       </tr>
                     </thead>
                     <tbody>
-                  <?php 
+                  <?php
                     $no = 1;
                     foreach ($record as $row){
-                        
+
                     if ($row['foto_pas'] == ''){ $foto_pas ='blank.png'; }else{ $foto_pas = $row['foto_pas']; }
                     echo "<tr><td>$no</td>
                               <td>$row[nama]</td>

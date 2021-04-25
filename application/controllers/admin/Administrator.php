@@ -808,13 +808,10 @@ class Administrator extends CI_Controller {
   }
   function delete_member(){
     cek_session_akses('listmember',$this->session->id_session);
-    if ($this->session->level=='admin'){
-        $id = array('id_member' => $this->uri->segment(4));
-    }else{
-        $id = array('id_member' => $this->uri->segment(4), 'id_users'=>$this->session->id_users);
-    }
+    $id = array('id_member' => $this->uri->segment(4));
+    $data = array('id_status' => '0');
     // $this->model_app->delete('tbl_member',$id);
-    $this->m_member->deactive_member($id);
-    redirect('admin/administrator/member');
+    $this->M_member->deactive_data($id,$data);
+    redirect('admin/administrator/listmember');
   }
 }

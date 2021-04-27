@@ -53,7 +53,7 @@ class M_main extends CI_Model
     }
 
     public function create_no_transaction(){
-	    $q = $this->db->query("SELECT no_induk FROM user ORDER BY no_induk DESC LIMIT 1");      
+	    $q = $this->db->query("SELECT no_induk FROM users ORDER BY no_induk DESC LIMIT 1");      
         
         $code = "";
         if ($q->num_rows() > 0) {
@@ -80,7 +80,7 @@ class M_main extends CI_Model
     public function checkEmail($email)
     {
        $this->db->select('*');
-       $this->db->from('user');
+       $this->db->from('users');
        $this->db->where('email', $email);
        $query = $this->db->get();
        return $query->result_array();

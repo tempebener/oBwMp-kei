@@ -114,19 +114,18 @@ class Register extends CI_Controller {
             }
 
             $no_induk    = $this->m_main->create_no_transaction();
+            $email = $this->input->post('email');
 
             if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''|$hasil4['file_name']==''|$hasil5['file_name']==''){
-                $data_user = array('first_name'=>$this->input->post('nama'),
+                $data_user = array('nama_lengkap'=>$this->input->post('nama'),
                                 'no_induk' => $no_induk,
                                 'email'=>$this->input->post('email'),
                                 'password' => md5($this->input->post('password')),
                                 // 'password' => md5('mitra123'),
-                                'status'=>'0',
-                                'group'=>'Member',
-                                'role'=>'user',
-                                'created_at'=>date('Y-m-d H:i:s'));
+                                'blokir'=>'Y',
+                                'level'=>'member');
                 $data_member = array('nama'=>$this->input->post('nama'),
-                                'id_user' => $no_induk,
+                                'no_induk' => $no_induk,
                                 'alamat'=>$this->input->post('alamat'),
                                 'no_hp'=>$this->input->post('no_hp'),
                                 'email'=>$this->input->post('email'),
@@ -138,17 +137,15 @@ class Register extends CI_Controller {
                                 'created_by'=>$this->session->id_users,
                                 'created_at'=>date('Y-m-d H:i:s'));
             }else{
-                $data_user = array('first_name'=>$this->input->post('nama'),
+                $data_user = array('nama_lengkap'=>$this->input->post('nama'),
                                 'no_induk' => $no_induk,
                                 'email'=>$this->input->post('email'),
                                 'password' => md5($this->input->post('password')),
                                 // 'password' => md5('mitra123'),
-                                'status'=>'0',
-                                'group'=>'Member',
-                                'role'=>'user',
-                                'created_at'=>date('Y-m-d H:i:s'));
+                                'blokir'=>'Y',
+                                'level'=>'member');
                 $data_member = array('nama'=>$this->input->post('nama'),
-                                'id_user' => $no_induk,
+                                'no_induk' => $no_induk,
                                 'alamat'=>$this->input->post('alamat'),
                                 'no_hp'=>$this->input->post('no_hp'),
                                 'email'=>$this->input->post('email'),
@@ -168,7 +165,7 @@ class Register extends CI_Controller {
             
             $result = $this->m_main->checkEmail($email);
             if(empty($result)) {
-                $this->m_main->multi_insert_member('user',$data_user,'tbl_member',$data_member);
+                $this->m_main->multi_insert_member('users',$data_user,'tbl_member',$data_member);
                 $msg = "Data Insert Successfully";
             }else {
                 $msg = "Email Already Exists";

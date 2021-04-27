@@ -23,13 +23,12 @@
                     $no = 1;
                     foreach ($record as $row){
                         
-                    if ($row['foto'] == ''){ $foto ='blank.png'; }else{ $foto = $row['foto']; } ?>
+                    if ($row['foto'] == ''){ $foto ='admin.png'; }else{ $foto = $row['foto']; } ?>
                             <tr><td><?= $no ?></td>
                               <td><?= $row['username'] ?></td>
                               <td><?= $row['nama_lengkap'] ?></td>
                               <td><?= $row['email'] ?></td>
-                              <?php if() ?>
-                              <td class="div-image"><img class="img-circle" width="45px" style="border:1px solid #cecece" class="img-circle" src="<?= base_url('theme/images/foto_register/profil/'.$foto) ?>"></td>
+                              <td class="div-image"><img class="img-circle" width="45px" style="border:1px solid #cecece" class="img-circle" src="<?= base_url('theme/images/foto_register/'.$foto) ?>"></td>
                               <td><?= $row['blokir'] ?></td>
                               <td><?= $row['level'] ?></td>
                               <td><center>

@@ -105,7 +105,7 @@
                     <input class="form-control" type="file" name="foto_pas" placeholder="Upload Foto Diri*">
                   </div>
                 </div>
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                   <div class="form-group">
                     <label class="post-title h6">Upload NPWP</label>
                     <input class="form-control" type="file" name="foto_npwp" placeholder="Upload NPWP*">
@@ -122,7 +122,7 @@
                     <label class="post-title h6">Partnership Agreement</label>
                     <input class="form-control" type="file" name="partnership_agreement" placeholder="Partnership Agreement*">
                   </div>
-                </div>
+                </div> -->
               </div>
               <br/>
               <div class="text-left">

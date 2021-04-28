@@ -536,6 +536,38 @@ class Administrator extends CI_Controller {
 
       $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan',$data);
   }
+  function pelatihan_tambah(){
+    $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_tambah');
+  }
+  function pelatihan_simpan(){
+      if (isset($_POST['submit'])){
+        $config['upload_path'] = 'theme/images/foto_slider/';
+              $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+              $config['max_size'] = '5000'; // kb
+              $this->load->library('upload', $config);
+              $this->upload->do_upload('foto');
+              $hasil=$this->upload->data();
+              if ($hasil['file_name']==''){
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                        'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
+                                      'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
+                                      'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')));
+              }else{
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                        'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
+                                      'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
+                                      'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')),
+                                      'foto'=>$hasil['file_name']);
+              }
+              $this->model_app->insert('tbl_pelatihan',$data);
+        redirect('admin/administrator/listpelatihan');
+      }else{
+        $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_tambah',$data);
+      }
+  }
+
   function detailspelatihan($id){
 
       $row = $this->M_pelatihan->get_by_id2($id);

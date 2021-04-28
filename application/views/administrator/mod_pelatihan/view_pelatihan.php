@@ -1,8 +1,8 @@
-            <div class="col-xs-12">  
+            <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
                   <h3 class="box-title">Modul Pelatihan</h3>
-                  <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>administrator/tambah_manajemenuser'>Tambahkan Data</a>
+                  <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>admin/administrator/pelatihan_tambah'>Tambahkan Data</a>
                 </div><!-- /.box-header -->
                 <div class="box-body">
                   <table id="example1" class="table table-bordered table-striped">
@@ -15,21 +15,21 @@
                       </tr>
                     </thead>
                     <tbody>
-                  <?php 
+                  <?php
                     $no = 1;
-                    
-                    
-                  
-                    
-                    
+
+
+
+
+
                     foreach ($record as $row){
-                       
-                        
+
+
                     if ($row['foto'] == ''){ $foto ='blank.png'; }else{ $foto = $row['foto']; }
                     echo "<tr><td>$no</td>
                               <td>$row[judul_pelatihan]</td>
                               <td><img style='border:1px solid #cecece' width='120px'  src='".base_url()."theme/images/foto_pelatihan/$foto'></td>
-                            
+
                               <td><center>
                               <a class='btn btn-warning btn-xs' title='Detail Data' href='".base_url()."admin/administrator/detailspelatihan/$row[id_pelatihan]'><span class='glyphicon glyphicon-zoom-in'></span></a>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."administrator/edit_manajemenuser/'><span class='glyphicon glyphicon-edit'></span></a>

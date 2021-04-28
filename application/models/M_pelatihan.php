@@ -1,9 +1,9 @@
-<?php 
+<?php
 class M_pelatihan extends CI_Model{
  public $table = 'tbl_pelatihan';
   public $id    = 'id_pelatihan';
   public $order = 'DESC';
-	
+
 
 	function get_by_id_pelatihan($id)
   {
@@ -11,7 +11,7 @@ class M_pelatihan extends CI_Model{
   $this->db->join('tbl_pelatihan', 'tbl_pelatihan.id_pelatihan = tbl_pelatihan_detail.id_pelatihan','inner');
   return $this->db->get('tbl_pelatihan_detail')->result();
   }
-	
+
  function get_by_id2($id)
   {
     $this->db->where($this->id, $id);
@@ -31,13 +31,16 @@ class M_pelatihan extends CI_Model{
   {
     $this->db->where('id_pelatihan', $id);
     $this->db->or_where('id_pelatihan', $id);
-    
+
     return $this->db->get('tbl_pelatihan')->row();
   }
 
   function insert_bab($data)
   {
-
     $this->db->insert('tbl_pelatihan_detail', $data);
+  }
+  function insert_bab_tbl($data,$tabel_nama)
+  {
+    $this->db->insert($tabel_nama, $data);
   }
 }

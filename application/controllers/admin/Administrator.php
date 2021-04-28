@@ -541,7 +541,7 @@ class Administrator extends CI_Controller {
   }
   function pelatihan_simpan(){
       if (isset($_POST['submit'])){
-        $config['upload_path'] = 'theme/images/foto_slider/';
+              $config['upload_path'] = 'theme/images/foto_pelatihan/';
               $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
               $config['max_size'] = '5000'; // kb
               $this->load->library('upload', $config);
@@ -565,6 +565,50 @@ class Administrator extends CI_Controller {
         redirect('admin/administrator/listpelatihan');
       }else{
         $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_tambah',$data);
+      }
+  }
+  function pelatihan_edit(){
+      $id = $this->uri->segment(4);
+      if (isset($_POST['submit'])){
+              $config['upload_path'] = 'theme/images/foto_pelatihan/';
+              $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+              $config['max_size'] = '5000'; // kb
+              $this->load->library('upload', $config);
+              $this->upload->do_upload('foto');
+              $hasil=$this->upload->data();
+              if ($hasil['file_name']==''){
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
+                      'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
+                      'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')));
+                      $where = array('id_pelatihan' => $this->input->post('id_pelatihan'));
+											$this->db->update('tbl_pelatihan', $data, $where);
+              }else{
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
+                      'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
+                      'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')),
+                      'foto'=>$hasil['file_name']);
+                      $where = array('id_pelatihan' => $this->input->post('id_pelatihan'));
+											$_image = $this->db->get_where('tbl_pelatihan',$where)->row();
+											$query = $this->db->update('tbl_pelatihan',$data,$where);
+											if($query){
+												unlink("theme/images/foto_pelatihan/".$_image->foto);
+											}
+              }
+              redirect('admin/administrator/listpelatihan');
+            }
+            $where = array('id_slider' => $this->input->post('id'));
+          }else{
+              if ($this->session->username==$this->uri->segment(4) OR $this->session->level=='admin'){
+                  $proses = $this->As_m->edit('tbl_pelatihan', array('id_pelatihan' => $id))->row_array();
+              }else{
+                  	$proses = $this->As_m->edit('tbl_pelatihan', array('id_pelatihan' => $id, 'id_users' => $this->session->id_users))->row_array();
+
+              }
+              $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_edit',$data);
       }
   }
 

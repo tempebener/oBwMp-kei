@@ -771,7 +771,7 @@ class Administrator extends CI_Controller {
               $data_user = array('nama_lengkap'=>$this->input->post('nama'),
                               'no_induk' => $no_induk,
                               'email'=>$this->input->post('email'),
-                              'password' => md5($this->input->post('password')),
+                              'password' => hash("sha512", md5($this->input->post('password'))),
                               // 'password' => md5('member123'),
                               'blokir'=>'Y',
                               'level'=>'member');
@@ -791,7 +791,7 @@ class Administrator extends CI_Controller {
               $data_user = array('nama_lengkap'=>$this->input->post('nama'),
                               'no_induk' => $no_induk,
                               'email'=>$this->input->post('email'),
-                              'password' => md5($this->input->post('password')),
+                              'password' => hash("sha512", md5($this->input->post('password'))),
                               // 'password' => md5('mitra123'),
                               'blokir'=>'Y',
                               'level'=>'member');

@@ -102,7 +102,6 @@
               <td> $row[video]</td>
                <td>$tgl_posting</td>
                <td><center>
-                 <a class='btn btn-warning btn-xs' title='Detail Data' href='".base_url()."#'><span class='glyphicon glyphicon-zoom-in'></span></a>
                  <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/pelatihan_bab_edit/$row[id_pelatihan_detail]'><span class='glyphicon glyphicon-edit'></span></a>
                  <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/pelatihan_bab_hapus/$row[id_pelatihan_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                </center></td>

@@ -680,32 +680,65 @@ class Administrator extends CI_Controller {
   function pelatihan_bab_edit(){
     $id = $this->uri->segment(4);
     if (isset($_POST['submit'])){
-            $config['upload_path'] = 'theme/images/foto_pelatihan/';
-            $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
-            $config['max_size'] = '5000'; // kb
+            $config['upload_path'] = 'theme/images/foto_pelatihan/pelatihan_detail/';
+            $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
+            $config['max_size']       = '5000'; // kb
             $this->load->library('upload', $config);
-            $this->upload->do_upload('foto');
+            $this->upload->do_upload('gambar');
             $hasil=$this->upload->data();
-            if ($hasil['file_name']==''){
-                    $data = array('id_users'=>$this->session->id_users,
-                    'date_time'=>date('Y-m-d'),
-                    'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
-                    'deskripsi_singkat'=>$this->input->post('deskripsi_singkat_pelatihan'),
-                    'deskirpsi_full'=>$this->input->post('deskirpsi_full_pelatihan'));
+            $this->upload->do_upload('download_pdf');
+            $hasil2=$this->upload->data();
+            if ($hasil['file_name']=='' AND $hasil2['file_name']==''){
+                    $data = array(
+                    'judul_pelatihan_detail' =>$this->input->post('judul_pelatihan_detail'),
+                    'judul_pelatihan_detail_seo' =>seo_title($this->input->post('judul_pelatihan_detail')),
+                    'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),                  
+                    'date_time' => date("Y-m-d"));
                     $where = array('id_pelatihan_detail' => $this->input->post('id'));
                     $this->db->update('tbl_pelatihan_detail', $data, $where);
-            }else{
-                    $data = array('id_users'=>$this->session->id_users,
-                    'date_time'=>date('Y-m-d'),
-                    'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
-                    'deskripsi_singkat'=>$this->input->post('deskripsi_singkat_pelatihan'),
-                    'deskirpsi_full'=>$this->input->post('deskirpsi_full_pelatihan'),
-                    'foto'=>$hasil['file_name']);
+            }else if($hasil['file_name']==''){
+                    $data = array(
+                    'judul_pelatihan_detail' =>$this->input->post('judul_pelatihan_detail'),
+                    'judul_pelatihan_detail_seo' =>seo_title($this->input->post('judul_pelatihan_detail')),
+                    'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),
+                    'download_pdf'=>$hasil2['file_name'],
+                    'date_time' => date("Y-m-d"),
+                    'download_pdf'=>$hasil2['file_name']);
                     $where = array('id_pelatihan_detail' => $this->input->post('id'));
                     $_image = $this->db->get_where('tbl_pelatihan_detail',$where)->row();
                     $query = $this->db->update('tbl_pelatihan_detail',$data,$where);
                     if($query){
-                      unlink("theme/images/foto_pelatihan/".$_image->foto);
+                      unlink("theme/images/foto_pelatihan/pelatihan_detail/".$_image->download_pdf);
+                    }
+            }else if($hasil2['file_name']==''){
+                    $data = array(
+                    'judul_pelatihan_detail' =>$this->input->post('judul_pelatihan_detail'),
+                    'judul_pelatihan_detail_seo' =>seo_title($this->input->post('judul_pelatihan_detail')),
+                    'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),
+                    'download_pdf'=>$hasil2['file_name'],
+                    'date_time' => date("Y-m-d"),
+                    'gambar'=>$hasil['file_name']);
+                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pelatihan_detail',$where)->row();
+                    $query = $this->db->update('tbl_pelatihan_detail',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pelatihan/pelatihan_detail/".$_image->gambar);
+                    }
+            }else{
+                    $data = array(
+                    'judul_pelatihan_detail' =>$this->input->post('judul_pelatihan_detail'),
+                    'judul_pelatihan_detail_seo' =>seo_title($this->input->post('judul_pelatihan_detail')),
+                    'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),
+                    'download_pdf'=>$hasil2['file_name'],
+                    'date_time' => date("Y-m-d"),
+                    'gambar'=>$hasil['file_name'],
+                    'download_pdf'=>$hasil2['file_name']);
+                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pelatihan_detail',$where)->row();
+                    $query = $this->db->update('tbl_pelatihan_detail',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pelatihan/pelatihan_detail/".$_image->gambar);
+                      unlink("theme/images/foto_pelatihan/pelatihan_detail/".$_image->download_pdf);
                     }
             }
             redirect('admin/administrator/listpelatihan/');

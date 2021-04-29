@@ -6,7 +6,7 @@
                 </div>
               <div class='box-body'>";
               $attributes = array('class'=>'form-horizontal','role'=>'form');
-              echo form_open_multipart('admin/administrator/pelatihan_edit',$attributes);
+              echo form_open_multipart('admin/administrator/pelatihan_bab_edit',$attributes);
               if ($rows['gambar']==''){ $foto = 'users.gif'; }else{ $foto = $rows['gambar']; }
           echo "<div class='col-md-12'>
                   <table class='table table-condensed table-bordered'>

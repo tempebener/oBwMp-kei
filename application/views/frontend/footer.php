@@ -42,7 +42,7 @@
                   <li class="list-item"><a class="link link-inherit" href="https://cianjurartamakmur.co.id" target="_blank">PT CIANJUR ARTA MAKMUR</a></li>
                   <li class="list-item"><a class="link link-inherit" href="https://widodomakmurunggas.co.id" target="_blank">PT WIDODO MAKMUR UNGGAS</a></li>
                   <li class="list-item"><a class="link link-inherit" href="https://garutmakmurperkasa.co.id" target="_blank">PT GARUT MAKMUR PERKASA</a></li>
-                  <li class="list-item"><a class="link link-inherit" href="#" target="_blank">WTV</a></li>
+                  <li class="list-item"><a class="link link-inherit" href="https://youtube.com/channel/UCy4T3aRZ0fg1JOJXCjVcTnw" target="_blank">WTV</a></li>
                  
                 </ul>
               </div>

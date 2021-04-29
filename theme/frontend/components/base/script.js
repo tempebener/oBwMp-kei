@@ -466,296 +466,296 @@ components.regula = {
 	}
 };
 
-components.rdMailform = {
-	selector: '.rd-mailform',
-	styles: [
-		'http://localhost/kesatriaan/theme/frontend/components/rd-mailform/rd-mailform.css',
-		'http://localhost/kesatriaan/theme/frontend/components/font-awesome/font-awesome.css'
-	],
-	script: [
-		'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
-		'http://localhost/kesatriaan/theme/frontend/components/rd-mailform/rd-mailform.min.js',
-	],
-	init: function ( nodes ) {
-		let i, j, k,
-			$captchas = $( nodes ).find( '.recaptcha' ),
-			msg = {
-				'MF000': 'Successfully sent!',
-				'MF001': 'Recipients are not set!',
-				'MF002': 'Form will not work locally!',
-				'MF003': 'Please, define email field in your form!',
-				'MF004': 'Please, define type of your form!',
-				'MF254': 'Something went wrong with PHPMailer!',
-				'MF255': 'Aw, snap! Something went wrong.'
-			};
+// components.rdMailform = {
+// 	selector: '.rd-mailform',
+// 	styles: [
+// 		'http://localhost/kesatriaan/theme/frontend/components/rd-mailform/rd-mailform.css',
+// 		'http://localhost/kesatriaan/theme/frontend/components/font-awesome/font-awesome.css'
+// 	],
+// 	script: [
+// 		'http://localhost/kesatriaan/theme/frontend/components/jquery/jquery.min.js',
+// 		'http://localhost/kesatriaan/theme/frontend/components/rd-mailform/rd-mailform.min.js',
+// 	],
+// 	init: function ( nodes ) {
+// 		let i, j, k,
+// 			$captchas = $( nodes ).find( '.recaptcha' ),
+// 			msg = {
+// 				'MF000': 'Successfully sent!',
+// 				'MF001': 'Recipients are not set!',
+// 				'MF002': 'Form will not work locally!',
+// 				'MF003': 'Please, define email field in your form!',
+// 				'MF004': 'Please, define type of your form!',
+// 				'MF254': 'Something went wrong with PHPMailer!',
+// 				'MF255': 'Aw, snap! Something went wrong.'
+// 			};
 
-		if ( $captchas.length ) {
-			$.getScript("//www.google.com/recaptcha/api.js?onload=onloadCaptchaCallback&render=explicit&hl=en");
-		}
+// 		if ( $captchas.length ) {
+// 			$.getScript("//www.google.com/recaptcha/api.js?onload=onloadCaptchaCallback&render=explicit&hl=en");
+// 		}
 
-		/**
-		 * @desc Check if all elements pass validation
-		 * @param {object} elements - object of items for validation
-		 * @param {object} captcha - captcha object for validation
-		 * @return {boolean}
-		 */
-		function isValidated(elements, captcha) {
-			let results, errors = 0;
+// 		/**
+// 		 * @desc Check if all elements pass validation
+// 		 * @param {object} elements - object of items for validation
+// 		 * @param {object} captcha - captcha object for validation
+// 		 * @return {boolean}
+// 		 */
+// 		function isValidated(elements, captcha) {
+// 			let results, errors = 0;
 
-			if (elements.length) {
-				for (let j = 0; j < elements.length; j++) {
+// 			if (elements.length) {
+// 				for (let j = 0; j < elements.length; j++) {
 
-					let $input = $(elements[j]);
-					if ((results = $input.regula('validate')).length) {
-						for (k = 0; k < results.length; k++) {
-							errors++;
-							$input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
-						}
-					} else {
-						$input.siblings(".form-validation").text("").parent().removeClass("has-error")
-					}
-				}
+// 					let $input = $(elements[j]);
+// 					if ((results = $input.regula('validate')).length) {
+// 						for (k = 0; k < results.length; k++) {
+// 							errors++;
+// 							$input.siblings(".form-validation").text(results[k].message).parent().addClass("has-error");
+// 						}
+// 					} else {
+// 						$input.siblings(".form-validation").text("").parent().removeClass("has-error")
+// 					}
+// 				}
 
-				if (captcha) {
-					if (captcha.length) {
-						return validateReCaptcha(captcha) && errors === 0
-					}
-				}
+// 				if (captcha) {
+// 					if (captcha.length) {
+// 						return validateReCaptcha(captcha) && errors === 0
+// 					}
+// 				}
 
-				return errors === 0;
-			}
-			return true;
-		}
+// 				return errors === 0;
+// 			}
+// 			return true;
+// 		}
 
-		/**
-		 * @desc Validate google reCaptcha
-		 * @param {object} captcha - captcha object for validation
-		 * @return {boolean}
-		 */
-		function validateReCaptcha(captcha) {
-			let captchaToken = captcha.find('.g-recaptcha-response').val();
+// 		/**
+// 		 * @desc Validate google reCaptcha
+// 		 * @param {object} captcha - captcha object for validation
+// 		 * @return {boolean}
+// 		 */
+// 		function validateReCaptcha(captcha) {
+// 			let captchaToken = captcha.find('.g-recaptcha-response').val();
 
-			if (captchaToken.length === 0) {
-				captcha
-					.siblings('.form-validation')
-					.html('Please, prove that you are not robot.')
-					.addClass('active');
-				captcha
-					.closest('.form-wrap')
-					.addClass('has-error');
+// 			if (captchaToken.length === 0) {
+// 				captcha
+// 					.siblings('.form-validation')
+// 					.html('Please, prove that you are not robot.')
+// 					.addClass('active');
+// 				captcha
+// 					.closest('.form-wrap')
+// 					.addClass('has-error');
 
-				captcha.on('propertychange', function () {
-					let $this = $(this),
-						captchaToken = $this.find('.g-recaptcha-response').val();
+// 				captcha.on('propertychange', function () {
+// 					let $this = $(this),
+// 						captchaToken = $this.find('.g-recaptcha-response').val();
 
-					if (captchaToken.length > 0) {
-						$this
-							.closest('.form-wrap')
-							.removeClass('has-error');
-						$this
-							.siblings('.form-validation')
-							.removeClass('active')
-							.html('');
-						$this.off('propertychange');
-					}
-				});
+// 					if (captchaToken.length > 0) {
+// 						$this
+// 							.closest('.form-wrap')
+// 							.removeClass('has-error');
+// 						$this
+// 							.siblings('.form-validation')
+// 							.removeClass('active')
+// 							.html('');
+// 						$this.off('propertychange');
+// 					}
+// 				});
 
-				return false;
-			}
+// 				return false;
+// 			}
 
-			return true;
-		}
+// 			return true;
+// 		}
 
-		/**
-		 * @desc Initialize Google reCaptcha
-		 */
-		window.onloadCaptchaCallback = function () {
-			for (let i = 0; i < $captchas.length; i++) {
-				let
-					$captcha = $($captchas[i]),
-					resizeHandler = (function() {
-						let
-							frame = this.querySelector( 'iframe' ),
-							inner = this.firstElementChild,
-							inner2 = inner.firstElementChild,
-							containerRect = null,
-							frameRect = null,
-							scale = null;
+// 		/**
+// 		 * @desc Initialize Google reCaptcha
+// 		 */
+// 		window.onloadCaptchaCallback = function () {
+// 			for (let i = 0; i < $captchas.length; i++) {
+// 				let
+// 					$captcha = $($captchas[i]),
+// 					resizeHandler = (function() {
+// 						let
+// 							frame = this.querySelector( 'iframe' ),
+// 							inner = this.firstElementChild,
+// 							inner2 = inner.firstElementChild,
+// 							containerRect = null,
+// 							frameRect = null,
+// 							scale = null;
 
-						inner2.style.transform = '';
-						inner.style.height = 'auto';
-						inner.style.width = 'auto';
+// 						inner2.style.transform = '';
+// 						inner.style.height = 'auto';
+// 						inner.style.width = 'auto';
 
-						containerRect = this.getBoundingClientRect();
-						frameRect = frame.getBoundingClientRect();
-						scale = containerRect.width/frameRect.width;
+// 						containerRect = this.getBoundingClientRect();
+// 						frameRect = frame.getBoundingClientRect();
+// 						scale = containerRect.width/frameRect.width;
 
-						if ( scale < 1 ) {
-							inner2.style.transform = 'scale('+ scale +')';
-							inner2.style.transformOrigin = 'top left';
-							inner.style.height = ( frameRect.height * scale ) + 'px';
-							inner.style.width = ( frameRect.width * scale ) + 'px';
-						}
-					}).bind( $captchas[i] );
+// 						if ( scale < 1 ) {
+// 							inner2.style.transform = 'scale('+ scale +')';
+// 							inner2.style.transformOrigin = 'top left';
+// 							inner.style.height = ( frameRect.height * scale ) + 'px';
+// 							inner.style.width = ( frameRect.width * scale ) + 'px';
+// 						}
+// 					}).bind( $captchas[i] );
 
-				grecaptcha.render(
-					$captcha.attr('id'),
-					{
-						sitekey: $captcha.attr('data-sitekey'),
-						size: $captcha.attr('data-size') ? $captcha.attr('data-size') : 'normal',
-						theme: $captcha.attr('data-theme') ? $captcha.attr('data-theme') : 'light',
-						callback: function () {
-							$('.recaptcha').trigger('propertychange');
-						}
-					}
-				);
+// 				grecaptcha.render(
+// 					$captcha.attr('id'),
+// 					{
+// 						sitekey: $captcha.attr('data-sitekey'),
+// 						size: $captcha.attr('data-size') ? $captcha.attr('data-size') : 'normal',
+// 						theme: $captcha.attr('data-theme') ? $captcha.attr('data-theme') : 'light',
+// 						callback: function () {
+// 							$('.recaptcha').trigger('propertychange');
+// 						}
+// 					}
+// 				);
 
-				$captcha.after("<span class='form-validation'></span>");
+// 				$captcha.after("<span class='form-validation'></span>");
 
-				if ( $captchas[i].hasAttribute( 'data-auto-size' ) ) {
-					resizeHandler();
-					window.addEventListener( 'resize', resizeHandler );
-				}
-			}
-		};
+// 				if ( $captchas[i].hasAttribute( 'data-auto-size' ) ) {
+// 					resizeHandler();
+// 					window.addEventListener( 'resize', resizeHandler );
+// 				}
+// 			}
+// 		};
 
-		for ( i = 0; i < nodes.length; i++ ) {
-			let
-				$form = $(nodes[i]),
-				formHasCaptcha = false;
+// 		for ( i = 0; i < nodes.length; i++ ) {
+// 			let
+// 				$form = $(nodes[i]),
+// 				formHasCaptcha = false;
 
-			$form.attr('novalidate', 'novalidate').ajaxForm({
-				data: {
-					"form-type": $form.attr("data-form-type") || "contact",
-					"counter": i
-				},
-				beforeSubmit: function (arr, $form, options) {
-					if ( window.xMode ) return;
+// 			$form.attr('novalidate', 'novalidate').ajaxForm({
+// 				data: {
+// 					"form-type": $form.attr("data-form-type") || "contact",
+// 					"counter": i
+// 				},
+// 				beforeSubmit: function (arr, $form, options) {
+// 					if ( window.xMode ) return;
 
-					let
-						form = $(nodes[this.extraData.counter]),
-						inputs = form.find("[data-constraints]"),
-						output = $("#" + form.attr("data-form-output")),
-						captcha = form.find('.recaptcha'),
-						captchaFlag = true;
+// 					let
+// 						form = $(nodes[this.extraData.counter]),
+// 						inputs = form.find("[data-constraints]"),
+// 						output = $("#" + form.attr("data-form-output")),
+// 						captcha = form.find('.recaptcha'),
+// 						captchaFlag = true;
 
-					output.removeClass("active error success");
+// 					output.removeClass("active error success");
 
-					if (isValidated(inputs, captcha)) {
+// 					if (isValidated(inputs, captcha)) {
 
-						// veify reCaptcha
-						if (captcha.length) {
-							let captchaToken = captcha.find('.g-recaptcha-response').val(),
-								captchaMsg = {
-									'CPT001': 'Please, setup you "site key" and "secret key" of reCaptcha',
-									'CPT002': 'Something wrong with google reCaptcha'
-								};
+// 						// veify reCaptcha
+// 						if (captcha.length) {
+// 							let captchaToken = captcha.find('.g-recaptcha-response').val(),
+// 								captchaMsg = {
+// 									'CPT001': 'Please, setup you "site key" and "secret key" of reCaptcha',
+// 									'CPT002': 'Something wrong with google reCaptcha'
+// 								};
 
-							formHasCaptcha = true;
+// 							formHasCaptcha = true;
 
-							$.ajax({
-								method: "POST",
-								url: "components/rd-mailform/reCaptcha.php",
-								data: {'g-recaptcha-response': captchaToken},
-								async: false
-							})
-								.done(function (responceCode) {
-									if (responceCode !== 'CPT000') {
-										if (output.hasClass("snackbar")) {
-											output.html('<div class="snackbar-inner"><div class="snackbar-title"><span class="icon snackbar-icon fa-check"></span>'+ captchaMsg[responceCode] +'</div></div>');
+// 							$.ajax({
+// 								method: "POST",
+// 								url: "components/rd-mailform/reCaptcha.php",
+// 								data: {'g-recaptcha-response': captchaToken},
+// 								async: false
+// 							})
+// 								.done(function (responceCode) {
+// 									if (responceCode !== 'CPT000') {
+// 										if (output.hasClass("snackbar")) {
+// 											output.html('<div class="snackbar-inner"><div class="snackbar-title"><span class="icon snackbar-icon fa-check"></span>'+ captchaMsg[responceCode] +'</div></div>');
 
-											setTimeout(function () {
-												output.removeClass("active");
-											}, 3500);
+// 											setTimeout(function () {
+// 												output.removeClass("active");
+// 											}, 3500);
 
-											captchaFlag = false;
-										} else {
-											output.html(captchaMsg[responceCode]);
-										}
+// 											captchaFlag = false;
+// 										} else {
+// 											output.html(captchaMsg[responceCode]);
+// 										}
 
-										output.addClass("active");
-									}
-								});
-						}
+// 										output.addClass("active");
+// 									}
+// 								});
+// 						}
 
-						if (!captchaFlag) {
-							return false;
-						}
+// 						if (!captchaFlag) {
+// 							return false;
+// 						}
 
-						form.addClass('form-in-process');
+// 						form.addClass('form-in-process');
 
-						if (output.hasClass("snackbar")) {
-							output.html('<div class="snackbar-inner"><div class="snackbar-title"><span class="icon snackbar-icon fa-circle-o-notch fa-spin"></span>Sending</div></div>');
-							output.addClass("active");
-						}
-					} else {
-						return false;
-					}
-				},
-				error: function (result) {
-					if ( window.xMode ) return;
+// 						if (output.hasClass("snackbar")) {
+// 							output.html('<div class="snackbar-inner"><div class="snackbar-title"><span class="icon snackbar-icon fa-circle-o-notch fa-spin"></span>Sending</div></div>');
+// 							output.addClass("active");
+// 						}
+// 					} else {
+// 						return false;
+// 					}
+// 				},
+// 				error: function (result) {
+// 					if ( window.xMode ) return;
 
-					let
-						output = $("#" + $(nodes[this.extraData.counter]).attr("data-form-output")),
-						form = $(nodes[this.extraData.counter]);
+// 					let
+// 						output = $("#" + $(nodes[this.extraData.counter]).attr("data-form-output")),
+// 						form = $(nodes[this.extraData.counter]);
 
-					output.text(msg[result]);
-					form.removeClass('form-in-process');
+// 					output.text(msg[result]);
+// 					form.removeClass('form-in-process');
 
-					if (formHasCaptcha) {
-						grecaptcha.reset();
-					}
-				},
-				success: function (result) {
-					if ( window.xMode ) return;
+// 					if (formHasCaptcha) {
+// 						grecaptcha.reset();
+// 					}
+// 				},
+// 				success: function (result) {
+// 					if ( window.xMode ) return;
 
-					let
-						form = $(nodes[this.extraData.counter]),
-						output = $("#" + form.attr("data-form-output")),
-						select = form.find('select');
+// 					let
+// 						form = $(nodes[this.extraData.counter]),
+// 						output = $("#" + form.attr("data-form-output")),
+// 						select = form.find('select');
 
-					form
-						.addClass('success')
-						.removeClass('form-in-process');
+// 					form
+// 						.addClass('success')
+// 						.removeClass('form-in-process');
 
-					if (formHasCaptcha) {
-						grecaptcha.reset();
-					}
+// 					if (formHasCaptcha) {
+// 						grecaptcha.reset();
+// 					}
 
-					result = result.length === 13 ? result : 'MF255';
-					output.text(msg[result]);
+// 					result = result.length === 13 ? result : 'MF255';
+// 					output.text(msg[result]);
 
-					if (result === "MF000") {
-						if (output.hasClass("snackbar")) {
-							output.html('<div class="snackbar-inner"><div class="snackbar-title"><span class="icon snackbar-icon fa-check"></span>'+ msg[result] +'</div></div>');
-						} else {
-							output.addClass("active success");
-						}
-					} else {
-						if (output.hasClass("snackbar")) {
-							output.html('<div class="snackbar-inner"><div class="snackbar-title"><span class="icon snackbar-icon fa-exclamation-triangle"></span>'+ msg[result] +'</div></div>');
-						} else {
-							output.addClass("active error");
-						}
-					}
+// 					if (result === "MF000") {
+// 						if (output.hasClass("snackbar")) {
+// 							output.html('<div class="snackbar-inner"><div class="snackbar-title"><span class="icon snackbar-icon fa-check"></span>'+ msg[result] +'</div></div>');
+// 						} else {
+// 							output.addClass("active success");
+// 						}
+// 					} else {
+// 						if (output.hasClass("snackbar")) {
+// 							output.html('<div class="snackbar-inner"><div class="snackbar-title"><span class="icon snackbar-icon fa-exclamation-triangle"></span>'+ msg[result] +'</div></div>');
+// 						} else {
+// 							output.addClass("active error");
+// 						}
+// 					}
 
-					form.clearForm();
+// 					form.clearForm();
 
-					if (select.length) {
-						select.select2("val", "");
-					}
+// 					if (select.length) {
+// 						select.select2("val", "");
+// 					}
 
-					form.find('input, textarea').trigger('blur');
+// 					form.find('input, textarea').trigger('blur');
 
-					setTimeout(function () {
-						output.removeClass("active error success");
-						form.removeClass('success');
-					}, 3500);
-				}
-			});
-		}
-	}
-};
+// 					setTimeout(function () {
+// 						output.removeClass("active error success");
+// 						form.removeClass('success');
+// 					}, 3500);
+// 				}
+// 			});
+// 		}
+// 	}
+// };
 
 components.rdNavbar = {
 	selector: '.rd-navbar',

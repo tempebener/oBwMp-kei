@@ -608,8 +608,7 @@ class Administrator extends CI_Controller {
               $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_edit',$data);
               }
   }
-  function pelatihan_hapus()
-	{
+  function pelatihan_hapus(){
 
 			$id = $this->uri->segment(4);
 			$_id = $this->db->get_where('tbl_pelatihan',['id_pelatihan' => $id])->row();
@@ -646,7 +645,7 @@ class Administrator extends CI_Controller {
 
         $config['upload_path']    = 'theme/images/foto_pelatihan/pelatihan_detail/';
         $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
-        $config['max_size']       = '1000'; // kb
+        $config['max_size']       = '5000'; // kb
         $this->load->library('upload', $config);
         $this->upload->do_upload('gambar');
         $hasil=$this->upload->data();
@@ -668,6 +667,60 @@ class Administrator extends CI_Controller {
         $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_tambah');
       }
   }
+  function pelatihan_bab_hapus(){
+
+      $id = $this->uri->segment(4);
+      $_id = $this->db->get_where('tbl_pelatihan_detail',['id_pelatihan_detail' => $id])->row();
+      $query = $this->db->delete('tbl_pelatihan_detail',['id_pelatihan_detail'=> $id]);
+      if($query){
+               unlink("./theme/images/foto_pelatihan/".$_id->gambar);
+     }
+    redirect('admin/administrator/listpelatihan/');
+  }
+  function pelatihan_bab_edit(){
+    $id = $this->uri->segment(4);
+    if (isset($_POST['submit'])){
+            $config['upload_path'] = 'theme/images/foto_pelatihan/';
+            $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+            $config['max_size'] = '5000'; // kb
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('foto');
+            $hasil=$this->upload->data();
+            if ($hasil['file_name']==''){
+                    $data = array('id_users'=>$this->session->id_users,
+                    'date_time'=>date('Y-m-d'),
+                    'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
+                    'deskripsi_singkat'=>$this->input->post('deskripsi_singkat_pelatihan'),
+                    'deskirpsi_full'=>$this->input->post('deskirpsi_full_pelatihan'));
+                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                    $this->db->update('tbl_pelatihan_detail', $data, $where);
+            }else{
+                    $data = array('id_users'=>$this->session->id_users,
+                    'date_time'=>date('Y-m-d'),
+                    'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
+                    'deskripsi_singkat'=>$this->input->post('deskripsi_singkat_pelatihan'),
+                    'deskirpsi_full'=>$this->input->post('deskirpsi_full_pelatihan'),
+                    'foto'=>$hasil['file_name']);
+                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pelatihan_detail',$where)->row();
+                    $query = $this->db->update('tbl_pelatihan_detail',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pelatihan/".$_image->foto);
+                    }
+            }
+            redirect('admin/administrator/listpelatihan/');
+        }else{
+            if ($this->session->level=='admin'){
+                $proses = $this->model_app->edit('tbl_pelatihan_detail', array('id_pelatihan_detail' => $id))->row_array();
+            }else{
+                $proses = $this->model_app->edit('tbl_pelatihan_detail', array('id_pelatihan_detail' => $id, 'id_users' => $this->session->id_users))->row_array();
+            }
+            $data = array('rows' => $proses);
+            $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_bab_edit',$data);
+            }
+
+  }
+
 
   // Modul Pengantar
   function listpengantar(){

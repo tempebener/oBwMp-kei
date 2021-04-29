@@ -3,7 +3,7 @@
       <div class='row'>
         <div class='col-xs-12'>
           <h2 class='page-header'>
-            <i class='fa fa-globe'></i> DETAIL PELATIHAN 
+            <i class='fa fa-globe'></i> DETAIL PELATIHAN
             <small class='pull-right'></small>
           </h2>
         </div>
@@ -13,7 +13,7 @@
       <div class='row invoice-info'>
         <div class='col-sm-6 invoice-col'>
           <table width="100%" border="0" cellspacing="0" cellpadding="4">
-            <?php 
+            <?php
                     $no = 1;
                     foreach ($pelatihan as $row){
                 if ($row['foto'] == ''){ $foto ='blank.png'; }else{ $foto = $row['foto']; }
@@ -28,32 +28,30 @@
                   <td>:</td>
                   <td><img style='border:1px solid #cecece' width='120px'  src='".base_url()."theme/images/foto_pelatihan/$row[foto]'></td>
               </tr>
-            
-              
           </table>
         </div>
          <div class='col-sm-6 invoice-col'>
           <table width='100%' border='0' cellspacing='0' cellpadding='0'>
-            
-             
-             
+
+
+
                <tr>
                   <td>Tanggal Posting</td>
                   <td >:</td>
                   <td >".tgl_indo($row['date_time'])."</td>
               </tr>
-            
-          
-            
+
+
+
                     </table>
         </div>
-       
 
- 
+
+
    <!-- /.col -->
 
         <!-- /.col -->
-          
+
         <!-- /.col -->
       </div>
       <!-- /.row -->
@@ -61,9 +59,9 @@
 <br>
 
  <h2 class='page-header'>
-            <i class='fa fa-globe'></i> BAB PELATIHAN 
-            <small class='pull-right'></small> 
-            
+            <i class='fa fa-globe'></i> BAB PELATIHAN
+            <small class='pull-right'></small>
+
 
           <a class='pull-right btn btn-primary btn-sm'  href='".base_url()."admin/administrator/add_bab_pelatihan/$row[id_pelatihan]' >Tambah BAB Pelatihan</a>
           </h2>
@@ -89,7 +87,7 @@
             </thead>
             <tbody>
 
-                <?php 
+                <?php
                     $no = 1;
                     foreach ($pelatihanbab as $row){
                    $tgl_posting = tgl_indo($row['date_time']);
@@ -99,13 +97,17 @@
               <td>$no</td>
               <td>$row[judul_pelatihan_detail]</td>
               <td>$row[deskripsi_pelatihan_singkat]</td>
-              
+
               <td>$row[download_pdf]</td>
               <td> $row[video]</td>
                <td>$tgl_posting</td>
-               <td></td>
+               <td><center>
+                 <a class='btn btn-warning btn-xs' title='Detail Data' href='".base_url()."#'><span class='glyphicon glyphicon-zoom-in'></span></a>
+                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/pelatihan_bab_edit/$row[id_pelatihan_detail]'><span class='glyphicon glyphicon-edit'></span></a>
+                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/pelatihan_bab_hapus/$row[id_pelatihan_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+               </center></td>
             </tr>
-        
+
 ";
                       $no++;
                     }

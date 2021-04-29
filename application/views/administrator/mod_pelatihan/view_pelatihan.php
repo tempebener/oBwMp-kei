@@ -31,7 +31,7 @@
                               <td><img style='border:1px solid #cecece' width='120px'  src='".base_url()."theme/images/foto_pelatihan/$foto'></td>
 
                               <td><center>
-                              <a class='btn btn-warning btn-xs' title='Detail Data' href='".base_url()."admin/administrator/detailspelatihan/$row[id_pelatihan]'><span class='glyphicon glyphicon-zoom-in'></span></a>
+                                <a class='btn btn-warning btn-xs' title='Detail Data' href='".base_url()."admin/administrator/detailspelatihan/$row[id_pelatihan]'><span class='glyphicon glyphicon-zoom-in'></span></a>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/pelatihan_edit/$row[id_pelatihan]'><span class='glyphicon glyphicon-edit'></span></a>
                                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/pelatihan_hapus/$row[id_pelatihan]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                               </center></td>

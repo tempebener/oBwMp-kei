@@ -173,7 +173,7 @@ class Register extends CI_Controller {
             }
             $this->session->set_flashdata('msg', $msg);
 
-            redirect('register');
+            redirect('register_member');
         }else{
             $this->load->view('frontend/register/member');
         }

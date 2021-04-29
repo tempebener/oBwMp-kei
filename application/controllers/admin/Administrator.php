@@ -599,18 +599,19 @@ class Administrator extends CI_Controller {
 											}
               }
               redirect('admin/administrator/listpelatihan');
-            }
-            $where = array('id_slider' => $this->input->post('id'));
+
+          $where = array('id_slider' => $this->input->post('id'));
           }else{
               if ($this->session->username==$this->uri->segment(4) OR $this->session->level=='admin'){
                   $proses = $this->As_m->edit('tbl_pelatihan', array('id_pelatihan' => $id))->row_array();
               }else{
                   	$proses = $this->As_m->edit('tbl_pelatihan', array('id_pelatihan' => $id, 'id_users' => $this->session->id_users))->row_array();
 
-              }
+                    }
               $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_edit',$data);
-      }
+              }
   }
+
 
   function detailspelatihan($id){
 

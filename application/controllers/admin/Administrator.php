@@ -468,7 +468,6 @@ class Administrator extends CI_Controller {
 
             $this->load->library('image_lib',$config);
             $this->image_lib->watermark();
-
             if ($this->session->level == 'kontributor'){ $status = 'y'; }else{ $status = 'Y'; }
 
 
@@ -580,37 +579,46 @@ class Administrator extends CI_Controller {
                       $data = array('id_users'=>$this->session->id_users,
                       'date_time'=>date('Y-m-d'),
                       'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
-                      'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
-                      'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')));
-                      $where = array('id_pelatihan' => $this->input->post('id_pelatihan'));
+                      'deskripsi_singkat'=>$this->input->post('deskripsi_singkat_pelatihan'),
+                      'deskirpsi_full'=>$this->input->post('deskirpsi_full_pelatihan'));
+                      $where = array('id_pelatihan' => $this->input->post('id'));
 											$this->db->update('tbl_pelatihan', $data, $where);
               }else{
                       $data = array('id_users'=>$this->session->id_users,
                       'date_time'=>date('Y-m-d'),
                       'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
-                      'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
-                      'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')),
+                      'deskripsi_singkat'=>$this->input->post('deskripsi_singkat_pelatihan'),
+                      'deskirpsi_full'=>$this->input->post('deskirpsi_full_pelatihan'),
                       'foto'=>$hasil['file_name']);
-                      $where = array('id_pelatihan' => $this->input->post('id_pelatihan'));
+                      $where = array('id_pelatihan' => $this->input->post('id'));
 											$_image = $this->db->get_where('tbl_pelatihan',$where)->row();
 											$query = $this->db->update('tbl_pelatihan',$data,$where);
 											if($query){
 												unlink("theme/images/foto_pelatihan/".$_image->foto);
 											}
               }
-              redirect('admin/administrator/listpelatihan');
-
-          $where = array('id_slider' => $this->input->post('id'));
+              redirect('admin/administrator/listpelatihan/');
           }else{
-              if ($this->session->username==$this->uri->segment(4) OR $this->session->level=='admin'){
-                  $proses = $this->As_m->edit('tbl_pelatihan', array('id_pelatihan' => $id))->row_array();
+              if ($this->session->level=='admin'){
+                  $proses = $this->model_app->edit('tbl_pelatihan', array('id_pelatihan' => $id))->row_array();
               }else{
-                  	$proses = $this->As_m->edit('tbl_pelatihan', array('id_pelatihan' => $id, 'id_users' => $this->session->id_users))->row_array();
-
-                    }
+                  $proses = $this->model_app->edit('tbl_pelatihan', array('id_pelatihan' => $id, 'id_users' => $this->session->id_users))->row_array();
+              }
+              $data = array('rows' => $proses);
               $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_edit',$data);
               }
   }
+  function pelatihan_hapus()
+	{
+
+			$id = $this->uri->segment(4);
+			$_id = $this->db->get_where('tbl_pelatihan',['id_pelatihan' => $id])->row();
+			$query = $this->db->delete('tbl_pelatihan',['id_pelatihan'=> $id]);
+			if($query){
+							 unlink("./theme/images/foto_pelatihan/".$_id->foto);
+		 }
+		redirect('admin/administrator/listpelatihan/');
+	}
 
 
   function detailspelatihan($id){

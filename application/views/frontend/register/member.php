@@ -35,7 +35,15 @@
 
         <div class="row row-30">
           <div class="col-md-12">
-            <form class="rd-form rd-mailform" data-form-output="contact-form" data-form-type="contact" method="post" action="<?php echo base_url();?>register/add_member" enctype="multipart/form-data">
+            <?php 
+              if($this->session->flashdata('error') !='')
+              {
+                echo '<div class="form-output snackbar snackbar-danger" role="alert">';
+                echo $this->session->flashdata('error');
+                echo '</div>';
+              }
+            ?>
+            <form data-form-output="contact-form" data-form-type="contact" method="post" action="<?php echo base_url();?>register/add_member" enctype="multipart/form-data">
          
               <div class="row row-20">
                 <div class="col-md-6">
@@ -129,7 +137,7 @@
                 <button class="btn btn-primary" name="submit" type="submit">Apply</button>
               </div>
             </form>
-            <div class="form-output snackbar snackbar-primary" id="contact-form"></div>
+            
           </div>
         </div>
       </div>

@@ -15,13 +15,13 @@
               ?>
             <div>
                     <!-- Post event-->
-                    <div class="post post-event" data-animate='{"class":"fadeInUp"}'><a class="post-media" href="#"><img class="post-img post-img-custom" src="<?php echo base_url()?>theme/images/foto_ekonomi/<?php echo $post_new->foto_eo ?>" alt=""/>
+                    <div class="post post-event" data-animate='{"class":"fadeInUp"}'><a class="post-media" href="<?php echo base_url("ekonomioutlook/$post_new->id_eo/$post_new->judul_eo_seo ") ?>"><img class="post-img post-img-custom" src="<?php echo base_url()?>theme/images/foto_ekonomi/<?php echo $post_new->foto_eo ?>" alt=""/>
                        <!--  <div class="post-date">
                           <div class="post-day">19</div>
                           <div class="post-month"></div>
                         </div> --></a>
                       <div class="post-heading h4">
-                        <div class="post-title"><a href="#"><?php echo $post_new->judul_eo ?></a></div>
+                        <div class="post-title"><a href="<?php echo base_url("ekonomioutlook/$post_new->id_eo/$post_new->judul_eo_seo ") ?>"><?php echo $post_new->judul_eo ?></a></div>
 <!--                         <div class="post-price"></div>
  -->                      </div>
                       <div class="post-meta post-meta-vertical big">

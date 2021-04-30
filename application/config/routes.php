@@ -90,6 +90,9 @@ $route['register_member']='register/add_member';
 $route['register_mitra']='register/add_mitra';
 
 
+// Agropreneur Update
+$route['ekonomioutlook/(:num)/(:any)'] = "ekonomioutlook/ekonomi_singel/$1/$2";
+
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 

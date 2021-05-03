@@ -112,154 +112,164 @@ class Administrator extends CI_Controller {
         }
   }
   function edit_manajemenuser(){
-      $id = $this->uri->segment(4);
-      if (isset($_POST['submit'])){
-        $config['upload_path'] = 'theme/images/foto_register/profil';
-              $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-              $config['max_size'] = '1000'; // kb
-              $this->load->library('upload', $config);
-              $this->upload->do_upload('f');
-              $hasil=$this->upload->data();
-               if ($hasil['file_name']=='' AND empty($this->input->post('b'))){
-                      $data = array(
-                                      'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
-                                      'email'=>$this->db->escape_str($this->input->post('d')),
-                                      'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                      'blokir'=>$this->db->escape_str($this->input->post('h')));
-              }elseif ($hasil['file_name']!='' AND empty($this->input->post('b'))){
-                      $data = array(
-                                      'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
-                                      'email'=>$this->db->escape_str($this->input->post('d')),
-                                      'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                      'foto'=>$hasil['file_name'],
-                                      'blokir'=>$this->db->escape_str($this->input->post('h')));
-              }elseif ($hasil['file_name']=='' AND !empty($this->input->post('b'))){
-                      $data = array(
-                                      'password'=>hash("sha512", md5($this->input->post('b'))),
-                                      'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
-                                      'email'=>$this->db->escape_str($this->input->post('d')),
-                                      'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                      'blokir'=>$this->db->escape_str($this->input->post('h')));
-              }elseif ($hasil['file_name']!='' AND !empty($this->input->post('b'))){
-                      $data = array(
-                                      'password'=>hash("sha512", md5($this->input->post('b'))),
-                                      'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
-                                      'email'=>$this->db->escape_str($this->input->post('d')),
-                                      'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                      'foto'=>$hasil['file_name'],
-                                      'blokir'=>$this->db->escape_str($this->input->post('h')));
-              }
-              $where = array('id_users' => $this->input->post('id'));
-              $this->model_app->update('users', $data, $where);
+    $id = $this->uri->segment(4);
+    if (isset($_POST['submit'])){
+      $config['upload_path'] = 'theme/images/foto_register/profil';
+            $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+            $config['max_size'] = '1000'; // kb
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('f');
+            $hasil=$this->upload->data();
+             if ($hasil['file_name']=='' AND empty($this->input->post('b'))){
+                    $data = array(
+                                    'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                    'email'=>$this->db->escape_str($this->input->post('d')),
+                                    'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                                    'blokir'=>$this->db->escape_str($this->input->post('h')));
+            }elseif ($hasil['file_name']!='' AND empty($this->input->post('b'))){
+                    $data = array(
+                                    'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                    'email'=>$this->db->escape_str($this->input->post('d')),
+                                    'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                                    'foto'=>$hasil['file_name'],
+                                    'blokir'=>$this->db->escape_str($this->input->post('h')));
+            }elseif ($hasil['file_name']=='' AND !empty($this->input->post('b'))){
+                    $data = array(
+                                    'password'=>hash("sha512", md5($this->input->post('b'))),
+                                    'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                    'email'=>$this->db->escape_str($this->input->post('d')),
+                                    'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                                    'blokir'=>$this->db->escape_str($this->input->post('h')));
+            }elseif ($hasil['file_name']!='' AND !empty($this->input->post('b'))){
+                    $data = array(
+                                    'password'=>hash("sha512", md5($this->input->post('b'))),
+                                    'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                    'email'=>$this->db->escape_str($this->input->post('d')),
+                                    'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                                    'foto'=>$hasil['file_name'],
+                                    'blokir'=>$this->db->escape_str($this->input->post('h')));
+            }
+            $where = array('id_users' => $this->input->post('id'));
+            $this->model_app->update('users', $data, $where);
 
-                $mod=count($this->input->post('modul'));
-                $modul=$this->input->post('modul');
-                for($i=0;$i<$mod;$i++){
-                  $datam = array('id_session'=>$this->input->post('ids'),
-                                'id_modul'=>$modul[$i]);
-                  $this->model_app->insert('users_modul',$datam);
-                }
-
-        redirect('admin/administrator/edit_manajemenuser/'.$this->input->post('id'));
-      }else{
-              if ($this->session->id_users==$this->uri->segment(4) OR $this->session->level=='admin'){
-                  $proses = $this->model_app->edit('users', array('id_users' => $id))->row_array();
-                  $akses = $this->model_app->view_join_where('users_modul','modul','id_modul', array('id_session' => $proses['id_session']),'id_umod','DESC');
-                  $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
-                  $data = array('rows' => $proses, 'record' => $modul, 'akses' => $akses);
-            $this->template->load('administrator/template','administrator/mod_users/view_users_edit',$data);
-              }else{
-                  redirect('admin/administrator/edit_manajemenuser/'.$this->session->id_users);
+              $mod=count($this->input->post('modul'));
+              $modul=$this->input->post('modul');
+              for($i=0;$i<$mod;$i++){
+                $datam = array('id_session'=>$this->input->post('ids'),
+                              'id_modul'=>$modul[$i]);
+                $this->model_app->insert('users_modul',$datam);
               }
-      }
+
+      redirect('admin/administrator/edit_manajemenuser/'.$this->input->post('id'));
+    }else{
+            if ($this->session->id_users==$this->uri->segment(4) OR $this->session->level=='admin'){
+                $proses = $this->model_app->edit('users', array('id_users' => $id))->row_array();
+                $akses = $this->model_app->view_join_where('users_modul','modul','id_modul', array('id_session' => $proses['id_session']),'id_umod','DESC');
+                $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
+                $data = array('rows' => $proses, 'record' => $modul, 'akses' => $akses);
+          $this->template->load('administrator/template','administrator/mod_users/view_users_edit',$data);
+            }else{
+                redirect('admin/administrator/edit_manajemenuser/'.$this->session->id_users);
+            }
+    }
   }
   function edit_manajemenprofile(){
-          $id = $this->uri->segment(4);
-          if (isset($_POST['submit'])){
-              $config['upload_path'] = 'theme/images/foto_register/profil/';
-              $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
-              $config['max_size'] = '1000'; // kb
-              $this->load->library('upload', $config);
-              $this->upload->do_upload('f');
-              $hasil=$this->upload->data();
-              if ($hasil['file_name']=='' AND empty($this->input->post('bw'))){
-                      $data = array(
-                                      'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
-                                      'email'=>$this->db->escape_str($this->input->post('d')),
-                                      'no_telp'=>$this->db->escape_str($this->input->post('e')),
+    $id = $this->uri->segment(4);
+    if (isset($_POST['submit'])){
+        $config['upload_path'] = 'theme/images/foto_register/profil/';
+        $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
+        $config['max_size'] = '1000'; // kb
+        $this->load->library('upload', $config);
+        $this->upload->do_upload('f');
+        $hasil=$this->upload->data();
+        if ($hasil['file_name']=='' AND empty($this->input->post('bw'))){
+                $data = array(
+                                'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                'email'=>$this->db->escape_str($this->input->post('d')),
+                                'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                            );
+        }elseif ($hasil['file_name']!='' AND empty($this->input->post('bw'))){
+                $data = array(
+                                'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                'email'=>$this->db->escape_str($this->input->post('d')),
+                                'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                                'foto'=>$hasil['file_name']
+                            );
+        }elseif ($hasil['file_name']=='' AND !empty($this->input->post('bw'))){
+                $data = array(
+                                'password'=>hash("sha512", md5($this->input->post('bw'))),
+                                'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                'email'=>$this->db->escape_str($this->input->post('d')),
+                                'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                                'pesan_singkat'=>$this->input->post('psn')
+                            );
+        }elseif ($hasil['file_name']!='' AND !empty($this->input->post('bw'))){
+                $data = array(
+                                'password'=>hash("sha512", md5($this->input->post('bw'))),
+                                'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
+                                'email'=>$this->db->escape_str($this->input->post('d')),
+                                'no_telp'=>$this->db->escape_str($this->input->post('e')),
+                                'pesan_singkat'=>$this->input->post('psn'),
+                                'foto'=>$hasil['file_name'],
+                            );
+        }
+        $where = array('id_users' => $this->input->post('id'));
+        $this->model_app->update('users', $data, $where);
 
-                                  );
-              }elseif ($hasil['file_name']!='' AND empty($this->input->post('bw'))){
-                      $data = array(
-                                      'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
-
-                                      'email'=>$this->db->escape_str($this->input->post('d')),
-                                      'no_telp'=>$this->db->escape_str($this->input->post('e')),
-
-                                      'foto'=>$hasil['file_name']
-                                  );
-              }elseif ($hasil['file_name']=='' AND !empty($this->input->post('bw'))){
-                      $data = array(
-                                      'password'=>hash("sha512", md5($this->input->post('bw'))),
-                                      'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
-                                      'email'=>$this->db->escape_str($this->input->post('d')),
-                                      'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                      'pesan_singkat'=>$this->input->post('psn')
-                                  );
-              }elseif ($hasil['file_name']!='' AND !empty($this->input->post('bw'))){
-                      $data = array(
-                                      'password'=>hash("sha512", md5($this->input->post('bw'))),
-                                      'nama_lengkap'=>$this->db->escape_str($this->input->post('c')),
-                                      'email'=>$this->db->escape_str($this->input->post('d')),
-                                      'no_telp'=>$this->db->escape_str($this->input->post('e')),
-                                      'pesan_singkat'=>$this->input->post('psn'),
-                                      'foto'=>$hasil['file_name'],
-                                  );
-              }
-              $where = array('id_users' => $this->input->post('id'));
-              $this->model_app->update('users', $data, $where);
-
-                $mod=count($this->input->post('modul'));
-                $modul=$this->input->post('modul');
-                for($i=0;$i<$mod;$i++){
-                  $datam = array('id_session'=>$this->input->post('ids'),
-                                'id_modul'=>$modul[$i]);
-                  $this->model_app->insert('users_modul',$datam);
-                }
-
-              redirect('admin/administrator/edit_manajemenprofile/'.$this->input->post('id'));
-          }else{
-              if ($this->session->id_users==$this->uri->segment(4) OR $this->session->level=='admin'){
-                  $proses = $this->model_app->edit('users', array('id_users' => $id))->row_array();
-                  $akses = $this->model_app->view_join_where('users_modul','modul','id_modul', array('id_session' => $proses['id_session']),'id_umod','DESC');
-                  $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
-                  $data = array('rows' => $proses, 'record' => $modul, 'akses' => $akses);
-                  $this->template->load('administrator/template','administrator/mod_users/view_users_edit_profile',$data);
-              }else{
-                  redirect('admin/administrator/edit_manajemenprofile/'.$this->session->id_users);
-              }
+          $mod=count($this->input->post('modul'));
+          $modul=$this->input->post('modul');
+          for($i=0;$i<$mod;$i++){
+            $datam = array('id_session'=>$this->input->post('ids'),
+                          'id_modul'=>$modul[$i]);
+            $this->model_app->insert('users_modul',$datam);
           }
+
+        redirect('admin/administrator/edit_manajemenprofile/'.$this->input->post('id'));
+    }else{
+        if ($this->session->id_users==$this->uri->segment(4) OR $this->session->level=='admin'){
+            $proses = $this->model_app->edit('users', array('id_users' => $id))->row_array();
+            $akses = $this->model_app->view_join_where('users_modul','modul','id_modul', array('id_session' => $proses['id_session']),'id_umod','DESC');
+            $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
+            $data = array('rows' => $proses, 'record' => $modul, 'akses' => $akses);
+            $this->template->load('administrator/template','administrator/mod_users/view_users_edit_profile',$data);
+        }else{
+            redirect('admin/administrator/edit_manajemenprofile/'.$this->session->id_users);
+        }
+    }
   }
   function delete_manajemenuser(){
-      cek_session_akses ('manajemenuser',$this->session->id_session);
-      $id = $this->uri->segment(4);
-      $_id = $this->db->get_where('users',['id_users' => $id])->row();
-       $query = $this->db->delete('users',['id_users'=>$id]);
-      if($query){
-               unlink("./theme/images/foto_register/profil/".$_id->foto);
-     }
-     redirect('admin/administrator/manajemenuser');
-
-
+    cek_session_akses ('manajemenuser',$this->session->id_session);
+    $id = $this->uri->segment(4);
+    $_id = $this->db->get_where('users',['id_users' => $id])->row();
+    $query = $this->db->delete('users',['id_users'=>$id]);
+    if($query){
+      unlink("./theme/images/foto_register/profil/".$_id->foto);
     }
+    redirect('admin/administrator/manajemenuser');
+  }
+
+  function deactive_manajemenuser(){
+    cek_session_akses('manajemenuser',$this->session->id_session);
+    $id = array('id_users' => $this->uri->segment(4));
+    $data = array('blokir' => 'Y');
+    $this->model_app->deactive_data($id,$data);
+    redirect('admin/administrator/manajemenuser');
+  }
+
+  function active_manajemenuser(){
+    cek_session_akses('manajemenuser',$this->session->id_session);
+    $id = array('id_users' => $this->uri->segment(4));
+    $data = array('blokir' => 'N');
+    $this->model_app->deactive_data($id,$data);
+    redirect('admin/administrator/manajemenuser');
+  }
+
   function delete_akses(){
-          cek_session_admin();
-          $id = array('id_umod' => $this->uri->segment(4));
-          $this->model_app->delete('users_modul',$id);
-          redirect('admin/administrator/edit_manajemenuser/'.$this->uri->segment(4));
-      }
-
-
+    cek_session_admin();
+    $id = array('id_umod' => $this->uri->segment(4));
+    $this->model_app->delete('users_modul',$id);
+    redirect('admin/administrator/edit_manajemenuser/'.$this->uri->segment(4));
+  }
 
   function sliderlist(){
       $data['record'] = $this->db->query("select * from tbl_slider x join tbl_slider_s y on x.id_slider_s = y.id_slider_s  where id_slider

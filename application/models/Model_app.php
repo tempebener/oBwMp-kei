@@ -86,4 +86,9 @@ class Model_app extends CI_model{
         $this->db->where($where);
         $this->db->update('users',$data);
     }
+
+    function active_data($where,$data){
+        $this->db->where($where);
+        $this->db->update('users',$data);
+    }   
 }

@@ -37,11 +37,12 @@
     
       <!-- Side SocMed -->
       <div class="icon-bar">
-        <a href="https://www.facebook.com/kesatriaan.entrepreneur.indonesia" class="facebook"><i class="fa fa-facebook"></i></a> 
-        <a href="https://www.instagram.com/kei_widodo_makmur" class="instagram"><i class="fa fa-instagram"></i></a> 
+        <a href="https://www.facebook.com/kesatriaan.entrepreneur.indonesia" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a> 
+        <a href="https://wa.me/082136613891" class="whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a> 
+        <a href="https://www.instagram.com/kei_widodo_makmur" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a> 
+        <a href="https://www.youtube.com/channel/UCaXcQCE0lbJWRz9GQhtuXSw" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a> 
         <!-- <a href="#" class="google"><i class="fa fa-google"></i></a> 
         <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a> -->
-        <a href="https://www.youtube.com/channel/UCaXcQCE0lbJWRz9GQhtuXSw" class="youtube"><i class="fa fa-youtube"></i></a> 
       </div>
 
       <!-- Counters-->

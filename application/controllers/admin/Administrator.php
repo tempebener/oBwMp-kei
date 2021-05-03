@@ -106,7 +106,7 @@ class Administrator extends CI_Controller {
             // redirect('administrator/edit_manajemenuser/'.$this->input->post('a'));
             redirect('admin/administrator/manajemenuser');
         }else{
-            $proses = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
+            $proses = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','ASC');
             $data = array('record' => $proses);
             $this->template->load('administrator/template','administrator/mod_users/view_users_tambah',$data);
         }
@@ -165,7 +165,7 @@ class Administrator extends CI_Controller {
             if ($this->session->id_users==$this->uri->segment(4) OR $this->session->level=='admin'){
                 $proses = $this->model_app->edit('users', array('id_users' => $id))->row_array();
                 $akses = $this->model_app->view_join_where('users_modul','modul','id_modul', array('id_session' => $proses['id_session']),'id_umod','DESC');
-                $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
+                $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','ASC');
                 $data = array('rows' => $proses, 'record' => $modul, 'akses' => $akses);
           $this->template->load('administrator/template','administrator/mod_users/view_users_edit',$data);
             }else{
@@ -229,7 +229,7 @@ class Administrator extends CI_Controller {
         if ($this->session->id_users==$this->uri->segment(4) OR $this->session->level=='admin'){
             $proses = $this->model_app->edit('users', array('id_users' => $id))->row_array();
             $akses = $this->model_app->view_join_where('users_modul','modul','id_modul', array('id_session' => $proses['id_session']),'id_umod','DESC');
-            $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','DESC');
+            $modul = $this->model_app->view_where_ordering('modul', array('publish' => 'Y','status' => 'user'), 'id_modul','ASC');
             $data = array('rows' => $proses, 'record' => $modul, 'akses' => $akses);
             $this->template->load('administrator/template','administrator/mod_users/view_users_edit_profile',$data);
         }else{

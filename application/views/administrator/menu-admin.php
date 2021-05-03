@@ -45,6 +45,9 @@
               if($cek==1 OR $this->session->level=='admin'){
                 echo "<li><a href='".base_url()."admin/administrator/listpelatihan'><i class='fa fa-circle-o'></i>Pelatihan</a></li>";
               }
+              if($cek==1 OR $this->session->level=='admin'){
+                echo "<li><a href='".base_url()."admin/administrator/eo_list'><i class='fa fa-circle-o'></i>Ekonomi Outlook</a></li>";
+              }
 
                 $cek_member=$this->model_app->umenu_akses("listmember",$this->session->id_session);
                 if($cek_member==1 OR $this->session->level=='admin'){

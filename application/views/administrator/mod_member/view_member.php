@@ -32,7 +32,7 @@
                               <td>$row[pend_terakhir]</td>
                               <td>$row[pekerjaan]</td>
                               <td>$row[usaha_diminati]</td>
-                              <td class='div-image'><img class='img-circle' width='45px' style='border:1px solid #cecece' class='img-circle' src='".base_url()."theme/images/foto_users/member/foto_diri/$foto_pas'></td>
+                              <td class='div-image'><img class='img-circle' width='45px' style='border:1px solid #cecece' class='img-circle' src='".base_url()."theme/images/foto_users/$foto_pas'></td>
                               <td><center>
                                 <a class='btn btn-warning btn-xs' title='Detail Data' href='".base_url()."admin/administrator/detailsmember/$row[id_member]'><span class='glyphicon glyphicon-zoom-in'></span></a>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/edit_member/$row[id_member]'><span class='glyphicon glyphicon-edit'></span></a>

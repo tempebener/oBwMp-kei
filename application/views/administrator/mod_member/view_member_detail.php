@@ -35,11 +35,11 @@
 <tr><th>Pendidikan Terakhir</th><td> $row[pend_terakhir]</td></tr>
 <tr><th>Pekerjaan</th><td> $row[pekerjaan]</td></tr>
 <tr><th>Usaha yang Diminati</th><td> $row[usaha_diminati]</td></tr>
-<tr><th>KTP</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/member/ktp/$row[foto_ktp]'></tr>
-<tr><th>NPWP</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/member/npwp/$row[foto_npwp]'></tr>
-<tr><th>Foto Diri</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/member/foto_diri/$row[foto_pas]'></tr>
-<tr><th>SKU</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/member/sku/$row[foto_sku]'></tr>
-<tr><th>Partnership Agreement</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/member/partnership/$row[partnership_agreement]'></tr>
+<tr><th>KTP</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/$row[foto_ktp]'></tr>
+<tr><th>NPWP</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/$row[foto_npwp]'></tr>
+<tr><th>Foto Diri</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/$row[foto_pas]'></tr>
+<tr><th>SKU</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/$row[foto_sku]'></tr>
+<tr><th>Partnership Agreement</th><td> <img style='border:1px solid #cecece' height='200px' class='' src='".base_url()."theme/images/foto_users/$row[partnership_agreement]'></tr>
 
  ";
                       $no++;

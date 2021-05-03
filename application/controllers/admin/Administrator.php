@@ -1068,7 +1068,7 @@ class Administrator extends CI_Controller {
     cek_session_akses('listmember',$this->session->id_session);
     $id = $this->session->id_users;
     if (isset($_POST['submit'])){
-          $config['upload_path'] = 'theme/images/foto_users/member/';
+          $config['upload_path'] = 'theme/images/foto_users/';
           $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
           $config['max_size'] = '1000'; // kb
           $this->load->library('upload', $config);
@@ -1160,7 +1160,7 @@ class Administrator extends CI_Controller {
       cek_session_akses('listmember',$this->session->id_session);
       $id = $this->uri->segment(4);
       if (isset($_POST['submit'])){
-          $config['upload_path'] = 'theme/images/foto_users/member/';
+          $config['upload_path'] = 'theme/images/foto_users/';
           $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
           $config['max_size'] = '1000'; // kb
           $this->load->library('upload', $config);

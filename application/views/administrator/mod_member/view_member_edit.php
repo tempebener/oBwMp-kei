@@ -41,27 +41,27 @@
 
                     <tr><th scope='row'>KTP</th>
                       <td><input type='file' class='form-control' name='foto_ktp'>";
-                        if ($rows['foto_ktp'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/member/ktp/$rows[foto_ktp]'>$rows[foto_ktp]</a>"; } echo "</td>
+                        if ($rows['foto_ktp'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/$rows[foto_ktp]'>$rows[foto_ktp]</a>"; } echo "</td>
                     </tr>
 
                     <tr><th scope='row'>NPWP</th>
                       <td><input type='file' class='form-control' name='foto_npwp'>";
-                        if ($rows['foto_npwp'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/member/npwp/$rows[foto_npwp]'>$rows[foto_npwp]</a>"; } echo "</td>
+                        if ($rows['foto_npwp'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/$rows[foto_npwp]'>$rows[foto_npwp]</a>"; } echo "</td>
                     </tr>
 
                     <tr><th scope='row'>Foto Diri</th>
                       <td><input type='file' class='form-control' name='foto_pas'>";
-                        if ($rows['foto_pas'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/member/foto_diri/$rows[foto_pas]'>$rows[foto_pas]</a>"; } echo "</td>
+                        if ($rows['foto_pas'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/$rows[foto_pas]'>$rows[foto_pas]</a>"; } echo "</td>
                     </tr>
 
                     <tr><th scope='row'>SKU</th>
                       <td><input type='file' class='form-control' name='foto_sku'>";
-                        if ($rows['foto_sku'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/member/sku/$rows[foto_sku]'>$rows[foto_sku]</a>"; } echo "</td>
+                        if ($rows['foto_sku'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/$rows[foto_sku]'>$rows[foto_sku]</a>"; } echo "</td>
                     </tr>
 
                     <tr><th scope='row'>Partnership Agreement</th>
                       <td><input type='file' class='form-control' name='partnership_agreement'>";
-                        if ($rows['partnership_agreement'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/member/partnership/$rows[partnership_agreement]'>$rows[partnership_agreement]</a>"; } echo "</td>
+                        if ($rows['partnership_agreement'] != ''){ echo "<i style='color:red'>Lihat Gambar Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/$rows[partnership_agreement]'>$rows[partnership_agreement]</a>"; } echo "</td>
                     </tr>
                     
                   </tbody>

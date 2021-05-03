@@ -10,11 +10,11 @@
                     <input type="hidden" name="id_eo" value="<?php echo $eo->id_eo;?>"/>
                     <tr><th width="120px" scope="row">Judul</th>    <td><input type="text" class="form-control" name="judul_eo_detail" required></td></tr>
                     <tr><th scope="row">Deskripsi</th>             <td><textarea id="editor1" class="form-control" name="deskripsi_eo_detail" style="height:260px" required></textarea></td></tr>
-                    <tr><th scope='row'>Gambar</th>                 <td><input type='file' class='form-control' name='gambar' required></td></tr>
+                    <tr><th scope='row'>Gambar</th>                 <td><input type='file' class='form-control' name='gambar'></td></tr>
 
-                    <tr><th scope='row'>File PDF</th>                 <td><input type='file' class='form-control' name='download_pdf' required></td></tr>
+                    <tr><th scope='row'>File PDF</th>                 <td><input type='file' class='form-control' name='download_pdf'></td></tr>
                    <tr> <th scope='row'><td>NOTED: Nama File PDF Tidak boleh mengunakan Spasi. </td></th></tr>
-                    <tr><th width="120px" scope="row">LINK Video Youtube</th>    <td><input type="text" class="form-control" name="video" required></td></tr>
+                    <tr><th width="120px" scope="row">LINK Video Youtube</th>    <td><input type="text" class="form-control" name="video"></td></tr>
                   </tbody>
                   </table>
                 </div>

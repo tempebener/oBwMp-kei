@@ -8,6 +8,7 @@ class Administrator extends CI_Controller {
     /* memanggil model untuk ditampilkan pada masing2 modul */
 
     $this->load->model('M_pelatihan');
+    $this->load->model('M_ekonomi');
     /* memanggil function dari masing2 model yang akan digunakan */
 
   }
@@ -692,7 +693,7 @@ class Administrator extends CI_Controller {
                     $data = array(
                     'judul_pelatihan_detail' =>$this->input->post('judul_pelatihan_detail'),
                     'judul_pelatihan_detail_seo' =>seo_title($this->input->post('judul_pelatihan_detail')),
-                    'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),                  
+                    'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),
                     'date_time' => date("Y-m-d"));
                     $where = array('id_pelatihan_detail' => $this->input->post('id'));
                     $this->db->update('tbl_pelatihan_detail', $data, $where);
@@ -754,6 +755,226 @@ class Administrator extends CI_Controller {
 
   }
 
+  function eo_list(){
+      cek_session_akses('eo_list',$this->session->id_session);
+         $data['record'] = $this->model_app->view_ordering('tbl_ekonomi_outlook','id_eo','DESC');
+
+
+      $this->template->load('administrator/template','administrator/mod_eo/view_list',$data);
+  }
+  function eo_tambah(){
+    $this->template->load('administrator/template','administrator/mod_eo/view_tambah');
+  }
+  function eo_simpan(){
+      if (isset($_POST['submit'])){
+              $config['upload_path'] = 'theme/images/foto_ekonomi/';
+              $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+              $config['max_size'] = '5000'; // kb
+              $this->load->library('upload', $config);
+              $this->upload->do_upload('foto');
+              $hasil=$this->upload->data();
+              if ($hasil['file_name']==''){
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                        'judul_eo'=>$this->db->escape_str($this->input->post('judul_eo')),
+                                      'deskripsi_eo'=>$this->input->post('deskripsi_eo'));
+              }else{
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                        'judul_eo'=>$this->db->escape_str($this->input->post('judul_eo')),
+                                      'deskripsi_eo'=>$this->input->post('deskripsi_eo'),
+                                      'foto_eo'=>$hasil['file_name']);
+              }
+              $this->model_app->insert('tbl_ekonomi_outlook',$data);
+        redirect('admin/administrator/eo_list');
+      }else{
+        $this->template->load('administrator/template','administrator/mod_eo/view_tambah',$data);
+      }
+  }
+  function eo_edit(){
+      $id = $this->uri->segment(4);
+      if (isset($_POST['submit'])){
+              $config['upload_path'] = 'theme/images/foto_ekonomi/';
+              $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+              $config['max_size'] = '5000'; // kb
+              $this->load->library('upload', $config);
+              $this->upload->do_upload('foto');
+              $hasil=$this->upload->data();
+              if ($hasil['file_name']==''){
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'judul_eo'=>$this->db->escape_str($this->input->post('judul_eo')),
+                      'deskripsi_eo'=>$this->input->post('deskripsi_eo'));
+                      $where = array('id_eo' => $this->input->post('id'));
+                      $this->db->update('tbl_ekonomi_outlook', $data, $where);
+              }else{
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'judul_eo'=>$this->db->escape_str($this->input->post('judul_eo')),
+                      'deskripsi_eo'=>$this->input->post('deskripsi_eo'),
+                      'foto'=>$hasil['file_name']);
+                      $where = array('id_pelatihan' => $this->input->post('id'));
+                      $_image = $this->db->get_where('tbl_ekonomi_outlook',$where)->row();
+                      $query = $this->db->update('tbl_ekonomi_outlook',$data,$where);
+                      if($query){
+                        unlink("theme/images/foto_ekonomi/".$_image->foto_eo);
+                      }
+              }
+              redirect('admin/administrator/eo_list/');
+          }else{
+              if ($this->session->level=='admin'){
+                  $proses = $this->model_app->edit('tbl_ekonomi_outlook', array('id_eo' => $id))->row_array();
+              }else{
+                  $proses = $this->model_app->edit('tbl_ekonomi_outlook', array('id_eo' => $id, 'id_users' => $this->session->id_users))->row_array();
+              }
+              $data = array('rows' => $proses);
+              $this->template->load('administrator/template','administrator/mod_eo/view_edit',$data);
+              }
+  }
+  function eo_hapus(){
+
+      $id = $this->uri->segment(4);
+      $_id = $this->db->get_where('tbl_ekonomi_outlook',['id_eo' => $id])->row();
+      $query = $this->db->delete('tbl_ekonomi_outlook',['id_eo'=> $id]);
+      if($query){
+               unlink("./theme/images/foto_ekonomi/".$_id->foto);
+     }
+    redirect('admin/administrator/eo_list/');
+  }
+  function eo_detail($id){
+
+      $row = $this->M_ekonomi->get_by_id2($id);
+      /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
+      if ($row){
+      /* memanggil function dari masing2 model yang akan digunakan */
+      $eo = $this->M_ekonomi->get_by_id2($id);
+      $data['eo']            = $eo;
+       $data['eobab']            = $this->M_ekonomi->get_by_id3($id);
+      $this->template->load('administrator/template','administrator/mod_eo/view_detail',$data);
+      }
+  }
+
+  function add_bab_eo($id){
+      $eo = $this->M_ekonomi->get_by_id_add($id);
+      $data['eo']            = $eo;
+      $this->template->load('administrator/template','administrator/mod_eo/view_eo_bab_tambah',$data);
+  }
+  function simpan_bab_eo(){
+      if (isset($_POST['submit'])){
+        $id = $this->input->post('id_eo');
+        $pelatihan = $this->M_ekonomi->get_by_id_add($id);
+        $seo = seo_title($this->input->post('judul_eo_detail'));
+
+        $config['upload_path']    = 'theme/images/foto_ekonomi/ekonomi_detail/';
+        $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
+        $config['max_size']       = '5000'; // kb
+        $this->load->library('upload', $config);
+        $this->upload->do_upload('gambar');
+        $hasil=$this->upload->data();
+        $this->upload->do_upload('download_pdf');
+        $hasil2=$this->upload->data();
+
+        $data = array('id_eo' =>$id,
+                    'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
+                    'judul_eo_detail_seo' =>$seo.'-'.date("dmYHis"),
+                    'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
+                    'gambar'=>$hasil['file_name'],
+                    'date_time' => date("Y-m-d"),
+                    'download_pdf' =>$hasil2['file_name'],
+                    'video' =>$this->input->post('video'));
+
+        $this->M_ekonomi->insert_bab($data);
+        redirect('admin/administrator/eo_detail/' . $id);
+      }else{
+        $this->template->load('administrator/template','administrator/mod_eo/view_eo_bab_tambah');
+      }
+  }
+  function eo_bab_hapus(){
+
+      $id = $this->uri->segment(4);
+      $_id = $this->db->get_where('tbl_ekonomi_outlook_detail',['id_eo_detail' => $id])->row();
+      $query = $this->db->delete('tbl_ekonomi_outlook_detail',['id_eo_detail'=> $id]);
+      if($query){
+               unlink("./theme/images/foto_ekonomi/ekonomi_detail/".$_id->gambar);
+     }
+    redirect('admin/administrator/eo_list/');
+  }
+  function eo_bab_edit(){
+    $id = $this->uri->segment(4);
+    if (isset($_POST['submit'])){
+            $config['upload_path'] = 'theme/images/foto_ekonomi/ekonomi_detail/';
+            $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
+            $config['max_size']       = '5000'; // kb
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('gambar');
+            $hasil=$this->upload->data();
+            $this->upload->do_upload('download_pdf');
+            $hasil2=$this->upload->data();
+            if ($hasil['file_name']=='' AND $hasil2['file_name']==''){
+                    $data = array(
+                    'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
+                    'judul_eo_detail_seo' =>seo_title($this->input->post('judul_eo_detail_seo')),
+                    'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
+                    'date_time' => date("Y-m-d"));
+                    $where = array('id_eo_detail' => $this->input->post('id'));
+                    $this->db->update('tbl_ekonomi_outlook_detail', $data, $where);
+            }else if($hasil['file_name']==''){
+                    $data = array(
+                      'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
+                      'judul_eo_detail_seo' =>seo_title($this->input->post('judul_eo_detail_seo')),
+                      'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
+                    'download_pdf'=>$hasil2['file_name'],
+                    'date_time' => date("Y-m-d"),
+                    'download_pdf'=>$hasil2['file_name']);
+                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_ekonomi_outlook_detail',$where)->row();
+                    $query = $this->db->update('tbl_ekonomi_outlook_detail',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_ekonomi/ekonomi_detail/".$_image->download_pdf);
+                    }
+            }else if($hasil2['file_name']==''){
+                    $data = array(
+                      'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
+                      'judul_eo_detail_seo' =>seo_title($this->input->post('judul_eo_detail_seo')),
+                      'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
+                    'download_pdf'=>$hasil2['file_name'],
+                    'date_time' => date("Y-m-d"),
+                    'gambar'=>$hasil['file_name']);
+                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_ekonomi_outlook_detail',$where)->row();
+                    $query = $this->db->update('tbl_ekonomi_outlook_detail',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_ekonomi/ekonomi_detail/".$_image->gambar);
+                    }
+            }else{
+                    $data = array(
+                      'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
+                      'judul_eo_detail_seo' =>seo_title($this->input->post('judul_eo_detail_seo')),
+                      'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
+                    'download_pdf'=>$hasil2['file_name'],
+                    'date_time' => date("Y-m-d"),
+                    'gambar'=>$hasil['file_name'],
+                    'download_pdf'=>$hasil2['file_name']);
+                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_ekonomi_outlook_detail',$where)->row();
+                    $query = $this->db->update('tbl_ekonomi_outlook_detail',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_ekonomi/ekonomi_detail/".$_image->gambar);
+                      unlink("theme/images/foto_ekonomi/ekonomi_detail/".$_image->download_pdf);
+                    }
+            }
+            redirect('admin/administrator/eo_list/');
+        }else{
+            if ($this->session->level=='admin'){
+                $proses = $this->model_app->edit('tbl_ekonomi_outlook_detail', array('id_eo_detail' => $id))->row_array();
+            }else{
+                $proses = $this->model_app->edit('tbl_ekonomi_outlook_detail', array('id_eo_detail' => $id, 'id_users' => $this->session->id_users))->row_array();
+            }
+            $data = array('rows' => $proses);
+            $this->template->load('administrator/template','administrator/mod_eo/view_eo_bab_edit',$data);
+            }
+
+  }
 
   // Modul Pengantar
   function listpengantar(){

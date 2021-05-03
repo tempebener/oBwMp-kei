@@ -9,7 +9,7 @@
                   <tbody>
                     <tr><th width="120px" scope="row">Judul</th>    <td><input type="text" class="form-control" name="judul_eo" required></td></tr>
                     <tr><th scope="row">Deskripsi Full</th>             <td><textarea id="editor1" class="form-control" name="deskripsi_eo" style="height:260px" required></textarea></td></tr>
-                    <tr><th scope='row'>Gambar</th>                 <td><input type='file' class='form-control' name='foto' required></td></tr>
+                    <tr><th scope='row'>Gambar</th>                 <td><input type='file' class='form-control' name='foto'></td></tr>
                   </tbody>
                   </table>
                 </div>

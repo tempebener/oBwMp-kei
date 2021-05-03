@@ -19,7 +19,7 @@
                     <tr><th scope='row'>Alamat Email</th>                    <td><input type='email' class='form-control' name='d' value='$rows[email]'></td></tr>
                     <tr><th scope='row'>No Telepon</th>                  <td><input type='number' class='form-control' name='e' value='$rows[no_telp]'></td></tr>
                     <tr><th scope='row'>Ganti Foto</th>                     <td><input type='file' class='form-control' name='f'><hr style='margin:5px'>";
-                                                                                 if ($rows['foto'] != ''){ echo "<i style='color:red'>Foto Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_register/profil/$rows[foto]'>$rows[foto]</a>"; } echo "</td></tr></td></tr>";
+                                                                                 if ($rows['foto'] != ''){ echo "<i style='color:red'>Foto Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_users/$rows[foto]'>$rows[foto]</a>"; } echo "</td></tr></td></tr>";
                     if ($this->session->level == 'admin'){
                       echo "<tr><th scope='row'>Status</th>                   <td>"; if ($rows['blokir']=='Y'){ echo "<input type='radio' name='h' value='Y' checked> Blokir &nbsp; <input type='radio' name='h' value='N'> Aktif"; }else{ echo "<input type='radio' name='h' value='Y'> Blokir &nbsp; <input type='radio' name='h' value='N' checked> Aktif"; } echo "</td></tr>
                             <tr><th scope='row'>Tambah Akses</th>                    <td><div class='checkbox-scroll'>";

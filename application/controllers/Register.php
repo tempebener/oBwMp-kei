@@ -100,7 +100,7 @@ class Register extends CI_Controller {
             $this->session->set_flashdata('error', '<div class="form-output snackbar snackbar-danger" role="alert">Email sudah terdaftar, silahkan gunakan email lain</div>');
             redirect('register');
         }else {
-            $config['upload_path'] = 'theme/images/foto_users/member/';
+            $config['upload_path'] = 'theme/images/foto_users/';
             $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
             $config['max_size'] = '1000'; // kb
             $this->load->library('upload', $config);

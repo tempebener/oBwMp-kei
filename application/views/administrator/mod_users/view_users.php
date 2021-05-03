@@ -28,7 +28,7 @@
                           <td><?= $row['username'] ?></td>
                           <td><?= $row['nama_lengkap'] ?></td>
                           <td><?= $row['email'] ?></td>
-                          <td class="div-image"><img class="img-circle" width="45px" style="border:1px solid #cecece" class="img-circle" src="<?= base_url('theme/images/foto_register/'.$foto) ?>"></td>
+                          <td class="div-image"><img class="img-circle" width="45px" style="border:1px solid #cecece" class="img-circle" src="<?= base_url('theme/images/foto_users/'.$foto) ?>"></td>
                           <td>
                             <?php
                               if($row['blokir']=="Y"){

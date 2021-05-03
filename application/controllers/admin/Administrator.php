@@ -66,7 +66,7 @@ class Administrator extends CI_Controller {
         cek_session_akses('manajemenuser',$this->session->id_session);
         $id = $this->session->id_users;
         if (isset($_POST['submit'])){
-            $config['upload_path'] = 'theme/images/foto_register/profil';
+            $config['upload_path'] = 'theme/images/foto_users/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG|jpeg';
             $config['max_size'] = '1000'; // kb
             $this->load->library('upload', $config);
@@ -114,7 +114,7 @@ class Administrator extends CI_Controller {
   function edit_manajemenuser(){
     $id = $this->uri->segment(4);
     if (isset($_POST['submit'])){
-      $config['upload_path'] = 'theme/images/foto_register/profil';
+      $config['upload_path'] = 'theme/images/foto_users/';
             $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
             $config['max_size'] = '1000'; // kb
             $this->load->library('upload', $config);
@@ -176,7 +176,7 @@ class Administrator extends CI_Controller {
   function edit_manajemenprofile(){
     $id = $this->uri->segment(4);
     if (isset($_POST['submit'])){
-        $config['upload_path'] = 'theme/images/foto_register/profil/';
+        $config['upload_path'] = 'theme/images/foto_users/';
         $config['allowed_types'] = 'gif|jpg|png|JPG|JPEG';
         $config['max_size'] = '1000'; // kb
         $this->load->library('upload', $config);
@@ -243,7 +243,7 @@ class Administrator extends CI_Controller {
     $_id = $this->db->get_where('users',['id_users' => $id])->row();
     $query = $this->db->delete('users',['id_users'=>$id]);
     if($query){
-      unlink("./theme/images/foto_register/profil/".$_id->foto);
+      unlink("./theme/images/foto_users/".$_id->foto);
     }
     redirect('admin/administrator/manajemenuser');
   }

@@ -21,7 +21,7 @@
                     <tr><th scope='row'>Ganti Foto</th>                     <td><input type='file' class='form-control' name='f'><hr style='margin:5px'>";
                                                                                  if ($rows['foto'] != ''){ echo "<i style='color:red'>Foto Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_register/profil/$rows[foto]'>$rows[foto]</a>"; } echo "</td></tr></td></tr>";
                     if ($this->session->level == 'admin'){
-                      echo "<tr><th scope='row'>Blokir</th>                   <td>"; if ($rows['blokir']=='Y'){ echo "<input type='radio' name='h' value='Y' checked> Ya &nbsp; <input type='radio' name='h' value='N'> Tidak"; }else{ echo "<input type='radio' name='h' value='Y'> Ya &nbsp; <input type='radio' name='h' value='N' checked> Tidak"; } echo "</td></tr>
+                      echo "<tr><th scope='row'>Status</th>                   <td>"; if ($rows['blokir']=='Y'){ echo "<input type='radio' name='h' value='Y' checked> Blokir &nbsp; <input type='radio' name='h' value='N'> Aktif"; }else{ echo "<input type='radio' name='h' value='Y'> Blokir &nbsp; <input type='radio' name='h' value='N' checked> Aktif"; } echo "</td></tr>
                             <tr><th scope='row'>Tambah Akses</th>                    <td><div class='checkbox-scroll'>";
                                                                                foreach ($record as $row){
                                                                                  echo "<span style='display:block'><input name='modul[]' type='checkbox' value='$row[id_modul]' /> $row[nama_modul]</span> ";

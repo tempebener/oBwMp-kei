@@ -13,7 +13,7 @@
                         <th>Nama Lengkap</th>
                         <th>Email</th>
                         <th>Foto</th>
-                        <th>Blokir</th>
+                        <th>Status</th>
                         <th>Level</th>
                         <th style='width:70px'>Action</th>
                       </tr>
@@ -29,10 +29,26 @@
                               <td><?= $row['nama_lengkap'] ?></td>
                               <td><?= $row['email'] ?></td>
                               <td class="div-image"><img class="img-circle" width="45px" style="border:1px solid #cecece" class="img-circle" src="<?= base_url('theme/images/foto_register/'.$foto) ?>"></td>
-                              <td><?= $row['blokir'] ?></td>
+                              <td>
+                                <?php
+                                  if($row['blokir']=="Y"){
+                                      echo "<span class='label label-warning fontspecial'>Blokir</span>";
+                                  }else{
+                                      echo "<span class='label label-info fontspecial'>Aktif</span>";
+                                  }
+                                ?>
+                              </td>
                               <td><?= $row['level'] ?></td>
                               <td><center>
                                 <a class="btn btn-success btn-xs" title="Edit Data" href="<?= base_url('admin/administrator/edit_manajemenuser/'.$row['id_users']) ?>"><span class="glyphicon glyphicon-edit"></span></a>
+
+                                <?php
+                                  if($row['blokir']=="Y"){
+                                  echo "<a class='btn btn-info btn-xs' title='Aktifkan User' href='".base_url()."admin/administrator/active_manajemenuser/$row[id_users]'><span class='glyphicon glyphicon-ok'></span></a>"; 
+                                  }else{
+                                  echo "<a class='btn btn-warning btn-xs' title='Blokir User' href='".base_url()."admin/administrator/deactive_manajemenuser/$row[id_users]' onclick=\"return confirm('Apa anda yakin untuk blokir User ini?')\"><span class='glyphicon glyphicon-ban-circle'></span></a>"; 
+                                  } ?>
+
                                 <a class="btn btn-danger btn-xs" title="Delete Data" href="<?= base_url('admin/administrator/delete_manajemenuser/'.$row['id_users']) ?>" onclick="return confirm('Apa anda yakin untuk hapus Data ini?')"><span class="glyphicon glyphicon-remove"></span></a>
                               </center></td>
                           </tr>

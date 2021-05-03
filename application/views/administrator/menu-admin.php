@@ -3,8 +3,8 @@
           <div class="user-panel">
             <div class="pull-left image">
             <?php $usr = $this->model_app->view_where('users', array('id_users'=> $this->session->id_users))->row_array();
-                  if (trim($usr['foto'])==''){ $foto = 'blank.png'; }else{ $foto = $usr['foto']; } ?>
-            <img src="<?php echo base_url(); ?>/theme/images/foto_register/profil/<?php echo $foto; ?>" class="img-circle" alt="User Image">
+                  if (trim($usr['foto'])==''){ $foto = 'admin.png'; }elseif(!file_exists($usr['foto'])){ $foto = 'admin.png'; }else{ $foto = $usr['foto']; } ?>
+            <img src="<?php echo base_url(); ?>theme/images/foto_register/<?php echo $foto; ?>" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
               <?php echo "<p>$usr[nama_lengkap]</p>"; ?>

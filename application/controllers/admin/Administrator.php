@@ -875,23 +875,53 @@ class Administrator extends CI_Controller {
         $pelatihan = $this->M_ekonomi->get_by_id_add($id);
         $seo = seo_title($this->input->post('judul_eo_detail'));
 
-        $config['upload_path']    = 'theme/images/foto_ekonomi/ekonomi_detail/';
-        $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
+        $config['upload_path'] = 'theme/images/foto_ekonomi/ekonomi_detail/';
+        $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
         $config['max_size']       = '5000'; // kb
         $this->load->library('upload', $config);
+        $this->upload->initialize($config);
         $this->upload->do_upload('gambar');
         $hasil=$this->upload->data();
+
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
         $this->upload->do_upload('download_pdf');
         $hasil2=$this->upload->data();
 
+
+        if ($hasil['file_name']=='' AND $hasil2['file_name']==''){
         $data = array('id_eo' =>$id,
                     'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
                     'judul_eo_detail_seo' =>$seo.'-'.date("dmYHis"),
                     'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
-                    'gambar'=>$hasil['file_name'],
                     'date_time' => date("Y-m-d"),
-                    'download_pdf' =>$hasil2['file_name'],
                     'video' =>$this->input->post('video'));
+        }else if($hasil['file_name']==''){
+          $data = array('id_eo' =>$id,
+                      'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
+                      'judul_eo_detail_seo' =>$seo.'-'.date("dmYHis"),
+                      'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
+                      'date_time' => date("Y-m-d"),
+                      'download_pdf' =>$hasil2['file_name'],
+                      'video' =>$this->input->post('video'));
+        }else if($hasil2['file_name']==''){
+          $data = array('id_eo' =>$id,
+                      'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
+                      'judul_eo_detail_seo' =>$seo.'-'.date("dmYHis"),
+                      'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
+                      'gambar'=>$hasil['file_name'],
+                      'date_time' => date("Y-m-d"),
+                      'video' =>$this->input->post('video'));
+        }else{
+          $data = array('id_eo' =>$id,
+                      'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
+                      'judul_eo_detail_seo' =>$seo.'-'.date("dmYHis"),
+                      'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
+                      'gambar'=>$hasil['file_name'],
+                      'date_time' => date("Y-m-d"),
+                      'download_pdf' =>$hasil2['file_name'],
+                      'video' =>$this->input->post('video'));
+        }
 
         $this->M_ekonomi->insert_bab($data);
         redirect('admin/administrator/eo_detail/' . $id);
@@ -933,10 +963,10 @@ class Administrator extends CI_Controller {
                       'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
                       'judul_eo_detail_seo' =>seo_title($this->input->post('judul_eo_detail_seo')),
                       'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
-                    'download_pdf'=>$hasil2['file_name'],
-                    'date_time' => date("Y-m-d"),
-                    'download_pdf'=>$hasil2['file_name']);
-                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                      'download_pdf'=>$hasil2['file_name'],
+                      'date_time' => date("Y-m-d"),
+                      'download_pdf'=>$hasil2['file_name']);
+                    $where = array('id_eo_detail' => $this->input->post('id'));
                     $_image = $this->db->get_where('tbl_ekonomi_outlook_detail',$where)->row();
                     $query = $this->db->update('tbl_ekonomi_outlook_detail',$data,$where);
                     if($query){
@@ -947,10 +977,10 @@ class Administrator extends CI_Controller {
                       'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
                       'judul_eo_detail_seo' =>seo_title($this->input->post('judul_eo_detail_seo')),
                       'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
-                    'download_pdf'=>$hasil2['file_name'],
-                    'date_time' => date("Y-m-d"),
-                    'gambar'=>$hasil['file_name']);
-                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                      'download_pdf'=>$hasil2['file_name'],
+                      'date_time' => date("Y-m-d"),
+                      'gambar'=>$hasil['file_name']);
+                    $where = array('id_eo_detail' => $this->input->post('id'));
                     $_image = $this->db->get_where('tbl_ekonomi_outlook_detail',$where)->row();
                     $query = $this->db->update('tbl_ekonomi_outlook_detail',$data,$where);
                     if($query){
@@ -961,11 +991,11 @@ class Administrator extends CI_Controller {
                       'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
                       'judul_eo_detail_seo' =>seo_title($this->input->post('judul_eo_detail_seo')),
                       'deskripsi_eo_detail' =>$this->input->post('deskripsi_eo_detail'),
-                    'download_pdf'=>$hasil2['file_name'],
-                    'date_time' => date("Y-m-d"),
-                    'gambar'=>$hasil['file_name'],
-                    'download_pdf'=>$hasil2['file_name']);
-                    $where = array('id_pelatihan_detail' => $this->input->post('id'));
+                      'download_pdf'=>$hasil2['file_name'],
+                      'date_time' => date("Y-m-d"),
+                      'gambar'=>$hasil['file_name'],
+                      'download_pdf'=>$hasil2['file_name']);
+                    $where = array('id_eo_detail' => $this->input->post('id'));
                     $_image = $this->db->get_where('tbl_ekonomi_outlook_detail',$where)->row();
                     $query = $this->db->update('tbl_ekonomi_outlook_detail',$data,$where);
                     if($query){

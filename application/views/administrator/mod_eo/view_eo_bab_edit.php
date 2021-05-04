@@ -25,7 +25,7 @@
                     <tr>
                       <th scope='row'>Ganti PDF</th>
                       <td><input type='file' class='form-control' name='download_pdf'><hr style='margin:5px'>";
-                        if ($rows['download_pdf'] != ''){ echo "<i style='color:red'>Foto Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_pelatihan/pelatihan_detail/$rows[download_pdf]'>$rows[download_pdf]</a>"; } echo "</td></tr>
+                        if ($rows['download_pdf'] != ''){ echo "<i style='color:red'>Foto Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_ekonomi/ekonomi_detail/$rows[download_pdf]'>$rows[download_pdf]</a>"; } echo "</td></tr>
                       </td>
                     </tr>
                     <tr><th scope='row'>LINK Video Youtube</th>

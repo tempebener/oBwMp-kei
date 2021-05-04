@@ -1074,14 +1074,14 @@ class Administrator extends CI_Controller {
           $this->load->library('upload', $config);
           $this->upload->do_upload('foto_ktp');
           $hasil=$this->upload->data();
-          $this->upload->do_upload('foto_npwp');
-          $hasil2=$this->upload->data();
+          // $this->upload->do_upload('foto_npwp');
+          // $hasil2=$this->upload->data();
           $this->upload->do_upload('foto_pas');
           $hasil3=$this->upload->data();
-          $this->upload->do_upload('foto_sku');
-          $hasil4=$this->upload->data();
-          $this->upload->do_upload('partnership_agreement');
-          $hasil5=$this->upload->data();
+          // $this->upload->do_upload('foto_sku');
+          // $hasil4=$this->upload->data();
+          // $this->upload->do_upload('partnership_agreement');
+          // $hasil5=$this->upload->data();
 
           $this->form_validation->set_rules('email','Email','required');
 
@@ -1134,10 +1134,10 @@ class Administrator extends CI_Controller {
                               'created_by'=>$this->session->id_users,
                               'created_at'=>date('Y-m-d H:i:s'),
                               'foto_ktp'=>$hasil['file_name'],
-                              'foto_npwp'=>$hasil2['file_name'],
-                              'foto_pas'=>$hasil3['file_name'],
-                              'foto_sku'=>$hasil4['file_name'],
-                              'partnership_agreement'=>$hasil5['file_name']);
+                              // 'foto_npwp'=>$hasil2['file_name'],
+                              'foto_pas'=>$hasil3['file_name']);
+                              // 'foto_sku'=>$hasil4['file_name'],
+                              // 'partnership_agreement'=>$hasil5['file_name']);
           }
 
           $result = $this->m_main->checkEmail($email);
@@ -1166,14 +1166,14 @@ class Administrator extends CI_Controller {
           $this->load->library('upload', $config);
           $this->upload->do_upload('foto_ktp');
           $hasil=$this->upload->data();
-          $this->upload->do_upload('foto_npwp');
-          $hasil2=$this->upload->data();
+          // $this->upload->do_upload('foto_npwp');
+          // $hasil2=$this->upload->data();
           $this->upload->do_upload('foto_pas');
           $hasil3=$this->upload->data();
-          $this->upload->do_upload('foto_sku');
-          $hasil4=$this->upload->data();
-          $this->upload->do_upload('partnership_agreement');
-          $hasil5=$this->upload->data();
+          // $this->upload->do_upload('foto_sku');
+          // $hasil4=$this->upload->data();
+          // $this->upload->do_upload('partnership_agreement');
+          // $hasil5=$this->upload->data();
 
           if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''|$hasil4['file_name']==''|$hasil5['file_name']==''){
               $data = array('nama'=>$this->input->post('nama'),
@@ -1190,10 +1190,10 @@ class Administrator extends CI_Controller {
                               'pekerjaan'=>$this->input->post('pekerjaan'),
                               'usaha_diminati'=>$this->input->post('usaha_diminati'),
                               'foto_ktp'=>$hasil['file_name'],
-                              'foto_npwp'=>$hasil2['file_name'],
-                              'foto_pas'=>$hasil3['file_name'],
-                              'foto_sku'=>$hasil4['file_name'],
-                              'partnership_agreement'=>$hasil5['file_name']);
+                              // 'foto_npwp'=>$hasil2['file_name'],
+                              'foto_pas'=>$hasil3['file_name']);
+                              // 'foto_sku'=>$hasil4['file_name'],
+                              // 'partnership_agreement'=>$hasil5['file_name']);
           }
           $where = array('id_member' => $this->input->post('id'));
           $this->model_app->update('tbl_member', $data, $where);

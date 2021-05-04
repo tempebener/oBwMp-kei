@@ -85,5 +85,11 @@ class M_main extends CI_Model
        $query = $this->db->get();
        return $query->result_array();
     }
+
+    public function multi_delete_users($table,$data,$table2,$data2){
+        $sql = $this->db->delete($table, $data);
+        $sql = $this->db->delete($table2, $data2);
+		return $sql;
+    }
  
 }

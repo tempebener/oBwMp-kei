@@ -240,8 +240,13 @@ class Administrator extends CI_Controller {
   function delete_manajemenuser(){
     cek_session_akses ('manajemenuser',$this->session->id_session);
     $id = $this->uri->segment(4);
+    $no_induk = $this->uri->segment(5);
+    // $_id = $this->db->get_where('users',['id_users' => $id])->row();
+    // $query = $this->db->delete('users',['id_users'=>$id]);
+    $data_user = array('no_induk' => $no_induk);
+    $data_member = array('no_induk' => $no_induk);
     $_id = $this->db->get_where('users',['id_users' => $id])->row();
-    $query = $this->db->delete('users',['id_users'=>$id]);
+    $query = $this->M_main->multi_delete_users('users',$data_user,'tbl_member',$data_member);
     if($query){
       unlink("./theme/images/foto_users/".$_id->foto);
     }
@@ -1121,7 +1126,7 @@ class Administrator extends CI_Controller {
               echo "Form validation oke";
           }
 
-          $no_induk    = $this->m_main->create_no_transaction();
+          $no_induk    = $this->M_main->create_no_transaction();
 
           if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''|$hasil4['file_name']==''|$hasil5['file_name']==''){
               $data_user = array('nama_lengkap'=>$this->input->post('nama'),
@@ -1170,9 +1175,9 @@ class Administrator extends CI_Controller {
                               // 'partnership_agreement'=>$hasil5['file_name']);
           }
 
-          $result = $this->m_main->checkEmail($email);
+          $result = $this->M_main->checkEmail($email);
           if(empty($result)) {
-              $this->m_main->multi_insert_member('users',$data_user,'tbl_member',$data_member);
+              $this->M_main->multi_insert_member('users',$data_user,'tbl_member',$data_member);
               $msg = "Data Insert Successfully";
           }else {
               $msg = "Email Already Exists";

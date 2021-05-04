@@ -16,11 +16,11 @@ $a = $a[0];
                   <td width='5%'>:</td>
                   <td width='70%'><?php echo $a->nama_lengkap;?></td>
               </tr>
-              <tr>
+              <!-- <tr>
                   <td>Username</td>
                   <td>:</td>
                   <td width='70%'><?php echo $a->username;?></td>
-              </tr>
+              </tr> -->
               <tr>
                   <td>Email</td>
                   <td>:</td>

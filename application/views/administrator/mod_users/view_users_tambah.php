@@ -10,7 +10,6 @@
           echo "<div class='col-md-12'>
                   <table class='table table-condensed table-bordered'>
                   <tbody>
-                    <tr><th width='120px' scope='row'>Username</th>   <td><input type='text' class='form-control' name='a' onkeyup=\"nospaces(this)\" required></td></tr>
                     <tr><th scope='row'>Password</th>                 <td><input type='password' class='form-control' name='b' onkeyup=\"nospaces(this)\" required></td></tr>
                     <tr><th scope='row'>Nama Lengkap</th>             <td><input type='text' class='form-control' name='c' required></td></tr>
                     <tr><th scope='row'>Alamat Email</th>             <td><input type='email' class='form-control' name='d' required></td></tr>
@@ -32,3 +31,6 @@
                   </div>
             </div></div></div>";
             echo form_close();
+            ?>
+                    <!-- Disable dari echo -->
+                    <!-- <tr><th width='120px' scope='row'>Username</th>   <td><input type='text' class='form-control' name='a' onkeyup=\"nospaces(this)\" required></td></tr> -->

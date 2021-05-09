@@ -5502,3 +5502,9 @@ table.text-center th {
 	object-fit: cover;
 	height: 100%;
 }
+.font11{
+    font-size: 11px !important;
+}
+table.dataTable thead > tr > th {
+     padding-right: 5px; 
+}

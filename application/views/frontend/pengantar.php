@@ -16,7 +16,7 @@
                               <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/foto_pengantar/<?php echo $p->icon_1 ?>" alt="Pendampingan Bisnis" width="100px" height="auto">
                             </div>
                       <div class="blurb-title h4"><?php echo $p->judul_icon_1 ?></div>
-                     <!--  <div class="blurb-text big">Perangkat pembelajaran yang akan didapatkan peserta dalam kegiatan kesatriaan entrepreneur indonesia.</div> -->
+                      <div class="blurb-text big"><?php echo $p->deskripsi1 ?></div>
                     </article>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -27,7 +27,7 @@
                               <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/foto_pengantar/<?php echo $p->icon_2 ?>" alt="Pendampingan Bisnis" width="100px" height="auto">
                             </div>
                       <div class="blurb-title h4"><?php echo $p->judul_icon_2 ?></div>
-                    <!--   <div class="blurb-text big">Serangkaian rencana kegiatan yang akan dilakukan dalam kesatriaan entrepreneur indonesia.</div> -->
+                      <div class="blurb-text big"><?php echo $p->deskripsi2 ?></div>
                     </article>
             </div>
             <div class="col-sm-6 col-md-4">
@@ -38,7 +38,7 @@
                               <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/foto_pengantar/<?php echo $p->icon_3 ?>" alt="Pendampingan Bisnis" width="100px" height="auto">
                             </div>
                       <div class="blurb-title h4"><?php echo $p->judul_icon_3 ?></div>
-                     <!--  <div class="blurb-text big">Seperangkat kegiatan yang diperuntukkan bagi peserta kesatriaan entrepreneur indonesia.</div> -->
+                      <div class="blurb-text big"><?php echo $p->deskripsi3 ?></div>
                     </article>
             </div>
           </div>

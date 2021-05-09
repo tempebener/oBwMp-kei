@@ -199,6 +199,15 @@ if ($this->session->level==''){
     CKEDITOR.replace('editor1' ,{
       filebrowserImageBrowseUrl : '<?php echo base_url('asset/kcfinder'); ?>'
     });
+    CKEDITOR.replace('editor2' ,{
+      filebrowserImageBrowseUrl : '<?php echo base_url('asset/kcfinder'); ?>'
+    });
+    CKEDITOR.replace('editor3' ,{
+      filebrowserImageBrowseUrl : '<?php echo base_url('asset/kcfinder'); ?>'
+    });
+    CKEDITOR.replace('editor4' ,{
+      filebrowserImageBrowseUrl : '<?php echo base_url('asset/kcfinder'); ?>'
+    });
     
  
     

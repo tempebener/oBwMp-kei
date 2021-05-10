@@ -952,10 +952,14 @@ class Administrator extends CI_Controller {
             $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
             $config['max_size']       = '5000'; // kb
             $this->load->library('upload', $config);
+            $this->upload->initialize($config);
             $this->upload->do_upload('gambar');
             $hasil=$this->upload->data();
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
             $this->upload->do_upload('download_pdf');
             $hasil2=$this->upload->data();
+
             if ($hasil['file_name']=='' AND $hasil2['file_name']==''){
                     $data = array(
                     'judul_eo_detail' =>$this->input->post('judul_eo_detail'),
@@ -1216,10 +1220,14 @@ class Administrator extends CI_Controller {
             $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
             $config['max_size']       = '5000'; // kb
             $this->load->library('upload', $config);
+            $this->upload->initialize($config);
             $this->upload->do_upload('gambar');
-            $hasil=$this->upload->data();
+            $hasil=$this->upload->data();    
+            $this->load->library('upload', $config);
+            $this->upload->initialize($config);
             $this->upload->do_upload('download_pdf');
             $hasil2=$this->upload->data();
+
             if ($hasil['file_name']=='' AND $hasil2['file_name']==''){
                     $data = array(
                     'judul_event_detail' =>$this->input->post('judul_event_detail'),
@@ -1240,7 +1248,7 @@ class Administrator extends CI_Controller {
                       'time_event_detail' =>$this->input->post('time_event_detail'),
                       'date_time' => date("Y-m-d"),
                       'download_pdf'=>$hasil2['file_name']);
-                    $where = array('id_eo_detail' => $this->input->post('id'));
+                    $where = array('id_event_detail' => $this->input->post('id'));
                     $_image = $this->db->get_where('tbl_event_detail',$where)->row();
                     $query = $this->db->update('tbl_event_detail',$data,$where);
                     if($query){

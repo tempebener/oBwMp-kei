@@ -38,4 +38,11 @@ class M_event extends CI_Model{
     $this->db->insert('tbl_event_detail', $data);
   }
 
+  function get_by_id_event($id)
+  {
+  $this->db->where('tbl_event_detail.id_event', $id);
+  $this->db->join('tbl_event', 'tbl_event.id_event = tbl_event_detail.id_event','inner');
+  return $this->db->get('tbl_event_detail')->result();
+  }
+
 }

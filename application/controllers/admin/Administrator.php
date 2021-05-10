@@ -1325,17 +1325,23 @@ class Administrator extends CI_Controller {
               $data = array('judul'=>$this->input->post('judul'),
                           'deskripsi'=>$this->input->post('deskripsi'),
                           'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'deskripsi1'=>$this->input->post('deskripsi1'),
                           'judul_icon_2'=>$this->input->post('judul_icon_2'),
-                          'judul_icon_3'=>$this->input->post('judul_icon_3'));
+                          'deskripsi2'=>$this->input->post('deskripsi2'),
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'),
+                          'deskripsi3'=>$this->input->post('deskripsi3'));
           }else{
               $data = array('judul'=>$this->input->post('judul'),
                           'deskripsi'=>$this->input->post('deskripsi'),
                           'icon_1'=>$hasil['file_name'],
                           'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'deskripsi1'=>$this->input->post('deskripsi1'),
                           'icon_2'=>$hasil2['file_name'],
                           'judul_icon_2'=>$this->input->post('judul_icon_2'),
+                          'deskripsi2'=>$this->input->post('deskripsi2'),
                           'icon_3'=>$hasil3['file_name'],
-                          'judul_icon_3'=>$this->input->post('judul_icon_3'));
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'),
+                          'deskripsi3'=>$this->input->post('deskripsi3'));
           }
           $where = array('id_pengantar' => $this->input->post('id'));
           $this->model_app->update('tbl_pengantar', $data, $where);

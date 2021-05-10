@@ -52,18 +52,11 @@
                       <a class="post-media" href="single-post.html">
                         <img class="post-img" src="<?php echo base_url();?>theme/images/foto_event/event_detail/<?php echo $post_new->gambar ?>" alt="" width="370" height="240"/>
                         <div class="post-date">
-                          <div class="post-day">19</div>
-                          <div class="post-month">Sep</div>
+                          <div class=""><?php echo tgl_indo($post_new->date_event_detail) ?></div>
                         </div></a>
                       <div class="post-heading h4">
                         <div class="post-title"><a href="single-post.html"><?php echo $post_new->judul_event_detail ?></a></div>
 
-                      </div>
-                      <div class="post-meta post-meta-vertical big">
-                        <div class="post-meta-item">
-                          <div class="post-meta-icon custom-font-clock"></div>
-                          <div class="post-time"><?php echo $post_new->time_event_detail ?></div>
-                        </div>
                       </div>
                     </div>
             </div>

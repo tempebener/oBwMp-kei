@@ -9,7 +9,7 @@
             <div class="navbar-spacer"></div>
             <div class="navbar-cell navbar-sidebar">
               <ul class="navbar-navigation rd-navbar-nav">
-                <li class="navbar-navigation-root-item active"><a class="navbar-navigation-root-link" href="#">Home</a>
+                <li class="navbar-navigation-root-item active"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>">Home</a>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="#">Tentang Kami</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
@@ -148,7 +148,7 @@
                         </li>
                       </ul>
                     </li>
-                    
+
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>inkubator_area">Inkubator Area</a>
                     </li>
                   </ul>

@@ -25,12 +25,6 @@
 
       <!--pendaftaran start-->
       <?php $this->load->view('frontend/pendaftaran')?>
-      <!--pendaftaran end-->
-
-      <!--modul pelatihan start-->
-      <?php $this->load->view('frontend/modul_pelatihan')?>
-      <!--modul pelatihan end-->
-
       <!--modul Event start-->
       <?php $this->load->view('frontend/modul_event')?>
       <!--modul event end-->

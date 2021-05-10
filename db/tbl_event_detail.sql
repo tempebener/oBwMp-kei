@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2021 at 09:41 AM
+-- Generation Time: May 10, 2021 at 09:43 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.3.27
 
@@ -20,22 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `kesatriaan`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_event`
---
-
-CREATE TABLE `tbl_event` (
-  `id_event` int(11) NOT NULL,
-  `judul_event` varchar(100) NOT NULL,
-  `judul_event_seo` varchar(200) NOT NULL,
-  `deskripsi_event` text NOT NULL,
-  `foto_event` varchar(50) NOT NULL,
-  `id_users` int(11) NOT NULL,
-  `date_time` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -63,12 +47,6 @@ CREATE TABLE `tbl_event_detail` (
 --
 
 --
--- Indexes for table `tbl_event`
---
-ALTER TABLE `tbl_event`
-  ADD PRIMARY KEY (`id_event`);
-
---
 -- Indexes for table `tbl_event_detail`
 --
 ALTER TABLE `tbl_event_detail`
@@ -77,12 +55,6 @@ ALTER TABLE `tbl_event_detail`
 --
 -- AUTO_INCREMENT for dumped tables
 --
-
---
--- AUTO_INCREMENT for table `tbl_event`
---
-ALTER TABLE `tbl_event`
-  MODIFY `id_event` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tbl_event_detail`

@@ -9,6 +9,7 @@ class Administrator extends CI_Controller {
 
     $this->load->model('M_pelatihan');
     $this->load->model('M_ekonomi');
+    $this->load->model('M_event');
     /* memanggil function dari masing2 model yang akan digunakan */
 
   }
@@ -1017,6 +1018,278 @@ class Administrator extends CI_Controller {
             }
             $data = array('rows' => $proses);
             $this->template->load('administrator/template','administrator/mod_eo/view_eo_bab_edit',$data);
+            }
+
+  }
+
+
+  function event_list(){
+      cek_session_akses('event_list',$this->session->id_session);
+         $data['record'] = $this->model_app->view_ordering('tbl_event','id_event','DESC');
+
+
+      $this->template->load('administrator/template','administrator/mod_event/view_list',$data);
+  }
+  function event_tambah(){
+    $this->template->load('administrator/template','administrator/mod_event/view_tambah');
+  }
+  function event_simpan(){
+      if (isset($_POST['submit'])){
+              $config['upload_path'] = 'theme/images/foto_event/';
+              $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+              $config['max_size'] = '5000'; // kb
+              $this->load->library('upload', $config);
+              $this->upload->do_upload('foto');
+              $hasil=$this->upload->data();
+              if ($hasil['file_name']==''){
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                        'judul_event'=>$this->db->escape_str($this->input->post('judul_event')),
+                        'judul_event_seo'=>seo_title($this->input->post('judul_event')),
+                        'deskripsi_event'=>$this->input->post('deskripsi_event'));
+              }else{
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                        'judul_event'=>$this->db->escape_str($this->input->post('judul_event')),
+                        'judul_event_seo'=>seo_title($this->input->post('judul_event')),
+                                      'deskripsi_event'=>$this->input->post('deskripsi_event'),
+                                      'foto_event'=>$hasil['file_name']);
+              }
+              $this->model_app->insert('tbl_event',$data);
+        redirect('admin/administrator/event_list');
+      }else{
+        $this->template->load('administrator/template','administrator/mod_event/view_tambah',$data);
+      }
+  }
+  function event_edit(){
+      $id = $this->uri->segment(4);
+      if (isset($_POST['submit'])){
+              $config['upload_path'] = 'theme/images/foto_event/';
+              $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+              $config['max_size'] = '5000'; // kb
+              $this->load->library('upload', $config);
+              $this->upload->do_upload('foto');
+              $hasil=$this->upload->data();
+              if ($hasil['file_name']==''){
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'judul_event'=>$this->db->escape_str($this->input->post('judul_event')),
+                      'judul_event_seo'=>seo_title($this->input->post('judul_event')),
+                      'deskripsi_event'=>$this->input->post('deskripsi_event'));
+                      $where = array('id_event' => $this->input->post('id'));
+                      $this->db->update('tbl_event', $data, $where);
+              }else{
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'judul_event'=>$this->db->escape_str($this->input->post('judul_event')),
+                      'judul_event_seo'=>seo_title($this->input->post('judul_event')),
+                      'deskripsi_event'=>$this->input->post('deskripsi_event'),
+                      'foto'=>$hasil['file_name']);
+                      $where = array('id_pelatihan' => $this->input->post('id'));
+                      $_image = $this->db->get_where('tbl_event',$where)->row();
+                      $query = $this->db->update('tbl_event',$data,$where);
+                      if($query){
+                        unlink("theme/images/foto_event/".$_image->foto_event);
+                      }
+              }
+              redirect('admin/administrator/event_list/');
+          }else{
+              if ($this->session->level=='admin'){
+                  $proses = $this->model_app->edit('tbl_event', array('id_event' => $id))->row_array();
+              }else{
+                  $proses = $this->model_app->edit('tbl_event', array('id_event' => $id, 'id_users' => $this->session->id_users))->row_array();
+              }
+              $data = array('rows' => $proses);
+              $this->template->load('administrator/template','administrator/mod_event/view_edit',$data);
+              }
+  }
+  function event_hapus(){
+
+      $id = $this->uri->segment(4);
+      $_id = $this->db->get_where('tbl_event',['id_event' => $id])->row();
+      $query = $this->db->delete('tbl_event',['id_event'=> $id]);
+      if($query){
+               unlink("./theme/images/foto_event/".$_id->foto);
+     }
+    redirect('admin/administrator/event_list/');
+  }
+  function event_detail($id){
+
+      $row = $this->M_event->get_by_id2($id);
+      /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
+      if ($row){
+      /* memanggil function dari masing2 model yang akan digunakan */
+      $event= $this->M_event->get_by_id2($id);
+      $data['event']            = $event;
+       $data['eventbab']            = $this->M_event->get_by_id3($id);
+      $this->template->load('administrator/template','administrator/mod_event/view_detail',$data);
+      }
+  }
+
+  function add_bab_event($id){
+      $event = $this->M_event->get_by_id_add($id);
+      $data['event']            = $event;
+      $this->template->load('administrator/template','administrator/mod_event/view_event_bab_tambah',$data);
+  }
+  function simpan_bab_event(){
+      if (isset($_POST['submit'])){
+        $id = $this->input->post('id_event');
+        $pelatihan = $this->M_ekonomi->get_by_id_add($id);
+        $seo = seo_title($this->input->post('judul_event_detail'));
+
+        $config['upload_path'] = 'theme/images/foto_event/event_detail/';
+        $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
+        $config['max_size']       = '5000'; // kb
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        $this->upload->do_upload('gambar');
+        $hasil=$this->upload->data();
+
+        $this->load->library('upload', $config);
+        $this->upload->initialize($config);
+        $this->upload->do_upload('download_pdf');
+        $hasil2=$this->upload->data();
+
+
+        if ($hasil['file_name']=='' AND $hasil2['file_name']==''){
+        $data = array('id_event' =>$id,
+                    'judul_event_detail' =>$this->input->post('judul_event_detail'),
+                    'judul_event_detail_seo' =>$seo.'-'.date("dmYHis"),
+                    'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
+                    'date_event_detail' =>$this->input->post('date_event_detail'),
+                    'time_event_detail' =>$this->input->post('time_event_detail'),
+                    'date_time' => date("Y-m-d"),
+                    'video' =>$this->input->post('video'));
+        }else if($hasil['file_name']==''){
+          $data = array('id_event' =>$id,
+                      'judul_event_detail' =>$this->input->post('judul_event_detail'),
+                      'judul_event_detail_seo' =>$seo.'-'.date("dmYHis"),
+                      'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
+                      'date_event_detail' =>$this->input->post('date_event_detail'),
+                      'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'date_time' => date("Y-m-d"),
+                      'download_pdf' =>$hasil2['file_name'],
+                      'video' =>$this->input->post('video'));
+        }else if($hasil2['file_name']==''){
+          $data = array('id_event' =>$id,
+                      'judul_event_detail' =>$this->input->post('judul_event_detail'),
+                      'judul_event_detail_seo' =>$seo.'-'.date("dmYHis"),
+                      'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
+                      'gambar'=>$hasil['file_name'],
+                      'date_event_detail' =>$this->input->post('date_event_detail'),
+                      'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'date_time' => date("Y-m-d"),
+                      'video' =>$this->input->post('video'));
+        }else{
+          $data = array('id_event' =>$id,
+                      'judul_event_detail' =>$this->input->post('judul_event_detail'),
+                      'judul_event_detail_seo' =>$seo.'-'.date("dmYHis"),
+                      'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
+                      'gambar'=>$hasil['file_name'],
+                      'date_event_detail' =>$this->input->post('date_event_detail'),
+                      'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'date_time' => date("Y-m-d"),
+                      'download_pdf' =>$hasil2['file_name'],
+                      'video' =>$this->input->post('video'));
+        }
+
+        $this->M_event->insert_bab($data);
+        redirect('admin/administrator/event_detail/' . $id);
+      }else{
+        $this->template->load('administrator/template','administrator/mod_event/view_event_bab_tambah');
+      }
+  }
+  function event_bab_hapus(){
+
+      $id = $this->uri->segment(4);
+      $_id = $this->db->get_where('tbl_event_detail',['id_event_detail' => $id])->row();
+      $query = $this->db->delete('tbl_event_detail',['id_event_detail'=> $id]);
+      if($query){
+               unlink("./theme/images/foto_event/event_detail/".$_id->gambar);
+     }
+    redirect('admin/administrator/event_list/');
+  }
+  function event_bab_edit(){
+    $id = $this->uri->segment(4);
+    if (isset($_POST['submit'])){
+            $config['upload_path'] = 'theme/images/foto_event/event_detail/';
+            $config['allowed_types']  = 'jpg|png|JPG|JPEG|jpeg|PDF|pdf|webp';
+            $config['max_size']       = '5000'; // kb
+            $this->load->library('upload', $config);
+            $this->upload->do_upload('gambar');
+            $hasil=$this->upload->data();
+            $this->upload->do_upload('download_pdf');
+            $hasil2=$this->upload->data();
+            if ($hasil['file_name']=='' AND $hasil2['file_name']==''){
+                    $data = array(
+                    'judul_event_detail' =>$this->input->post('judul_event_detail'),
+                    'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail_seo')),
+                    'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
+                    'date_event_detail' =>$this->input->post('date_event_detail'),
+                    'time_event_detail' =>$this->input->post('time_event_detail'),
+                    'date_time' => date("Y-m-d"));
+                    $where = array('id_event_detail' => $this->input->post('id'));
+                    $this->db->update('tbl_event_detail', $data, $where);
+            }else if($hasil['file_name']==''){
+                    $data = array(
+                      'judul_event_detail' =>$this->input->post('judul_event_detail'),
+                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail_seo')),
+                      'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
+                      'download_pdf'=>$hasil2['file_name'],
+                      'date_event_detail' =>$this->input->post('date_event_detail'),
+                      'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'date_time' => date("Y-m-d"),
+                      'download_pdf'=>$hasil2['file_name']);
+                    $where = array('id_eo_detail' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_event_detail',$where)->row();
+                    $query = $this->db->update('tbl_event_detail',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_event/event_detail/".$_image->download_pdf);
+                    }
+            }else if($hasil2['file_name']==''){
+                    $data = array(
+                      'judul_event_detail' =>$this->input->post('judul_event_detail'),
+                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail_seo')),
+                      'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
+                      'download_pdf'=>$hasil2['file_name'],
+                      'date_event_detail' =>$this->input->post('date_event_detail'),
+                      'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'date_time' => date("Y-m-d"),
+                      'gambar'=>$hasil['file_name']);
+                    $where = array('id_event_detail' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_event_detail',$where)->row();
+                    $query = $this->db->update('tbl_event_detail',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_event/event_detail/".$_image->gambar);
+                    }
+            }else{
+                    $data = array(
+                      'judul_event_detail' =>$this->input->post('judul_event_detail'),
+                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail_seo')),
+                      'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
+                      'download_pdf'=>$hasil2['file_name'],
+                      'date_event_detail' =>$this->input->post('date_event_detail'),
+                      'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'date_time' => date("Y-m-d"),
+                      'gambar'=>$hasil['file_name'],
+                      'download_pdf'=>$hasil2['file_name']);
+                    $where = array('id_event_detail' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_event_detail',$where)->row();
+                    $query = $this->db->update('tbl_event_detail',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_event/event_detail/".$_image->gambar);
+                      unlink("theme/images/foto_event/event_detail/".$_image->download_pdf);
+                    }
+            }
+            redirect('admin/administrator/event_list/');
+        }else{
+            if ($this->session->level=='admin'){
+                $proses = $this->model_app->edit('tbl_event_detail', array('id_event_detail' => $id))->row_array();
+            }else{
+                $proses = $this->model_app->edit('tbl_event_detail', array('id_event_detail' => $id, 'id_users' => $this->session->id_users))->row_array();
+            }
+            $data = array('rows' => $proses);
+            $this->template->load('administrator/template','administrator/mod_event/view_event_bab_edit',$data);
             }
 
   }

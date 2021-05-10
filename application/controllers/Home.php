@@ -16,10 +16,12 @@ class Home extends CI_Controller{
 		$data['post_slider'] = $this->m_main->get_all_slider($status);
 		$data['post_pengantar'] = $this->m_main->get_pengantar();
 		$data['post_tutors'] = $this->m_main->get_all_tutors($status);
-		$data['pelatihan'] = $this->db->query("select * from tbl_pelatihan  ORDER BY  id_pelatihan desc 
+		$data['pelatihan'] = $this->db->query("select * from tbl_pelatihan  ORDER BY  id_pelatihan desc
 			")->result();
+		$data['event'] = $this->db->query("select * from tbl_event  ORDER BY  id_event desc 
+				")->result();
 		$data['post_bod'] = $this->m_main->get_all_bod($status);
-		$data['ekonomi_outlook'] = $this->db->query("select * from tbl_ekonomi_outlook  ORDER BY  id_eo desc 
+		$data['ekonomi_outlook'] = $this->db->query("select * from tbl_ekonomi_outlook  ORDER BY  id_eo desc
 			")->result();
 		$data['berita'] = $this->db->query("select * from tbl_berita where status = 'Y' ORDER BY  id_berita desc limit 1
 			")->result();

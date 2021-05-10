@@ -30,18 +30,22 @@
       <!--modul pelatihan start-->
       <?php $this->load->view('frontend/modul_pelatihan')?>
       <!--modul pelatihan end-->
-      
+
+      <!--modul Event start-->
+      <?php $this->load->view('frontend/modul_event')?>
+      <!--modul event end-->
+
       <!-- Our Tutors start -->
       <?php $this->load->view('frontend/our_tutors')?>
       <!-- Our Tutors end -->
-    
+
       <!-- Side SocMed -->
       <div class="icon-bar">
-        <a href="https://www.facebook.com/kesatriaan.entrepreneur.indonesia" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a> 
-        <a href="https://wa.me/6282136613891" class="whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a> 
-        <a href="https://www.instagram.com/kei_widodo_makmur" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a> 
-        <a href="https://www.youtube.com/channel/UCaXcQCE0lbJWRz9GQhtuXSw" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a> 
-        <!-- <a href="#" class="google"><i class="fa fa-google"></i></a> 
+        <a href="https://www.facebook.com/kesatriaan.entrepreneur.indonesia" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+        <a href="https://wa.me/6282136613891" class="whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/kei_widodo_makmur" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+        <a href="https://www.youtube.com/channel/UCaXcQCE0lbJWRz9GQhtuXSw" class="youtube" target="_blank"><i class="fa fa-youtube"></i></a>
+        <!-- <a href="#" class="google"><i class="fa fa-google"></i></a>
         <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a> -->
       </div>
 
@@ -119,7 +123,7 @@
       </section>
 
       <!-- Post event-->
-    
+
       <!-- ekonomi outlook start-->
       <?php $this->load->view('frontend/ekonomi_outlook')?>
       <!-- ekonomi outlook end-->
@@ -131,9 +135,9 @@
       <!-- berita start -->
       <?php $this->load->view('frontend/berita_home')?>
       <!-- berita end -->
-     
 
-     
+
+
       <!-- Footer start-->
      <?php $this->load->view('frontend/footer')?>
      <!-- Footer end-->

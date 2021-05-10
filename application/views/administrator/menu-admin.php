@@ -46,6 +46,9 @@
                 echo "<li><a href='".base_url()."admin/administrator/listpelatihan'><i class='fa fa-circle-o'></i>Pelatihan</a></li>";
               }
               if($cek==1 OR $this->session->level=='admin'){
+                echo "<li><a href='".base_url()."admin/administrator/event_list'><i class='fa fa-circle-o'></i>Event</a></li>";
+              }
+              if($cek==1 OR $this->session->level=='admin'){
                 echo "<li><a href='".base_url()."admin/administrator/eo_list'><i class='fa fa-circle-o'></i>Ekonomi Outlook</a></li>";
               }
 

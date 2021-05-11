@@ -1158,40 +1158,52 @@ class Administrator extends CI_Controller {
         if ($hasil['file_name']=='' AND $hasil2['file_name']==''){
         $data = array('id_event' =>$id,
                     'judul_event_detail' =>$this->input->post('judul_event_detail'),
-                    'judul_event_detail_seo' =>$seo.'-'.date("dmYHis"),
+                    'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail')),
                     'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
                     'date_event_detail' =>$this->input->post('date_event_detail'),
                     'time_event_detail' =>$this->input->post('time_event_detail'),
+                    'time_event_detail_end' =>$this->input->post('time_event_detail_end'),
+                    'tempat_event_detail' =>$this->input->post('tempat_event_detail'),
+
                     'date_time' => date("Y-m-d"),
                     'video' =>$this->input->post('video'));
         }else if($hasil['file_name']==''){
           $data = array('id_event' =>$id,
                       'judul_event_detail' =>$this->input->post('judul_event_detail'),
-                      'judul_event_detail_seo' =>$seo.'-'.date("dmYHis"),
+                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail')),
                       'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
                       'date_event_detail' =>$this->input->post('date_event_detail'),
                       'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'time_event_detail_end' =>$this->input->post('time_event_detail_end'),
+                      'tempat_event_detail' =>$this->input->post('tempat_event_detail'),
+
                       'date_time' => date("Y-m-d"),
                       'download_pdf' =>$hasil2['file_name'],
                       'video' =>$this->input->post('video'));
         }else if($hasil2['file_name']==''){
           $data = array('id_event' =>$id,
                       'judul_event_detail' =>$this->input->post('judul_event_detail'),
-                      'judul_event_detail_seo' =>$seo.'-'.date("dmYHis"),
+                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail')),
                       'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
                       'gambar'=>$hasil['file_name'],
                       'date_event_detail' =>$this->input->post('date_event_detail'),
                       'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'time_event_detail_end' =>$this->input->post('time_event_detail_end'),
+                      'tempat_event_detail' =>$this->input->post('tempat_event_detail'),
+
                       'date_time' => date("Y-m-d"),
                       'video' =>$this->input->post('video'));
         }else{
           $data = array('id_event' =>$id,
                       'judul_event_detail' =>$this->input->post('judul_event_detail'),
-                      'judul_event_detail_seo' =>$seo.'-'.date("dmYHis"),
+                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail')),
                       'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
                       'gambar'=>$hasil['file_name'],
                       'date_event_detail' =>$this->input->post('date_event_detail'),
                       'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'time_event_detail_end' =>$this->input->post('time_event_detail_end'),
+                      'tempat_event_detail' =>$this->input->post('tempat_event_detail'),
+
                       'date_time' => date("Y-m-d"),
                       'download_pdf' =>$hasil2['file_name'],
                       'video' =>$this->input->post('video'));
@@ -1222,7 +1234,7 @@ class Administrator extends CI_Controller {
             $this->load->library('upload', $config);
             $this->upload->initialize($config);
             $this->upload->do_upload('gambar');
-            $hasil=$this->upload->data();    
+            $hasil=$this->upload->data();
             $this->load->library('upload', $config);
             $this->upload->initialize($config);
             $this->upload->do_upload('download_pdf');
@@ -1231,21 +1243,27 @@ class Administrator extends CI_Controller {
             if ($hasil['file_name']=='' AND $hasil2['file_name']==''){
                     $data = array(
                     'judul_event_detail' =>$this->input->post('judul_event_detail'),
-                    'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail_seo')),
+                    'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail')),
                     'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
                     'date_event_detail' =>$this->input->post('date_event_detail'),
                     'time_event_detail' =>$this->input->post('time_event_detail'),
+                    'time_event_detail_end' =>$this->input->post('time_event_detail_end'),
+                    'tempat_event_detail' =>$this->input->post('tempat_event_detail'),
+
                     'date_time' => date("Y-m-d"));
                     $where = array('id_event_detail' => $this->input->post('id'));
                     $this->db->update('tbl_event_detail', $data, $where);
             }else if($hasil['file_name']==''){
                     $data = array(
                       'judul_event_detail' =>$this->input->post('judul_event_detail'),
-                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail_seo')),
+                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail')),
                       'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
                       'download_pdf'=>$hasil2['file_name'],
                       'date_event_detail' =>$this->input->post('date_event_detail'),
                       'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'time_event_detail_end' =>$this->input->post('time_event_detail_end'),
+                      'tempat_event_detail' =>$this->input->post('tempat_event_detail'),
+
                       'date_time' => date("Y-m-d"),
                       'download_pdf'=>$hasil2['file_name']);
                     $where = array('id_event_detail' => $this->input->post('id'));
@@ -1257,11 +1275,14 @@ class Administrator extends CI_Controller {
             }else if($hasil2['file_name']==''){
                     $data = array(
                       'judul_event_detail' =>$this->input->post('judul_event_detail'),
-                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail_seo')),
+                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail')),
                       'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
                       'download_pdf'=>$hasil2['file_name'],
                       'date_event_detail' =>$this->input->post('date_event_detail'),
                       'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'time_event_detail_end' =>$this->input->post('time_event_detail_end'),
+                      'tempat_event_detail' =>$this->input->post('tempat_event_detail'),
+
                       'date_time' => date("Y-m-d"),
                       'gambar'=>$hasil['file_name']);
                     $where = array('id_event_detail' => $this->input->post('id'));
@@ -1273,11 +1294,14 @@ class Administrator extends CI_Controller {
             }else{
                     $data = array(
                       'judul_event_detail' =>$this->input->post('judul_event_detail'),
-                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail_seo')),
+                      'judul_event_detail_seo' =>seo_title($this->input->post('judul_event_detail')),
                       'deskripsi_event_detail' =>$this->input->post('deskripsi_event_detail'),
                       'download_pdf'=>$hasil2['file_name'],
                       'date_event_detail' =>$this->input->post('date_event_detail'),
                       'time_event_detail' =>$this->input->post('time_event_detail'),
+                      'time_event_detail_end' =>$this->input->post('time_event_detail_end'),
+                      'tempat_event_detail' =>$this->input->post('tempat_event_detail'),
+
                       'date_time' => date("Y-m-d"),
                       'gambar'=>$hasil['file_name'],
                       'download_pdf'=>$hasil2['file_name']);

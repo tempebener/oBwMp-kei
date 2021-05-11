@@ -87,7 +87,7 @@ $route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
 $route['pelatihan/(:num)/(:any)'] = "pelatihan/detail_pelatihan/$1/$2";
 $route['pelatihan/isi/(:num)/(:any)'] = "pelatihan/detail_isi_pelatihan/$1/$2";
 
-$route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
+$route['event_detail/(:num)/(:any)'] = "event/detail_event_utama/$1/$2";
 $route['event/(:num)/(:any)'] = "event/detail_event/$1/$2";
 // Register
 $route['register_member']='register/add_member';

@@ -10,7 +10,9 @@
                     <input type="hidden" name="id_event" value="<?php echo $event->id_event;?>"/>
                     <tr><th width="120px" scope="row">Nama Event</th>    <td><input type="text" class="form-control" name="judul_event_detail" required></td></tr>
                     <tr><th width="120px" scope="row">Tanggal Event</th>    <td><input type="date" class="form-control" name="date_event_detail" required></td></tr>
-                    <tr><th width="120px" scope="row">Waktu Event</th>    <td><input type="time" class="form-control" name="time_event_detail" required></td></tr>
+                    <tr><th width="120px" scope="row">Waktu Event Mulai</th>    <td><input type="time" class="form-control" name="time_event_detail" required></td></tr>
+                    <tr><th width="120px" scope="row">Waktu Event Selesai</th>    <td><input type="time" class="form-control" name="time_event_detail_end" required></td></tr>
+                    <tr><th width="120px" scope="row">Tempat Event</th>    <td><input type="text" class="form-control" name="tempat_event_detail" required></td></tr>
                     <tr><th scope="row">Deskripsi</th>             <td><textarea id="editor1" class="form-control" name="deskripsi_event_detail" style="height:260px" required></textarea></td></tr>
                     <tr><th scope='row'>Gambar</th>                 <td><input type='file' class='form-control' name='gambar'></td></tr>
 

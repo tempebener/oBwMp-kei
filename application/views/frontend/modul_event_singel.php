@@ -49,13 +49,13 @@
             <div class="col-xs-8 col-sm-6 col-md-4">
                     <!-- Post event-->
                     <div class="post post-event" data-animate='{"class":"fadeInUp"}'>
-                      <a class="post-media" href="single-post.html">
+                      <a class="post-media" href="<?php echo base_url("event_detail/$post_new->id_event_detail/$post_new->judul_event_detail_seo ") ?>">
                         <img class="post-img" src="<?php echo base_url();?>theme/images/foto_event/event_detail/<?php echo $post_new->gambar ?>" alt="" width="370" height="240"/>
                         <div class="post-date">
                           <div class=""><?php echo tgl_indo($post_new->date_event_detail) ?></div>
                         </div></a>
                       <div class="post-heading h4">
-                        <div class="post-title"><a href="single-post.html"><?php echo $post_new->judul_event_detail ?></a></div>
+                        <div class="post-title"><a href="<?php echo base_url("event_detail/$post_new->id_event_detail/$post_new->judul_event_detail_seo ") ?>"><?php echo $post_new->judul_event_detail ?></a></div>
 
                       </div>
                     </div>

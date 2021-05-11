@@ -18,8 +18,14 @@
                     <tr><th scope='row'>Tanggal Event</th>
                     <td><input type='date' class='form-control' name='date_event_detail' value='$rows[date_event_detail]'></td>
                     </tr>
-                    <tr><th scope='row'>Waktu Event</th>
+                    <tr><th scope='row'>Waktu Event Mulai</th>
                     <td><input type='time' class='form-control' name='time_event_detail' value='$rows[time_event_detail]'></td>
+                    </tr>
+                    <tr><th scope='row'>Waktu Event Selesai</th>
+                    <td><input type='time' class='form-control' name='time_event_detail_end' value='$rows[time_event_detail_end]'></td>
+                    </tr>
+                    <tr><th scope='row'>Tempat</th>
+                    <td><input type='text' class='form-control' name='tempat_event_detail' value='$rows[tempat_event_detail]'></td>
                     </tr>
                     <tr><th scope='row'>Deskripsi</th>
                     <td><textarea id='editor1' class='form-control' name='deskripsi_event_detail' style='height:260px'>$rows[deskripsi_event_detail]</textarea></td></tr>

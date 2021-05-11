@@ -69,7 +69,7 @@
                       <div class="blurb-counter-value h2"><!-- <span data-counter="">100</span><span class="counter-postfix">%</span> -->
                       </div>
                       
-                      <div class="blurb-title h4"><a href="#"><?php echo $post_new->judul_pelatihan_detail ?></a></div>
+                      <div class="blurb-title h4"><a href="<?php echo base_url("pelatihan/isi/$post_new->id_pelatihan_detail/$post_new->judul_pelatihan_detail_seo") ?>"><?php echo $post_new->judul_pelatihan_detail ?></a></div>
                       
                     </div>
                     

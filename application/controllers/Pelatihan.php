@@ -36,7 +36,26 @@ public function detail_pelatihan($id){
 			}
 		}
 
+public function detail_isi_pelatihan($id){
 
+			
+			$query = $this->Model_utama->view_join_one('tbl_pelatihan_detail','tbl_pelatihan','id_pelatihan',array('judul_pelatihan_detail_seo' => $this->uri->segment(4)),'id_pelatihan_detail','DESC',0,1);
+			if ($query->num_rows()<=0){
+				redirect('main');
+			}else{
+
+				$row = $query->row_array();
+				$data['title'] = cetak($row['judul_pelatihan_detail']);
+				$data['description'] = cetak_meta($row['deskripsi_pelatihan_singkat'],0,400);
+				$data['rows'] = $row;		
+
+				 $data['pelatihan_isi_detail']            = $this->M_pelatihan->get_by_id_pelatihan($id);
+ 
+				  
+
+				$this->load->view('frontend/modul_pelatihan_singel_detail', $data);
+			}
+		}
 
 	
 	

@@ -3,7 +3,6 @@
         <div class="container">
           <div class="text-block text-block-1" data-animate='{"class":"fadeIn"}'>
             <h2>Kesatriaan Quotes</h2>
-            <p class="big">Profil & Quotes dari para BOD Widodo Makmur Perkasa Group</p>
           </div>
           <div class="slick-person-container">
             <div class="slick-slider slick-person-img slider-nav" data-slick='{"slidesToShow":3,"arrows":false,"asNavFor":".slider-for","focusOnSelect":true,"centerMode":true,"centerPadding":"0px"}'>

@@ -6,12 +6,14 @@ class Register extends CI_Controller {
         parent::__construct();
     	$this->load->model('m_main');
     }
-  
-	public function index(){	
+
+	public function index(){
 		// $this->load->view('frontend/register/index');
-        $this->load->view('frontend/register/member');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+        $this->load->view('frontend/register/member',$data);
 	}
-  
+
 	public function add_mitra(){
 		if (isset($_POST['submit'])){
             $config['upload_path'] = 'theme/images/foto_register/mitra/';
@@ -88,7 +90,7 @@ class Register extends CI_Controller {
 			$this->load->view('frontend/register/mitra');
         }
 	}
-  
+
     public function add_member(){
         $this->load->helper(array('form', 'url'));
         $this->load->library(array('form_validation', 'session'));

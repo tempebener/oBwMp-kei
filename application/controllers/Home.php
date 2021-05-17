@@ -18,8 +18,10 @@ class Home extends CI_Controller{
 		$data['post_tutors'] = $this->m_main->get_all_tutors($status);
 		$data['pelatihan'] = $this->db->query("select * from tbl_pelatihan  ORDER BY  id_pelatihan desc
 			")->result();
-		$data['event'] = $this->db->query("select * from tbl_event  ORDER BY  id_event desc 
+		$data['event'] = $this->db->query("select * from tbl_event  ORDER BY  id_event desc
 				")->result();
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc 
+						")->result();
 		$data['post_bod'] = $this->m_main->get_all_bod($status);
 		$data['ekonomi_outlook'] = $this->db->query("select * from tbl_ekonomi_outlook  ORDER BY  id_eo desc
 			")->result();

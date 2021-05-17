@@ -17,7 +17,7 @@
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">KEI</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>visi_misi">Visi & Misi</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>visi_misi">Profil</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>struktur_organisasi">Struktur Organisasi</a>
@@ -114,7 +114,7 @@
                         <li class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pelatihan/3/budidaya-padi-jagung">Budidaya Padi & Jagung</a>
                         </li>
-                       
+
                       </ul>
                     </li>
                     <li><a class="navbar-navigation-dropdown-item">
@@ -149,7 +149,7 @@
                         </li>
                       </ul>
                     </li>
-                    
+
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>inkubator_area">Inkubator Area</a>
                     </li>
                   </ul>
@@ -180,14 +180,15 @@
                     </li>
                   </ul>
                 </li>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>">Galeri</a>
+                </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                     <li class="navbar-navigation-dropdown-item">
+                      <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>kei/admin">Login</a>
                       <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>register">Pendaftaran</a>
                     </li>
                   </ul>
-                </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kei/admin">Login</a>
                 </li>
               </ul>
             </div>

@@ -7,7 +7,9 @@ class Kontak extends CI_Controller{
   		$this->m_pengunjung->count_visitor();
 	}
 	function index(){
-		  $this->load->view('frontend/kontak_kami');
+    $data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		  $this->load->view('frontend/kontak_kami',$data);
 	}
 
   function kirim_pesan(){

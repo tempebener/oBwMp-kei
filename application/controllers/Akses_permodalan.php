@@ -7,21 +7,25 @@ class Akses_permodalan extends CI_Controller{
 
 	// Perbankan
 	function kur(){
-
-		$this->load->view('frontend/ap_kur');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		$this->load->view('frontend/ap_kur',$data);
 	}
 
 	// Non Perbankan
 	function lpdb_kumkm(){
-
-		$this->load->view('frontend/ap_lpdb_kumkm');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		$this->load->view('frontend/ap_lpdb_kumkm',$data);
 	}
 	function pkbl_bumn(){
-
-		$this->load->view('frontend/ap_pkbl_bumn');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		$this->load->view('frontend/ap_pkbl_bumn',$data);
 	}
 	function pnm(){
-
-		$this->load->view('frontend/ap_pnm');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		$this->load->view('frontend/ap_pnm',$data);
 	}
 }

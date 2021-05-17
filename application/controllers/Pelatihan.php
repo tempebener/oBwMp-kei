@@ -13,11 +13,11 @@ class Pelatihan extends CI_Controller {
 
   }
 
-	
+
 
 public function detail_pelatihan($id){
 
-			
+
 			$query = $this->Model_utama->view_where('tbl_pelatihan',array('judul_pelatihan_seo' => $this->uri->segment(3)),'id_pelatihan','DESC',0,1);
 			if ($query->num_rows()<=0){
 				redirect('main');
@@ -26,11 +26,12 @@ public function detail_pelatihan($id){
 				$row = $query->row_array();
 				$data['title'] = cetak($row['judul_pelatihan']);
 				$data['description'] = cetak_meta($row['deskripsi_singkat'],0,400);
-				$data['rows'] = $row;		
+				$data['rows'] = $row;
 
 				 $data['pelatihan_detail']            = $this->M_pelatihan->get_by_id_pelatihan($id);
- 
-				  
+				 $data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+		 						")->result();
+
 
 				$this->load->view('frontend/modul_pelatihan_singel', $data);
 			}
@@ -38,7 +39,7 @@ public function detail_pelatihan($id){
 
 public function detail_isi_pelatihan($id){
 
-			
+
 			$query = $this->Model_utama->view_join_one('tbl_pelatihan_detail','tbl_pelatihan','id_pelatihan',array('judul_pelatihan_detail_seo' => $this->uri->segment(4)),'id_pelatihan_detail','DESC',0,1);
 			if ($query->num_rows()<=0){
 				redirect('main');
@@ -47,18 +48,19 @@ public function detail_isi_pelatihan($id){
 				$row = $query->row_array();
 				$data['title'] = cetak($row['judul_pelatihan_detail']);
 				$data['description'] = cetak_meta($row['deskripsi_pelatihan_singkat'],0,400);
-				$data['rows'] = $row;		
+				$data['rows'] = $row;
 
 				 $data['pelatihan_isi_detail']            = $this->M_pelatihan->get_by_id_pelatihan($id);
- 
-				  
+				 $data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+		 						")->result();
+
 
 				$this->load->view('frontend/modul_pelatihan_singel_detail', $data);
 			}
 		}
 
-	
-	
-    
+
+
+
 
 }

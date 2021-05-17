@@ -7,27 +7,32 @@ class Inkubator_bisnis extends CI_Controller{
 
 	// Tentang Inkubator Bisnis
 	function tentang_inkubator_bisnis(){
-
-		$this->load->view('frontend/ib_tentang_inkubator_bisnis');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		$this->load->view('frontend/ib_tentang_inkubator_bisnis',$data);
 	}
 
 	// Konsultasi Online
 	function peternakan(){
-
-		$this->load->view('frontend/ib_peternakan');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		$this->load->view('frontend/ib_peternakan',$data);
 	}
 	function pertanian(){
-
-		$this->load->view('frontend/ib_pertanian');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		$this->load->view('frontend/ib_pertanian',$data);
 	}
 	function lainnya(){
-
-		$this->load->view('frontend/ib_lainnya');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		$this->load->view('frontend/ib_lainnya',$data);
 	}
-	
+
 	// Inkubator Area
 	function inkubator_area(){
-
-		$this->load->view('frontend/ib_inkubator_area');
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+						")->result();
+		$this->load->view('frontend/ib_inkubator_area',$data);
 	}
 }

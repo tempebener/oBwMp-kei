@@ -3,7 +3,7 @@
             <div class="navbar-cell">
               <div class="navbar-panel">
                 <button class="navbar-switch novi-icon custom-font-menu" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","isolate":"[data-multi-switch]"}'></button>
-                <div class="navbar-logo"><a class="navbar-logo-link" href="<?php echo base_url();?>"><img class="navbar-logo-inverse" src="<?php echo base_url();?>theme/images/logojoglo.png" alt="Teachzy" width="70" height="80"/></a></div>
+                <div class="navbar-logo"><a class="navbar-logo-link" href="<?php echo base_url();?>"><img class="navbar-logo-inverse" src="<?php echo base_url();?>theme/images/logo-kesatriaan.png" alt="Kesatriaan Entrepreneur Indonesia"></a></div>
               </div>
             </div>
             <div class="navbar-spacer"></div>
@@ -17,7 +17,7 @@
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">KEI</a>
                       <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                         <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>visi_misi">Visi & Misi</a>
+                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>visi_misi">Profil</a>
                         </li>
                         <li class="navbar-navigation-dropdown-item">
                           <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>struktur_organisasi">Struktur Organisasi</a>
@@ -179,15 +179,17 @@
                     </li>
                   </ul>
                 </li>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>">Galeri</a>
+                </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
                     <li class="navbar-navigation-dropdown-item">
+                      <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>kei/admin">Login</a>
                       <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>register">Pendaftaran</a>
                     </li>
                   </ul>
                 </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kei/admin">Login</a>
-                </li>
+
               </ul>
             </li>
             </div>

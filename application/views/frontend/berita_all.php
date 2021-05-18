@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-    <title>Food</title>
+    <title>Berita Kesatriaan Entrepreneur Indonesia</title>
     <?php $this->load->view('frontend/head')?>
   </head>
   <body>
@@ -19,7 +19,7 @@
             <div class="breadcrumb-inner">
               <div class="breadcrumb-item"><a class="breadcrumb-link" href="<?php echo base_url();?>">Beranda</a></div>
               <!-- <div class="breadcrumb-item"><a class="breadcrumb-link" href="blog.html">Blog</a></div> -->
-              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active"><?php echo "$rows[judul]"; ?></span></div>
+              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">Berita </span></div>
             </div>
           </div>
         </div>
@@ -27,19 +27,23 @@
       <!-- Post single-->
       <section class="section-md bg-transparent">
         <div class="container">
-          <div class="post">
-            <div class="post-media"><img class="post-img" src="<?php echo base_url()?>theme/images/berita/<?php echo "$rows[gambar]"; ?>" alt="" width="1170" height="500"/>
-            </div>
-            <div class="post-meta">
-              <div class="post-meta-item">
-                <div class="post-meta-icon custom-font-calendar"></div>
-                <div class="post-date"><?php echo  tgl_indo($rows['tanggal']); ?></div>
-              </div>
-
-            </div>
-            <div class="post-title h6"><?php echo "$rows[judul]"; ?></div>
-            <div class="post-text">
-              <p><?php echo "$rows[isi_berita]"; ?></p>
+          <div class="row row-30 justify-content-center">
+            <div class="col-md-12 col-lg-12">
+              <h2>Latest news</h2>
+              <?php foreach ($posts_berita as $post_new){
+                $isi = character_limiter($post_new->isi_berita,200);
+                ?>
+                    <div class="post post-offset"><a class="post-media" href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><img class="post-img" src="<?php echo base_url();?>theme/images/berita/<?php echo $post_new->gambar ?>" alt="" width="769" height="380"/></a>
+                      <div class="post-meta">
+                        <div class="post-meta-item">
+                          <div class="post-meta-icon custom-font-calendar"></div>
+                          <div class="post-date"><?php echo tgl_indo($post_new->tanggal) ?></div>
+                        </div>
+                      </div>
+                      <div class="post-title h6"><a href="<?php echo base_url("detail/$post_new->id_berita/$post_new->judul_seo ") ?>"><?php echo $post_new->judul ?></a></div>
+                      <div class="post-text"><?php echo $isi ?></div>
+                    </div>
+                  <?php } ?>
             </div>
           </div>
         </div>

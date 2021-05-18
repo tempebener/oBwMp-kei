@@ -83,10 +83,11 @@ $route['lainnya']='inkubator_bisnis/lainnya';
 $route['inkubator_area']='inkubator_bisnis/inkubator_area';
 
 // Agropreneur Update
+$route['berita'] = "artikel/index";
 $route['detail/(:num)/(:any)'] = "artikel/detail/$1/$2";
 $route['pelatihan/(:num)/(:any)'] = "pelatihan/detail_pelatihan/$1/$2";
 $route['pelatihan/isi/(:num)/(:any)'] = "pelatihan/detail_isi_pelatihan/$1/$2";
-//Event 
+//Event
 $route['event_detail/(:num)/(:any)'] = "event/detail_event_utama/$1/$2";
 $route['event/(:num)/(:any)'] = "event/detail_event/$1/$2";
 // Register

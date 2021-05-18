@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-    <title>Food</title>
+    <title>Kesatriaan</title>
     <?php $this->load->view('frontend/head')?>
   </head>
   <body>

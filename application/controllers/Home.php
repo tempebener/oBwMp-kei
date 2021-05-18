@@ -20,7 +20,7 @@ class Home extends CI_Controller{
 			")->result();
 		$data['event'] = $this->db->query("select * from tbl_event  ORDER BY  id_event desc
 				")->result();
-		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc 
+		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc limit 1
 						")->result();
 		$data['post_bod'] = $this->m_main->get_all_bod($status);
 		$data['ekonomi_outlook'] = $this->db->query("select * from tbl_ekonomi_outlook  ORDER BY  id_eo desc

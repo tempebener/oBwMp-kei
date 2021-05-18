@@ -22,6 +22,22 @@ class Model_utama extends CI_model{
         $this->db->limit($dari, $baris);
         return $this->db->get($table);
     }
+    public function view_one_limit($table1,$status,$order,$ordering,$baris,$dari)
+    {
+           $this->db->from($table1);
+           $this->db->where($status,'Y');
+           $this->db->order_by($order,$ordering);
+           $this->db->limit($dari, $baris);
+           return $this->db->get()->result();
+    }
+    public function views_row($table1,$status,$order,$ordering)
+    {
+       $this->db->limit(3);
+       $this->db->from($table1);
+       $this->db->where($status,'Y');
+       $this->db->order_by($order,$ordering);
+       return $this->db->get()->num_rows();
+     }
 
     public function view_single($table,$data,$order,$ordering){
         $this->db->where($data);
@@ -69,7 +85,7 @@ class Model_utama extends CI_model{
       return $this->db->get();
     }
      public function view_join_two_artikel($table1,$table2,$table3,$field,$field1,$where,$order,$ordering,$baris,$dari,$id){
-       
+
       $this->db->select('*',$table2.'.id_users as namax');
       $this->db->from($table1);
       $this->db->join($table2, $table1.'.'.$field.'='.$table2.'.'.$field);

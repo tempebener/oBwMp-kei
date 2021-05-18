@@ -14,12 +14,25 @@ class Artikel extends CI_Controller {
 
 	public function index()
 	{
-   
-			$this->load->view('frontend/berita_singel');
-	
+		$jumlah= $this->Model_utama->views_row('tbl_berita','headline','id_berita','DESC');
+		$config['total_rows'] = $jumlah;
+		if ($this->uri->segment('4')==''){
+			$dari = 0;
+		}else{
+			$dari = $this->uri->segment('4');
+		}
 
-	
-}
+		if (is_numeric($dari)) {
+			$config['per_page'] = 30;
+			$data['posts_berita']= $this->Model_utama->view_one_limit('tbl_berita','headline','id_berita','desc',$dari,$config['per_page']);
+			$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc limit 1
+						 ")->result();
+		}else{
+			redirect('main');
+		}
+			$this->load->view('frontend/berita_all',$data);
+
+	}
 
 public function detail(){
 
@@ -32,8 +45,9 @@ public function detail(){
 				$row = $query->row_array();
 				$data['title'] = cetak($row['judul']);
 				$data['description'] = cetak_meta($row['isi_berita'],0,400);
-				$data['rows'] = $row;		 
-				  
+				$data['rows'] = $row;
+				$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc limit 1
+							 ")->result();
 
 				$this->load->view('frontend/berita_singel', $data);
 			}
@@ -41,8 +55,8 @@ public function detail(){
 
 
 
-	
-	
-    
+
+
+
 
 }

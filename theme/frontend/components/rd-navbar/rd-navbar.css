@@ -461,7 +461,8 @@
 }
 
 .rd-navbar-fullwidth {
-	height: 80px;
+	height: 150px;
+	top: -30px;
 	font-weight: 700;
 	font-size: 0.875rem;
 	background-color: #04d2c8;

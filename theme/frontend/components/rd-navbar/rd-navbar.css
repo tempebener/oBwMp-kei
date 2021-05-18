@@ -697,7 +697,7 @@
 .rd-navbar-fullwidth .navbar-navigation-root-item {
 	display: flex;
 	align-items: center;
-	padding: 0 30px;
+	padding: 0 12px;
 }
 
 .rd-navbar-fullwidth .navbar-navigation-root-link {

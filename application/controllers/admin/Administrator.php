@@ -1089,7 +1089,7 @@ class Administrator extends CI_Controller {
                       'judul_event_seo'=>seo_title($this->input->post('judul_event')),
                       'deskripsi_event'=>$this->input->post('deskripsi_event'),
                       'foto'=>$hasil['file_name']);
-                      $where = array('id_pelatihan' => $this->input->post('id'));
+                      $where = array('id_event' => $this->input->post('id'));
                       $_image = $this->db->get_where('tbl_event',$where)->row();
                       $query = $this->db->update('tbl_event',$data,$where);
                       if($query){
@@ -1324,6 +1324,98 @@ class Administrator extends CI_Controller {
             $this->template->load('administrator/template','administrator/mod_event/view_event_bab_edit',$data);
             }
 
+  }
+
+  // Foto Galeri
+  function fotogaleri_list(){
+      cek_session_akses('fotogaleri_list',$this->session->id_session);
+         $data['record'] = $this->model_app->view_ordering('tbl_fotogaleri','id_fotogaleri','DESC');
+
+
+      $this->template->load('administrator/template','administrator/mod_fotogaleri/view_list',$data);
+  }
+  function fotogaleri_tambah(){
+    $this->template->load('administrator/template','administrator/mod_fotogaleri/view_tambah');
+  }
+  function fotogaleri_simpan(){
+      if (isset($_POST['submit'])){
+              $config['upload_path'] = 'theme/images/foto_fotogaleri/';
+              $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+              $config['max_size'] = '5000'; // kb
+              $this->load->library('upload', $config);
+              $this->upload->do_upload('foto');
+              $hasil=$this->upload->data();
+              if ($hasil['file_name']==''){
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'status_fotogaleri'=>'Y',
+                        'judul_fotogaleri'=>$this->db->escape_str($this->input->post('judul_fotogaleri')),
+                        'judul_fotogaleri_seo'=>seo_title($this->input->post('judul_fotogaleri')));
+              }else{
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'status_fotogaleri'=>'Y',
+                        'judul_fotogaleri'=>$this->db->escape_str($this->input->post('judul_fotogaleri')),
+                        'judul_fotogaleri_seo'=>seo_title($this->input->post('judul_fotogaleri')),
+                                      'gambar_fotogaleri'=>$hasil['file_name']);
+              }
+              $this->model_app->insert('tbl_fotogaleri',$data);
+        redirect('admin/administrator/fotogaleri_list');
+      }else{
+        $this->template->load('administrator/template','administrator/mod_fotogaleri/view_tambah',$data);
+      }
+  }
+  function fotogaleri_edit(){
+      $id = $this->uri->segment(4);
+      if (isset($_POST['submit'])){
+              $config['upload_path'] = 'theme/images/foto_fotogaleri/';
+              $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+              $config['max_size'] = '5000'; // kb
+              $this->load->library('upload', $config);
+              $this->upload->do_upload('foto');
+              $hasil=$this->upload->data();
+              if ($hasil['file_name']==''){
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'status_fotogaleri'=>'Y',
+                      'judul_fotogaleri'=>$this->db->escape_str($this->input->post('judul_fotogaleri')),
+                      'judul_fotogaleri_seo'=>seo_title($this->input->post('judul_fotogaleri')));
+                      $where = array('id_fotogaleri' => $this->input->post('id'));
+                      $this->db->update('tbl_fotogaleri', $data, $where);
+              }else{
+                      $data = array('id_users'=>$this->session->id_users,
+                      'date_time'=>date('Y-m-d'),
+                      'status_fotogaleri'=>'Y',
+                      'judul_fotogaleri'=>$this->db->escape_str($this->input->post('judul_fotogaleri')),
+                      'judul_fotogaleri_seo'=>seo_title($this->input->post('judul_fotogaleri')),
+                      'gambar_fotogaleri'=>$hasil['file_name']);
+                      $where = array('id_fotogaleri' => $this->input->post('id'));
+                      $_image = $this->db->get_where('tbl_fotogaleri',$where)->row();
+                      $query = $this->db->update('tbl_fotogaleri',$data,$where);
+                      if($query){
+                        unlink("theme/images/foto_fotogaleri/".$_image->gambar_fotogaleri);
+                      }
+              }
+              redirect('admin/administrator/fotogaleri_list/');
+          }else{
+              if ($this->session->level=='admin'){
+                  $proses = $this->model_app->edit('tbl_fotogaleri', array('id_fotogaleri' => $id))->row_array();
+              }else{
+                  $proses = $this->model_app->edit('tbl_fotogaleri', array('id_fotogaleri' => $id, 'id_users' => $this->session->id_users))->row_array();
+              }
+              $data = array('rows' => $proses);
+              $this->template->load('administrator/template','administrator/mod_fotogaleri/view_edit',$data);
+              }
+  }
+  function fotogaleri_hapus(){
+
+      $id = $this->uri->segment(4);
+      $_id = $this->db->get_where('tbl_fotogaleri',['id_fotogaleri' => $id])->row();
+      $query = $this->db->delete('tbl_fotogaleri',['id_fotogaleri'=> $id]);
+      if($query){
+               unlink("./theme/images/foto_fotogaleri/".$_id->gambar_fotogaleri);
+     }
+    redirect('admin/administrator/fotogaleri_list/');
   }
 
   // Modul Pengantar

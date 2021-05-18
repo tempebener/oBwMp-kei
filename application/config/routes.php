@@ -93,8 +93,8 @@ $route['event/(:num)/(:any)'] = "event/detail_event/$1/$2";
 // Register
 $route['register_member']='register/add_member';
 $route['register_mitra']='register/add_mitra';
-
-
+// Foto Galeri
+$route['gallery'] = "fotogaleri/index";
 // Agropreneur Update
 $route['ekonomioutlook/(:num)/(:any)'] = "ekonomioutlook/ekonomi_singel/$1/$2";
 

@@ -29,7 +29,7 @@ public function detail_pelatihan($id){
 				$data['rows'] = $row;
 
 				 $data['pelatihan_detail']            = $this->M_pelatihan->get_by_id_pelatihan($id);
-				 $data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc limit 1")->result();
+				 $data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  date_event_detail desc limit 1")->result();
 
 
 				$this->load->view('frontend/modul_pelatihan_singel', $data);
@@ -50,7 +50,7 @@ public function detail_isi_pelatihan($id){
 				$data['rows'] = $row;
 
 				 $data['pelatihan_isi_detail']            = $this->M_pelatihan->get_by_id_pelatihan($id);
-				 $data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc limit 1")->result();
+				 $data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  date_event_detail desc limit 1")->result();
 
 
 				$this->load->view('frontend/modul_pelatihan_singel_detail', $data);

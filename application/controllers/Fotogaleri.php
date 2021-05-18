@@ -25,7 +25,7 @@ class Fotogaleri extends CI_Controller {
 		if (is_numeric($dari)) {
 			$config['per_page'] = 30;
 			$data['posts_galeri']= $this->Model_utama->view_one_limit('tbl_fotogaleri','status_fotogaleri','id_fotogaleri','desc',$dari,$config['per_page']);
-			$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc limit 1
+			$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  date_event_detail desc limit 1
 						 ")->result();
 		}else{
 			redirect('main');

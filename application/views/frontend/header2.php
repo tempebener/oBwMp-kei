@@ -180,7 +180,7 @@
                     </li>
                   </ul>
                 </li>
-                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>">Galeri</a>
+                <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>gallery">Galeri</a>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">

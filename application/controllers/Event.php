@@ -23,6 +23,8 @@ class Event extends CI_Controller {
 					$row = $query->row_array();
 					$data['rows'] = $row;
 					 $data['event_detail']            = $this->M_event->get_by_id_event($id);
+					 $data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+			 						")->result();
 					$this->load->view('frontend/modul_event_singel', $data);
 				}
 			}
@@ -35,6 +37,8 @@ class Event extends CI_Controller {
 						}else{
 							$row = $query->row_array();
 							$data['rows'] = $row;
+							$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  id_event_detail desc
+											")->result();
 							$this->load->view('frontend/modul_event_singel_utama', $data);
 						}
 		}

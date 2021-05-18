@@ -961,11 +961,11 @@
 /*Add/Modif by Bayu*/
 .rd-navbar-fullwidth-linked .rd-navbar-absolute-wrap .rd-navbar-fullwidth.rd-navbar--is-stuck {
     /*warna rekomend nugie*/
-    background-color: #146497;
+    background-color: #012238;
 }
 .rd-navbar-fullwidth {
     /*warna rekomend nugie*/
-    background-color: #146497;
+    background-color: #012238;
 }
 .rd-navbar-fullwidth .navbar-navigation-dropdown-link:hover {
     color: #0471d2;
@@ -986,13 +986,13 @@
     color: #0471d2;
 }
 .rd-navbar-fixed .navbar-panel {
-    background: #146497;
+    background: #012238;
 }
 .rd-navbar-fixed .navbar-navigation-root-item.focus > .navbar-navigation-root-link, .rd-navbar-fixed .navbar-navigation-root-item.focus > .navbar-navigation-megamenu-link, .rd-navbar-fixed .navbar-navigation-root-item.focus > .navbar-navigation-dropdown-link, .rd-navbar-fixed .navbar-navigation-root-item.active > .navbar-navigation-root-link, .rd-navbar-fixed .navbar-navigation-root-item.active > .navbar-navigation-megamenu-link, .rd-navbar-fixed .navbar-navigation-root-item.active > .navbar-navigation-dropdown-link, .rd-navbar-fixed .navbar-navigation-megamenu-item.focus > .navbar-navigation-root-link, .rd-navbar-fixed .navbar-navigation-megamenu-item.focus > .navbar-navigation-megamenu-link, .rd-navbar-fixed .navbar-navigation-megamenu-item.focus > .navbar-navigation-dropdown-link, .rd-navbar-fixed .navbar-navigation-megamenu-item.active > .navbar-navigation-root-link, .rd-navbar-fixed .navbar-navigation-megamenu-item.active > .navbar-navigation-megamenu-link, .rd-navbar-fixed .navbar-navigation-megamenu-item.active > .navbar-navigation-dropdown-link, .rd-navbar-fixed .navbar-navigation-dropdown-item.focus > .navbar-navigation-root-link, .rd-navbar-fixed .navbar-navigation-dropdown-item.focus > .navbar-navigation-megamenu-link, .rd-navbar-fixed .navbar-navigation-dropdown-item.focus > .navbar-navigation-dropdown-link, .rd-navbar-fixed .navbar-navigation-dropdown-item.active > .navbar-navigation-root-link, .rd-navbar-fixed .navbar-navigation-dropdown-item.active > .navbar-navigation-megamenu-link, .rd-navbar-fixed .navbar-navigation-dropdown-item.active > .navbar-navigation-dropdown-link {
     color: #0471d2;
 }
-.rd-navbar-fixed .navbar-navigation-root-link:hover, 
-.rd-navbar-fixed .navbar-navigation-megamenu-link:hover, 
+.rd-navbar-fixed .navbar-navigation-root-link:hover,
+.rd-navbar-fixed .navbar-navigation-megamenu-link:hover,
 .rd-navbar-fixed .navbar-navigation-dropdown-link:hover {
     color: #0471d2;
 }

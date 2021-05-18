@@ -29,7 +29,9 @@
           <h2><?php echo "$rows[judul_event_detail]"; ?></h2>
           <div class="row row-30">
             <div class="col-md-6 col-xl-8">
-              <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/foto_event/event_detail/<?php echo $rows['gambar']; ?>);"></div>
+              <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/foto_event/event_detail/<?php echo $rows['gambar']; ?>); padding-bottom: 100%;
+    background-size: cover;
+    background-position: center center;"></div>
             </div>
             <div class="col-md-6 col-xl-4">
               <div class="box box-info">

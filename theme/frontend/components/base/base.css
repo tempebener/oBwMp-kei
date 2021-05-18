@@ -4768,7 +4768,7 @@ a:hover {
 
 img {
 	display: inline-block;
-	max-width: 110px;
+	max-width: 100%;
 	height: auto;
 }
 

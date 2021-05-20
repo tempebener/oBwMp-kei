@@ -77,9 +77,8 @@ $route['pkbl_bumn']='akses_permodalan/pkbl_bumn';
 $route['pnm']='akses_permodalan/pnm';
 // Inkubator Bisnis
 $route['tentang_inkubator_bisnis']='inkubator_bisnis/tentang_inkubator_bisnis';
-$route['peternakan']='inkubator_bisnis/peternakan';
-$route['pertanian']='inkubator_bisnis/pertanian';
-$route['lainnya']='inkubator_bisnis/lainnya';
+$route['Konsultasi-online']='inkubator_bisnis/Konsultasi_online';
+
 $route['inkubator_area']='inkubator_bisnis/inkubator_area';
 
 // Agropreneur Update

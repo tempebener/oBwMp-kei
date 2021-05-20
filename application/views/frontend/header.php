@@ -3,7 +3,7 @@
             <div class="navbar-cell">
               <div class="navbar-panel">
                 <button class="navbar-switch novi-icon custom-font-menu" data-multi-switch='{"targets":".rd-navbar","scope":".rd-navbar","isolate":"[data-multi-switch]"}'></button>
-                <div class="navbar-logo"><a class="navbar-logo-link" href="<?php echo base_url();?>"><img style="max-width: 110px;" class="navbar-logo-inverse" src="<?php echo base_url();?>theme/images/logo-kesatriaan.png" alt="Kesatriaan Entrepreneur Indonesia"></a></div>
+                <div class="navbar-logo"><a class="navbar-logo-link" href="<?php echo base_url();?>"><img style="max-width: 110px;" class="navbar-logo-inverse" src="<?php echo base_url();?>theme/images/logokeinew.png" alt="Kesatriaan Entrepreneur Indonesia"></a></div>
               </div>
             </div>
             <div class="navbar-spacer"></div>
@@ -135,18 +135,8 @@
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>tentang_inkubator_bisnis">Tentang Inkubator Bisnis</a>
                     </li>
 
-                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="#">Konsultasi Online</a>
-                      <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>peternakan">Peternakan</a>
-                        </li>
-                        <li class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>pertanian">Pertanian</a>
-                        </li>
-                        <li><a class="navbar-navigation-dropdown-item">
-                          <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>lainnya">Lainnya</a>
-                        </li>
-                      </ul>
+                    <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>Konsultasi-online">Konsultasi Online</a>
+                     
                     </li>
 
                     <li class="navbar-navigation-dropdown-item"><a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>inkubator_area">Inkubator Area</a>

@@ -25,7 +25,7 @@
               <div class="breadcrumb-item"><a class="breadcrumb-link" href="<?php echo base_url();?>">Home</a></div>
               <div class="breadcrumb-item"><span class="breadcrumb-text">Inkubator Bisnis</span></div>
               <div class="breadcrumb-item"><span class="breadcrumb-text">Konsultasi Online</span></div>
-              <div class="breadcrumb-item"><span class="breadcrumb-text breadcrumb-active">Peternakan</span></div>
+           
             </div>
           </div>
         </div>
@@ -35,9 +35,9 @@
       <section class="section-md bg-transparent text-center">
         <div class="container">
           <div class="text-block text-block-1">
-            <h2>Peternakan</h2>
+            <h2>Hubungi Kami</h2>
             <br/>
-
+            <div class="btn-group-1"><a class="btn btn-lg btn-primary" href="https://wa.me/+6282136613891" target="_blank">Whatsapp</a><a class="btn btn-lg btn-primary" href="<?php echo base_url();?>kontak">Kontak</a></div>
           </div>
       </section>
 

@@ -13,21 +13,21 @@ class Inkubator_bisnis extends CI_Controller{
 	}
 
 	// Konsultasi Online
-	function peternakan(){
+	function Konsultasi_online(){
 		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  date_event_detail desc limit 1
 						")->result();
-		$this->load->view('frontend/ib_peternakan',$data);
+		$this->load->view('frontend/ib_konsultasionline',$data);
 	}
-	function pertanian(){
-		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  date_event_detail desc limit 1
-						")->result();
-		$this->load->view('frontend/ib_pertanian',$data);
-	}
-	function lainnya(){
-		$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  date_event_detail desc limit 1
-						")->result();
-		$this->load->view('frontend/ib_lainnya',$data);
-	}
+	// function pertanian(){
+	// 	$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  date_event_detail desc limit 1
+	// 					")->result();
+	// 	$this->load->view('frontend/ib_pertanian',$data);
+	// }
+	// function lainnya(){
+	// 	$data['event_terbaru'] = $this->db->query("select * from tbl_event_detail  ORDER BY  date_event_detail desc limit 1
+	// 					")->result();
+	// 	$this->load->view('frontend/ib_lainnya',$data);
+	// }
 
 	// Inkubator Area
 	function inkubator_area(){

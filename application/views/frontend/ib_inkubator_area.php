@@ -31,13 +31,97 @@
       </section>
 
       <!-- Deskripsi Profil -->
+     
       <section class="section-md bg-transparent text-center">
         <div class="container">
           <div class="text-block text-block-1">
             <h2>Inkubator Area</h2>
-            <br/>
-
+           
           </div>
+          <div class="row row-30 justify-content-center">
+            <div class="col-sm-5 col-md-5">
+                    <!-- Blurb-->
+                    <article class="blurb blurb-2">
+                      <div class="icon blurb-icon blurb-icon-primary custom-font-pin"></div>
+                      <div class="blurb-title h4">Region Sumatera</div>
+                      <div class="blurb-text big">
+                         <ul style="margin-left: 36px"class="list list-icons">
+                <li class="list-item">
+                  <div class="list-icon custom-font-pin"></div><a class="link link-inherit" href="#">Joglo Tumiyono, Klaten</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-icon custom-font-email"></div><a class="link link-inherit" href="mailto:#">kesatriaan.entrepreneur@gmail.com</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-icon custom-font-phone"></div><span><span>Call Us: </span><a class="link link-inherit" href="tel:#">1-800-123-1234</a></span>
+                </li>
+              </ul>
+                      </div>
+                    </article>
+            </div>
+            <div class="col-sm-5 col-md-5">
+                    <!-- Blurb-->
+                    <article class="blurb blurb-2">
+                      <div class="icon blurb-icon blurb-icon-primary custom-font-pin"></div>
+                      <div class="blurb-title h4">Region Jabar & Banten</div>
+                      <div class="blurb-text big">
+                         <ul style="margin-left: 36px"class="list list-icons">
+                <li class="list-item">
+                  <div class="list-icon custom-font-pin"></div><a class="link link-inherit" href="#">Joglo Tumiyono, Klaten</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-icon custom-font-email"></div><a class="link link-inherit" href="mailto:#">kesatriaan.entrepreneur@gmail.com</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-icon custom-font-phone"></div><span><span>Call Us: </span><a class="link link-inherit" href="tel:#">1-800-123-1234</a></span>
+                </li>
+              </ul>
+                      </div>
+                    </article>
+            </div>
+            <div class="col-sm-5 col-md-5">
+                    <!-- Blurb-->
+                    <article class="blurb blurb-2">
+                      <div class="icon blurb-icon blurb-icon-primary custom-font-pin"></div>
+                      <div class="blurb-title h4">Region Jateng & DIY</div>
+                      <div class="blurb-text big">
+                         <ul style="margin-left: 36px"class="list list-icons">
+                <li class="list-item">
+                  <div class="list-icon custom-font-pin"></div><a class="link link-inherit" href="#">Joglo Tumiyono, Klaten</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-icon custom-font-email"></div><a class="link link-inherit" href="mailto:#">kesatriaan.entrepreneur@gmail.com</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-icon custom-font-phone"></div><span><span>Call Us: </span><a class="link link-inherit" href="tel:#">1-800-123-1234</a></span>
+                </li>
+              </ul>
+                      </div>
+                    </article>
+            </div>
+
+              <div class="col-sm-5 col-md-5">
+                    <!-- Blurb-->
+                    <article class="blurb blurb-2">
+                      <div class="icon blurb-icon blurb-icon-primary custom-font-pin"></div>
+                      <div class="blurb-title h4">Region Jatim dan Bali</div>
+                      <div class="blurb-text big">
+                         <ul style="margin-left: 36px"class="list list-icons">
+                <li class="list-item">
+                  <div class="list-icon custom-font-pin"></div><a class="link link-inherit" href="#">Joglo Tumiyono, Klaten</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-icon custom-font-email"></div><a class="link link-inherit" href="mailto:#">kesatriaan.entrepreneur@gmail.com</a>
+                </li>
+                <li class="list-item">
+                  <div class="list-icon custom-font-phone"></div><span><span>Call Us: </span><a class="link link-inherit" href="tel:#">1-800-123-1234</a></span>
+                </li>
+              </ul>
+                      </div>
+                    </article>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- Footer start-->

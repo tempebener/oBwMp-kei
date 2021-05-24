@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-    <title>Food</title>
-    <?php $this->load->view('frontend/head')?>
+    <title><?php echo "$rows[judul_pelatihan]"; ?></title>
+    <meta name="title" content="<?php echo "$rows[judul_pelatihan]"; ?>">
+    <meta property="og:title" content="<?php echo "$rows[judul_pelatihan]"; ?>">
+    <?php $this->load->view('frontend/head2')?>
   </head>
   <body>
     <div class="page">
@@ -44,14 +46,14 @@
                 <div class="post-meta-icon custom-font-calendar"></div>
                 <div class="post-date"></div>
               </div> -->
-             
+
             </div>
           </br>
             <div class="post-title h6"><?php echo "$rows[judul_pelatihan]"; ?></div>
             </br>
             <div class="post-text">
               <div class="row row-30 row-lg-55">
-                
+
                 <!-- foreachnya nti taro sini - Start -->
                    <?php
               foreach ($pelatihan_detail as $post_new)
@@ -60,7 +62,7 @@
                 <div class="col-6 col-sm-3 col-md-6">
                   <!-- Blurb side-->
                   <article class="blurb blurb-side">
-                  
+
                     <div class="blurb-item">
                       <!-- <div class="icon blurb-icon custom-font-graduated"></div> -->
                       <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/foto_pelatihan/pelatihan_detail/<?php echo $post_new->gambar ?>" alt="Jaminan Akses Pemodalan" width="80px" height="auto">
@@ -68,11 +70,11 @@
                     <div class="blurb-body">
                       <div class="blurb-counter-value h2"><!-- <span data-counter="">100</span><span class="counter-postfix">%</span> -->
                       </div>
-                      
+
                       <div class="blurb-title h4"><a href="<?php echo base_url("pelatihan/isi/$post_new->id_pelatihan_detail/$post_new->judul_pelatihan_detail_seo") ?>"><?php echo $post_new->judul_pelatihan_detail ?></a></div>
-                      
+
                     </div>
-                    
+
                   </article>
                 </div>
                  <?php } ?>
@@ -83,7 +85,7 @@
           </div>
         </div>
       </section>
-    
+
       <!-- Footer default-->
     <!-- Footer start-->
      <?php $this->load->view('frontend/footer')?>

@@ -1,13 +1,25 @@
  <head>
-    <title>KEI</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta property="og:title" content="KEI">
-    <meta property="og:description" content="">
-    <meta property="og:image" content="">
-    <meta property="og:url" content="">
-    <link rel="icon" href="<?php echo base_url();?>assets/images/favicon.png" type="image/x-icon">
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta content="crudbiz" name="author">
+    <meta NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    <title>Kesatriaan Entrepreneur Indonesia</title>
+    <meta name="title" content="Kesatriaan Entrepreneur Indonesia">
+    <meta property="og:title" content="Kesatriaan Entrepreneur Indonesia">
+    <meta name="site_url" content="<?php echo base_url()?>">
+    <meta name="description" content="Kesatriaan Entreprenenur Indonesia (KEI) merupakan lembaga yang konsen dalam membangun generasi muda bangsa, dengan melahirkan sumberdaya kepemimpinan umat di masa depan">
+    <meta name="keywords" content="Kesatriaan Entrepreneur Indonesia">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="alternate" href="<?php echo base_url()?>" hreflang="id" />
+    <link href='<?php echo base_url()?>' rel='canonical'/>
+    <meta property="og:site_name" content="Kesatriaan Entrepreneur Indonesia">
+    <meta property="og:description" content="Kesatriaan Entreprenenur Indonesia (KEI) merupakan lembaga yang konsen dalam membangun generasi muda bangsa, dengan melahirkan sumberdaya kepemimpinan umat di masa depan">
+    <meta property="og:url" content="<?php echo base_url()?>">
+    <meta property="og:image" content="<?php echo base_url()?>theme/images/logo-kesatriaan.png">
+    <meta property="og:image:url" content="<?php echo base_url()?>theme/images/logo-kesatriaan.png">
+    <meta property="og:type" content="article">
+    <link rel="shortcut icon" href="<?php echo base_url();?>assets/images/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="<?php echo base_url();?>theme/frontend/components/base/base.css">
     <script src="<?php echo base_url();?>theme/frontend/components/base/core.min.js"></script>
     <script src="<?php echo base_url();?>theme/frontend/components/base/script.js"></script>

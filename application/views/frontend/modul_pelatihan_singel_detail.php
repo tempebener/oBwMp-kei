@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
-    <title>Food</title>
-    <?php $this->load->view('frontend/head')?>
+     <title><?php echo "$rows[judul_pelatihan_detail]"; ?></title>
+     <meta name="title" content="<?php echo "$rows[judul_pelatihan_detail]"; ?>">
+     <meta property="og:title" content="<?php echo "$rows[judul_pelatihan_detail]"; ?>">
+     <meta name="site_url" content="<?php echo base_url()?>">
+    <?php $this->load->view('frontend/head2')?>
   </head>
   <body>
     <div class="page">
@@ -34,9 +37,9 @@
              <div class="col-md-6 col-xl-8">
                <center>
            <iframe width="720" height="330" src="https://www.youtube.com/embed/GgUy8FzQh7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
-             
+
               <p class="big"><?php echo "$rows[deskripsi_pelatihan_singkat]"; ?>.</p><br>
-             
+
             </div>
 
             <div class="col-md-6 col-xl-4">
@@ -55,18 +58,18 @@
                     <div class="box-list-term">Download:</div>
                     <div class="box-list-desc"></div>
                   </div>
-                 
-               
+
+
                 </div>
               </div>
             </div>
-           
+
           </div>
         </div>
       </section>
       <!-- Call to action-->
-     
-    
+
+
       <!-- Footer default-->
     <!-- Footer start-->
      <?php $this->load->view('frontend/footer')?>

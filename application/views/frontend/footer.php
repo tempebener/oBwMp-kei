@@ -29,7 +29,7 @@
                 <ul class="list list-sm">
                   <li class="list-item">
                     <?php foreach ($event_terbaru as $post_new){ ?>
-                      <div class="post post-responsive post-responsive-1"><a class="post-media" href="single-post.html"><img class="post-img" src="<?php echo base_url();?>theme/images/foto_event/event_detail/<?php echo $post_new->gambar ?>" alt="" width="20" height="10"/></a>
+                      <div class="post post-responsive post-responsive-1"><a class="post-media" href="<?php echo base_url("event_detail/$post_new->id_event_detail/$post_new->judul_event_detail_seo ") ?>"><img class="post-img" src="<?php echo base_url();?>theme/images/foto_event/event_detail/<?php echo $post_new->gambar ?>" alt="" width="20" height="10"/></a>
                         <div class="post-meta">
                           <div class="post-meta-item">
                             <div class="post-meta-icon custom-font-calendar"></div>

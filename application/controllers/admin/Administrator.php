@@ -1718,10 +1718,13 @@ class Administrator extends CI_Controller {
           $config['allowed_types'] = 'jpg|png|JPG|JPEG|jpeg|pdf|PDF';
           $config['max_size'] = '1000'; // kb
           $this->load->library('upload', $config);
+          $this->upload->initialize($config);
           $this->upload->do_upload('foto_ktp');
           $hasil=$this->upload->data();
           // $this->upload->do_upload('foto_npwp');
           // $hasil2=$this->upload->data();
+          $this->load->library('upload', $config);
+          $this->upload->initialize($config);
           $this->upload->do_upload('foto_pas');
           $hasil3=$this->upload->data();
           // $this->upload->do_upload('foto_sku');
@@ -1729,7 +1732,8 @@ class Administrator extends CI_Controller {
           // $this->upload->do_upload('partnership_agreement');
           // $hasil5=$this->upload->data();
 
-          if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''|$hasil4['file_name']==''|$hasil5['file_name']==''){
+          // if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''|$hasil4['file_name']==''|$hasil5['file_name']==''){
+          if ($hasil['file_name']==''||$hasil3['file_name']==''){
               $data = array('nama'=>$this->input->post('nama'),
                               'alamat'=>$this->input->post('alamat'),
                               'no_hp'=>$this->input->post('no_hp'),

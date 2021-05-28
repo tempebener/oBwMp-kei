@@ -1435,9 +1435,9 @@ class Administrator extends CI_Controller {
       if (isset($_POST['submit'])){
           $config['upload_path']    = 'theme/images/foto_pengantar/';
           $config['allowed_types']  = 'gif|jpg|png|PNG|JPG|JPEG|jpeg|webp';
-          $config['max_size']       = '500'; // kb
-          $config['max_width']      = '100';
-          $config['max_height']     = '100';
+          // $config['max_size']       = '500'; // kb
+          // $config['max_width']      = '100';
+          // $config['max_height']     = '100';
           $this->load->library('upload', $config);
           $this->upload->do_upload('icon_1');
           $hasil=$this->upload->data();
@@ -1445,7 +1445,7 @@ class Administrator extends CI_Controller {
           $hasil2=$this->upload->data();
           $this->upload->do_upload('icon_3');
           $hasil3=$this->upload->data();
-          if ($hasil['file_name']==''|$hasil2['file_name']==''|$hasil3['file_name']==''){
+          if ($hasil['file_name']=='' AND $hasil2['file_name']=='' AND $hasil3['file_name']==''){
               $data = array('judul'=>$this->input->post('judul'),
                           'deskripsi'=>$this->input->post('deskripsi'),
                           'judul_icon_1'=>$this->input->post('judul_icon_1'),
@@ -1454,6 +1454,110 @@ class Administrator extends CI_Controller {
                           'deskripsi2'=>$this->input->post('deskripsi2'),
                           'judul_icon_3'=>$this->input->post('judul_icon_3'),
                           'deskripsi3'=>$this->input->post('deskripsi3'));
+                    $where = array('id_pengantar' => $this->input->post('id'));
+                    $this->db->update('tbl_pengantar', $data, $where);
+          }elseif ($hasil['file_name']=='' AND $hasil2['file_name']==''){
+              $data = array('judul'=>$this->input->post('judul'),
+                          'deskripsi'=>$this->input->post('deskripsi'),
+                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'deskripsi1'=>$this->input->post('deskripsi1'),
+                          'icon_3'=>$hasil3['file_name'],
+                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
+                          'deskripsi2'=>$this->input->post('deskripsi2'),
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'),
+                          'deskripsi3'=>$this->input->post('deskripsi3'));
+                    $where = array('id_pengantar' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pengantar',$where)->row();
+                    $query = $this->db->update('tbl_pengantar',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pengantar/".$_image->icon_3);
+                    }
+          }elseif ($hasil['file_name']=='' AND $hasil3['file_name']==''){
+              $data = array('judul'=>$this->input->post('judul'),
+                          'deskripsi'=>$this->input->post('deskripsi'),
+                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'deskripsi1'=>$this->input->post('deskripsi1'),
+                          'icon_2'=>$hasil2['file_name'],
+                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
+                          'deskripsi2'=>$this->input->post('deskripsi2'),
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'),
+                          'deskripsi3'=>$this->input->post('deskripsi3'));
+                    $where = array('id_pengantar' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pengantar',$where)->row();
+                    $query = $this->db->update('tbl_pengantar',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pengantar/".$_image->icon_2);
+                    }
+          }elseif ($hasil2['file_name']=='' AND $hasil3['file_name']==''){
+              $data = array('judul'=>$this->input->post('judul'),
+                          'deskripsi'=>$this->input->post('deskripsi'),
+                          'icon_1'=>$hasil['file_name'],
+                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'deskripsi1'=>$this->input->post('deskripsi1'),
+                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
+                          'deskripsi2'=>$this->input->post('deskripsi2'),
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'),
+                          'deskripsi3'=>$this->input->post('deskripsi3'));
+                    $where = array('id_pengantar' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pengantar',$where)->row();
+                    $query = $this->db->update('tbl_pengantar',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pengantar/".$_image->icon_1);
+                    }
+          }elseif ($hasil['file_name']==''){
+              $data = array('judul'=>$this->input->post('judul'),
+                          'deskripsi'=>$this->input->post('deskripsi'),
+                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'deskripsi1'=>$this->input->post('deskripsi1'),
+                          'icon_2'=>$hasil2['file_name'],
+                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
+                          'deskripsi2'=>$this->input->post('deskripsi2'),
+                          'icon_3'=>$hasil3['file_name'],
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'),
+                          'deskripsi3'=>$this->input->post('deskripsi3'));
+                    $where = array('id_pengantar' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pengantar',$where)->row();
+                    $query = $this->db->update('tbl_pengantar',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pengantar/".$_image->icon_2);
+                      unlink("theme/images/foto_pengantar/".$_image->icon_3);
+                    }
+          }elseif ($hasil2['file_name']==''){
+              $data = array('judul'=>$this->input->post('judul'),
+                          'deskripsi'=>$this->input->post('deskripsi'),
+                          'icon_1'=>$hasil['file_name'],
+                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'deskripsi1'=>$this->input->post('deskripsi1'),
+                          'icon_3'=>$hasil3['file_name'],
+                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
+                          'deskripsi2'=>$this->input->post('deskripsi2'),
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'),
+                          'deskripsi3'=>$this->input->post('deskripsi3'));
+                    $where = array('id_pengantar' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pengantar',$where)->row();
+                    $query = $this->db->update('tbl_pengantar',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pengantar/".$_image->icon_1);
+                      unlink("theme/images/foto_pengantar/".$_image->icon_3);
+                    }
+          }elseif ($hasil3['file_name']==''){
+              $data = array('judul'=>$this->input->post('judul'),
+                          'deskripsi'=>$this->input->post('deskripsi'),
+                          'icon_1'=>$hasil['file_name'],
+                          'judul_icon_1'=>$this->input->post('judul_icon_1'),
+                          'deskripsi1'=>$this->input->post('deskripsi1'),
+                          'icon_2'=>$hasil2['file_name'],
+                          'judul_icon_2'=>$this->input->post('judul_icon_2'),
+                          'deskripsi2'=>$this->input->post('deskripsi2'),
+                          'judul_icon_3'=>$this->input->post('judul_icon_3'),
+                          'deskripsi3'=>$this->input->post('deskripsi3'));
+                    $where = array('id_pengantar' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pengantar',$where)->row();
+                    $query = $this->db->update('tbl_pengantar',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pengantar/".$_image->icon_1);
+                      unlink("theme/images/foto_pengantar/".$_image->icon_2);
+                    }
           }else{
               $data = array('judul'=>$this->input->post('judul'),
                           'deskripsi'=>$this->input->post('deskripsi'),
@@ -1466,9 +1570,17 @@ class Administrator extends CI_Controller {
                           'icon_3'=>$hasil3['file_name'],
                           'judul_icon_3'=>$this->input->post('judul_icon_3'),
                           'deskripsi3'=>$this->input->post('deskripsi3'));
+                    $where = array('id_pengantar' => $this->input->post('id'));
+                    $_image = $this->db->get_where('tbl_pengantar',$where)->row();
+                    $query = $this->db->update('tbl_pengantar',$data,$where);
+                    if($query){
+                      unlink("theme/images/foto_pengantar/".$_image->icon_1);
+                      unlink("theme/images/foto_pengantar/".$_image->icon_2);
+                      unlink("theme/images/foto_pengantar/".$_image->icon_3);
+                    }
           }
-          $where = array('id_pengantar' => $this->input->post('id'));
-          $this->model_app->update('tbl_pengantar', $data, $where);
+          // $where = array('id_pengantar' => $this->input->post('id'));
+          // $this->model_app->update('tbl_pengantar', $data, $where);
           redirect('admin/administrator/listpengantar');
       }else{
           if ($this->session->level=='admin'){

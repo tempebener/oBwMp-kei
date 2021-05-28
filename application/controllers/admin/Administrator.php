@@ -1435,16 +1435,20 @@ class Administrator extends CI_Controller {
       if (isset($_POST['submit'])){
           $config['upload_path']    = 'theme/images/foto_pengantar/';
           $config['allowed_types']  = 'gif|jpg|png|PNG|JPG|JPEG|jpeg|webp';
-          // $config['max_size']       = '500'; // kb
-          // $config['max_width']      = '100';
-          // $config['max_height']     = '100';
           $this->load->library('upload', $config);
+          $this->upload->initialize($config);
           $this->upload->do_upload('icon_1');
           $hasil=$this->upload->data();
+          $this->load->library('upload', $config);
+          $this->upload->initialize($config);
           $this->upload->do_upload('icon_2');
           $hasil2=$this->upload->data();
+          $this->load->library('upload', $config);
+          $this->upload->initialize($config);
           $this->upload->do_upload('icon_3');
           $hasil3=$this->upload->data();
+
+
           if ($hasil['file_name']=='' AND $hasil2['file_name']=='' AND $hasil3['file_name']==''){
               $data = array('judul'=>$this->input->post('judul'),
                           'deskripsi'=>$this->input->post('deskripsi'),

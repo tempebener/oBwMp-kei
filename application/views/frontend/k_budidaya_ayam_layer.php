@@ -36,7 +36,9 @@
         <div class="container">
             <h2>SKEMA KEMITRAAN Budidaya Ayam Layer</h2>
             <hr style="border: 5px solid yellow;margin-left:20px;margin-right:20px;border-radius: 5px;">
-          
+            <br>
+           <dd>Skema kemitraan budidaya ayam layer merupakan suatu strategis bisnis dalam bentuk kerja sama antara kelompok peternak/UMKM/peternak perorangan/Koperasi Pesantren Indonesia, Yayasan Kesatriaan Entrepreneur Indonesia dan PT. Widodo Makmur Unggas Tbk untuk meraih manfaat bersama maupun keuntungan bersama sesuai prinsip saling membutuhkan dan saling mengisi sesuai kesepakatan yang muncul.
+            </dd>
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
               <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
@@ -48,11 +50,7 @@
       </section>
  <section class="section section-md bg-transparent">
         <div class="container">
-          <dl class="term-list">
-            <dt class="h6">A. Skema Kemitraan Budidaya Ayam Layer</dt>
-            <dd>Skema kemitraan budidaya ayam layer merupakan suatu strategis bisnis dalam bentuk kerja sama antara kelompok peternak/UMKM/peternak perorangan/Koperasi Pesantren Indonesia, Yayasan Kesatriaan Entrepreneur Indonesia dan PT. Widodo Makmur Unggas Tbk untuk meraih manfaat bersama maupun keuntungan bersama sesuai prinsip saling membutuhkan dan saling mengisi sesuai kesepakatan yang muncul.
-            </dd>
-          </dl>
+          
           <dl class="term-list">
             <dt class="h6">KET</dt>
             <dd>1.  Pihak Yayasan Kesatriaan Entrepreneur Indonesia melakukan seleksi terhadap Mitra</dd>

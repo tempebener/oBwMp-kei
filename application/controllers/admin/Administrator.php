@@ -1774,4 +1774,53 @@ class Administrator extends CI_Controller {
     $this->M_member->deactive_data($id,$data);
     redirect('admin/administrator/listmember');
   }
+
+  function skemakemitraanlist(){
+      $data['record'] = $this->db->query("select * from tbl_skema_kemitraan  where id_skema_kemitraan
+
+        ")->result_array();
+      $this->template->load('administrator/template','administrator/mod_skemakemitraan/view_skemakemitraan',$data);
+    }
+    function skemakemitraan_edit(){
+      $id = $this->uri->segment(4);
+      if (isset($_POST['submit'])){
+              $config['upload_path'] = 'theme/images/skema_kemitraan/';
+              $config['allowed_types'] = 'gif|jpg|png|jpeg|JPG|JPEG';
+              $config['max_size'] = '5000'; // kb
+              $this->load->library('upload', $config);
+              $this->upload->do_upload('foto');
+              $hasil=$this->upload->data();
+              if ($hasil['file_name']==''){
+                      $data = array(
+                      'judul_skema_kemitraan'=>$this->db->escape_str($this->input->post('judul_skema_kemitraan')),
+                      
+                      'deskripsi_skema_kemitraan'=>$this->input->post('deskripsi_skema_kemitraan'),
+                      'keterangan_skema_kemitraan'=>$this->input->post('keterangan_skema_kemitraan'));
+                      $where = array('id_skema_kemitraan' => $this->input->post('id'));
+                      $this->db->update('tbl_skema_kemitraan', $data, $where);
+              }else{
+                      $data = array(
+                      'judul_skema_kemitraan'=>$this->db->escape_str($this->input->post('judul_skema_kemitraan')),
+                      
+                      'deskripsi_skema_kemitraan'=>$this->input->post('deskripsi_skema_kemitraan'),
+                       'keterangan_skema_kemitraan'=>$this->input->post('keterangan_skema_kemitraan'),
+                      'foto'=>$hasil['file_name']);
+                      $where = array('id_skema_kemitraan' => $this->input->post('id'));
+                      $_image = $this->db->get_where('tbl_skema_kemitraan',$where)->row();
+                      $query = $this->db->update('tbl_skema_kemitraan',$data,$where);
+                      if($query){
+                        unlink("theme/images/skema_kemitraan/".$_image->foto);
+                      }
+              }
+              redirect('admin/administrator/skemakemitraanlist/');
+          }else{
+              if ($this->session->level=='admin'){
+                  $proses = $this->model_app->edit('tbl_skema_kemitraan', array('id_skema_kemitraan' => $id))->row_array();
+              }else{
+                  $proses = $this->model_app->edit('tbl_skema_kemitraan', array('id_skema_kemitraan' => $id))->row_array();
+              }
+              $data = array('rows' => $proses);
+              $this->template->load('administrator/template','administrator/mod_skemakemitraan/view_edit_skemakemitraan',$data);
+              }
+  }
 }

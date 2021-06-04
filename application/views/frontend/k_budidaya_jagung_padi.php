@@ -30,21 +30,38 @@
           </div>
         </div>
       </section>
+ <?php
+             foreach ($budidaya_jagung_padi as $post_new)
+             {
 
-      <!-- Deskripsi Budidaya Jagung & Padi -->
+             ?>
+      <!-- Deskripsi Profil -->
        <section class="section-md bg-transparent text-center">
         <div class="container">
-            <h2>SKEMA KEMITRAAN<br/>Budidaya Jagung & Padi</h2>
-            <hr style="border: 5px solid yellow;margin-left:200px;margin-right:200px;border-radius: 5px;">
-          
+            <h2><?php echo $post_new->judul_skema_kemitraan ?></h2>
+            <hr style="border: 5px solid yellow;margin-left:20px;margin-right:20px;border-radius: 5px;">
+            <br>
+           <dd><?php echo $post_new->deskripsi_skema_kemitraan ?>
+            </dd>
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/skema_kemitraan_jagung_padi.png" alt="SKEMA KEMITRAAN Budidaya Jagung & Padi" width="100%" height="auto">
+              <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/<?php echo $post_new->foto ?>" alt="SKEMA KEMITRAAN Budidaya Ayam Layer" width="100%" height="auto">
             </div>
           
           </div>
         </div>
       </section>
+ <section class="section section-md bg-transparent">
+        <div class="container">
+          
+          <dl class="term-list">
+            
+            <dd id='editor2'><?php echo $post_new->keterangan_skema_kemitraan ?></dd>
+          </dl>
+        </div>
+      </section>
+       <?php } ?>
 
       <!-- Footer start-->
       <?php $this->load->view('frontend/footer')?>

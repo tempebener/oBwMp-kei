@@ -31,21 +31,39 @@
         </div>
       </section>
 
+      <?php
+             foreach ($ayam_broiler as $post_new)
+             {
+
+             ?>
       <!-- Deskripsi Profil -->
        <section class="section-md bg-transparent text-center">
         <div class="container">
-            <h2>SKEMA KEMITRAAN Budidaya Ayam Broiler</h2>
+            <h2><?php echo $post_new->judul_skema_kemitraan ?></h2>
             <hr style="border: 5px solid yellow;margin-left:20px;margin-right:20px;border-radius: 5px;">
-          
+            <br>
+           <dd><?php echo $post_new->deskripsi_skema_kemitraan ?>
+            </dd>
           <div class="row row-30">
             <div class="col-md-6 col-xl-12 d-flex">
               <!-- <div class="image image-responsive rounded" style="background-image:url(<?php echo base_url();?>theme/images/profil/sapi.png)"></div> -->
-              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/skema_kemitraan_budidaya_ayam_broiler.png" alt="SKEMA KEMITRAAN Budidaya Ayam Broiler" width="100%" height="auto">
+              <img class="image-custom rounded" src="<?php echo base_url();?>theme/images/skema_kemitraan/<?php echo $post_new->foto ?>" alt="SKEMA KEMITRAAN Budidaya Ayam Layer" width="100%" height="auto">
             </div>
           
           </div>
         </div>
       </section>
+ <section class="section section-md bg-transparent">
+        <div class="container">
+          
+          <dl class="term-list">
+            
+            <dd><?php echo $post_new->keterangan_skema_kemitraan ?></dd>
+           
+         
+        </div>
+      </section>
+       <?php } ?>
 
       <!-- Footer start-->
       <?php $this->load->view('frontend/footer')?>

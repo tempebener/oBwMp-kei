@@ -710,6 +710,7 @@ class Administrator extends CI_Controller {
                     'judul_pelatihan_detail' =>$this->input->post('judul_pelatihan_detail'),
                     'judul_pelatihan_detail_seo' =>seo_title($this->input->post('judul_pelatihan_detail')),
                     'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),
+                    'video' =>$this->input->post('video'),
                     'date_time' => date("Y-m-d"));
                     $where = array('id_pelatihan_detail' => $this->input->post('id'));
                     $this->db->update('tbl_pelatihan_detail', $data, $where);
@@ -720,6 +721,7 @@ class Administrator extends CI_Controller {
                     'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),
                     'download_pdf'=>$hasil2['file_name'],
                     'date_time' => date("Y-m-d"),
+                    'video' =>$this->input->post('video'),
                     'download_pdf'=>$hasil2['file_name']);
                     $where = array('id_pelatihan_detail' => $this->input->post('id'));
                     $_image = $this->db->get_where('tbl_pelatihan_detail',$where)->row();
@@ -733,6 +735,7 @@ class Administrator extends CI_Controller {
                     'judul_pelatihan_detail_seo' =>seo_title($this->input->post('judul_pelatihan_detail')),
                     'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),
                     'download_pdf'=>$hasil2['file_name'],
+                    'video' =>$this->input->post('video'),
                     'date_time' => date("Y-m-d"),
                     'gambar'=>$hasil['file_name']);
                     $where = array('id_pelatihan_detail' => $this->input->post('id'));
@@ -747,6 +750,7 @@ class Administrator extends CI_Controller {
                     'judul_pelatihan_detail_seo' =>seo_title($this->input->post('judul_pelatihan_detail')),
                     'deskripsi_pelatihan_singkat' =>$this->input->post('deskripsi_pelatihan_singkat'),
                     'download_pdf'=>$hasil2['file_name'],
+                    'video' =>$this->input->post('video'),
                     'date_time' => date("Y-m-d"),
                     'gambar'=>$hasil['file_name'],
                     'download_pdf'=>$hasil2['file_name']);

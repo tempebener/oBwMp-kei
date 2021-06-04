@@ -36,7 +36,7 @@
           <div class="row row-30">
              <div class="col-md-6 col-xl-8">
                <center>
-           <iframe width="720" height="330" src="https://www.youtube.com/embed/GgUy8FzQh7M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+           <iframe width="720" height="330" src="https://www.youtube.com/embed/<?php echo "$rows[video]"; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
               <p class="big"><?php echo "$rows[deskripsi_pelatihan_singkat]"; ?>.</p><br>
 
@@ -51,12 +51,7 @@
                     <div class="box-list-desc"><?php echo "$rows[judul_pelatihan_detail]"; ?></div>
                   </div>
                   <div class="box-list-item">
-                    <div class="box-list-term">Download:</div>
-                    <div class="box-list-desc"></div>
-                  </div>
-                  <div class="box-list-item">
-                    <div class="box-list-term">Download:</div>
-                    <div class="box-list-desc"></div>
+                    <div class="box-list-term"><a href="ssadasd">Download Modul</a></div>
                   </div>
 
 

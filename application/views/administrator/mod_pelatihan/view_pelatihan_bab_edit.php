@@ -13,7 +13,8 @@
                   <tbody>
                     <input type='hidden' name='id' value='$rows[id_pelatihan_detail]'>
                     <tr><th scope='row'>Judul</th>
-                    <td><input type='text' class='form-control' name='judul_pelatihan_detail' value='$rows[judul_pelatihan_detail]'></td></tr>
+                    <td><input type='text' class='form-control' name='judul_pelatihan_detail' value='$rows[judul_pelatihan_detail]'></td>
+                    </tr>
                     <tr><th scope='row'>Deskripsi</th>
                     <td><textarea id='editor1' class='form-control' name='deskripsi_pelatihan_singkat' style='height:260px'>$rows[deskripsi_pelatihan_singkat]</textarea></td></tr>
                     <tr>
@@ -27,6 +28,9 @@
                       <td><input type='file' class='form-control' name='download_pdf'><hr style='margin:5px'>";
                         if ($rows['download_pdf'] != ''){ echo "<i style='color:red'>Foto Saat ini : </i><a target='_BLANK' href='".base_url()."theme/images/foto_pelatihan/pelatihan_detail/$rows[download_pdf]'>$rows[download_pdf]</a>"; } echo "</td></tr>
                       </td>
+                    </tr>
+                    <tr><th scope='row'>LINK Video Youtube</th>
+                    <td><input type='text' class='form-control' name='video' value='$rows[video]'></td>
                     </tr>
                   </tbody>
                   </table></div>

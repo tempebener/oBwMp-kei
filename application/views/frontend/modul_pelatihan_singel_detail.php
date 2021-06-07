@@ -36,7 +36,15 @@
           <div class="row row-30">
              <div class="col-md-6 col-xl-8">
                <center>
-           <iframe width="720" height="330" src="https://www.youtube.com/embed/<?php echo "$rows[video]"; ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+                 <?php
+                      if(empty($rows['video']))
+                      { echo ""; }
+                      else
+                      {echo "<iframe width='720' height='330' src='https://www.youtube.com/embed/$rows[video]' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>";}
+                    ?>
+
+
+         </center>
 
               <p class="big"><?php echo "$rows[deskripsi_pelatihan_singkat]"; ?>.</p><br>
 

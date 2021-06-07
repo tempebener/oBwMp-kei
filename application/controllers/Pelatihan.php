@@ -40,9 +40,23 @@ public function detail_isi_pelatihan($id){
 
 
 			$query = $this->Model_utama->view_join_one('tbl_pelatihan_detail','tbl_pelatihan','id_pelatihan',array('judul_pelatihan_detail_seo' => $this->uri->segment(4)),'id_pelatihan_detail','DESC',0,1);
-			if ($query->num_rows()<=0){
+			if ($query->num_rows()<=0)
+			{
+
 				redirect('main');
+
 			}else{
+					$row = $query->row_array();
+				
+					if($row['status_lang_news'] == 'Y')
+				{
+				      $daftar = "<a href='". base_url('member/index') . "'>daftar</a>";
+				    if(!$this->session->id_users)
+				    {
+				    	 $_SESSION['langganan'] = "Untuk membaca konten ini diharuskan berlangganan dahulu. Bila belum mempunyai akun $daftar & bila sudah silakan login";
+				       redirect('register');          
+				        return;
+				    }
 
 				$row = $query->row_array();
 				$data['title'] = cetak($row['judul_pelatihan_detail']);
@@ -56,6 +70,7 @@ public function detail_isi_pelatihan($id){
 				$this->load->view('frontend/modul_pelatihan_singel_detail', $data);
 			}
 		}
+	}
 
 
 

@@ -59,7 +59,7 @@
                     <div class="box-list-desc"><?php echo "$rows[judul_pelatihan_detail]"; ?></div>
                   </div>
                   <div class="box-list-item">
-                    <div class="box-list-term"><a href="ssadasd">Download Modul</a></div>
+                    <div class="box-list-term"><a href="<?php base_url()?>theme/images/foto_pelatihan/pelatihan_detail/<?php echo "$rows[download_pdf]";?>">Download Modul</a></div>
                   </div>
 
 

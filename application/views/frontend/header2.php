@@ -173,12 +173,22 @@
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>gallery">Galeri</a>
                 </li>
                 <li class="navbar-navigation-root-item"><a class="navbar-navigation-root-link" href="<?php echo base_url();?>kontak">Kontak</a>
-                  <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                   <ul class="navbar-navigation-dropdown rd-navbar-dropdown">
+                    <?php if ($this->session->userdata('id_users')) { ?>
+                       <li class="navbar-navigation-dropdown-item">
+                      <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>admin/administrator/logout">Logout</a>
+                      
+                    </li>
+                    <?php } else { ?>
                     <li class="navbar-navigation-dropdown-item">
                       <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>kei/admin">Login</a>
                       <a class="navbar-navigation-dropdown-link" href="<?php echo base_url();?>register">Pendaftaran</a>
                     </li>
+                    <?php } ?>
                   </ul>
+                </li>
+
+              </ul>
                 </li>
               </ul>
             </div>

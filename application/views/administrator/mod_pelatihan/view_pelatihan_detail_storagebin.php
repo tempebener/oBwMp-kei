@@ -61,8 +61,9 @@
  <h2 class='page-header'>
             <i class='fa fa-globe'></i> BAB PELATIHAN
             <small class='pull-right'></small>
-          <a class='pull-right btn btn-primary btn-sm'  href='".base_url()."admin/administrator/add_bab_pelatihan/$row[id_pelatihan]' >Tambah BAB Pelatihan</a>
-          <a class='pull-right btn btn-sm'  href='".base_url()."admin/administrator/pelatihan_detail_storagebin/$row[id_pelatihan]' ><span class='glyphicon glyphicon-trash'></span></a>
+
+
+          <a class='pull-right btn btn-primary btn-sm'  title='List Data' href='".base_url()."admin/administrator/detailspelatihan/$row[id_pelatihan]' ><span class='glyphicon glyphicon-tasks'></span></a>
           </h2>
            ";
                       $no++;
@@ -101,8 +102,8 @@
               <td> $row[video]</td>
                <td>$tgl_posting</td>
                <td><center>
-                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/pelatihan_bab_edit/$row[id_pelatihan_detail]'><span class='glyphicon glyphicon-edit'></span></a>
-                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/pelatihan_bab_hapus_temp/$row[id_pelatihan_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+               <a class='btn btn-warning btn-xs' title='Kembalikan Data' href='".base_url()."admin/administrator/pelatihan_bab_restore/$row[id_pelatihan_detail]' onclick=\"return confirm('Apa anda yakin untuk mengembalikan Data ini?')\"><span class='glyphicon glyphicon-repeat'></span></a>
+                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/pelatihan_bab_hapus/$row[id_pelatihan_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                </center></td>
             </tr>
 

@@ -19,7 +19,21 @@ class M_ekonomi extends CI_Model{
      // $this->db->join('users', 'users.id_users = tbl_pelatihan.id_users','inner');
      return $this->db->get('tbl_ekonomi_outlook')->result_array();
    }
-   function get_by_id3($id)
+   function get_by_eo_detail($id)
+   {
+     $this->db->where('tbl_ekonomi_outlook_detail.id_eo', $id);
+     $this->db->where('status_eo_detail ','publish');
+     $this->db->join('tbl_ekonomi_outlook', 'tbl_ekonomi_outlook.id_eo = tbl_ekonomi_outlook_detail.id_eo','inner');
+     return $this->db->get('tbl_ekonomi_outlook_detail')->result_array();
+   }
+  function get_by_eo_detail_storage($id)
+   {
+     $this->db->where('tbl_ekonomi_outlook_detail.id_eo', $id);
+     $this->db->where('status_eo_detail','trash');
+     $this->db->join('tbl_ekonomi_outlook', 'tbl_ekonomi_outlook.id_eo = tbl_ekonomi_outlook_detail.id_eo','inner');
+     return $this->db->get('tbl_ekonomi_outlook_detail')->result_array();
+   }
+  function get_by_id3($id)
    {
      $this->db->where('tbl_ekonomi_outlook_detail.id_eo', $id);
      $this->db->join('tbl_ekonomi_outlook', 'tbl_ekonomi_outlook.id_eo = tbl_ekonomi_outlook_detail.id_eo','inner');

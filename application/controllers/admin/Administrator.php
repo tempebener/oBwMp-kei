@@ -565,17 +565,19 @@ class Administrator extends CI_Controller {
               $hasil=$this->upload->data();
               if ($hasil['file_name']==''){
                       $data = array('id_users'=>$this->session->id_users,
-                      'date_time'=>date('Y-m-d'),
+                        'date_time'=>date('Y-m-d'),
+                        'status_pelatihan '=>'1',
                         'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
-                                      'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
-                                      'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')));
+                        'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
+                        'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')));
               }else{
                       $data = array('id_users'=>$this->session->id_users,
                       'date_time'=>date('Y-m-d'),
-                        'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
-                                      'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
-                                      'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')),
-                                      'foto'=>$hasil['file_name']);
+                      'status_pelatihan '=>'1',
+                      'judul_pelatihan'=>$this->db->escape_str($this->input->post('judul_pelatihan')),
+                      'deskripsi_singkat'=>$this->db->escape_str($this->input->post('deskripsi_singkat')),
+                      'deskirpsi_full'=>$this->db->escape_str($this->input->post('deskirpsi_full')),
+                      'foto'=>$hasil['file_name']);
               }
               $this->model_app->insert('tbl_pelatihan',$data);
         redirect('admin/administrator/listpelatihan');
@@ -645,10 +647,21 @@ class Administrator extends CI_Controller {
       /* memanggil function dari masing2 model yang akan digunakan */
       $pelatihan = $this->M_pelatihan->get_by_id2($id);
       $data['pelatihan']            = $pelatihan;
-       $data['pelatihanbab']            = $this->M_pelatihan->get_by_id3($id);
+      $data['pelatihanbab']            = $this->M_pelatihan->get_by_pelatihan_detail($id);
       $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_detail',$data);
       }
   }
+  function pelatihan_detail_storagebin($id){
+    $row = $this->M_pelatihan->get_by_id2($id);
+    /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
+    if ($row){
+    /* memanggil function dari masing2 model yang akan digunakan */
+    $pelatihan = $this->M_pelatihan->get_by_id2($id);
+    $data['pelatihan']            = $pelatihan;
+    $data['pelatihanbab']            = $this->M_pelatihan->get_by_pelatihan_detail_storage($id,'trash');
+    $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_detail_storagebin',$data);
+    }
+	}
   function add_bab_pelatihan($id){
       $pelatihan = $this->M_pelatihan->get_by_id_add($id);
       $data['pelatihan']            = $pelatihan;
@@ -694,6 +707,20 @@ class Administrator extends CI_Controller {
      }
     redirect('admin/administrator/listpelatihan/');
   }
+  function pelatihan_bab_hapus_temp(){
+			cek_session_akses('listpelatihan',$this->session->id_session);
+			$data = array('status_pelatihan_detail '=>'trash');
+			$where = array('id_pelatihan_detail ' => $this->uri->segment(4));
+			$this->db->update('tbl_pelatihan_detail ', $data, $where);
+			redirect('admin/administrator/listpelatihan/');
+	}
+  function pelatihan_bab_restore(){
+			cek_session_akses('listpelatihan',$this->session->id_session);
+			$data = array('status_pelatihan_detail'=>'publish');
+			$where = array('id_pelatihan_detail' => $this->uri->segment(4));
+			$this->db->update('tbl_pelatihan_detail', $data, $where);
+			redirect('admin/administrator/listpelatihan');
+	}
   function pelatihan_bab_edit(){
     $id = $this->uri->segment(4);
     if (isset($_POST['submit'])){
@@ -861,18 +888,7 @@ class Administrator extends CI_Controller {
      }
     redirect('admin/administrator/eo_list/');
   }
-  function eo_detail($id){
 
-      $row = $this->M_ekonomi->get_by_id2($id);
-      /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
-      if ($row){
-      /* memanggil function dari masing2 model yang akan digunakan */
-      $eo = $this->M_ekonomi->get_by_id2($id);
-      $data['eo']            = $eo;
-       $data['eobab']            = $this->M_ekonomi->get_by_id3($id);
-      $this->template->load('administrator/template','administrator/mod_eo/view_detail',$data);
-      }
-  }
 
   function add_bab_eo($id){
       $eo = $this->M_ekonomi->get_by_id_add($id);
@@ -1029,6 +1045,43 @@ class Administrator extends CI_Controller {
             }
 
   }
+  function eo_detail($id){
+
+      $row = $this->M_ekonomi->get_by_id2($id);
+      /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
+      if ($row){
+      /* memanggil function dari masing2 model yang akan digunakan */
+      $eo = $this->M_ekonomi->get_by_id2($id);
+      $data['eo']            = $eo;
+       $data['eobab']            = $this->M_ekonomi->get_by_eo_detail($id);
+      $this->template->load('administrator/template','administrator/mod_eo/view_detail',$data);
+      }
+  }
+  function eo_detail_storagebin($id){
+    $row = $this->M_ekonomi->get_by_id2($id);
+    /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
+    if ($row){
+    /* memanggil function dari masing2 model yang akan digunakan */
+    $eo = $this->M_ekonomi->get_by_id2($id);
+    $data['eo']            = $eo;
+    $data['eobab']            = $this->M_ekonomi->get_by_eo_detail_storage($id);
+    $this->template->load('administrator/template','administrator/mod_eo/view_eo_detail_storagebin',$data);
+    }
+	}
+  function eo_bab_hapus_temp(){
+			cek_session_akses('eo_list',$this->session->id_session);
+			$data = array('status_eo_detail '=>'trash');
+			$where = array('id_eo_detail ' => $this->uri->segment(4));
+			$this->db->update('tbl_ekonomi_outlook_detail ', $data, $where);
+			redirect('admin/administrator/eo_list/');
+	}
+  function eo_bab_restore(){
+			cek_session_akses('eo_list',$this->session->id_session);
+			$data = array('status_eo_detail'=>'publish');
+			$where = array('id_eo_detail' => $this->uri->segment(4));
+			$this->db->update('tbl_ekonomi_outlook_detail', $data, $where);
+			redirect('admin/administrator/eo_list');
+	}
 
 
   function event_list(){
@@ -1133,6 +1186,14 @@ class Administrator extends CI_Controller {
       $this->template->load('administrator/template','administrator/mod_event/view_detail',$data);
       }
   }
+  function event_list_sampah(){
+      cek_session_akses('event_list_sampah',$this->session->id_session);
+         $data['record'] = $this->model_app->view_ordering('tbl_event','id_event','DESC');
+
+
+      $this->template->load('administrator/template','administrator/mod_event/view_list',$data);
+  }
+
 
   function add_bab_event($id){
       $event = $this->M_event->get_by_id_add($id);
@@ -1797,7 +1858,7 @@ class Administrator extends CI_Controller {
               if ($hasil['file_name']==''){
                       $data = array(
                       'judul_skema_kemitraan'=>$this->db->escape_str($this->input->post('judul_skema_kemitraan')),
-                      
+
                       'deskripsi_skema_kemitraan'=>$this->input->post('deskripsi_skema_kemitraan'),
                       'keterangan_skema_kemitraan'=>$this->input->post('keterangan_skema_kemitraan'));
                       $where = array('id_skema_kemitraan' => $this->input->post('id'));
@@ -1805,7 +1866,7 @@ class Administrator extends CI_Controller {
               }else{
                       $data = array(
                       'judul_skema_kemitraan'=>$this->db->escape_str($this->input->post('judul_skema_kemitraan')),
-                      
+
                       'deskripsi_skema_kemitraan'=>$this->input->post('deskripsi_skema_kemitraan'),
                        'keterangan_skema_kemitraan'=>$this->input->post('keterangan_skema_kemitraan'),
                       'foto'=>$hasil['file_name']);

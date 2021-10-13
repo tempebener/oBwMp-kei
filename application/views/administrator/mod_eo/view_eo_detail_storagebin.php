@@ -15,18 +15,18 @@
           <table width="100%" border="0" cellspacing="0" cellpadding="4">
             <?php
                     $no = 1;
-                    foreach ($pelatihan as $row){
-                if ($row['foto'] == ''){ $foto ='blank.png'; }else{ $foto = $row['foto']; }
+                    foreach ($eo as $row){
+                if ($row['foto_eo'] == ''){ $foto_eo ='blank.png'; }else{ $foto_eo = $row['foto_eo']; }
                     echo "
               <tr>
                  <td>Judul Pelatihan</td>
                   <td>:</td>
-                  <td>$row[judul_pelatihan]</td>
+                  <td>$row[judul_eo]</td>
               </tr>
               <tr>
                   <td>Foto</td>
                   <td>:</td>
-                  <td><img style='border:1px solid #cecece' width='120px'  src='".base_url()."theme/images/foto_pelatihan/$row[foto]'></td>
+                  <td><img style='border:1px solid #cecece' width='120px'  src='".base_url()."theme/images/foto_ekonomi/$row[foto_eo]'></td>
               </tr>
           </table>
         </div>
@@ -61,8 +61,9 @@
  <h2 class='page-header'>
             <i class='fa fa-globe'></i> BAB PELATIHAN
             <small class='pull-right'></small>
-          <a class='pull-right btn btn-primary btn-sm'  href='".base_url()."admin/administrator/add_bab_pelatihan/$row[id_pelatihan]' >Tambah BAB Pelatihan</a>
-          <a class='pull-right btn btn-sm'  href='".base_url()."admin/administrator/pelatihan_detail_storagebin/$row[id_pelatihan]' ><span class='glyphicon glyphicon-trash'></span></a>
+
+
+          <a class='pull-right btn btn-primary btn-sm'  title='List Data' href='".base_url()."admin/administrator/eo_detail/$row[id_eo]' ><span class='glyphicon glyphicon-tasks'></span></a>
           </h2>
            ";
                       $no++;
@@ -88,21 +89,20 @@
 
                 <?php
                     $no = 1;
-                    foreach ($pelatihanbab as $row){
+                    foreach ($eobab as $row){
                    $tgl_posting = tgl_indo($row['date_time']);
 
                     echo "
             <tr>
               <td>$no</td>
-              <td>$row[judul_pelatihan_detail]</td>
-              <td>$row[deskripsi_pelatihan_singkat]</td>
-
+              <td>$row[judul_eo_detail]</td>
+              <td>$row[deskripsi_eo_detail]</td>
               <td>$row[download_pdf]</td>
               <td> $row[video]</td>
                <td>$tgl_posting</td>
                <td><center>
-                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/pelatihan_bab_edit/$row[id_pelatihan_detail]'><span class='glyphicon glyphicon-edit'></span></a>
-                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/pelatihan_bab_hapus_temp/$row[id_pelatihan_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+               <a class='btn btn-warning btn-xs' title='Kembalikan Data' href='".base_url()."admin/administrator/eo_bab_restore/$row[id_eo_detail]' onclick=\"return confirm('Apa anda yakin untuk mengembalikan Data ini?')\"><span class='glyphicon glyphicon-repeat'></span></a>
+                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/eo_bab_hapus/$row[id_eo_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                </center></td>
             </tr>
 

@@ -64,6 +64,7 @@
 
 
           <a class='pull-right btn btn-primary btn-sm'  href='".base_url()."admin/administrator/add_bab_eo/$row[id_eo]' >Tambah BAB</a>
+          <a class='pull-right btn btn-sm'  href='".base_url()."admin/administrator/eo_detail_storagebin/$row[id_eo]' ><span class='glyphicon glyphicon-trash'></span></a>
           </h2>
            ";
                       $no++;
@@ -103,7 +104,7 @@
                <td>$tgl_posting</td>
                <td><center>
                  <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/eo_bab_edit/$row[id_eo_detail]'><span class='glyphicon glyphicon-edit'></span></a>
-                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/eo_bab_hapus/$row[id_eo_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/eo_bab_hapus_temp/$row[id_eo_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                </center></td>
             </tr>
 

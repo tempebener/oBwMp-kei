@@ -23,6 +23,23 @@ class M_pelatihan extends CI_Model{
   {
     $this->db->where('tbl_pelatihan_detail.id_pelatihan', $id);
     $this->db->or_where('tbl_pelatihan_detail.id_pelatihan', $id);
+    $this->db->or_where('status_pelatihan_detail','trash');
+    $this->db->join('tbl_pelatihan', 'tbl_pelatihan.id_pelatihan = tbl_pelatihan_detail.id_pelatihan','inner');
+    return $this->db->get('tbl_pelatihan_detail')->result_array();
+  }
+  function get_by_pelatihan_detail_storage($id)
+  {
+
+    $this->db->where('tbl_pelatihan_detail.id_pelatihan', $id);
+    $this->db->where('status_pelatihan_detail','trash');
+    $this->db->join('tbl_pelatihan', 'tbl_pelatihan.id_pelatihan = tbl_pelatihan_detail.id_pelatihan','inner');
+
+    return $this->db->get('tbl_pelatihan_detail')->result_array();
+  }
+  function get_by_pelatihan_detail($id)
+  {
+    $this->db->where('tbl_pelatihan_detail.id_pelatihan', $id);
+    $this->db->where('status_pelatihan_detail','publish');
     $this->db->join('tbl_pelatihan', 'tbl_pelatihan.id_pelatihan = tbl_pelatihan_detail.id_pelatihan','inner');
     return $this->db->get('tbl_pelatihan_detail')->result_array();
   }

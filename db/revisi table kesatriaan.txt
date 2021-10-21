@@ -1,0 +1,12 @@
+Kei Kesatriaan
+
+tbl_pelatihan_detail
+add status_pelatihan_detail (varchar 10)
+
+
+tbl_event_detail
+add status_event_detail (varchar 10)
+
+
+tbl_ekonomi_outlook_detail
+add status_eo_detail (varchar 10)

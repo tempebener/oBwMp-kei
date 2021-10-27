@@ -1528,11 +1528,22 @@ class Administrator extends CI_Controller {
 
   // Foto Galeri
   function fotogaleri_list(){
-      cek_session_akses('fotogaleri_list',$this->session->id_session);
-         $data['record'] = $this->model_app->view_ordering('tbl_fotogaleri','id_fotogaleri','DESC');
-
-
-      $this->template->load('administrator/template','administrator/mod_fotogaleri/view_list',$data);
+    cek_session_akses('fotogaleri_list',$this->session->id_session);
+    if ($this->session->level=='admin'){
+      $data['record'] = $this->model_app->view_where_ordering('tbl_fotogaleri',array('status_fotogaleri'=>'Y'),'id_fotogaleri','DESC');
+      }else{
+       $data['record'] = $this->model_app->view_where_ordering('tbl_fotogaleri',array('status_fotogaleri'=>'Y'),'id_fotogaleri','DESC');
+     }
+    $this->template->load('administrator/template','administrator/mod_fotogaleri/view_list',$data);
+  }
+  function fotogaleri_storagebin(){
+    cek_session_akses('fotogaleri_list',$this->session->id_session);
+    if ($this->session->level=='admin'){
+      $data['record'] = $this->model_app->view_where_ordering('tbl_fotogaleri',array('status_fotogaleri'=>'N'),'id_fotogaleri','DESC');
+      }else{
+       $data['record'] = $this->model_app->view_where_ordering('tbl_fotogaleri',array('status_fotogaleri'=>'N'),'id_fotogaleri','DESC');
+     }
+    $this->template->load('administrator/template','administrator/mod_fotogaleri/view_list_storagebin',$data);
   }
   function fotogaleri_tambah(){
     $this->template->load('administrator/template','administrator/mod_fotogaleri/view_tambah');
@@ -1615,8 +1626,22 @@ class Administrator extends CI_Controller {
       if($query){
                unlink("./theme/images/foto_fotogaleri/".$_id->gambar_fotogaleri);
      }
-    redirect('admin/administrator/fotogaleri_list/');
+    redirect('admin/administrator/fotogaleri_storagebin/');
   }
+  function fotogaleri_hapus_term(){
+			cek_session_akses('fotogaleri_list',$this->session->id_session);
+			$data = array('status_fotogaleri'=>'N');
+			$where = array('id_fotogaleri' => $this->uri->segment(4));
+			$this->db->update('tbl_fotogaleri', $data, $where);
+			redirect('admin/administrator/fotogaleri_list');
+	}
+  function fotogaleri_restore(){
+			cek_session_akses('fotogaleri_list',$this->session->id_session);
+			$data = array('status_fotogaleri'=>'Y');
+			$where = array('id_fotogaleri' => $this->uri->segment(4));
+			$this->db->update('tbl_fotogaleri', $data, $where);
+			redirect('admin/administrator/fotogaleri_storagebin');
+	}
 
   // Modul Pengantar
   function listpengantar(){

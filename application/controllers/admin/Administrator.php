@@ -390,14 +390,28 @@ class Administrator extends CI_Controller {
   function listberita(){
     cek_session_akses('listberita',$this->session->id_session);
        if ($this->session->level=='admin'){
-           $data['record'] = $this->model_app->view_join_one('tbl_berita','users','id_users','id_berita','DESC');
+           $data['record'] = $this->model_app->view_join_where('tbl_berita','users','id_users',array('status'=>'Y'),'id_berita','DESC');
         }else{
-            $data['record'] = $this->model_app->view_where_ordering('tbl_berita',array('id_users'=>$this->session->id_users),'id_berita','DESC');
+            $data['record'] = $this->model_app->view_where_ordering('tbl_berita',array('id_users'=>$this->session->id_users,'status'=>'Y'),'id_berita','DESC');
         }
         $data['rss'] = $this->model_utama->view_join('tbl_berita','users','id_users','id_berita','DESC',0,10);
 
 
     $this->template->load('administrator/template','administrator/mod_berita/view_berita',$data);
+  }
+
+  function listberita_storagebin(){
+    cek_session_akses('listberita',$this->session->id_session);
+
+       if ($this->session->level=='admin'){
+           $data['record'] = $this->model_app->view_join_where('tbl_berita','users','id_users',array('status'=>'T'),'id_berita','DESC');
+        }else{
+            $data['record'] = $this->model_app->view_where_ordering('tbl_berita',array('id_users'=>$this->session->id_users,'status'=>'T'),'id_berita','DESC');
+        }
+        $data['rss'] = $this->model_utama->view_join('tbl_berita','users','id_users','id_berita','DESC',0,10);
+
+
+    $this->template->load('administrator/template','administrator/mod_berita/view_berita_storagebin',$data);
   }
   function detailsberita($id){
 
@@ -543,14 +557,32 @@ class Administrator extends CI_Controller {
         }
     $this->model_app->delete('tbl_berita',$id);
     redirect('admin/administrator/listberita');
-}
+  }
+  function listberita_hapus_temp(){
+        cek_session_akses('listberita',$this->session->id_session);
+        $data = array('status'=>'T');
+        $where = array('id_berita' => $this->uri->segment(4));
+        $this->db->update('tbl_berita ', $data, $where);
+        redirect('admin/administrator/listberita/');
+    }
   // Controller Modul List Pelatihan
   function listpelatihan(){
       cek_session_akses('listpelatihan',$this->session->id_session);
-         $data['record'] = $this->model_app->view_ordering('tbl_pelatihan','id_pelatihan','DESC');
-
-
+      if ($this->session->level=='admin'){
+          $data['record'] = $this->model_app->view_where_ordering('tbl_pelatihan',array('status_pelatihan'=>'Y'),'id_pelatihan','DESC');
+       }else{
+           $data['record'] = $this->model_app->view_where_ordering('tbl_pelatihan',array('id_users'=>$this->session->id_users,'status_pelatihan'=>'Y'),'id_pelatihan','DESC');
+       }
       $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan',$data);
+  }
+  function listpelatihan_storagebin(){
+      cek_session_akses('listpelatihan',$this->session->id_session);
+      if ($this->session->level=='admin'){
+          $data['record'] = $this->model_app->view_where_ordering('tbl_pelatihan',array('status_pelatihan'=>'T'),'id_pelatihan','DESC');
+       }else{
+           $data['record'] = $this->model_app->view_where_ordering('tbl_pelatihan',array('id_users'=>$this->session->id_users,'status_pelatihan'=>'T'),'id_pelatihan','DESC');
+       }
+      $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_storagebin',$data);
   }
   function pelatihan_tambah(){
     $this->template->load('administrator/template','administrator/mod_pelatihan/view_pelatihan_tambah');
@@ -637,6 +669,20 @@ class Administrator extends CI_Controller {
 		 }
 		redirect('admin/administrator/listpelatihan/');
 	}
+  function pelatihan_restore(){
+			cek_session_akses('listpelatihan',$this->session->id_session);
+			$data = array('status_pelatihan'=>'Y');
+			$where = array('id_pelatihan' => $this->uri->segment(4));
+			$this->db->update('tbl_pelatihan', $data, $where);
+			redirect('admin/administrator/listpelatihan');
+	}
+  function listpelatihan_hapus_temp(){
+        cek_session_akses('listpelatihan',$this->session->id_session);
+        $data = array('status_pelatihan'=>'T');
+        $where = array('id_pelatihan' => $this->uri->segment(4));
+        $this->db->update('tbl_pelatihan ', $data, $where);
+        redirect('admin/administrator/listpelatihan/');
+    }
 
 
   function detailspelatihan($id){
@@ -804,10 +850,21 @@ class Administrator extends CI_Controller {
 
   function eo_list(){
       cek_session_akses('eo_list',$this->session->id_session);
-         $data['record'] = $this->model_app->view_ordering('tbl_ekonomi_outlook','id_eo','DESC');
-
-
+      if ($this->session->level=='admin'){
+          $data['record'] = $this->model_app->view_where_ordering('tbl_ekonomi_outlook',array('status_eo'=>'Y'),'id_eo','DESC');
+       }else{
+           $data['record'] = $this->model_app->view_where_ordering('tbl_ekonomi_outlook',array('status_eo'=>'Y'),'id_eo','DESC');
+       }
       $this->template->load('administrator/template','administrator/mod_eo/view_list',$data);
+  }
+  function eo_storagebin(){
+      cek_session_akses('eo_list',$this->session->id_session);
+      if ($this->session->level=='admin'){
+          $data['record'] = $this->model_app->view_where_ordering('tbl_ekonomi_outlook',array('status_eo'=>'N'),'id_eo','DESC');
+       }else{
+           $data['record'] = $this->model_app->view_where_ordering('tbl_ekonomi_outlook',array('status_eo'=>'N'),'id_eo','DESC');
+       }
+      $this->template->load('administrator/template','administrator/mod_eo/view_list_storagebin',$data);
   }
   function eo_tambah(){
     $this->template->load('administrator/template','administrator/mod_eo/view_tambah');
@@ -888,6 +945,20 @@ class Administrator extends CI_Controller {
      }
     redirect('admin/administrator/eo_list/');
   }
+  function eo_restore(){
+			cek_session_akses('eo_list',$this->session->id_session);
+			$data = array('status_eo'=>'Y');
+			$where = array('id_eo' => $this->uri->segment(4));
+			$this->db->update('tbl_ekonomi_outlook', $data, $where);
+			redirect('admin/administrator/eo_list');
+	}
+  function eo_hapus_term(){
+			cek_session_akses('eo_list',$this->session->id_session);
+			$data = array('status_eo'=>'N');
+			$where = array('id_eo' => $this->uri->segment(4));
+			$this->db->update('tbl_ekonomi_outlook', $data, $where);
+			redirect('admin/administrator/eo_list');
+	}
 
 
   function add_bab_eo($id){
@@ -1085,11 +1156,22 @@ class Administrator extends CI_Controller {
 
 
   function event_list(){
-      cek_session_akses('event_list',$this->session->id_session);
-         $data['record'] = $this->model_app->view_ordering('tbl_event','id_event','DESC');
-
-
-      $this->template->load('administrator/template','administrator/mod_event/view_list',$data);
+    cek_session_akses('event_list',$this->session->id_session);
+    if ($this->session->level=='admin'){
+      $data['record'] = $this->model_app->view_where_ordering('tbl_event',array('status_event'=>'Y'),'id_event','DESC');
+      }else{
+       $data['record'] = $this->model_app->view_where_ordering('tbl_event',array('status_event'=>'Y'),'id_event','DESC');
+     }
+   $this->template->load('administrator/template','administrator/mod_event/view_list',$data);
+  }
+  function event_storagebin(){
+    cek_session_akses('event_list',$this->session->id_session);
+    if ($this->session->level=='admin'){
+      $data['record'] = $this->model_app->view_where_ordering('tbl_event',array('status_event'=>'N'),'id_event','DESC');
+      }else{
+       $data['record'] = $this->model_app->view_where_ordering('tbl_event',array('status_event'=>'N'),'id_event','DESC');
+     }
+   $this->template->load('administrator/template','administrator/mod_event/view_list_storagebin',$data);
   }
   function event_tambah(){
     $this->template->load('administrator/template','administrator/mod_event/view_tambah');
@@ -1174,6 +1256,27 @@ class Administrator extends CI_Controller {
      }
     redirect('admin/administrator/event_list/');
   }
+  function event_hapus_term(){
+			cek_session_akses('event_list',$this->session->id_session);
+			$data = array('status_event'=>'N');
+			$where = array('id_event' => $this->uri->segment(4));
+			$this->db->update('tbl_event', $data, $where);
+			redirect('admin/administrator/event_list');
+	}
+  function event_restore(){
+			cek_session_akses('event_list',$this->session->id_session);
+			$data = array('status_event'=>'Y');
+			$where = array('id_event' => $this->uri->segment(4));
+			$this->db->update('tbl_event', $data, $where);
+			redirect('admin/administrator/event_list');
+	}
+  function event_list_sampah(){
+      cek_session_akses('event_list_sampah',$this->session->id_session);
+         $data['record'] = $this->model_app->view_ordering('tbl_event','id_event','DESC');
+
+
+      $this->template->load('administrator/template','administrator/mod_event/view_list',$data);
+  }
   function event_detail($id){
 
       $row = $this->M_event->get_by_id2($id);
@@ -1182,18 +1285,28 @@ class Administrator extends CI_Controller {
       /* memanggil function dari masing2 model yang akan digunakan */
       $event= $this->M_event->get_by_id2($id);
       $data['event']            = $event;
-       $data['eventbab']            = $this->M_event->get_by_id3($id);
+      $data['eventbab']            = $this->M_event->get_by_id3($id);
       $this->template->load('administrator/template','administrator/mod_event/view_detail',$data);
       }
   }
-  function event_list_sampah(){
-      cek_session_akses('event_list_sampah',$this->session->id_session);
-         $data['record'] = $this->model_app->view_ordering('tbl_event','id_event','DESC');
-
-
-      $this->template->load('administrator/template','administrator/mod_event/view_list',$data);
-  }
-
+  function event_detail_storagebin($id){
+    $row = $this->M_event->get_by_id2($id);
+    /* melakukan pengecekan data, apabila ada maka akan ditampilkan */
+    if ($row){
+    /* memanggil function dari masing2 model yang akan digunakan */
+    $event = $this->M_event->get_by_id2($id);
+    $data['event']            = $event;
+    $data['eventbab']            = $this->M_event->get_by_event_detail_storage($id);
+    $this->template->load('administrator/template','administrator/mod_event/view_detail_storagebin',$data);
+    }
+	}
+  function event_bab_hapus_temp(){
+			cek_session_akses('event_list',$this->session->id_session);
+			$data = array('status_event_detail '=>'trash');
+			$where = array('id_event_detail ' => $this->uri->segment(4));
+			$this->db->update('tbl_event_detail ', $data, $where);
+			redirect('admin/administrator/event_list/');
+	}
 
   function add_bab_event($id){
       $event = $this->M_event->get_by_id_add($id);

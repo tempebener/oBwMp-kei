@@ -1,9 +1,8 @@
             <div class="col-xs-12">
               <div class="box">
                 <div class="box-header">
-                  <h3 class="box-title">Berita KEI</h3>
-                  <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>admin/administrator/tambah_listberita'>Tulis Berita</a>
-                  <a class='pull-right btn btn-sm'  href='<?php echo base_url(); ?>admin/administrator/listberita_storagebin' ><span class='glyphicon glyphicon-trash'></span></a>
+                  <h3 class="box-title">Berita KEI Sampah</h3>
+                  <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>admin/administrator/listberita'><span class='glyphicon glyphicon-tasks'></span></a>
                 </div><!-- /.box-header -->
                 <div class="box-body table-responsive">
                   <table id="example1" class="table table-bordered table-striped">
@@ -50,7 +49,7 @@
 
                                  <a class='btn btn-warning btn-xs' title='Detail Data' href='".base_url()."admin/administrator/detailsberita/$row[id_berita]'><span class='glyphicon glyphicon-zoom-in'></span></a>
                                 <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/edit_listberita/$row[id_berita]'><span class='glyphicon glyphicon-edit'></span></a>
-                                <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/listberita_hapus_temp/$row[id_berita]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                                <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/delete_listberita/$row[id_berita]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                               </center></td>
                           </tr>";
                       $no++;

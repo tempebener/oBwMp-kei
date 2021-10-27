@@ -8,11 +8,11 @@ class M_berita extends CI_Model{
 		$hsl=$this->db->query("SELECT tbl_berita.*,DATE_FORMAT(tanggal,'%d/%m/%Y') AS tanggal FROM tbl_berita  ORDER BY id_berita DESC");
 		return $hsl;
 	}
-	
+
     function simpan_berita($judul,$deskripsi,$file){
 		$this->db->trans_start();
             $this->db->query("insert into tbl_berita(jdl_1,jdl_2,foto) values ('$judul','$deskripsi','$file')");
-            
+
         $this->db->trans_complete();
         if($this->db->trans_status()==true)
         return true;
@@ -25,25 +25,25 @@ class M_berita extends CI_Model{
         $this->db->select('*');
         $this->db->select('count(*) as total');
         $this->db->select('(SELECT count(tbl_berita.id_berita)
-                            FROM tbl_berita 
+                            FROM tbl_berita
                             WHERE (tbl_berita.status = 1)
                             )
                             AS active_berita',TRUE);
 
         $this->db->select('(SELECT count(tbl_berita.id_berita)
-                            FROM tbl_berita 
+                            FROM tbl_berita
                             WHERE (tbl_berita.status = 0)
                             )
                             AS inactive_berita',TRUE);
 
-        
+
 
         $this->db->from('tbl_berita');
         $query = $this->db->get();
-        $query = $query->row();  
+        $query = $query->row();
         return $query;
     }
-	
+
 	function update_berita($id_berita,$judul,$user_id,$user_nama,$gambar){
 		$hsl=$this->db->query("update tbl_berita set jdl_1='$judul',berita_pengguna_id='$user_id',berita_author='$user_nama',foto='$gambar' where id_berita='$id_berita'");
 		return $hsl;
@@ -62,6 +62,16 @@ class M_berita extends CI_Model{
         else
         return false;
 	}
+
+  function get_by_berita_storage($id)
+  {
+
+    $this->db->where('tbl_berita.id_berita', $id);
+    $this->db->where('status','trash');
+    $this->db->join('tbl_pelatihan', 'tbl_pelatihan.id_pelatihan = tbl_pelatihan_detail.id_pelatihan','inner');
+
+    return $this->db->get('tbl_pelatihan_detail')->result_array();
+  }
 
 	//Front-End
 	function get_berita_home(){

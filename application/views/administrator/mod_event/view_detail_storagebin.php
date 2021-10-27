@@ -3,7 +3,7 @@
       <div class='row'>
         <div class='col-xs-12'>
           <h2 class='page-header'>
-            <i class='fa fa-globe'></i> Detail Event
+            <i class='fa fa-globe'></i> Bab Event Sampah
             <small class='pull-right'></small>
           </h2>
         </div>
@@ -62,9 +62,8 @@
             <i class='fa fa-globe'></i> BAB Event
             <small class='pull-right'></small>
 
-
-          <a class='pull-right btn btn-primary btn-sm'  href='".base_url()."admin/administrator/add_bab_event/$row[id_event]' >Tambah BAB</a>
-          <a class='pull-right btn btn-sm'  href='".base_url()."admin/administrator/event_detail_storagebin/$row[id_event]' ><span class='glyphicon glyphicon-trash'></span></a>
+            <a class='pull-right btn btn-primary btn-sm'  title='List Data' href='".base_url()."admin/administrator/event_detail/$row[id_event]' ><span class='glyphicon glyphicon-tasks'></span></a>
+          
           </h2>
            ";
                       $no++;
@@ -104,7 +103,7 @@
                <td>$tgl_posting</td>
                <td><center>
                  <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/event_bab_edit/$row[id_event_detail]'><span class='glyphicon glyphicon-edit'></span></a>
-                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/event_bab_hapus_temp/$row[id_event_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
+                 <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/event_bab_hapus/$row[id_event_detail]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                </center></td>
             </tr>
 

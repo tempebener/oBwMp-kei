@@ -1,9 +1,8 @@
 <div class="col-xs-12">
   <div class="box">
     <div class="box-header">
-      <h3 class="box-title">Slider</h3>
-      <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>admin/administrator/tambah_slider'>Tambahkan Data</a>
-      <a class='pull-right btn btn-sm'  href='<?php echo base_url(); ?>admin/administrator/sliderlist_storagebin' ><span class='glyphicon glyphicon-trash'></span></a>
+      <h3 class="box-title">Slider Sampah</h3>
+      <a class='pull-right btn btn-primary btn-sm' href='<?php echo base_url(); ?>admin/administrator/sliderlist'><span class='glyphicon glyphicon-tasks'></span></a>
     </div><!-- /.box-header -->
     <div class="box-body table-responsive padding">
       <table id="example1" class="table table-bordered table-striped">
@@ -45,19 +44,21 @@ if(count($status))
 
                   <td><center>
 
-                    <a class='btn btn-success btn-xs' title='Edit Data' href='".base_url()."admin/administrator/edit_slider/$row[id_slider]'><span class='glyphicon glyphicon-edit'></span></a>
+
                     ";
 
               if($row['id_slider_s'] == 2)
               {
                        echo "<a class='btn btn-primary btn-xs' title='Approve Data' href='".base_url()."admin/administrator/slider_aktif/" . $row['id_slider'] . "' ><span class='glyphicon glyphicon-ok'></span></a>
+                       <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/slider_hapus/$row[id_slider]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
                   </center></td>
 
                   ";
                   }
                   if($row['id_slider_s'] == 1)
                   {
-                  echo "<a class='btn btn-danger btn-xs' title='Hapus Data' href='".base_url()."admin/administrator/slider_noaktif/" . $row['id_slider'] . "' ><span class='glyphicon glyphicon-remove'></span></a>
+                  echo "<a class='btn btn-danger btn-xs' title='Approve Data' href='".base_url()."admin/administrator/slider_noaktif/" . $row['id_slider'] . "' ><span class='glyphicon glyphicon-remove'></span></a>
+                  <a class='btn btn-danger btn-xs' title='Delete Data' href='".base_url()."admin/administrator/slider_hapus/$row[id_slider]' onclick=\"return confirm('Apa anda yakin untuk hapus Data ini?')\"><span class='glyphicon glyphicon-remove'></span></a>
              </center></td>";
 
 

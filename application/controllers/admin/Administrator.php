@@ -278,11 +278,24 @@ class Administrator extends CI_Controller {
   }
 
   function sliderlist(){
-      $data['record'] = $this->db->query("select * from tbl_slider x join tbl_slider_s y on x.id_slider_s = y.id_slider_s  where id_slider
-
-        ")->result_array();
+    cek_session_akses('sliderlist',$this->session->id_session);
+       if ($this->session->level=='admin'){
+           $data['record'] = $this->model_app->view_where_ordering('tbl_slider',array('id_slider_s'=>'1'),'id_slider','DESC');
+        }else{
+            $data['record'] = $this->model_app->view_where_ordering('tbl_slider',array('id_slider_s'=>'1'),'id_slider','DESC');
+        }
       $this->template->load('administrator/template','administrator/mod_slider/view_slider',$data);
     }
+    function sliderlist_storagebin(){
+      cek_session_akses('sliderlist',$this->session->id_session);
+         if ($this->session->level=='admin'){
+             $data['record'] = $this->model_app->view_where_ordering('tbl_slider',array('id_slider_s'=>'2'),'id_slider','DESC');
+          }else{
+              $data['record'] = $this->model_app->view_where_ordering('tbl_slider',array('id_slider_s'=>'2'),'id_slider','DESC');
+          }
+        $this->template->load('administrator/template','administrator/mod_slider/view_slider_storagebin',$data);
+      }
+
   function slider_aktif(){
         $id = array('id_slider' => $this->uri->segment(4));
         $this->db->query("update tbl_slider set id_slider_s = '1'
@@ -384,6 +397,16 @@ class Administrator extends CI_Controller {
               }
       }
   }
+  function slider_hapus(){
+
+			$id = $this->uri->segment(4);
+			$_id = $this->db->get_where('tbl_slider',['id_slider' => $id])->row();
+			$query = $this->db->delete('tbl_slider',['id_slider'=> $id]);
+			if($query){
+							 unlink("./theme/images/foto_slider/".$_id->foto);
+		 }
+		redirect($_SERVER['HTTP_REFERER']);
+	}
 
   // Controller Modul List Berita
 
@@ -399,7 +422,6 @@ class Administrator extends CI_Controller {
 
     $this->template->load('administrator/template','administrator/mod_berita/view_berita',$data);
   }
-
   function listberita_storagebin(){
     cek_session_akses('listberita',$this->session->id_session);
 
